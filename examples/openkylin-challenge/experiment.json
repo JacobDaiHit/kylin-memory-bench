@@ -1,0 +1,61 @@
+{
+  "audit_counts": {
+    "budget_stop": 1,
+    "completion": 741,
+    "finished": 1,
+    "rejected": 1,
+    "start": 1
+  },
+  "cases": 12,
+  "dataset_sha256": "12aee151ac934ac885bd90a2a5c7d18f5f061a72b788a81aa734c2033627c73a",
+  "environment": {
+    "execution_context": "wsl2",
+    "is_openkylin": true,
+    "machine": "x86_64",
+    "os_release": {
+      "ID": "openkylin",
+      "PRETTY_NAME": "openKylin 2.0 SP1",
+      "VERSION_ID": "2.0"
+    },
+    "python": "3.12.2",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "system": "Linux"
+  },
+  "events": 258,
+  "execution_errors": 2,
+  "implementation_sha256": "a3840b2d3e8582080f9ffe22f8114fe36c513f88e3364d3906e47c79699d61a2",
+  "model": "deepseek-flash",
+  "native_versions": {
+    "hermes_commit": "4b8a43719b2a259cea88a72f9f13a2b6962e7ac3",
+    "openclaw": "2026.9.8 (fc23bc8)"
+  },
+  "network_or_guard_failures": [
+    {
+      "at": "2026-10-03T07:18:35.210680+00:00",
+      "balance_cny": "[PRIVATE ACCOUNT VALUE]",
+      "event": "budget_stop",
+      "reserve_cny": "1.446604"
+    },
+    {
+      "at": "2026-10-03T07:18:35.217107+00:00",
+      "event": "rejected",
+      "reason": "Live budget exhausted; no upstream completion was sent"
+    }
+  ],
+  "parameters": {
+    "max_tokens": 2048,
+    "temperature": 0,
+    "thinking": "disabled"
+  },
+  "presentation_note": "HTML/SVG regenerated with delivery source; original evidence and scores unchanged.",
+  "repeats": 3,
+  "retry_policy": "No selective rerun or replacement of failed cases.",
+  "run_id": "23b54cdd-32a1-430b-b749-e0e8adadfff4",
+  "usage": {
+    "completion_tokens": 87209,
+    "prompt_cache_hit_tokens": 21583104,
+    "prompt_cache_miss_tokens": 865657,
+    "prompt_tokens": 22448761,
+    "total_tokens": 22535970
+  }
+}

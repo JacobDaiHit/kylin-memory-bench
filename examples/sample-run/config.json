@@ -1,0 +1,23 @@
+{
+  "agents": [
+    {
+      "id": "selective",
+      "kind": "baseline",
+      "label": "选择性记忆基线",
+      "policy": "selective"
+    },
+    {
+      "id": "naive",
+      "kind": "baseline",
+      "label": "全量记忆基线",
+      "policy": "naive"
+    },
+    {
+      "id": "stateless",
+      "kind": "baseline",
+      "label": "无记忆基线",
+      "policy": "stateless"
+    }
+  ],
+  "schema_version": "1.0"
+}

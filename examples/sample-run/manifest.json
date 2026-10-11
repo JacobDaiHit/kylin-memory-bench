@@ -1,0 +1,50 @@
+{
+  "agents": [
+    {
+      "id": "selective",
+      "kind": "baseline",
+      "label": "选择性记忆基线",
+      "policy": "selective"
+    },
+    {
+      "id": "naive",
+      "kind": "baseline",
+      "label": "全量记忆基线",
+      "policy": "naive"
+    },
+    {
+      "id": "stateless",
+      "kind": "baseline",
+      "label": "无记忆基线",
+      "policy": "stateless"
+    }
+  ],
+  "clock": "simulated integer days; no real-time ageing claim",
+  "config_sha256": "3f9e91db0adf414d7f57f1f893154ea75b3a79c55c18f463d9c6fc50f0f0e92c",
+  "dataset_sha256": "65b84203c8c2c3b6c7826be1b65742e0ad64c1b023b04f3c4de37a64393ac573",
+  "environment": {
+    "execution_context": "wsl2",
+    "is_openkylin": true,
+    "machine": "x86_64",
+    "os_release": {
+      "ID": "openkylin",
+      "PRETTY_NAME": "openKylin 2.0 SP1",
+      "VERSION_ID": "2.0"
+    },
+    "python": "3.12.2",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "system": "Linux"
+  },
+  "event_count": 1512,
+  "evidence_head": "22972e79b7381f257a41141f4313e76a5a4c82be7411ad932075eb7c56689c96",
+  "execution_errors": 0,
+  "finished_at": "2026-10-03T07:46:31.719189+00:00",
+  "implementation_sha256": "6fe84c5059bc9ccd64800deabd2a6d8473ebf05dd895cccba27ff300eb81c3cf",
+  "jobs": 1,
+  "repeats": 3,
+  "run_id": "60d4460a-cd34-4b4a-86e6-ea388c041f39",
+  "schema_version": "1.0",
+  "started_at": "2026-10-03T07:46:22.614438+00:00",
+  "status": "completed",
+  "version": "0.2.0"
+}

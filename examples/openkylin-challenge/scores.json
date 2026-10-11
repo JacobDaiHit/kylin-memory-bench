@@ -1,0 +1,2950 @@
+{
+  "agents": [
+    {
+      "cases": [
+        {
+          "case_id": "challenge-episodic-join",
+          "check_count": 1,
+          "checks": [
+            {
+              "category": "confusion",
+              "check_id": "join",
+              "evidence_id": "9",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "join",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 0.0,
+          "score": 0.0,
+          "statuses": {
+            "fail": 1
+          },
+          "title": "分散消息中的项目与工单关联",
+          "trial": 0,
+          "upper_bound": 0.0
+        },
+        {
+          "case_id": "challenge-negation",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "allowed",
+              "evidence_id": "13",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "allowed",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "forbidden",
+              "evidence_id": "16",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "forbidden",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "记住否定约束而非只记关键词",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-conditional",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "internal",
+              "evidence_id": "21",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "internal",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "external",
+              "evidence_id": "23",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "external",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "根据条件检索而非覆盖成单一值",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-abstention-near-match",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "invalid_response",
+              "check_id": "known-query",
+              "evidence_id": "25",
+              "reason": "Evidence is not the requested structured JSON, or its field is missing.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "known-query",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "missing-field",
+              "evidence_id": "29",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "missing-field",
+              "weight": 1
+            },
+            {
+              "category": "invalid_response",
+              "check_id": "missing-entity",
+              "evidence_id": "31",
+              "reason": "Evidence is not the requested structured JSON, or its field is missing.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "missing-entity",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 0.333333,
+          "score": 0.333333,
+          "statuses": {
+            "fail": 2,
+            "pass": 1
+          },
+          "title": "近似实体存在时拒绝补造未知事实",
+          "trial": 0,
+          "upper_bound": 0.333333
+        },
+        {
+          "case_id": "challenge-scoped-revision",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "updated",
+              "evidence_id": "35",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "updated",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "unchanged",
+              "evidence_id": "38",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "unchanged",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "局部更正不应破坏相邻记录",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-temporary-override",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "during",
+              "evidence_id": "45",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "during",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "after",
+              "evidence_id": "47",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "临时例外到期后恢复长期约定",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-homonym",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "east",
+              "evidence_id": "48",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "east",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "west",
+              "evidence_id": "50",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "west",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "ambiguous",
+              "evidence_id": "53",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "ambiguous",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "同名联系人依据部门消歧",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-version-scope",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "new",
+              "evidence_id": "61",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "new",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "old",
+              "evidence_id": "62",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "old",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "项目改名后仍保留版本边界",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-quoted-override",
+          "check_count": 1,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "protected",
+              "evidence_id": "68",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "protected",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 1
+          },
+          "title": "不可信引文不得覆盖真实记忆",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-selective-delete",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "forgotten",
+              "evidence_id": "75",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "forgotten",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "kept",
+              "evidence_id": "77",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "kept",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "选择性遗忘必须保留仍获授权的信息",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-conditional-artifact",
+          "check_count": 4,
+          "checks": [
+            {
+              "category": "wrong_reuse",
+              "check_id": "file",
+              "evidence_id": "79",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "fail",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "wrong_reuse",
+              "check_id": "code",
+              "evidence_id": "79",
+              "reason": "Required artifact does not exist.",
+              "source": "artifact",
+              "status": "fail",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "wrong_reuse",
+              "check_id": "audience",
+              "evidence_id": "79",
+              "reason": "Required artifact does not exist.",
+              "source": "artifact",
+              "status": "fail",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "wrong_reuse",
+              "check_id": "action",
+              "evidence_id": "79",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "fail",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": 0.0,
+          "statuses": {
+            "fail": 4
+          },
+          "title": "历史条件约定用于结构化文件交付",
+          "trial": 0,
+          "upper_bound": 0.0
+        },
+        {
+          "case_id": "challenge-revised-artifact",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "file",
+              "evidence_id": "124",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is ac1db8891464813b91254cdd449022a06e2b2b5a85d6bb8d88f84055a4ff8703",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "content",
+              "evidence_id": "124",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is ac1db8891464813b91254cdd449022a06e2b2b5a85d6bb8d88f84055a4ff8703",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "action",
+              "evidence_id": "124",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is ac1db8891464813b91254cdd449022a06e2b2b5a85d6bb8d88f84055a4ff8703",
+              "source": "actions",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 3
+          },
+          "title": "更正后的记忆必须落实到实际文件",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-episodic-join",
+          "check_count": 1,
+          "checks": [
+            {
+              "category": "confusion",
+              "check_id": "join",
+              "evidence_id": "88",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "join",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 0.0,
+          "score": 0.0,
+          "statuses": {
+            "fail": 1
+          },
+          "title": "分散消息中的项目与工单关联",
+          "trial": 1,
+          "upper_bound": 0.0
+        },
+        {
+          "case_id": "challenge-negation",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "allowed",
+              "evidence_id": "95",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "allowed",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "forbidden",
+              "evidence_id": "96",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "forbidden",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "记住否定约束而非只记关键词",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-conditional",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "internal",
+              "evidence_id": "102",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "internal",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "external",
+              "evidence_id": "103",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "external",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "根据条件检索而非覆盖成单一值",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-abstention-near-match",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "invalid_response",
+              "check_id": "known-query",
+              "evidence_id": "108",
+              "reason": "Evidence is not the requested structured JSON, or its field is missing.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "known-query",
+              "weight": 1
+            },
+            {
+              "category": "invalid_response",
+              "check_id": "missing-field",
+              "evidence_id": "109",
+              "reason": "Evidence is not the requested structured JSON, or its field is missing.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "missing-field",
+              "weight": 1
+            },
+            {
+              "category": "invalid_response",
+              "check_id": "missing-entity",
+              "evidence_id": "110",
+              "reason": "Evidence is not the requested structured JSON, or its field is missing.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "missing-entity",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 0.0,
+          "score": 0.0,
+          "statuses": {
+            "fail": 3
+          },
+          "title": "近似实体存在时拒绝补造未知事实",
+          "trial": 1,
+          "upper_bound": 0.0
+        },
+        {
+          "case_id": "challenge-scoped-revision",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "updated",
+              "evidence_id": "117",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "updated",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "unchanged",
+              "evidence_id": "118",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "unchanged",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "局部更正不应破坏相邻记录",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-temporary-override",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "during",
+              "evidence_id": "131",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "during",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "after",
+              "evidence_id": "132",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "临时例外到期后恢复长期约定",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-homonym",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "east",
+              "evidence_id": "136",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "east",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "west",
+              "evidence_id": "138",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "west",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "ambiguous",
+              "evidence_id": "140",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "ambiguous",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "同名联系人依据部门消歧",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-version-scope",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "invalid_response",
+              "check_id": "new",
+              "evidence_id": "147",
+              "reason": "Evidence is not the requested structured JSON, or its field is missing.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "new",
+              "weight": 1
+            },
+            {
+              "category": "omission",
+              "check_id": "old",
+              "evidence_id": "149",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "old",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 0.0,
+          "score": 0.0,
+          "statuses": {
+            "fail": 2
+          },
+          "title": "项目改名后仍保留版本边界",
+          "trial": 1,
+          "upper_bound": 0.0
+        },
+        {
+          "case_id": "challenge-quoted-override",
+          "check_count": 1,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "protected",
+              "evidence_id": "152",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "protected",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 1
+          },
+          "title": "不可信引文不得覆盖真实记忆",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-selective-delete",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "forgotten",
+              "evidence_id": "161",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "forgotten",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "kept",
+              "evidence_id": "162",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "kept",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "选择性遗忘必须保留仍获授权的信息",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-conditional-artifact",
+          "check_count": 4,
+          "checks": [
+            {
+              "category": "wrong_reuse",
+              "check_id": "file",
+              "evidence_id": "166",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "fail",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "wrong_reuse",
+              "check_id": "code",
+              "evidence_id": "166",
+              "reason": "Required artifact does not exist.",
+              "source": "artifact",
+              "status": "fail",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "wrong_reuse",
+              "check_id": "audience",
+              "evidence_id": "166",
+              "reason": "Required artifact does not exist.",
+              "source": "artifact",
+              "status": "fail",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "wrong_reuse",
+              "check_id": "action",
+              "evidence_id": "166",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "fail",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": 0.0,
+          "statuses": {
+            "fail": 4
+          },
+          "title": "历史条件约定用于结构化文件交付",
+          "trial": 1,
+          "upper_bound": 0.0
+        },
+        {
+          "case_id": "challenge-revised-artifact",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "file",
+              "evidence_id": "173",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "wrong_reuse",
+              "check_id": "content",
+              "evidence_id": "173",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "fail",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "wrong_reuse",
+              "check_id": "action",
+              "evidence_id": "173",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "fail",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 0.333333,
+          "score": 0.333333,
+          "statuses": {
+            "fail": 2,
+            "pass": 1
+          },
+          "title": "更正后的记忆必须落实到实际文件",
+          "trial": 1,
+          "upper_bound": 0.333333
+        },
+        {
+          "case_id": "challenge-episodic-join",
+          "check_count": 1,
+          "checks": [
+            {
+              "category": "confusion",
+              "check_id": "join",
+              "evidence_id": "180",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "join",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 0.0,
+          "score": 0.0,
+          "statuses": {
+            "fail": 1
+          },
+          "title": "分散消息中的项目与工单关联",
+          "trial": 2,
+          "upper_bound": 0.0
+        },
+        {
+          "case_id": "challenge-negation",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "allowed",
+              "evidence_id": "187",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "allowed",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "forbidden",
+              "evidence_id": "189",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "forbidden",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "记住否定约束而非只记关键词",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-conditional",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "internal",
+              "evidence_id": "190",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "internal",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "external",
+              "evidence_id": "193",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "external",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "根据条件检索而非覆盖成单一值",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-abstention-near-match",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "invalid_response",
+              "check_id": "known-query",
+              "evidence_id": "199",
+              "reason": "Evidence is not the requested structured JSON, or its field is missing.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "known-query",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "missing-field",
+              "evidence_id": "201",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "missing-field",
+              "weight": 1
+            },
+            {
+              "category": "invalid_response",
+              "check_id": "missing-entity",
+              "evidence_id": "203",
+              "reason": "Evidence is not the requested structured JSON, or its field is missing.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "missing-entity",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 0.333333,
+          "score": 0.333333,
+          "statuses": {
+            "fail": 2,
+            "pass": 1
+          },
+          "title": "近似实体存在时拒绝补造未知事实",
+          "trial": 2,
+          "upper_bound": 0.333333
+        },
+        {
+          "case_id": "challenge-scoped-revision",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "updated",
+              "evidence_id": "206",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "updated",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "unchanged",
+              "evidence_id": "208",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "unchanged",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "局部更正不应破坏相邻记录",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-temporary-override",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "during",
+              "evidence_id": "216",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "during",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "after",
+              "evidence_id": "218",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "临时例外到期后恢复长期约定",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-homonym",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "east",
+              "evidence_id": "222",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "east",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "west",
+              "evidence_id": "225",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "west",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "ambiguous",
+              "evidence_id": "226",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "ambiguous",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "同名联系人依据部门消歧",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-version-scope",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "new",
+              "evidence_id": "232",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "new",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "old",
+              "evidence_id": "234",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "old",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "项目改名后仍保留版本边界",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-quoted-override",
+          "check_count": 1,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "protected",
+              "evidence_id": "240",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "protected",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 1
+          },
+          "title": "不可信引文不得覆盖真实记忆",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-selective-delete",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "forgotten",
+              "evidence_id": "247",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "forgotten",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "kept",
+              "evidence_id": "248",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "kept",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "选择性遗忘必须保留仍获授权的信息",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-conditional-artifact",
+          "check_count": 4,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "file",
+              "evidence_id": "251",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "code",
+              "evidence_id": "251",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "audience",
+              "evidence_id": "251",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "action",
+              "evidence_id": "251",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 4
+          },
+          "title": "历史条件约定用于结构化文件交付",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-revised-artifact",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "file",
+              "evidence_id": "258",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "wrong_reuse",
+              "check_id": "content",
+              "evidence_id": "258",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "fail",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "wrong_reuse",
+              "check_id": "action",
+              "evidence_id": "258",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "fail",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 0.333333,
+          "score": 0.333333,
+          "statuses": {
+            "fail": 2,
+            "pass": 1
+          },
+          "title": "更正后的记忆必须落实到实际文件",
+          "trial": 2,
+          "upper_bound": 0.333333
+        }
+      ],
+      "categories": {
+        "confusion": 3,
+        "correct": 54,
+        "execution_error": 3,
+        "invalid_response": 8,
+        "omission": 1,
+        "wrong_reuse": 12
+      },
+      "dimensions": {
+        "boundary": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "upper_bound": 1.0
+        },
+        "disambiguation": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 0.833333,
+          "score": 0.833333,
+          "upper_bound": 0.833333
+        },
+        "retention": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 0.5,
+          "score": 0.5,
+          "upper_bound": 0.5
+        },
+        "retrieval": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 0.611111,
+          "score": 0.611111,
+          "upper_bound": 0.611111
+        },
+        "reuse": {
+          "cases": 6,
+          "coverage": 0.833333,
+          "lower_bound": 0.277778,
+          "score": 0.333333,
+          "upper_bound": 0.444444
+        },
+        "update": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "upper_bound": 1.0
+        }
+      },
+      "evaluated_dimensions": 6,
+      "id": "openclaw",
+      "is_baseline": false,
+      "kind": "openclaw",
+      "label": "OpenClaw 2026.9.8 / DeepSeek Flash",
+      "overall": {
+        "coverage": 0.972222,
+        "lower_bound": 0.703704,
+        "score": 0.712963,
+        "upper_bound": 0.731481
+      },
+      "runtime": {
+        "errors": 2,
+        "latency_p50_ms": 15252.787,
+        "latency_p95_ms": 30819.909,
+        "steps": 129
+      },
+      "stability": {
+        "repeats": 3,
+        "stddev": 0.079651,
+        "trial_lower_bounds": [
+          0.694445,
+          0.611111,
+          0.805556
+        ]
+      }
+    },
+    {
+      "cases": [
+        {
+          "case_id": "challenge-episodic-join",
+          "check_count": 1,
+          "checks": [
+            {
+              "category": "confusion",
+              "check_id": "join",
+              "evidence_id": "5",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "join",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 0.0,
+          "score": 0.0,
+          "statuses": {
+            "fail": 1
+          },
+          "title": "分散消息中的项目与工单关联",
+          "trial": 0,
+          "upper_bound": 0.0
+        },
+        {
+          "case_id": "challenge-negation",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "allowed",
+              "evidence_id": "14",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "allowed",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "forbidden",
+              "evidence_id": "15",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "forbidden",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "记住否定约束而非只记关键词",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-conditional",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "internal",
+              "evidence_id": "19",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "internal",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "external",
+              "evidence_id": "20",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "external",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "根据条件检索而非覆盖成单一值",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-abstention-near-match",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "known-query",
+              "evidence_id": "26",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "known-query",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "missing-field",
+              "evidence_id": "27",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "missing-field",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "missing-entity",
+              "evidence_id": "28",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "missing-entity",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "近似实体存在时拒绝补造未知事实",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-scoped-revision",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "updated",
+              "evidence_id": "36",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "updated",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "unchanged",
+              "evidence_id": "37",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "unchanged",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "局部更正不应破坏相邻记录",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-temporary-override",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "during",
+              "evidence_id": "42",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "during",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "after",
+              "evidence_id": "43",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "临时例外到期后恢复长期约定",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-homonym",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "east",
+              "evidence_id": "51",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "east",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "west",
+              "evidence_id": "52",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "west",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "ambiguous",
+              "evidence_id": "54",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "ambiguous",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "同名联系人依据部门消歧",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-version-scope",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "new",
+              "evidence_id": "58",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "new",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "old",
+              "evidence_id": "60",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "old",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "项目改名后仍保留版本边界",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-quoted-override",
+          "check_count": 1,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "protected",
+              "evidence_id": "67",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "protected",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 1
+          },
+          "title": "不可信引文不得覆盖真实记忆",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-selective-delete",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "wrong_reuse",
+              "check_id": "forgotten",
+              "evidence_id": "72",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "forgotten",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "kept",
+              "evidence_id": "74",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "kept",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 0.5,
+          "score": 0.5,
+          "statuses": {
+            "fail": 1,
+            "pass": 1
+          },
+          "title": "选择性遗忘必须保留仍获授权的信息",
+          "trial": 0,
+          "upper_bound": 0.5
+        },
+        {
+          "case_id": "challenge-conditional-artifact",
+          "check_count": 4,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "file",
+              "evidence_id": "80",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "code",
+              "evidence_id": "80",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "audience",
+              "evidence_id": "80",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "action",
+              "evidence_id": "80",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 4
+          },
+          "title": "历史条件约定用于结构化文件交付",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-revised-artifact",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "file",
+              "evidence_id": "84",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "content",
+              "evidence_id": "84",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "action",
+              "evidence_id": "84",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "更正后的记忆必须落实到实际文件",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-episodic-join",
+          "check_count": 1,
+          "checks": [
+            {
+              "category": "confusion",
+              "check_id": "join",
+              "evidence_id": "92",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "join",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 0.0,
+          "score": 0.0,
+          "statuses": {
+            "fail": 1
+          },
+          "title": "分散消息中的项目与工单关联",
+          "trial": 1,
+          "upper_bound": 0.0
+        },
+        {
+          "case_id": "challenge-negation",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "allowed",
+              "evidence_id": "99",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "allowed",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "forbidden",
+              "evidence_id": "100",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "forbidden",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "记住否定约束而非只记关键词",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-conditional",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "internal",
+              "evidence_id": "105",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "internal",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "external",
+              "evidence_id": "106",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "external",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "根据条件检索而非覆盖成单一值",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-abstention-near-match",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "known-query",
+              "evidence_id": "112",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "known-query",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "missing-field",
+              "evidence_id": "113",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "missing-field",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "missing-entity",
+              "evidence_id": "114",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "missing-entity",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "近似实体存在时拒绝补造未知事实",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-scoped-revision",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "updated",
+              "evidence_id": "121",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "updated",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "unchanged",
+              "evidence_id": "122",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "unchanged",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "局部更正不应破坏相邻记录",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-temporary-override",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "during",
+              "evidence_id": "129",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "during",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "after",
+              "evidence_id": "130",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "临时例外到期后恢复长期约定",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-homonym",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "east",
+              "evidence_id": "135",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "east",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "west",
+              "evidence_id": "137",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "west",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "ambiguous",
+              "evidence_id": "139",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "ambiguous",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "同名联系人依据部门消歧",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-version-scope",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "new",
+              "evidence_id": "144",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "new",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "old",
+              "evidence_id": "146",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "old",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "项目改名后仍保留版本边界",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-quoted-override",
+          "check_count": 1,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "protected",
+              "evidence_id": "154",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "protected",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 1
+          },
+          "title": "不可信引文不得覆盖真实记忆",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-selective-delete",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "wrong_reuse",
+              "check_id": "forgotten",
+              "evidence_id": "159",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "forgotten",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "kept",
+              "evidence_id": "160",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "kept",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 0.5,
+          "score": 0.5,
+          "statuses": {
+            "fail": 1,
+            "pass": 1
+          },
+          "title": "选择性遗忘必须保留仍获授权的信息",
+          "trial": 1,
+          "upper_bound": 0.5
+        },
+        {
+          "case_id": "challenge-conditional-artifact",
+          "check_count": 4,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "file",
+              "evidence_id": "165",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "code",
+              "evidence_id": "165",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "audience",
+              "evidence_id": "165",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "action",
+              "evidence_id": "165",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 4
+          },
+          "title": "历史条件约定用于结构化文件交付",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-revised-artifact",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "file",
+              "evidence_id": "171",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "content",
+              "evidence_id": "171",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "action",
+              "evidence_id": "171",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "更正后的记忆必须落实到实际文件",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-episodic-join",
+          "check_count": 1,
+          "checks": [
+            {
+              "category": "confusion",
+              "check_id": "join",
+              "evidence_id": "179",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "join",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 0.0,
+          "score": 0.0,
+          "statuses": {
+            "fail": 1
+          },
+          "title": "分散消息中的项目与工单关联",
+          "trial": 2,
+          "upper_bound": 0.0
+        },
+        {
+          "case_id": "challenge-negation",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "allowed",
+              "evidence_id": "184",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "allowed",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "forbidden",
+              "evidence_id": "185",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "forbidden",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "记住否定约束而非只记关键词",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-conditional",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "internal",
+              "evidence_id": "192",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "internal",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "external",
+              "evidence_id": "194",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "external",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "根据条件检索而非覆盖成单一值",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-abstention-near-match",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "known-query",
+              "evidence_id": "197",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "known-query",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "missing-field",
+              "evidence_id": "198",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "missing-field",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "missing-entity",
+              "evidence_id": "200",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "missing-entity",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "近似实体存在时拒绝补造未知事实",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-scoped-revision",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "updated",
+              "evidence_id": "209",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "updated",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "unchanged",
+              "evidence_id": "210",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "unchanged",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "局部更正不应破坏相邻记录",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-temporary-override",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "during",
+              "evidence_id": "215",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "during",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "after",
+              "evidence_id": "217",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "临时例外到期后恢复长期约定",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-homonym",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "east",
+              "evidence_id": "221",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "east",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "west",
+              "evidence_id": "223",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "west",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "ambiguous",
+              "evidence_id": "224",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "ambiguous",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "同名联系人依据部门消歧",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-version-scope",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "new",
+              "evidence_id": "231",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "new",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "old",
+              "evidence_id": "233",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "old",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "项目改名后仍保留版本边界",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-quoted-override",
+          "check_count": 1,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "protected",
+              "evidence_id": "239",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "protected",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 1
+          },
+          "title": "不可信引文不得覆盖真实记忆",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-selective-delete",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "wrong_reuse",
+              "check_id": "forgotten",
+              "evidence_id": "245",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "forgotten",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "kept",
+              "evidence_id": "246",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "kept",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 0.5,
+          "score": 0.5,
+          "statuses": {
+            "fail": 1,
+            "pass": 1
+          },
+          "title": "选择性遗忘必须保留仍获授权的信息",
+          "trial": 2,
+          "upper_bound": 0.5
+        },
+        {
+          "case_id": "challenge-conditional-artifact",
+          "check_count": 4,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "file",
+              "evidence_id": "252",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "code",
+              "evidence_id": "252",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "audience",
+              "evidence_id": "252",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "action",
+              "evidence_id": "252",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 4
+          },
+          "title": "历史条件约定用于结构化文件交付",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "challenge-revised-artifact",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "file",
+              "evidence_id": "256",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "content",
+              "evidence_id": "256",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "action",
+              "evidence_id": "256",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "更正后的记忆必须落实到实际文件",
+          "trial": 2,
+          "upper_bound": 1.0
+        }
+      ],
+      "categories": {
+        "confusion": 3,
+        "correct": 75,
+        "wrong_reuse": 3
+      },
+      "dimensions": {
+        "boundary": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 0.75,
+          "score": 0.75,
+          "upper_bound": 0.75
+        },
+        "disambiguation": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "upper_bound": 1.0
+        },
+        "retention": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 0.5,
+          "score": 0.5,
+          "upper_bound": 0.5
+        },
+        "retrieval": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "upper_bound": 1.0
+        },
+        "reuse": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "upper_bound": 1.0
+        },
+        "update": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "upper_bound": 1.0
+        }
+      },
+      "evaluated_dimensions": 6,
+      "id": "hermes",
+      "is_baseline": false,
+      "kind": "hermes",
+      "label": "Hermes 4b8a437 / DeepSeek Flash",
+      "overall": {
+        "coverage": 1.0,
+        "lower_bound": 0.875,
+        "score": 0.875,
+        "upper_bound": 0.875
+      },
+      "runtime": {
+        "errors": 0,
+        "latency_p50_ms": 8476.684,
+        "latency_p95_ms": 18745.943,
+        "steps": 129
+      },
+      "stability": {
+        "repeats": 3,
+        "stddev": 0.0,
+        "trial_lower_bounds": [
+          0.875,
+          0.875,
+          0.875
+        ]
+      }
+    }
+  ],
+  "dataset_sha256": "12aee151ac934ac885bd90a2a5c7d18f5f061a72b788a81aa734c2033627c73a",
+  "method": "Equal dimension macro average of equal case/trial weighted-check scores; unknown/error remain in coverage bounds.",
+  "run_id": "23b54cdd-32a1-430b-b749-e0e8adadfff4",
+  "run_status": "completed_with_errors",
+  "schema_version": "1.0",
+  "scorer_version": "1.0"
+}

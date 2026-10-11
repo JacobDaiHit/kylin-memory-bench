@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+runs/
+tmp/
+.coverage
+.env
+*.local.json
+
+# Private inputs and mutable native agent workspaces
+.env.*
+!.env.example
+examples/*/workspaces/
+docs/evidence/account-balance-final.json
+/ai_open_kylin_open_kylin_benchmark_XaCQyZepC8.pdf
+
+# Publish only the reviewed PDF and package validation log from output
+/output/*
+!/output/pdf/
+/output/pdf/*
+!/output/pdf/KylinMemoryBench-technical-report.pdf
+!/output/validation/
+/output/validation/*
+!/output/validation/package-lifecycle.log

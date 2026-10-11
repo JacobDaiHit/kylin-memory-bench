@@ -1,0 +1,74 @@
+{
+  "recorded_at": "2026-10-03T06:28:53.428025+00:00",
+  "platform": {
+    "system": "Linux",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "machine": "x86_64",
+    "python": "3.12.2",
+    "os_release": {
+      "ID": "openkylin",
+      "PRETTY_NAME": "openKylin 2.0 SP1",
+      "VERSION_ID": "2.0"
+    },
+    "is_openkylin": true,
+    "execution_context": "wsl2"
+  },
+  "processor": "x86_64",
+  "sqlite": "3.42.0",
+  "rootfs_source": {
+    "url": "https://gitee.com/openkylin/openkylin-wsl.git",
+    "commit": "d0fc936df6069e2dd32ae6747ef186236c632f3c",
+    "sha256": "980e03db542d75c799cd26a3ee34ac5144ee1fcb2fc6bbfcec5ab641f20e00e0",
+    "bytes": 88798056
+  },
+  "packages": {
+    "command": [
+      "dpkg-query",
+      "-W",
+      "-f=${Package}\t${Version}\n",
+      "python3",
+      "sqlite3",
+      "libc6",
+      "libzstd1",
+      "ukui-desktop-environment-core",
+      "ukui-session-manager",
+      "ukui-panel",
+      "peony",
+      "kwin-x11",
+      "xvfb",
+      "x11vnc",
+      "novnc",
+      "firefox"
+    ],
+    "exit_code": 0,
+    "stdout": "firefox\t125.0.3+build1-ok7.1\nkwin-x11\t4:5.24.4-ok10.1\nlibc6\t2.38-1ok6.9\nlibzstd1\t1.5.5-ok3\nnovnc\t1:1.3.0-ok1\npeony\t4.10.0.5-ok2~0523.1\npython3\t3.12.2-ok1\nsqlite3\t3.42.0-ok1\nukui-desktop-environment-core\t4.10.0.0-ok2\nukui-panel\t4.10.4.3-ok0.17\nukui-session-manager\t4.0.0.0-ok32\nx11vnc\t0.9.16-ok1\nxvfb\t2:21.1.10-ok3",
+    "stderr": ""
+  },
+  "openclaw": {
+    "command": [
+      "/home/maedaily/.local/share/kmb-live/openclaw/bin/openclaw",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "OpenClaw 2026.9.8 (fc23bc8)",
+    "stderr": ""
+  },
+  "hermes_commit": {
+    "revision": "4b8a43719b2a259cea88a72f9f13a2b6962e7ac3",
+    "source": "Read checkout git metadata; no new git installation"
+  },
+  "apt_sources": {
+    "/etc/apt/sources.list": "deb http://archive.build.openkylin.top/openkylin nile main cross pty\n\ndeb http://archive.build.openkylin.top/openkylin nile-security main cross pty\n\ndeb http://archive.build.openkylin.top/openkylin nile-updates main cross pty\n\ndeb http://archive.build.openkylin.top/openkylin nile-proposed main cross pty\n\ndeb http://ppa.build.openkylin.top/kylinsoft/anything/openkylin/ nile main\n",
+    "/etc/apt/sources.list.d/openkylin-anything.list": "deb http://ppa.build.openkylin.top/kylinsoft/anything2.0/openkylin/ nile main\n"
+  },
+  "desktop": {
+    "type": "UKUI components on Xvfb via local noVNC",
+    "display": ":14",
+    "pixels": [
+      1600,
+      900
+    ],
+    "scope": "Real openKylin userland on WSL2; not bare-metal boot, login-manager or kernel certification.",
+    "script": "scripts/start_desktop.sh"
+  }
+}

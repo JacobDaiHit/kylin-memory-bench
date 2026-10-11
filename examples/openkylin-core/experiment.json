@@ -1,0 +1,104 @@
+{
+  "audit_counts": {
+    "completion": 2237,
+    "finished": 1,
+    "rejected": 11,
+    "start": 1
+  },
+  "cases": 36,
+  "dataset_sha256": "65b84203c8c2c3b6c7826be1b65742e0ad64c1b023b04f3c4de37a64393ac573",
+  "environment": {
+    "execution_context": "wsl2",
+    "is_openkylin": true,
+    "machine": "x86_64",
+    "os_release": {
+      "ID": "openkylin",
+      "PRETTY_NAME": "openKylin 2.0 SP1",
+      "VERSION_ID": "2.0"
+    },
+    "python": "3.12.2",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "system": "Linux"
+  },
+  "events": 1008,
+  "execution_errors": 19,
+  "implementation_sha256": "a3840b2d3e8582080f9ffe22f8114fe36c513f88e3364d3906e47c79699d61a2",
+  "model": "deepseek-flash",
+  "native_versions": {
+    "hermes_commit": "4b8a43719b2a259cea88a72f9f13a2b6962e7ac3",
+    "openclaw": "2026.9.8 (fc23bc8)"
+  },
+  "network_or_guard_failures": [
+    {
+      "at": "2026-10-03T05:56:16.936549+00:00",
+      "event": "rejected",
+      "reason": "DeepSeek network request failed"
+    },
+    {
+      "at": "2026-10-03T06:03:07.847681+00:00",
+      "event": "rejected",
+      "reason": "DeepSeek network request failed"
+    },
+    {
+      "at": "2026-10-03T06:03:13.042976+00:00",
+      "event": "rejected",
+      "reason": "DeepSeek network request failed"
+    },
+    {
+      "at": "2026-10-03T06:03:33.691178+00:00",
+      "event": "rejected",
+      "reason": "DeepSeek network request failed"
+    },
+    {
+      "at": "2026-10-03T06:03:56.236747+00:00",
+      "event": "rejected",
+      "reason": "DeepSeek network request failed"
+    },
+    {
+      "at": "2026-10-03T06:04:25.791671+00:00",
+      "event": "rejected",
+      "reason": "DeepSeek network request failed"
+    },
+    {
+      "at": "2026-10-03T06:12:26.314244+00:00",
+      "event": "rejected",
+      "reason": "DeepSeek network request failed"
+    },
+    {
+      "at": "2026-10-03T06:14:20.730457+00:00",
+      "event": "rejected",
+      "reason": "DeepSeek network request failed"
+    },
+    {
+      "at": "2026-10-03T06:14:27.539712+00:00",
+      "event": "rejected",
+      "reason": "DeepSeek network request failed"
+    },
+    {
+      "at": "2026-10-03T06:22:59.230605+00:00",
+      "event": "rejected",
+      "reason": "The read operation timed out"
+    },
+    {
+      "at": "2026-10-03T06:35:48.185992+00:00",
+      "event": "rejected",
+      "reason": "DeepSeek network request failed"
+    }
+  ],
+  "parameters": {
+    "max_tokens": 2048,
+    "temperature": 0,
+    "thinking": "disabled"
+  },
+  "presentation_note": "HTML/SVG regenerated with delivery source; original evidence and scores unchanged.",
+  "repeats": 3,
+  "retry_policy": "No selective rerun or replacement of failed cases.",
+  "run_id": "dc318856-004f-4b1c-9910-2ab94d6b2633",
+  "usage": {
+    "completion_tokens": 141685,
+    "prompt_cache_hit_tokens": 10261120,
+    "prompt_cache_miss_tokens": 2768779,
+    "prompt_tokens": 13029899,
+    "total_tokens": 13171584
+  }
+}

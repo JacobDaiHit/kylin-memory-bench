@@ -1,0 +1,10 @@
+{
+  "run_id": "dc318856-004f-4b1c-9910-2ab94d6b2633",
+  "upstream_attempts": 2245,
+  "upstream_completed_counter_delta": 2242,
+  "audit_completion_events": 2237,
+  "completion_events_missing_after_postflight_balance_errors": 5,
+  "explanation": "Frozen proxy updated completion counter and usage before the post-flight balance lookup, but logged completion afterward. A failed lookup could discard the result and omit its completion audit event. All benchmark execution failures remain unchanged. Recorded audit usage is therefore a partial total.",
+  "delivered_fix": "Persist and audit paid result before balance refresh; preserve result on post-flight lookup failure; next paid call still requires fresh pre-flight balance. Fault-injection test included.",
+  "frozen_source_preserved": true
+}

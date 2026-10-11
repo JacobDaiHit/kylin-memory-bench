@@ -1,0 +1,32 @@
+name: benchmark-ci
+on: [push, pull_request]
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ['3.9', '3.12']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m unittest discover -s tests -v
+      - run: python -m kylin_memory_bench demo --output runs/ci --repeats 3 --quiet
+      - run: python -m kylin_memory_bench verify runs/ci
+      - run: python scripts/build_release.py
+      - if: runner.os == 'Linux'
+        run: |
+          version=$(python -c 'from kylin_memory_bench import __version__; print(__version__)')
+          dpkg-deb --info "dist/kylin-memory-bench_${version}_all.deb"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: evidence-${{ matrix.os }}-${{ matrix.python }}
+          path: |
+            runs/ci/*.json
+            runs/ci/*.jsonl
+            runs/ci/*.html
+            runs/ci/*.svg
+            runs/ci/*.csv
+            dist/*

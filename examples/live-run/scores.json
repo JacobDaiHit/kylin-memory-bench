@@ -1,0 +1,719 @@
+{
+  "agents": [
+    {
+      "cases": [
+        {
+          "case_id": "retention-001-224906",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "written",
+              "evidence_id": "1",
+              "reason": "Deterministic contains check on memory evidence.",
+              "source": "memory",
+              "status": "pass",
+              "step_id": "learn",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "retained",
+              "evidence_id": "5",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "persisted",
+              "evidence_id": "5",
+              "reason": "Deterministic contains check on memory evidence.",
+              "source": "memory",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "跨会话与干扰后的稳定偏好",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "retrieval-001-224906",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "retrieved",
+              "evidence_id": "8",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "abstained",
+              "evidence_id": "9",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "unknown",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "按项目与字段检索并拒绝未知事实",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "update-001-224906",
+          "check_count": 4,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "updated",
+              "evidence_id": "12",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "new-store",
+              "evidence_id": "12",
+              "reason": "Deterministic contains check on memory evidence.",
+              "source": "memory",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "deleted",
+              "evidence_id": "13",
+              "reason": "Value absent from a partial snapshot; absence cannot establish store contents.",
+              "source": "memory",
+              "status": "unknown",
+              "step_id": "forget",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "not-reused",
+              "evidence_id": "14",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-delete",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.75,
+          "dimension": "update",
+          "lower_bound": 0.75,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3,
+            "unknown": 1
+          },
+          "title": "更正信息、覆盖旧值并处理撤销",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "disambiguation-001-224906",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "scope-a",
+              "evidence_id": "17",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall-a",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "scope-b",
+              "evidence_id": "18",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall-b",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "相似项目名、相同字段的隔离",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "boundary-001-224906",
+          "check_count": 4,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "not-stored-immediately",
+              "evidence_id": "20",
+              "reason": "Value absent from a partial snapshot; absence cannot establish store contents.",
+              "source": "memory",
+              "status": "unknown",
+              "step_id": "boundary",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "not-reused",
+              "evidence_id": "21",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "not-stored-later",
+              "evidence_id": "21",
+              "reason": "Value absent from a partial snapshot; absence cannot establish store contents.",
+              "source": "memory",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "useful-memory-kept",
+              "evidence_id": "22",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "positive-control",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.5,
+          "dimension": "boundary",
+          "lower_bound": 0.5,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2,
+            "unknown": 2
+          },
+          "title": "临时信息不应持久化",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "reuse-001-224906",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "artifact-created",
+              "evidence_id": "28",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "artifact-content",
+              "evidence_id": "28",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "action-trace",
+              "evidence_id": "28",
+              "reason": "No structured action trace is available.",
+              "source": "actions",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.666667,
+          "dimension": "reuse",
+          "lower_bound": 0.666667,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2,
+            "unknown": 1
+          },
+          "title": "历史输出路径和模板用于真实文件任务",
+          "trial": 0,
+          "upper_bound": 1.0
+        }
+      ],
+      "categories": {
+        "correct": 14,
+        "insufficient_evidence": 4
+      },
+      "dimensions": {
+        "boundary": {
+          "cases": 1,
+          "coverage": 0.5,
+          "lower_bound": 0.5,
+          "score": 1.0,
+          "upper_bound": 1.0
+        },
+        "disambiguation": {
+          "cases": 1,
+          "coverage": 1.0,
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "upper_bound": 1.0
+        },
+        "retention": {
+          "cases": 1,
+          "coverage": 1.0,
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "upper_bound": 1.0
+        },
+        "retrieval": {
+          "cases": 1,
+          "coverage": 1.0,
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "upper_bound": 1.0
+        },
+        "reuse": {
+          "cases": 1,
+          "coverage": 0.666667,
+          "lower_bound": 0.666667,
+          "score": 1.0,
+          "upper_bound": 1.0
+        },
+        "update": {
+          "cases": 1,
+          "coverage": 0.75,
+          "lower_bound": 0.75,
+          "score": 1.0,
+          "upper_bound": 1.0
+        }
+      },
+      "evaluated_dimensions": 6,
+      "id": "openclaw",
+      "is_baseline": false,
+      "kind": "openclaw",
+      "label": "OpenClaw 2026.9.8 / DeepSeek Flash",
+      "overall": {
+        "coverage": 0.819445,
+        "lower_bound": 0.819445,
+        "score": 1.0,
+        "upper_bound": 1.0
+      },
+      "runtime": {
+        "errors": 0,
+        "latency_p50_ms": 13621.424,
+        "latency_p95_ms": 19195.313,
+        "steps": 28
+      },
+      "stability": {
+        "repeats": 1,
+        "stddev": null,
+        "trial_lower_bounds": [
+          0.819445
+        ]
+      }
+    },
+    {
+      "cases": [
+        {
+          "case_id": "retention-001-224906",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "written",
+              "evidence_id": "29",
+              "reason": "Deterministic contains check on memory evidence.",
+              "source": "memory",
+              "status": "pass",
+              "step_id": "learn",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "retained",
+              "evidence_id": "33",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "persisted",
+              "evidence_id": "33",
+              "reason": "Deterministic contains check on memory evidence.",
+              "source": "memory",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "跨会话与干扰后的稳定偏好",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "retrieval-001-224906",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "retrieved",
+              "evidence_id": "36",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "abstained",
+              "evidence_id": "37",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "unknown",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "按项目与字段检索并拒绝未知事实",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "update-001-224906",
+          "check_count": 4,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "updated",
+              "evidence_id": "40",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "new-store",
+              "evidence_id": "40",
+              "reason": "Deterministic contains check on memory evidence.",
+              "source": "memory",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "deleted",
+              "evidence_id": "41",
+              "reason": "Value absent from a partial snapshot; absence cannot establish store contents.",
+              "source": "memory",
+              "status": "unknown",
+              "step_id": "forget",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "not-reused",
+              "evidence_id": "42",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-delete",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.75,
+          "dimension": "update",
+          "lower_bound": 0.75,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3,
+            "unknown": 1
+          },
+          "title": "更正信息、覆盖旧值并处理撤销",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "disambiguation-001-224906",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "scope-a",
+              "evidence_id": "45",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall-a",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "scope-b",
+              "evidence_id": "46",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall-b",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "相似项目名、相同字段的隔离",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "boundary-001-224906",
+          "check_count": 4,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "not-stored-immediately",
+              "evidence_id": "48",
+              "reason": "Value absent from a partial snapshot; absence cannot establish store contents.",
+              "source": "memory",
+              "status": "unknown",
+              "step_id": "boundary",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "not-reused",
+              "evidence_id": "49",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "not-stored-later",
+              "evidence_id": "49",
+              "reason": "Value absent from a partial snapshot; absence cannot establish store contents.",
+              "source": "memory",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "useful-memory-kept",
+              "evidence_id": "50",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "positive-control",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.5,
+          "dimension": "boundary",
+          "lower_bound": 0.5,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2,
+            "unknown": 2
+          },
+          "title": "临时信息不应持久化",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "reuse-001-224906",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "artifact-created",
+              "evidence_id": "56",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "artifact-content",
+              "evidence_id": "56",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "action-trace",
+              "evidence_id": "56",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "历史输出路径和模板用于真实文件任务",
+          "trial": 0,
+          "upper_bound": 1.0
+        }
+      ],
+      "categories": {
+        "correct": 15,
+        "insufficient_evidence": 3
+      },
+      "dimensions": {
+        "boundary": {
+          "cases": 1,
+          "coverage": 0.5,
+          "lower_bound": 0.5,
+          "score": 1.0,
+          "upper_bound": 1.0
+        },
+        "disambiguation": {
+          "cases": 1,
+          "coverage": 1.0,
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "upper_bound": 1.0
+        },
+        "retention": {
+          "cases": 1,
+          "coverage": 1.0,
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "upper_bound": 1.0
+        },
+        "retrieval": {
+          "cases": 1,
+          "coverage": 1.0,
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "upper_bound": 1.0
+        },
+        "reuse": {
+          "cases": 1,
+          "coverage": 1.0,
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "upper_bound": 1.0
+        },
+        "update": {
+          "cases": 1,
+          "coverage": 0.75,
+          "lower_bound": 0.75,
+          "score": 1.0,
+          "upper_bound": 1.0
+        }
+      },
+      "evaluated_dimensions": 6,
+      "id": "hermes",
+      "is_baseline": false,
+      "kind": "hermes",
+      "label": "Hermes 4b8a437 / DeepSeek Flash",
+      "overall": {
+        "coverage": 0.875,
+        "lower_bound": 0.875,
+        "score": 1.0,
+        "upper_bound": 1.0
+      },
+      "runtime": {
+        "errors": 0,
+        "latency_p50_ms": 6674.472,
+        "latency_p95_ms": 10379.759,
+        "steps": 28
+      },
+      "stability": {
+        "repeats": 1,
+        "stddev": null,
+        "trial_lower_bounds": [
+          0.875
+        ]
+      }
+    }
+  ],
+  "dataset_sha256": "95763e8b6c485ba313162038d67f3ad9b84256cf31abea926dd14dbb7c6b19c1",
+  "method": "Equal dimension macro average of equal case/trial weighted-check scores; unknown/error remain in coverage bounds.",
+  "run_id": "12d24f12-b194-4681-a5e7-5a10594a062d",
+  "run_status": "completed",
+  "schema_version": "1.0",
+  "scorer_version": "1.0"
+}

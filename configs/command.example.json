@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0",
+  "agents": [
+    {"id": "custom", "label": "Custom agent", "kind": "command",
+     "command": ["{python}", "/absolute/path/to/agent_bridge.py"], "timeout": 120,
+     "env_allow": []}
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "agents": [
+    {
+      "id": "openclaw",
+      "original": {
+        "coverage": 0.972222,
+        "lower_bound": 0.703704,
+        "score": 0.712963,
+        "upper_bound": 0.731481
+      },
+      "reviewed": {
+        "coverage": 0.972222,
+        "lower_bound": 0.787037,
+        "score": 0.796296,
+        "upper_bound": 0.814815
+      }
+    },
+    {
+      "id": "hermes",
+      "original": {
+        "coverage": 1.0,
+        "lower_bound": 0.875,
+        "score": 0.875,
+        "upper_bound": 0.875
+      },
+      "reviewed": {
+        "coverage": 1.0,
+        "lower_bound": 0.958333,
+        "score": 0.958333,
+        "upper_bound": 0.958333
+      }
+    }
+  ],
+  "changed_checks": [
+    {
+      "agent_id": "openclaw",
+      "event_id": "9",
+      "from": "fail",
+      "to": "pass",
+      "trial": 0
+    },
+    {
+      "agent_id": "openclaw",
+      "event_id": "88",
+      "from": "fail",
+      "to": "pass",
+      "trial": 1
+    },
+    {
+      "agent_id": "openclaw",
+      "event_id": "180",
+      "from": "fail",
+      "to": "pass",
+      "trial": 2
+    },
+    {
+      "agent_id": "hermes",
+      "event_id": "5",
+      "from": "fail",
+      "to": "pass",
+      "trial": 0
+    },
+    {
+      "agent_id": "hermes",
+      "event_id": "92",
+      "from": "fail",
+      "to": "pass",
+      "trial": 1
+    },
+    {
+      "agent_id": "hermes",
+      "event_id": "179",
+      "from": "fail",
+      "to": "pass",
+      "trial": 2
+    }
+  ],
+  "changed_rule": {
+    "case_id": "challenge-episodic-join",
+    "op": "one_of",
+    "step_id": "join",
+    "value": [
+      "松柏",
+      "松柏项目"
+    ]
+  },
+  "evidence_chain_head": "a8d391be8405f2c062540d506de8c722ba951d69efa0266777188ebea7f5c015",
+  "kind": "post_experiment_annotation_correction",
+  "original_dataset_sha256": "12aee151ac934ac885bd90a2a5c7d18f5f061a72b788a81aa734c2033627c73a",
+  "reason": "此页为答案标注订正版：松柏与松柏项目作为显式等价答案。只修正一个检查，六次误判改为通过；全部原始提示、回答、文件、执行错误和其他检查保持原样。订正是在实测后发现问题并统一应用，不是新的模型实验。",
+  "reviewed_dataset_sha256": "d774456276d73e48b10674224a5fb9e6020ea6a5b83336a566a013563d0f8ac0",
+  "schema_version": "1.0",
+  "source_run_id": "23b54cdd-32a1-430b-b749-e0e8adadfff4"
+}

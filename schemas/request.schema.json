@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "KMB adapter request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol_version",
+    "session_id",
+    "day",
+    "prompt",
+    "workspace"
+  ],
+  "properties": {
+    "protocol_version": {
+      "const": "1.0"
+    },
+    "session_id": {
+      "type": "string"
+    },
+    "day": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "prompt": {
+      "type": "string"
+    },
+    "workspace": {
+      "type": "string"
+    }
+  }
+}

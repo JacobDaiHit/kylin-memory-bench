@@ -1,0 +1,72 @@
+test_command_persists_workspace_state_across_processes (test_adapters.AdapterTests.test_command_persists_workspace_state_across_processes) ... ok
+test_command_protocol_is_utf8_and_has_no_shell_expansion (test_adapters.AdapterTests.test_command_protocol_is_utf8_and_has_no_shell_expansion) ... ok
+test_config_duplicate_ids_shell_strings_and_invalid_timeout (test_adapters.AdapterTests.test_config_duplicate_ids_shell_strings_and_invalid_timeout) ... ok
+test_environment_is_isolated_and_allowlisted (test_adapters.AdapterTests.test_environment_is_isolated_and_allowlisted) ... ok
+test_hermes_missing_dependency_home_fails_without_installing (test_adapters.AdapterTests.test_hermes_missing_dependency_home_fails_without_installing) ... ok
+test_hermes_requires_successful_terminal_record (test_adapters.AdapterTests.test_hermes_requires_successful_terminal_record) ... ok
+test_hermes_shares_only_dependency_installations (test_adapters.AdapterTests.test_hermes_shares_only_dependency_installations) ... skipped 'Hermes dependency links require POSIX symlinks'
+test_hermes_stream_session_resume_and_boundaries (test_adapters.AdapterTests.test_hermes_stream_session_resume_and_boundaries) ... ok
+test_malformed_response_rejected (test_adapters.AdapterTests.test_malformed_response_rejected) ... ok
+test_openclaw_envelopes_and_unknown_actions (test_adapters.AdapterTests.test_openclaw_envelopes_and_unknown_actions) ... ok
+test_openclaw_errors_rejected_even_when_process_exit_zero (test_adapters.AdapterTests.test_openclaw_errors_rejected_even_when_process_exit_zero) ... ok
+test_openclaw_malformed_envelopes_are_actionable_errors (test_adapters.AdapterTests.test_openclaw_malformed_envelopes_are_actionable_errors) ... ok
+test_snapshot_partial_by_default_and_unreadable_not_complete (test_adapters.AdapterTests.test_snapshot_partial_by_default_and_unreadable_not_complete) ... ok
+test_timeout_and_failure_and_bounded_output (test_adapters.AdapterTests.test_timeout_and_failure_and_bounded_output) ... ok
+test_bad_json_is_actionable_exit (test_cli_release.CLITests.test_bad_json_is_actionable_exit) ... ok
+test_compare_rejects_different_datasets_and_writes_source_index (test_cli_release.CLITests.test_compare_rejects_different_datasets_and_writes_source_index) ... ok
+test_doctor_does_not_claim_openkylin_without_detection (test_cli_release.CLITests.test_doctor_does_not_claim_openkylin_without_detection) ... ok
+test_generate_validate_and_no_overwrite (test_cli_release.CLITests.test_generate_validate_and_no_overwrite) ... ok
+test_native_missing_executable_returns_three (test_cli_release.CLITests.test_native_missing_executable_returns_three) ... ok
+test_deb_is_reproducible_and_contains_runtime_data (test_cli_release.ReleaseTests.test_deb_is_reproducible_and_contains_runtime_data) ... ok
+test_persistent_permission_error_is_bounded_and_original_survives (test_core.AtomicWriteTests.test_persistent_permission_error_is_bounded_and_original_survives) ... ok
+test_transient_windows_replace_is_retried_without_losing_data (test_core.AtomicWriteTests.test_transient_windows_replace_is_retried_without_losing_data) ... ok
+test_duplicate_case_id_and_invalid_json (test_core.DatasetTests.test_duplicate_case_id_and_invalid_json) ... ok
+test_generator_is_reproducible_and_seed_sensitive (test_core.DatasetTests.test_generator_is_reproducible_and_seed_sensitive) ... ok
+test_path_containment (test_core.DatasetTests.test_path_containment) ... ok
+test_rejects_invalid_cases (test_core.DatasetTests.test_rejects_invalid_cases) ... ok
+test_round_trip (test_core.DatasetTests.test_round_trip) ... ok
+test_single_session_is_not_long_term (test_core.DatasetTests.test_single_session_is_not_long_term) ... ok
+test_six_dimensions_and_four_evidence_sources (test_core.DatasetTests.test_six_dimensions_and_four_evidence_sources) ... ok
+test_symlink_rejected (test_core.DatasetTests.test_symlink_rejected) ... skipped 'Symlink creation not permitted on this host'
+test_actions_require_actual_trace (test_core.ScoringTests.test_actions_require_actual_trace) ... ok
+test_artifact_must_exist (test_core.ScoringTests.test_artifact_must_exist) ... ok
+test_bounds_keep_unknowns_in_denominator (test_core.ScoringTests.test_bounds_keep_unknowns_in_denominator) ... ok
+test_fenced_json_allowed_but_commentary_not (test_core.ScoringTests.test_fenced_json_allowed_but_commentary_not) ... ok
+test_positive_partial_memory (test_core.ScoringTests.test_positive_partial_memory) ... ok
+test_runtime_error_is_not_memory_failure (test_core.ScoringTests.test_runtime_error_is_not_memory_failure) ... ok
+test_structured_equality_prevents_negated_keyword_false_positive (test_core.ScoringTests.test_structured_equality_prevents_negated_keyword_false_positive) ... ok
+test_type_strictness_and_omission (test_core.ScoringTests.test_type_strictness_and_omission) ... ok
+test_unknown_is_not_failure_or_success (test_core.ScoringTests.test_unknown_is_not_failure_or_success) ... ok
+test_audit_contains_no_credentials_or_prompt (test_live_deepseek.LiveGuardTests.test_audit_contains_no_credentials_or_prompt) ... ok
+test_budget_lock_excludes_concurrent_experiments_and_releases (test_live_deepseek.LiveGuardTests.test_budget_lock_excludes_concurrent_experiments_and_releases) ... ok
+test_budget_rejects_before_paid_request (test_live_deepseek.LiveGuardTests.test_budget_rejects_before_paid_request) ... ok
+test_controls_and_cached_cost_bound (test_live_deepseek.LiveGuardTests.test_controls_and_cached_cost_bound) ... ok
+test_existing_ledger_is_not_reset (test_live_deepseek.LiveGuardTests.test_existing_ledger_is_not_reset) ... ok
+test_failed_request_keeps_reserved_budget (test_live_deepseek.LiveGuardTests.test_failed_request_keeps_reserved_budget) ... ok
+test_fixed_model_and_call_count (test_live_deepseek.LiveGuardTests.test_fixed_model_and_call_count) ... ok
+test_postflight_balance_failure_preserves_paid_response_and_next_call_still_checks_budget (test_live_deepseek.LiveGuardTests.test_postflight_balance_failure_preserves_paid_response_and_next_call_still_checks_budget) ... ok
+test_sse_carries_tool_arguments_and_usage (test_live_deepseek.LiveGuardTests.test_sse_carries_tool_arguments_and_usage) ... ok
+test_cases_overlap_without_overlapping_turns_of_one_adapter (test_parallel_trace.ParallelTests.test_cases_overlap_without_overlapping_turns_of_one_adapter) ... ok
+test_parallel_cases_match_serial_scores_and_each_chain_verifies (test_parallel_trace.ParallelTests.test_parallel_cases_match_serial_scores_and_each_chain_verifies) ... ok
+test_unexpected_worker_failure_does_not_deadlock (test_parallel_trace.ParallelTests.test_unexpected_worker_failure_does_not_deadlock) ... ok
+test_missing_database_stays_unknown (test_parallel_trace.TraceTests.test_missing_database_stays_unknown) ... ok
+test_native_compressed_rows_decode_and_corrupt_or_oversized_rows_fail_closed (test_parallel_trace.TraceTests.test_native_compressed_rows_decode_and_corrupt_or_oversized_rows_fail_closed) ... ok
+test_native_rows_are_session_and_turn_scoped_and_failed_calls_cannot_pass (test_parallel_trace.TraceTests.test_native_rows_are_session_and_turn_scoped_and_failed_calls_cannot_pass) ... ok
+test_adapter_error_stops_case_and_preserves_other_cases (test_runner.RunnerTests.test_adapter_error_stops_case_and_preserves_other_cases) ... ok
+test_duplicate_steps_rejected (test_runner.RunnerTests.test_duplicate_steps_rejected) ... ok
+test_end_to_end_baselines_distinguish_capability (test_runner.RunnerTests.test_end_to_end_baselines_distinguish_capability) ... ok
+test_evidence_verifies_and_report_outputs_exist (test_runner.RunnerTests.test_evidence_verifies_and_report_outputs_exist) ... ok
+test_html_escapes_untrusted_labels (test_runner.RunnerTests.test_html_escapes_untrusted_labels) ... ok
+test_never_overwrite_a_run (test_runner.RunnerTests.test_never_overwrite_a_run) ... ok
+test_new_sessions_and_no_cross_case_leak (test_runner.RunnerTests.test_new_sessions_and_no_cross_case_leak) ... ok
+test_no_gold_is_sent_to_adapter (test_runner.RunnerTests.test_no_gold_is_sent_to_adapter) ... ok
+test_tampered_evidence_and_scores_rejected (test_runner.RunnerTests.test_tampered_evidence_and_scores_rejected) ... ok
+test_alias_contract_rejects_unbounded_and_non_scalar_sets (test_submission.SubmissionTests.test_alias_contract_rejects_unbounded_and_non_scalar_sets) ... ok
+test_challenge_generation_is_reproducible_and_seed_changes_facts (test_submission.SubmissionTests.test_challenge_generation_is_reproducible_and_seed_changes_facts) ... ok
+test_evidence_inspector_cannot_break_out_of_embedded_json (test_submission.SubmissionTests.test_evidence_inspector_cannot_break_out_of_embedded_json) ... ok
+test_explicit_project_aliases_reject_wrong_and_malformed_answers (test_submission.SubmissionTests.test_explicit_project_aliases_reject_wrong_and_malformed_answers) ... ok
+
+----------------------------------------------------------------------
+Ran 67 tests in 8.434s
+
+OK (skipped=2)

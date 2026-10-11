@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "agents": [
+    {
+      "id": "openclaw", "label": "OpenClaw (configure a model before running)",
+      "kind": "openclaw", "executable": "openclaw", "timeout": 180,
+      "model": "REPLACE_PROVIDER/REPLACE_MODEL",
+      "env_allow": ["OPENAI_API_KEY", "ANTHROPIC_API_KEY", "OPENROUTER_API_KEY"],
+      "memory_complete": false,
+      "native_config": {}
+    },
+    {
+      "id": "hermes", "label": "Hermes (configure a model before running)",
+      "kind": "hermes", "executable": "hermes", "timeout": 180,
+      "model": "REPLACE_MODEL", "provider": "REPLACE_PROVIDER",
+      "env_allow": ["OPENAI_API_KEY", "ANTHROPIC_API_KEY", "OPENROUTER_API_KEY"],
+      "memory_complete": false,
+      "native_config": {}
+    }
+  ]
+}

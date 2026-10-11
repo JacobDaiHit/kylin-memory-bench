@@ -1,0 +1,3 @@
+# Preserve recorded evidence and frozen source bytes on every platform.
+* -text
+*.sh text eol=lf

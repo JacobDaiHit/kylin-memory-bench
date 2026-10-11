@@ -1,0 +1,37 @@
+{
+  "reviewed_at_utc": "2026-10-03T08:00:40.647697+00:00",
+  "technical_pdf": {
+    "path": "output/pdf/KylinMemoryBench-technical-report.pdf",
+    "pages": 16,
+    "sha256": "34633f6b8c201f229ba3c81e3e2f3751f47acf6a21dc8f9d93a1614d6ab05bf8",
+    "method": "All 16 pages rendered with bundled Poppler and visually inspected; changed pages re-rendered after corrections. Checked Chinese glyphs, table layout, two radar charts, page numbers and source/reviewed fingerprints."
+  },
+  "browser_checks": [
+    {
+      "page": "core report",
+      "filter": "openclaw / reuse / pass",
+      "observed": "54 / 648 checks"
+    },
+    {
+      "page": "reviewed challenge report",
+      "filter": "hermes / boundary / fail",
+      "observed": "3 / 162 checks"
+    },
+    {
+      "page": "reviewed challenge evidence",
+      "action": "click event 72 from failed check",
+      "observed": "event 72, Hermes selective-delete/forgotten, response KEEP-86959, expected null"
+    },
+    {
+      "page": "reviewed challenge evidence",
+      "search": "#72",
+      "observed": "1 / 258 events"
+    }
+  ],
+  "native_desktop": {
+    "system": "openKylin 2.0 SP1 / WSL 2",
+    "startup": "Final scripts/start_desktop.sh restarted successfully, Xvfb :14, localhost noVNC 6084",
+    "observed": "UKUI wallpaper, icons, panel, terminal OS/Python/version; openKylin Firefox rendered the final reviewed challenge report from local file, 78.7% and 95.8% cards.",
+    "limitation": "Component desktop session; full login manager and bare-metal hardware not tested."
+  }
+}

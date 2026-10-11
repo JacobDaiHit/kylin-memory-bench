@@ -1,0 +1,38 @@
+{
+  "scope": "pilot: one selected case per dimension, one trial; not a ranking or openKylin desktop acceptance",
+  "actual_agents": {
+    "openclaw": "2026.9.8 (fc23bc8)",
+    "hermes": "git 4b8a43719b2a259cea88a72f9f13a2b6962e7ac3"
+  },
+  "runtime_versions": {
+    "benchmark_python": "3.14.4",
+    "openclaw_node": "24.21.0",
+    "hermes_python": "3.14.7",
+    "hermes_node": "26.7.0"
+  },
+  "model": "deepseek-flash",
+  "inference": {
+    "thinking": "disabled",
+    "temperature": 0,
+    "max_output_tokens": 2048
+  },
+  "audit_counts": {
+    "start": 1,
+    "completion": 131,
+    "finished": 1
+  },
+  "usage": {
+    "prompt_tokens": 788026,
+    "completion_tokens": 8545,
+    "prompt_cache_hit_tokens": 625536,
+    "prompt_cache_miss_tokens": 162490
+  },
+  "pilot_balance_before_cny": "[PRIVATE ACCOUNT VALUE]",
+  "pilot_balance_after_cny": "[PRIVATE ACCOUNT VALUE]",
+  "account_balance_at_first_probe_cny": "[PRIVATE ACCOUNT VALUE]",
+  "account_balance_after_all_experiments_cny": "[PRIVATE ACCOUNT VALUE]",
+  "balance_note": "Account-level snapshots rounded to cents; may be delayed and affected by other calls. Not an exact independent bill.",
+  "core_version_note": "Native pilot was run before the 0.1.1 version-label bump; original manifest/version and evidence hashes are preserved. The 0.1.1 scorer independently verifies these results.",
+  "final_balance_checked_at": "2026-10-03T04:38:20.747517+00:00",
+  "observed_account_decrease_cny": "0.26"
+}

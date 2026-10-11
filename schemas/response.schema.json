@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "KMB adapter response",
+  "type": "object",
+  "required": [
+    "text"
+  ],
+  "properties": {
+    "text": {
+      "type": "string"
+    },
+    "memory": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "required": [
+            "text",
+            "complete"
+          ],
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "complete": {
+              "type": "boolean"
+            }
+          }
+        }
+      ]
+    },
+    "actions": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "arguments": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "usage": {
+      "type": "object"
+    },
+    "provenance": {
+      "type": "string"
+    }
+  }
+}

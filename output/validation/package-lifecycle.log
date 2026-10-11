@@ -1,0 +1,69 @@
+UTC=2026-10-03T08:05:34Z
+DEB_SHA256=4798d35ed924d28fd5db36bfb3a46551e15f9ff48249f59441a66794493d4a39
+ new Debian package, version 2.0.
+ size 2544080 bytes: control archive=3173 bytes.
+     424 bytes,    11 lines      control
+    9324 bytes,    94 lines      md5sums
+ Package: kylin-memory-bench
+ Version: 0.2.0
+ Section: science
+ Priority: optional
+ Architecture: all
+ Depends: python3 (>= 3.9)
+ Installed-Size: 17273
+ Maintainer: Kylin Memory Bench contributors <maintainers@example.invalid>
+ Description: Evidence-first long-term agent memory benchmark
+  Reproducible CLI, synthetic scenarios, explainable six-dimensional scoring,
+  offline HTML reports and adapters for openKylin agent evaluation.
+(Reading database ... 90797 files and directories currently installed.)
+Preparing to unpack .../kylin-memory-bench_0.2.0_all.deb ...
+Unpacking kylin-memory-bench (0.2.0) ...
+Setting up kylin-memory-bench (0.2.0) ...
+0.2.0
+{
+  "agents": [
+    {
+      "coverage": 1.0,
+      "id": "selective",
+      "lower_bound": 1.0,
+      "score": 1.0,
+      "upper_bound": 1.0
+    },
+    {
+      "coverage": 1.0,
+      "id": "naive",
+      "lower_bound": 0.708333,
+      "score": 0.708333,
+      "upper_bound": 0.708333
+    },
+    {
+      "coverage": 1.0,
+      "id": "stateless",
+      "lower_bound": 0.291667,
+      "score": 0.291667,
+      "upper_bound": 0.291667
+    }
+  ],
+  "output": "/home/kmb/runs/package-validation-20261003-160534-94310",
+  "run_status": "completed"
+}
+{
+  "cases": 36,
+  "events": 504,
+  "note": "Checks integrity and scoring consistency; hashes are not a signature or proof of honest adapter behavior.",
+  "run_id": "0fe71163-548d-490d-8e42-b47fa01db818",
+  "status": "completed",
+  "valid": true
+}
+Installed implementation: 6fe84c5059bc9ccd64800deabd2a6d8473ebf05dd895cccba27ff300eb81c3cf
+(Reading database ... 90904 files and directories currently installed.)
+Removing kylin-memory-bench (0.2.0) ...
+dpkg: warning: while removing kylin-memory-bench, directory '/usr/share/kylin-memory-bench/kylin_memory_bench' not empty so not removed
+Selecting previously unselected package kylin-memory-bench.
+(Reading database ... 90797 files and directories currently installed.)
+Preparing to unpack .../kylin-memory-bench_0.2.0_all.deb ...
+Unpacking kylin-memory-bench (0.2.0) ...
+Setting up kylin-memory-bench (0.2.0) ...
+0.2.0
+kylin-memory-bench	0.2.0
+LIFECYCLE PASS

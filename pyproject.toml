@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kylin-memory-bench"
+version = "0.2.0"
+description = "Evidence-first long-term agent memory benchmark for openKylin"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Kylin Memory Bench contributors"}]
+dependencies = []
+
+[project.scripts]
+kmb = "kylin_memory_bench.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["kylin_memory_bench*"]
+
+[tool.setuptools.package-data]
+kylin_memory_bench = ["data/*.jsonl", "data/*.json", "templates/*.html"]
