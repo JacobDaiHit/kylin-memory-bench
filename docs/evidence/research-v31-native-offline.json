@@ -1,0 +1,85 @@
+{
+  "paid_calls": 0,
+  "provider_network_calls": 0,
+  "backend": "loopback_stub_with_remote_method_override",
+  "wrapper_sha256": "1470ec782ff2765d5a0926de35ee76e778a282f447019ce498b1b3161b893a63",
+  "isolation": {
+    "capabilities_dropped": true,
+    "global_hermes_config_hidden": true,
+    "hermes_runtime_present": true,
+    "no_new_privileges": true,
+    "old_tmp_hidden": true,
+    "openclaw_runtime_present": true,
+    "other_run_files_hidden": true,
+    "other_workspaces_hidden": true,
+    "pid_namespace": true,
+    "repository_hidden": true,
+    "workspace_read_write": true
+  },
+  "native_stub_turns": [
+    {
+      "agent": "openclaw",
+      "output_cap": 1024,
+      "decoded": true,
+      "new_session": true,
+      "requests": 1
+    },
+    {
+      "agent": "openclaw",
+      "output_cap": 4096,
+      "decoded": true,
+      "new_session": true,
+      "requests": 1
+    },
+    {
+      "agent": "hermes",
+      "output_cap": 1024,
+      "decoded": true,
+      "new_session": true,
+      "requests": 1
+    },
+    {
+      "agent": "hermes",
+      "output_cap": 4096,
+      "decoded": true,
+      "new_session": true,
+      "requests": 1
+    }
+  ],
+  "request_controls": [
+    {
+      "model": "deepseek-flash",
+      "max_tokens": 1024,
+      "thinking": {
+        "type": "disabled"
+      },
+      "temperature": 0
+    },
+    {
+      "model": "deepseek-flash",
+      "max_tokens": 4096,
+      "thinking": {
+        "type": "disabled"
+      },
+      "temperature": 0
+    },
+    {
+      "model": "deepseek-flash",
+      "max_tokens": 1024,
+      "thinking": {
+        "type": "disabled"
+      },
+      "temperature": 0
+    },
+    {
+      "model": "deepseek-flash",
+      "max_tokens": 4096,
+      "thinking": {
+        "type": "disabled"
+      },
+      "temperature": 0
+    }
+  ],
+  "native_health_status": "not_paid_tested",
+  "scope": "Filesystem/PID isolation, native CLI startup/decoding and effective per-turn caps only; no real memory behaviour, retrieval-index health or difficulty claim."
+}

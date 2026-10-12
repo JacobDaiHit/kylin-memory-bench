@@ -1,0 +1,3489 @@
+{
+  "agents": [
+    {
+      "cases": [
+        {
+          "case_id": "difficulty-retention-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "delivery",
+              "evidence_id": "7",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "7",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "retention / 低负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retention-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "delivery",
+              "evidence_id": "25",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "25",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "retention / 高负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-low",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "first",
+              "evidence_id": "23",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "second",
+              "evidence_id": "23",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "budget",
+              "evidence_id": "23",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "retrieval / 低负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-high",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "first",
+              "evidence_id": "30",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "second",
+              "evidence_id": "30",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "budget",
+              "evidence_id": "30",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "retrieval / 高负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "test",
+              "evidence_id": "36",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "production",
+              "evidence_id": "36",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "update / 低负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "test",
+              "evidence_id": "42",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "production",
+              "evidence_id": "42",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "update / 高负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "active",
+              "evidence_id": "49",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "archive",
+              "evidence_id": "49",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "disambiguation / 低负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "active",
+              "evidence_id": "69",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "archive",
+              "evidence_id": "69",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "disambiguation / 高负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-boundary-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "revoked",
+              "evidence_id": "71",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "public",
+              "evidence_id": "71",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "boundary / 低负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-boundary-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "revoked",
+              "evidence_id": "83",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "public",
+              "evidence_id": "83",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "boundary / 高负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-reuse-low",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "file",
+              "evidence_id": "85",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "audience",
+              "evidence_id": "85",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "code",
+              "evidence_id": "85",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "style",
+              "evidence_id": "85",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "85",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "revision",
+              "evidence_id": "85",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "write",
+              "evidence_id": "85",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 7
+          },
+          "title": "reuse / 低负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-reuse-high",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "file",
+              "evidence_id": "90",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "audience",
+              "evidence_id": "90",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "code",
+              "evidence_id": "90",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "style",
+              "evidence_id": "90",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "90",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "revision",
+              "evidence_id": "90",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "write",
+              "evidence_id": "90",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 7
+          },
+          "title": "reuse / 高负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retention-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "delivery",
+              "evidence_id": "96",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "96",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "retention / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retention-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "delivery",
+              "evidence_id": "116",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "116",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "retention / 高负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-low",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "first",
+              "evidence_id": "112",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "second",
+              "evidence_id": "112",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "budget",
+              "evidence_id": "112",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "retrieval / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-high",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "omission",
+              "check_id": "first",
+              "evidence_id": "120",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "omission",
+              "check_id": "second",
+              "evidence_id": "120",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "budget",
+              "evidence_id": "120",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 0.333333,
+          "score": 0.333333,
+          "statuses": {
+            "fail": 2,
+            "pass": 1
+          },
+          "title": "retrieval / 高负载",
+          "trial": 1,
+          "upper_bound": 0.333333
+        },
+        {
+          "case_id": "difficulty-update-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "test",
+              "evidence_id": "127",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "production",
+              "evidence_id": "127",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "update / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "test",
+              "evidence_id": "132",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "production",
+              "evidence_id": "132",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "update / 高负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "active",
+              "evidence_id": "139",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "archive",
+              "evidence_id": "139",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "disambiguation / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "active",
+              "evidence_id": "160",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "archive",
+              "evidence_id": "160",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "disambiguation / 高负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-boundary-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "revoked",
+              "evidence_id": "159",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "wrong_reuse",
+              "check_id": "public",
+              "evidence_id": "159",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 0.5,
+          "score": 0.5,
+          "statuses": {
+            "fail": 1,
+            "pass": 1
+          },
+          "title": "boundary / 低负载",
+          "trial": 1,
+          "upper_bound": 0.5
+        },
+        {
+          "case_id": "difficulty-boundary-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "revoked",
+              "evidence_id": "173",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "public",
+              "evidence_id": "173",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "boundary / 高负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-reuse-low",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "file",
+              "evidence_id": "175",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "audience",
+              "evidence_id": "175",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "code",
+              "evidence_id": "175",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "style",
+              "evidence_id": "175",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "175",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "revision",
+              "evidence_id": "175",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "write",
+              "evidence_id": "175",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 7
+          },
+          "title": "reuse / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-reuse-high",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "file",
+              "evidence_id": "180",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "audience",
+              "evidence_id": "180",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "code",
+              "evidence_id": "180",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "style",
+              "evidence_id": "180",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "180",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "revision",
+              "evidence_id": "180",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "write",
+              "evidence_id": "180",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 7
+          },
+          "title": "reuse / 高负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retention-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "delivery",
+              "evidence_id": "186",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "186",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "retention / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retention-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "delivery",
+              "evidence_id": "206",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "206",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "retention / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-low",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "first",
+              "evidence_id": "202",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "second",
+              "evidence_id": "202",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "budget",
+              "evidence_id": "202",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "retrieval / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-high",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "first",
+              "evidence_id": "210",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "second",
+              "evidence_id": "210",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "budget",
+              "evidence_id": "210",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "retrieval / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "test",
+              "evidence_id": "217",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "production",
+              "evidence_id": "217",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "update / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "test",
+              "evidence_id": "222",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "production",
+              "evidence_id": "222",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "update / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "active",
+              "evidence_id": "229",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "archive",
+              "evidence_id": "229",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "disambiguation / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "active",
+              "evidence_id": "248",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "archive",
+              "evidence_id": "248",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "disambiguation / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-boundary-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "revoked",
+              "evidence_id": "253",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "public",
+              "evidence_id": "253",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "boundary / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-boundary-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "revoked",
+              "evidence_id": "264",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "public",
+              "evidence_id": "264",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "boundary / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-reuse-low",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "file",
+              "evidence_id": "263",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "audience",
+              "evidence_id": "263",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "code",
+              "evidence_id": "263",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "style",
+              "evidence_id": "263",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "263",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "revision",
+              "evidence_id": "263",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "write",
+              "evidence_id": "263",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 7
+          },
+          "title": "reuse / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-reuse-high",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "file",
+              "evidence_id": "270",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "audience",
+              "evidence_id": "270",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "code",
+              "evidence_id": "270",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "style",
+              "evidence_id": "270",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "270",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "revision",
+              "evidence_id": "270",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "write",
+              "evidence_id": "270",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 7
+          },
+          "title": "reuse / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        }
+      ],
+      "categories": {
+        "correct": 105,
+        "omission": 2,
+        "wrong_reuse": 1
+      },
+      "dimensions": {
+        "boundary": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 0.916667,
+          "score": 0.916667,
+          "upper_bound": 0.916667
+        },
+        "disambiguation": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "upper_bound": 1.0
+        },
+        "retention": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "upper_bound": 1.0
+        },
+        "retrieval": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 0.888889,
+          "score": 0.888889,
+          "upper_bound": 0.888889
+        },
+        "reuse": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "upper_bound": 1.0
+        },
+        "update": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "upper_bound": 1.0
+        }
+      },
+      "evaluated_dimensions": 6,
+      "id": "openclaw",
+      "is_baseline": false,
+      "kind": "openclaw",
+      "label": "OpenClaw 2026.9.8 / DeepSeek Flash",
+      "overall": {
+        "coverage": 1.0,
+        "lower_bound": 0.967593,
+        "score": 0.967593,
+        "upper_bound": 0.967593
+      },
+      "runtime": {
+        "errors": 0,
+        "latency_p50_ms": 27466.372,
+        "latency_p95_ms": 38121.253,
+        "steps": 135
+      },
+      "stability": {
+        "repeats": 3,
+        "stddev": 0.045831,
+        "trial_lower_bounds": [
+          1.0,
+          0.902778,
+          1.0
+        ]
+      }
+    },
+    {
+      "cases": [
+        {
+          "case_id": "difficulty-retention-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "delivery",
+              "evidence_id": "4",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "4",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "retention / 低负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retention-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "delivery",
+              "evidence_id": "19",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "19",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "retention / 高负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-low",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "first",
+              "evidence_id": "26",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "second",
+              "evidence_id": "26",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "budget",
+              "evidence_id": "26",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "retrieval / 低负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-high",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "first",
+              "evidence_id": "29",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "second",
+              "evidence_id": "29",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "budget",
+              "evidence_id": "29",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "retrieval / 高负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "test",
+              "evidence_id": "34",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "production",
+              "evidence_id": "34",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "update / 低负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "test",
+              "evidence_id": "41",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "production",
+              "evidence_id": "41",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "update / 高负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "active",
+              "evidence_id": "46",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "omission",
+              "check_id": "archive",
+              "evidence_id": "46",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 0.5,
+          "score": 0.5,
+          "statuses": {
+            "fail": 1,
+            "pass": 1
+          },
+          "title": "disambiguation / 低负载",
+          "trial": 0,
+          "upper_bound": 0.5
+        },
+        {
+          "case_id": "difficulty-disambiguation-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "omission",
+              "check_id": "active",
+              "evidence_id": "61",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "archive",
+              "evidence_id": "61",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 0.5,
+          "score": 0.5,
+          "statuses": {
+            "fail": 1,
+            "pass": 1
+          },
+          "title": "disambiguation / 高负载",
+          "trial": 0,
+          "upper_bound": 0.5
+        },
+        {
+          "case_id": "difficulty-boundary-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "revoked",
+              "evidence_id": "74",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "public",
+              "evidence_id": "74",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "boundary / 低负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-boundary-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "revoked",
+              "evidence_id": "80",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "omission",
+              "check_id": "public",
+              "evidence_id": "80",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 0.5,
+          "score": 0.5,
+          "statuses": {
+            "fail": 1,
+            "pass": 1
+          },
+          "title": "boundary / 高负载",
+          "trial": 0,
+          "upper_bound": 0.5
+        },
+        {
+          "case_id": "difficulty-reuse-low",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "file",
+              "evidence_id": "86",
+              "reason": "Adapter exited 1; stderr SHA256 is 8178326dcdf756429c60677ab6e28c8455154cef9fe2db411cb72dff4e465808",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "audience",
+              "evidence_id": "86",
+              "reason": "Adapter exited 1; stderr SHA256 is 8178326dcdf756429c60677ab6e28c8455154cef9fe2db411cb72dff4e465808",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "code",
+              "evidence_id": "86",
+              "reason": "Adapter exited 1; stderr SHA256 is 8178326dcdf756429c60677ab6e28c8455154cef9fe2db411cb72dff4e465808",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "style",
+              "evidence_id": "86",
+              "reason": "Adapter exited 1; stderr SHA256 is 8178326dcdf756429c60677ab6e28c8455154cef9fe2db411cb72dff4e465808",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "approval",
+              "evidence_id": "86",
+              "reason": "Adapter exited 1; stderr SHA256 is 8178326dcdf756429c60677ab6e28c8455154cef9fe2db411cb72dff4e465808",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "revision",
+              "evidence_id": "86",
+              "reason": "Adapter exited 1; stderr SHA256 is 8178326dcdf756429c60677ab6e28c8455154cef9fe2db411cb72dff4e465808",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "write",
+              "evidence_id": "86",
+              "reason": "Adapter exited 1; stderr SHA256 is 8178326dcdf756429c60677ab6e28c8455154cef9fe2db411cb72dff4e465808",
+              "source": "actions",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 7
+          },
+          "title": "reuse / 低负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-reuse-high",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "file",
+              "evidence_id": "89",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "audience",
+              "evidence_id": "89",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "code",
+              "evidence_id": "89",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "style",
+              "evidence_id": "89",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "89",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "revision",
+              "evidence_id": "89",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "write",
+              "evidence_id": "89",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 7
+          },
+          "title": "reuse / 高负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retention-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "delivery",
+              "evidence_id": "94",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "94",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "retention / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retention-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "delivery",
+              "evidence_id": "108",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "108",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "retention / 高负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-low",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "first",
+              "evidence_id": "114",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "second",
+              "evidence_id": "114",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "budget",
+              "evidence_id": "114",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "retrieval / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-high",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "first",
+              "evidence_id": "119",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "second",
+              "evidence_id": "119",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "budget",
+              "evidence_id": "119",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "retrieval / 高负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "test",
+              "evidence_id": "124",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "production",
+              "evidence_id": "124",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "update / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "test",
+              "evidence_id": "131",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "production",
+              "evidence_id": "131",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "update / 高负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "omission",
+              "check_id": "active",
+              "evidence_id": "136",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "archive",
+              "evidence_id": "136",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 0.5,
+          "score": 0.5,
+          "statuses": {
+            "fail": 1,
+            "pass": 1
+          },
+          "title": "disambiguation / 低负载",
+          "trial": 1,
+          "upper_bound": 0.5
+        },
+        {
+          "case_id": "difficulty-disambiguation-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "active",
+              "evidence_id": "152",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "omission",
+              "check_id": "archive",
+              "evidence_id": "152",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 0.5,
+          "score": 0.5,
+          "statuses": {
+            "fail": 1,
+            "pass": 1
+          },
+          "title": "disambiguation / 高负载",
+          "trial": 1,
+          "upper_bound": 0.5
+        },
+        {
+          "case_id": "difficulty-boundary-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "revoked",
+              "evidence_id": "165",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "public",
+              "evidence_id": "165",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "boundary / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-boundary-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "revoked",
+              "evidence_id": "170",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "omission",
+              "check_id": "public",
+              "evidence_id": "170",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 0.5,
+          "score": 0.5,
+          "statuses": {
+            "fail": 1,
+            "pass": 1
+          },
+          "title": "boundary / 高负载",
+          "trial": 1,
+          "upper_bound": 0.5
+        },
+        {
+          "case_id": "difficulty-reuse-low",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "file",
+              "evidence_id": "176",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "audience",
+              "evidence_id": "176",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "code",
+              "evidence_id": "176",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "style",
+              "evidence_id": "176",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "176",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "revision",
+              "evidence_id": "176",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "write",
+              "evidence_id": "176",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 7
+          },
+          "title": "reuse / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-reuse-high",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "file",
+              "evidence_id": "179",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "audience",
+              "evidence_id": "179",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "code",
+              "evidence_id": "179",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "style",
+              "evidence_id": "179",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "179",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "revision",
+              "evidence_id": "179",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "write",
+              "evidence_id": "179",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 7
+          },
+          "title": "reuse / 高负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retention-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "delivery",
+              "evidence_id": "184",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "184",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "retention / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retention-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "delivery",
+              "evidence_id": "198",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "198",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "retention / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-low",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "first",
+              "evidence_id": "204",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "second",
+              "evidence_id": "204",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "budget",
+              "evidence_id": "204",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "retrieval / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-high",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "first",
+              "evidence_id": "209",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "second",
+              "evidence_id": "209",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "budget",
+              "evidence_id": "209",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 3
+          },
+          "title": "retrieval / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "test",
+              "evidence_id": "214",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "production",
+              "evidence_id": "214",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "update / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "test",
+              "evidence_id": "221",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "production",
+              "evidence_id": "221",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "update",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "update / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "active",
+              "evidence_id": "226",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "archive",
+              "evidence_id": "226",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "disambiguation / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "active",
+              "evidence_id": "242",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "archive",
+              "evidence_id": "242",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "disambiguation / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-boundary-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "revoked",
+              "evidence_id": "254",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "public",
+              "evidence_id": "254",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 2
+          },
+          "title": "boundary / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-boundary-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "revoked",
+              "evidence_id": "259",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "omission",
+              "check_id": "public",
+              "evidence_id": "259",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "boundary",
+          "lower_bound": 0.5,
+          "score": 0.5,
+          "statuses": {
+            "fail": 1,
+            "pass": 1
+          },
+          "title": "boundary / 高负载",
+          "trial": 2,
+          "upper_bound": 0.5
+        },
+        {
+          "case_id": "difficulty-reuse-low",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "file",
+              "evidence_id": "267",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "audience",
+              "evidence_id": "267",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "code",
+              "evidence_id": "267",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "style",
+              "evidence_id": "267",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "267",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "revision",
+              "evidence_id": "267",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "write",
+              "evidence_id": "267",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 7
+          },
+          "title": "reuse / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-reuse-high",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "correct",
+              "check_id": "file",
+              "evidence_id": "269",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "audience",
+              "evidence_id": "269",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "code",
+              "evidence_id": "269",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "style",
+              "evidence_id": "269",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "approval",
+              "evidence_id": "269",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "revision",
+              "evidence_id": "269",
+              "reason": "Deterministic equals check on artifact evidence.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "write",
+              "evidence_id": "269",
+              "reason": "Deterministic json_subset check on actions evidence.",
+              "source": "actions",
+              "status": "pass",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "statuses": {
+            "pass": 7
+          },
+          "title": "reuse / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        }
+      ],
+      "categories": {
+        "correct": 94,
+        "execution_error": 7,
+        "omission": 7
+      },
+      "dimensions": {
+        "boundary": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 0.75,
+          "score": 0.75,
+          "upper_bound": 0.75
+        },
+        "disambiguation": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 0.666667,
+          "score": 0.666667,
+          "upper_bound": 0.666667
+        },
+        "retention": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "upper_bound": 1.0
+        },
+        "retrieval": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "upper_bound": 1.0
+        },
+        "reuse": {
+          "cases": 6,
+          "coverage": 0.833333,
+          "lower_bound": 0.833333,
+          "score": 1.0,
+          "upper_bound": 1.0
+        },
+        "update": {
+          "cases": 6,
+          "coverage": 1.0,
+          "lower_bound": 1.0,
+          "score": 1.0,
+          "upper_bound": 1.0
+        }
+      },
+      "evaluated_dimensions": 6,
+      "id": "hermes",
+      "is_baseline": false,
+      "kind": "hermes",
+      "label": "Hermes 4b8a437 / DeepSeek Flash",
+      "overall": {
+        "coverage": 0.972222,
+        "lower_bound": 0.875,
+        "score": 0.902778,
+        "upper_bound": 0.902778
+      },
+      "runtime": {
+        "errors": 1,
+        "latency_p50_ms": 11022.906,
+        "latency_p95_ms": 18211.264,
+        "steps": 135
+      },
+      "stability": {
+        "repeats": 3,
+        "stddev": 0.068041,
+        "trial_lower_bounds": [
+          0.791667,
+          0.875,
+          0.958333
+        ]
+      }
+    }
+  ],
+  "dataset_sha256": "0aae4ecc47af860221ff0e6dbd26d009033f13e3c4e78a30ed613426c9d3bb5b",
+  "method": "Equal dimension macro average of equal case/trial weighted-check scores; unknown/error remain in coverage bounds.",
+  "run_id": "c49728c3-101a-4c94-9556-18b85d9c3406",
+  "run_status": "completed_with_errors",
+  "schema_version": "1.0",
+  "scorer_version": "1.0"
+}

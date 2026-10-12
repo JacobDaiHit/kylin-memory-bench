@@ -1,0 +1,19 @@
+{
+  "archives": [
+    {
+      "original_source": "scripts/live_deepseek.py",
+      "archived_source": "experiments/math_memory/transport-v3-before.py",
+      "source_sha256": "ef01bd400639a3a536a791c4895a6c2f048e78acb3a6c2904164dcc757ed7cb6",
+      "execution_freeze": "docs/evidence/research-v3-execution-freeze.json",
+      "original_freeze_unchanged": true
+    },
+    {
+      "original_source": "scripts/live_deepseek.py",
+      "archived_source": "experiments/math_memory/transport-v3-fixed.py",
+      "source_sha256": "adb3cfb6c1d8c5e5ee59127a65e7b8203a05df474baa1c2980e3f5963fef5db1",
+      "execution_freeze": "docs/evidence/research-v3-transport-execution-freeze.json",
+      "original_freeze_unchanged": true
+    }
+  ],
+  "scope": "Exact source bytes for the two historical V3 attempts. Current transport is a new revision; old freezes and scores are unchanged."
+}

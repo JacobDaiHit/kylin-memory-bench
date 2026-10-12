@@ -1,0 +1,5642 @@
+{
+  "research-v31-binding-low-memory": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-binding-low-stateless": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-binding-low-open_book": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-binding-low-no_history": {
+    "q01": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q02": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q03": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q04": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q05": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q06": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q07": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q08": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q09": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q10": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q11": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q12": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q13": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q14": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q15": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q16": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-binding-high-memory": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-binding-high-stateless": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-binding-high-open_book": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-binding-high-no_history": {
+    "q01": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q02": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q03": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q04": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q05": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q06": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q07": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q08": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q09": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q10": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q11": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q12": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q13": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q14": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q15": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q16": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-updates-low-memory": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-updates-low-stateless": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-updates-low-open_book": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-updates-low-no_history": {
+    "q01": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q02": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q03": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q04": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q05": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q06": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q07": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q08": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q09": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q10": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q11": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q12": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q13": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q14": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q15": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q16": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-updates-high-memory": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-003"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-005"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-006"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-007"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-007"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-009"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-updates-high-stateless": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-003"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-005"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-006"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-007"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-007"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-009"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-updates-high-open_book": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-003"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-005"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-006"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-007"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-007"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-009"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-updates-high-no_history": {
+    "q01": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q02": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q03": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q04": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q05": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q06": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q07": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q08": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q09": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q10": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q11": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q12": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q13": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q14": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q15": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q16": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-delay-low-memory": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-delay-low-stateless": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-delay-low-open_book": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-delay-low-no_history": {
+    "q01": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q02": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q03": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q04": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q05": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q06": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q07": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q08": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q09": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q10": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q11": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q12": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q13": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q14": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q15": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q16": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-delay-high-memory": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-delay-high-stateless": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-delay-high-open_book": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-delay-high-no_history": {
+    "q01": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q02": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q03": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q04": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q05": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q06": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q07": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q08": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q09": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q10": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q11": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q12": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q13": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q14": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q15": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q16": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-scope-low-memory": {
+    "q01": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "branch-blue-9278",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "branch-blue-6808",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "3/17",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "9/17",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "7",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "5",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "6",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-scope-low-stateless": {
+    "q01": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "branch-blue-9278",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "branch-blue-6808",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "3/17",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "9/17",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "7",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "5",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "6",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-scope-low-open_book": {
+    "q01": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "branch-blue-9278",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "branch-blue-6808",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "3/17",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "9/17",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "7",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "5",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "6",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-scope-low-no_history": {
+    "q01": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q02": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q03": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q04": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q05": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q06": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q07": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q08": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q09": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q10": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q11": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q12": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q13": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q14": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q15": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q16": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-scope-high-memory": {
+    "q01": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "branch-blue-9278",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "branch-blue-6808",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "3/17",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "9/17",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "7",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "5",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "6",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-scope-high-stateless": {
+    "q01": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "branch-blue-9278",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "branch-blue-6808",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "3/17",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "9/17",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "7",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "5",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "6",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-scope-high-open_book": {
+    "q01": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "branch-blue-9278",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "branch-blue-6808",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "3/17",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "9/17",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "7",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "5",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "6",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-scope-high-no_history": {
+    "q01": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q02": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q03": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q04": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q05": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q06": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q07": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q08": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q09": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q10": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q11": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q12": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q13": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q14": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q15": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q16": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-cancel-low-memory": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v6",
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-006"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-cancel-low-stateless": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v6",
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-006"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-cancel-low-open_book": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v6",
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-006"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-cancel-low-no_history": {
+    "q01": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q02": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q03": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q04": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q05": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q06": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q07": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q08": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q09": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q10": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q11": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q12": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q13": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q14": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q15": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q16": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-cancel-high-memory": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-003"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v6",
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-006"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-cancel-high-stateless": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-003"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v6",
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-006"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-cancel-high-open_book": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-003"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v6",
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-006"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-cancel-high-no_history": {
+    "q01": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q02": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q03": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q04": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q05": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q06": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q07": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q08": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q09": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q10": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q11": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q12": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q13": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q14": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q15": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q16": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-combined-low-memory": {
+    "q01": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "3",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "branch-blue-9278",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-003"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "4",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "branch-blue-6808",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-003"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "e3",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "e4",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "3/17",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "9/17",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "7",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "5",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "6",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "v6",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-004"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-006"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-combined-low-stateless": {
+    "q01": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "3",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "branch-blue-9278",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-003"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "4",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "branch-blue-6808",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-003"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "e3",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "e4",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "3/17",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "9/17",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "7",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "5",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "6",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "v6",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-004"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-006"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-combined-low-open_book": {
+    "q01": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "3",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "branch-blue-9278",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-003"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "4",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "branch-blue-6808",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-003"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "e3",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "e4",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "3/17",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "9/17",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "7",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "5",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "6",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "v6",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-004"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-006"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-combined-low-no_history": {
+    "q01": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q02": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q03": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q04": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q05": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q06": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q07": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q08": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q09": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q10": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q11": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q12": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q13": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q14": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q15": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q16": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-combined-high-memory": {
+    "q01": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-005"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-008"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "3",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "branch-blue-9278",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-003"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "4",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "branch-blue-6808",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-003"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "e3",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "e4",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "3/17",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "9/17",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "7",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "5",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "6",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "v6",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-009"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-006"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-combined-high-stateless": {
+    "q01": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-005"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-008"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "3",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "branch-blue-9278",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-003"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "4",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "branch-blue-6808",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-003"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "e3",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "e4",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "3/17",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "9/17",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "7",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "5",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "6",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "v6",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-009"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-006"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-combined-high-open_book": {
+    "q01": {
+      "value": "2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-005"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-008"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "3",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "branch-blue-9278",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-003"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "4",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "branch-blue-6808",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-003"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "e3",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "e4",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "3/17",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "9/17",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "7",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "5",
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "6",
+      "supporting_literal_records": [
+        "SCHUR-397515-research-R6808-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "v6",
+      "supporting_literal_records": [
+        "SCHUR-615743-research-R6678-009"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "SCHUR-320939-research-R9278-006"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-combined-high-no_history": {
+    "q01": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q02": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q03": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q04": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q05": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q06": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q07": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q08": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q09": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q10": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q11": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q12": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q13": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q14": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q15": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q16": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  }
+}

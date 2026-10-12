@@ -2,11 +2,13 @@
 
 面向 openKylin 的智能体长期记忆自动化评测工具。以真实运行证据为评分输入，覆盖长期保持、记忆调用、动态更新、相近区分、边界识别和任务复用六个维度。
 
-**当前版本：0.2.0。** 交付包含可安装 CLI、36 例标准集、12 例独立挑战集、原生 OpenClaw/Hermes 适配器、确定性评分和离线证据检查器。真实实验在 openKylin 2.0 SP1 / WSL 2 上运行，两款智能体共同使用 DeepSeek Flash，各执行三轮；规则基线与早期 Ubuntu pilot 独立保存。系统身份和运行错误如实记录。
+**当前正式版本：0.2.0；工作树正在准备 0.2.1。** 交付包含可安装 CLI、36 例标准集、12 例独立挑战集、原生 OpenClaw/Hermes 适配器、确定性评分和离线证据检查器。真实实验在 openKylin 2.0 SP1 / WSL 2 上运行，两款智能体共同使用 DeepSeek Flash，各执行三轮；规则基线与早期 Ubuntu pilot 独立保存。系统身份和运行错误如实记录。
 
 项目仓库：https://github.com/JacobDaiHit/kylin-memory-bench 。[技术方案与实测报告 PDF](output/pdf/KylinMemoryBench-technical-report.pdf) 随源码保存。
 
 优先打开 [标准集实测报告](examples/openkylin-core/report.html) 与 [挑战集实测报告](examples/openkylin-challenge/reviewed-report.html)。完整交付包中的 START_HERE.md 提供接收入口，技术报告 PDF、固定源码快照与安装包随包附带。最终 3–5 分钟演示视频由提交者按 [录屏脚本](docs/demo-video.md) 录制。
+
+0.2.1 新增材料：[离线导览](docs/presentation/index.html)、[数据说明卡](docs/dataset-card.md)、[修订验证记录](docs/revision-validation.md)、[数学V3.1修复与离线验收](docs/memory-revision-v31.md)。原难度试测未达到预定门槛；V3.1已补评分、状态对照和运行准备，尚未付费实测。最终安装包和视频尚未冻结，现有PDF与安装生命周期记录属于0.2.0。
 
 ## 一分钟运行
 
@@ -43,7 +45,7 @@ python3 scripts/build_release.py
 在 Debian/openKylin 系统安装生成的包：
 
 ```sh
-sudo apt install ./dist/kylin-memory-bench_0.2.0_all.deb
+sudo apt install ./dist/kylin-memory-bench_0.2.1_all.deb
 kmb demo --output "$HOME/kmb-demo"
 kmb verify "$HOME/kmb-demo"
 ```
@@ -129,6 +131,9 @@ run/
 ## 方案、复现与验收材料
 
 - [完整评测方案](docs/design.md)：目标、前提、数据设计、证据收集、公式、偏差和局限。
+- [数学研究记忆真实试测](docs/math-memory-pilot-report.md)：付费可行性结果、失败分类与测量边界，尚未达到正式推进条件。
+- [研究档案记忆V3设计](experiments/math_memory/memory-v3-design.md)：只测跨会话记录恢复与管理；[离线实例](experiments/math_memory/memory-v3/index.html)、[真实付费结果](docs/research-memory-v3-report.md)。已完成小试测，充分难度尚未验证。
+- [研究档案记忆V3.1](experiments/math_memory/memory-v31-design.md)：唯一明确答案块的内容评分、无持久状态消融、三家族配平及分阶段健康检查；[离线实例](experiments/math_memory/memory-v31/index.html)，本版未付费实测。
 - [数据格式](docs/dataset.md)、[JSON Schema](schemas/dataset.schema.json)、[适配器协议](docs/adapters.md)。
 - [openKylin 部署与验收](docs/openkylin.md)、[3–5 分钟录屏脚本](docs/demo-video.md)。
 - [交付要求逐项对应](docs/acceptance.md)、[本地验证记录](docs/validation.md)。

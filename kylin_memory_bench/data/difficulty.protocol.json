@@ -1,0 +1,115 @@
+{
+  "agents": [
+    "openclaw",
+    "hermes"
+  ],
+  "analysis_domains": [
+    "content",
+    "artifact",
+    "action"
+  ],
+  "dataset_sha256": "0aae4ecc47af860221ff0e6dbd26d009033f13e3c4e78a30ed613426c9d3bb5b",
+  "gates": {
+    "difficulty_effect_families": 3,
+    "effective_coverage": 0.9,
+    "mean_drop": 0.15,
+    "same_direction_trials": 2
+  },
+  "generator_sha256": "c7e542c85dc7e05f8b8946476926dd23ec613c8236d4c37039a420c9fe180775",
+  "jobs": 2,
+  "memory_scope": "diagnostic only; no claim of complete deletion",
+  "pairs": [
+    {
+      "axis": "interference_sessions",
+      "family": "retention",
+      "level": "low",
+      "load": 1,
+      "steps": 3
+    },
+    {
+      "axis": "interference_sessions",
+      "family": "retention",
+      "level": "high",
+      "load": 6,
+      "steps": 8
+    },
+    {
+      "axis": "candidate_fact_count",
+      "family": "retrieval",
+      "level": "low",
+      "load": 4,
+      "steps": 2
+    },
+    {
+      "axis": "candidate_fact_count",
+      "family": "retrieval",
+      "level": "high",
+      "load": 64,
+      "steps": 2
+    },
+    {
+      "axis": "untouched_neighbour_fields",
+      "family": "update",
+      "level": "low",
+      "load": 1,
+      "steps": 3
+    },
+    {
+      "axis": "untouched_neighbour_fields",
+      "family": "update",
+      "level": "high",
+      "load": 13,
+      "steps": 3
+    },
+    {
+      "axis": "near_entity_count",
+      "family": "disambiguation",
+      "level": "low",
+      "load": 2,
+      "steps": 3
+    },
+    {
+      "axis": "near_entity_count",
+      "family": "disambiguation",
+      "level": "high",
+      "load": 8,
+      "steps": 9
+    },
+    {
+      "axis": "authorised_fields_remaining",
+      "family": "boundary",
+      "level": "low",
+      "load": 0,
+      "steps": 4
+    },
+    {
+      "axis": "authorised_fields_remaining",
+      "family": "boundary",
+      "level": "high",
+      "load": 2,
+      "steps": 4
+    },
+    {
+      "axis": "non_null_history_constraints",
+      "family": "reuse",
+      "level": "low",
+      "load": 2,
+      "steps": 2
+    },
+    {
+      "axis": "non_null_history_constraints",
+      "family": "reuse",
+      "level": "high",
+      "load": 5,
+      "steps": 2
+    }
+  ],
+  "repeats": 3,
+  "revocation_protocol": "request followed by identical explicit user confirmation in both systems",
+  "schema_version": "1.0",
+  "seed": 20261011,
+  "selection_policy": "No outcome-driven case selection or replacement; all errors and unknowns retained.",
+  "status": "frozen_before_paid_run",
+  "suite_description": "Six paired task families. Load and scoring are frozen before any paid call; no guaranteed ordering.",
+  "timeout_seconds": 600
+}

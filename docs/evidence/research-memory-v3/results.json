@@ -1,0 +1,1839 @@
+{
+  "verification": {
+    "valid": true,
+    "events": 410,
+    "cases": 3,
+    "run_id": "49cb7544-05db-4561-8a71-6334756b31e7",
+    "status": "completed_with_errors",
+    "note": "Checks integrity and scoring consistency; hashes are not a signature or proof of honest adapter behavior."
+  },
+  "run_id": "49cb7544-05db-4561-8a71-6334756b31e7",
+  "status": "completed_with_errors",
+  "rows": [
+    {
+      "case": "research-v3-combined-high-open_book",
+      "condition": "open_book",
+      "format": null,
+      "format_error": "Invalid/duplicate key-value row",
+      "execution_error": null,
+      "extra_fields": [],
+      "check_count": 18,
+      "observed_count": 0,
+      "correct_count": 0,
+      "coverage": 0.0,
+      "correct_over_all": 0.0,
+      "correct_over_observed": null,
+      "checks": [
+        {
+          "qid": "q01",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "2",
+          "actual": null,
+          "literal_evidence": {
+            "value": "2",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-005"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q02",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "branch-blue-6678",
+          "actual": null,
+          "literal_evidence": {
+            "value": "branch-blue-6678",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-008"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q03",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "3",
+          "actual": null,
+          "literal_evidence": {
+            "value": "3",
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-002"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q04",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "branch-blue-9278",
+          "actual": null,
+          "literal_evidence": {
+            "value": "branch-blue-9278",
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-003"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q05",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "4",
+          "actual": null,
+          "literal_evidence": {
+            "value": "4",
+            "supporting_literal_records": [
+              "SCHUR-397515-research-R6808-002"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q06",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "branch-blue-6808",
+          "actual": null,
+          "literal_evidence": {
+            "value": "branch-blue-6808",
+            "supporting_literal_records": [
+              "SCHUR-397515-research-R6808-003"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q07",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "e2",
+          "actual": null,
+          "literal_evidence": {
+            "value": "e2",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q08",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "e3",
+          "actual": null,
+          "literal_evidence": {
+            "value": "e3",
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q09",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "e4",
+          "actual": null,
+          "literal_evidence": {
+            "value": "e4",
+            "supporting_literal_records": [
+              "SCHUR-397515-research-R6808-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q10",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "2/17",
+          "actual": null,
+          "literal_evidence": {
+            "value": "2/17",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-001"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q11",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "3/17",
+          "actual": null,
+          "literal_evidence": {
+            "value": "3/17",
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-001"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q12",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "9/17",
+          "actual": null,
+          "literal_evidence": {
+            "value": "9/17",
+            "supporting_literal_records": [
+              "SCHUR-397515-research-R6808-001"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q13",
+          "group": "historical",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "7",
+          "actual": null,
+          "literal_evidence": {
+            "value": "7",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q14",
+          "group": "historical",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "5",
+          "actual": null,
+          "literal_evidence": {
+            "value": "5",
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q15",
+          "group": "historical",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "6",
+          "actual": null,
+          "literal_evidence": {
+            "value": "6",
+            "supporting_literal_records": [
+              "SCHUR-397515-research-R6808-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q16",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "v6",
+          "actual": null,
+          "literal_evidence": {
+            "value": "v6",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-009"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q17",
+          "group": "boundary",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-006"
+            ],
+            "reason": "withdrawn_by_record"
+          }
+        },
+        {
+          "qid": "q18",
+          "group": "boundary",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        }
+      ],
+      "primary_memory_eligible": false,
+      "claim_limit": "Native single-trial record-memory feasibility; no mathematical result or stable capacity estimate.",
+      "agent": "openclaw",
+      "trial": 0,
+      "event_id": "401",
+      "observation_status": "observed",
+      "response_text": "I'll work through the records for each project.\n\n**SCHUR-615743-research** (project records only, ignoring -archive/-grid/seminar):\n- R6678-000 (C0): d1=7, branch=branch-green-6678, adoption e2/finite\n- R6678-002: a11=3\n- R6678-003: a12=3/13\n- R6678-004: a22=32/11\n- R6678-005: d1=2\n- R6678-006: d2=3\n- R6678-007: branch=branch-green-6678\n- R6678-008: d1=19, branch=branch-blue-6678\n- R6678-009: cancel d1 of R6678-008 → d1 reverts\n- R6678-010: draft (ignored)\n- R6678-011: hint_permission=false\n\nCurrent d1: R6678-005 set d1=2; R6678-008 set d1=19 but its d1 was cancelled → d1=2.\nCurrent branch: R6678-008 branch=branch-blue-6678 (not cancelled) → branch-blue-6678.\nAdoption edition: e2 (from C0, unchanged). Lemma matching e2/finite: R6678-001 bound=2/17.\nC0 d1=7. Current revision label: last accepted patch/cancel = R6678-011 (no revision) → the last with a revision is R6678-008 v5... but R6678-011 has no revision tag. The current revision is the last accepted patch/cancel registration's label; R6678-011 has none, so latest labeled = v5 (R6678-008). Hmm — but R6678-009 cancel has revision v6. So current revision = v6.\n\n**SCHUR-320939-research**:\n- R9278-000 (C0): d1=5, branch=branch-green-9278, adoption e3/finite\n- R9278-002: d1=3, branch=branch-green-9278\n- R9278-003: d1=19, branch=branch-blue-9278\n- R9278-004: cancel d1 of R9278-003 → d1 reverts to 3\n- R9278-005: draft (ignored)\n- R9278-006: hint_permission=false\n\nCurrent d1=3. Branch=branch-blue-9278. Edition e3. Lemma e3/finite: R9278-001 bound=3/17. C0 d1=5. six_order_hint: hint_permission=false → null.\n\n**SCHUR-397515-research**:\n- R6808-000 (C0): d1=6, branch=branch-green-6808, adoption e4/finite\n- R6808-002: d1=4, branch=branch-green-6808\n- R6808-003: d1=19, branch=branch-blue-6808\n- R6808-004: cancel d1 of R6808-003 → d1 reverts to 4\n- R6808-005: draft (ignored)\n- R6808-006: hint_permission=false\n\nCurrent d1=4. Branch=branch-blue-6808. Edition e4. Lemma e4/finite: R6808-001 bound=9/17. C0 d1=6. error_bound_o8: never provided → null.\n\n```json\n{\n  \"q01\": \"2\",\n  \"q02\": \"branch-blue-6678\",\n  \"q03\": \"3\",\n  \"q04\": \"branch-blue-9278\",\n  \"q05\": \"4\",\n  \"q06\": \"branch-blue-6808\",\n  \"q07\": \"e2\",\n  \"q08\": \"e3\",\n  \"q09\": \"e4\",\n  \"q10\": \"2/17\",\n  \"q11\": \"3/17\",\n  \"q12\": \"9/17\",\n  \"q13\": \"7\",\n  \"q14\": \"5\",\n  \"q15\": \"6\",\n  \"q16\": \"v6\",\n  \"q17\": null,\n  \"q18\": null\n}\n```",
+      "actual_answers": null,
+      "tool_evidence": {
+        "historical_events": 78,
+        "historical_execution_errors": 0,
+        "historical_tool_actions": 154,
+        "final_tool_actions": 0,
+        "provenance": "openclaw-cli"
+      }
+    },
+    {
+      "case": "research-v3-combined-high-memory",
+      "condition": "memory",
+      "format": null,
+      "format_error": "Invalid/duplicate key-value row",
+      "execution_error": null,
+      "extra_fields": [],
+      "check_count": 18,
+      "observed_count": 0,
+      "correct_count": 0,
+      "coverage": 0.0,
+      "correct_over_all": 0.0,
+      "correct_over_observed": null,
+      "checks": [
+        {
+          "qid": "q01",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "2",
+          "actual": null,
+          "literal_evidence": {
+            "value": "2",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-005"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q02",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "branch-blue-6678",
+          "actual": null,
+          "literal_evidence": {
+            "value": "branch-blue-6678",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-008"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q03",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "3",
+          "actual": null,
+          "literal_evidence": {
+            "value": "3",
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-002"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q04",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "branch-blue-9278",
+          "actual": null,
+          "literal_evidence": {
+            "value": "branch-blue-9278",
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-003"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q05",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "4",
+          "actual": null,
+          "literal_evidence": {
+            "value": "4",
+            "supporting_literal_records": [
+              "SCHUR-397515-research-R6808-002"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q06",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "branch-blue-6808",
+          "actual": null,
+          "literal_evidence": {
+            "value": "branch-blue-6808",
+            "supporting_literal_records": [
+              "SCHUR-397515-research-R6808-003"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q07",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "e2",
+          "actual": null,
+          "literal_evidence": {
+            "value": "e2",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q08",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "e3",
+          "actual": null,
+          "literal_evidence": {
+            "value": "e3",
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q09",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "e4",
+          "actual": null,
+          "literal_evidence": {
+            "value": "e4",
+            "supporting_literal_records": [
+              "SCHUR-397515-research-R6808-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q10",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "2/17",
+          "actual": null,
+          "literal_evidence": {
+            "value": "2/17",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-001"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q11",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "3/17",
+          "actual": null,
+          "literal_evidence": {
+            "value": "3/17",
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-001"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q12",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "9/17",
+          "actual": null,
+          "literal_evidence": {
+            "value": "9/17",
+            "supporting_literal_records": [
+              "SCHUR-397515-research-R6808-001"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q13",
+          "group": "historical",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "7",
+          "actual": null,
+          "literal_evidence": {
+            "value": "7",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q14",
+          "group": "historical",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "5",
+          "actual": null,
+          "literal_evidence": {
+            "value": "5",
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q15",
+          "group": "historical",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "6",
+          "actual": null,
+          "literal_evidence": {
+            "value": "6",
+            "supporting_literal_records": [
+              "SCHUR-397515-research-R6808-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q16",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "v6",
+          "actual": null,
+          "literal_evidence": {
+            "value": "v6",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-009"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q17",
+          "group": "boundary",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-006"
+            ],
+            "reason": "withdrawn_by_record"
+          }
+        },
+        {
+          "qid": "q18",
+          "group": "boundary",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        }
+      ],
+      "primary_memory_eligible": true,
+      "claim_limit": "Native single-trial record-memory feasibility; no mathematical result or stable capacity estimate.",
+      "agent": "openclaw",
+      "trial": 0,
+      "event_id": "410",
+      "observation_status": "observed",
+      "response_text": "Let me work through each project's effective state.\n\n**SCHUR-615743-research** (accepted patches/cancels only):\n- R6678-002: a11=3 (v8)\n- R6678-003: a12=3/13 (v3)\n- R6678-004: a22=32/11 (v7)\n- R6678-005: d1=2 (v2)\n- R6678-006: d2=3 (v1)\n- R6678-007: branch=branch-green-6678 (v4)\n- R6678-008: d1=19, branch=branch-blue-6678 (v5)\n- R6678-009: cancel d1 of R6678-008 → d1 from 008 removed; branch-blue-6678 remains\n- R6678-010: draft → ignored\n- R6678-011: hint_permission=false\n- R6678-012..017: lemmas (e3/e4/e5/e6/e7/e8)\n- R6678-018..033: archive/grid projects (different project names, not this project)\n\nEffective: d1 = 2 (from R6678-005, since 008's d1 cancelled). branch = branch-blue-6678 (from 008, not cancelled). Current revision = last accepted patch/cancel label = R6678-011 (no revision) → actually last accepted patch with revision... R6678-011 has no revision. The last accepted patch/cancel with a revision label is R6678-009 (v6). Hmm, \"当前revision取最后一份accepted patch/cancel登记的标签\" — last accepted patch/cancel registration's label. R6678-011 is a patch (accepted) with no revision. So the last accepted patch/cancel is R6678-011, which has no revision label → null? Let me reconsider: the label of the last accepted patch/cancel. R6678-011 has no revision field. So revision = null.\n\nWait, but there are later accepted patches? R6678-018+ are project \"SCHUR-615743-research-archive\" etc. — different project. So for SCHUR-615743-research, last accepted patch/cancel = R6678-011 (no revision). So q16 = null.\n\nHmm, but maybe they intend the last one that has a revision. The rule says \"当前revision取最后一份accepted patch/cancel登记的标签\". R6678-011 is the last accepted patch/cancel, and it has no revision label → null.\n\n**q07** edition for SCHUR-615743-research: \"该引用明确指定的edition\" — the reference's explicitly specified edition. The reference is the adoption in the archive/grid records? Actually \"该引用\" = the citation/adoption. For SCHUR-615743-research, the adoption appears in archive record R6678-018 (edition e2) and grid records (e2). But those are different projects. Hmm.\n\nActually the question set: q07-q09 ask \"该引用明确指定的edition\" and q10-q12 ask the bound matching all four items. This refers to the adoption reference in the project's records. For SCHUR-615743-research, the adoption is in R6678-018 (project SCHUR-615743-research-archive) with edition e2, regime finite, lemma L-Schur-shared. And the matching lemma is R6678-019 (bound 30/23).\n\nHmm, but the project is SCHUR-615743-research, and the archive is a separate project. Let me reconsider — the \"引用\" (adoption reference) for each project. Let me look at what adoption references exist per base project.\n\nFor SCHUR-615743-research: adoption in R6678-018 (archive, e2), R6678-020 (grid-1, e2), R6678-022 (grid-2, e2), etc. All e2.\n\nFor SCHUR-320939-research: adoption in R9278-007 (archive, e3), R9278-009 (grid-1, e3).\n\nFor SCHUR-397515-research: adoption in R6808-007 (archive, e4), R6808-009 (grid-1, e4).\n\nSo the edition per project: 615743→e2, 320939→e3, 397515→e4.\n\nAnd matching lemma (project, lemma_id, edition, regime all four match):\n- 615743: need project SCHUR-615743-research-archive? The adoption is in archive project. Matching lemma R6678-019: project SCHUR-615743-research-archive, lemma L-Schur-shared, e2, finite, bound 30/23. ✓\n- 320939: adoption in R9278-007 (archive, e3). Matching lemma? R9278-008 is archive e2 (bound 30/23) — edition mismatch. Is there an e3 finite lemma for 320939-archive? No. Hmm. R9278-010 is grid-1 e2. So no e3 lemma → bound null? \n\nWait, let me reconsider. Maybe the \"引用\" refers to the adoption within the same project. Let me re-read: \"采用引理必须匹配登记的project、lemma_id、edition、regime四项\". So the adoption specifies project implicitly (the record's project), lemma_id, edition, regime. The matching lemma must match all four.\n\nFor 320939: adoption in R9278-007 has project=SCHUR-320939-research-archive, lemma_id=L-Schur-shared, edition=e3, regime=finite. Matching lemma with project=SCHUR-320939-research-archive, e3, finite: none exists (only e2). So bound = null.\n\nHmm, that seems odd. Let me reconsider whether the adoption's project is the base project. Actually the adoption is a field inside a patch record; the \"project\" for matching is the record's project. \n\nLet me reconsider: maybe q07-q12 refer to the base project's own adoption. But base projects (SCHUR-615743-research etc.) have no adoption field in their records. The adoptions are only in -archive and -grid-N projects.\n\nHmm. Let me reconsider the whole thing. Perhaps the intended reading: each base project has an associated \"引用\" (the adoption reference) which is the archive record. Let me just go with the archive records as the canonical reference per project.\n\nActually, let me reconsider. The question says \"该引用明确指定的edition\" — \"the edition explicitly specified by that reference\". For each project there's exactly one adoption reference presumably. Let me check: for 615743, adoptions appear in archive (e2), grid-1 (e2), grid-2 (e2)... all e2. For 320939: archive e3, grid-1 e3. For 397515: archive e4, grid-1 e4.\n\nSo editions: 615743→e2, 320939→e3, 397515→e4. Consistent.\n\nNow matching lemma bound:\n- 615743: project SCHUR-615743-research-archive, e2, finite → R6678-019 bound 30/23. ✓\n- 320939: project SCHUR-320939-research-archive, e3, finite → none. But wait, is there a lemma for 320939-archive? R9278-008 is archive e2. No e3. → null.\n- 397515: project SCHUR-397515-research-archive, e4, finite → R6808-008 is archive e2. No e4. → null.\n\nHmm, that gives null for two. Let me double check there are no other lemmas. Lemmas listed:\n- R6808-001: 397515-research, e4, finite, 9/17\n- R9278-008: 320939-archive, e2, finite, 30/23\n- R6808-008: 397515-archive, e2, finite, 30/23\n- R9278-010: 320939-grid-1, e2, finite, 31/23\n- R6808-010: 397515-grid-1, e2, finite, 31/23\n- R6678-012: 615743, e3, finite, 20/19\n- R6678-013: 615743, e4, infinite, 21/19\n- R6678-014: 615743, e5, finite, 22/19\n- R6678-015: 615743, e6, infinite, 23/19\n- R6678-016: 615743, e7, finite, 24/19\n- R6678-017: 615743, e8, infinite, 25/19\n- R6678-019: 615743-archive, e2, finite, 30/23\n- R6678-021: 615743-grid-1, e2, finite, 31/23\n- R6678-023: grid-2, e2, 32/23\n- R6678-025: grid-3, e2, 33/23\n- R6678-027: grid-4, e2, 34/23\n- R667\n⚠️ Reply truncated at the model's output token limit. The text above is partial — ask to continue it.",
+      "actual_answers": null,
+      "tool_evidence": {
+        "historical_events": 78,
+        "historical_execution_errors": 0,
+        "historical_tool_actions": 212,
+        "final_tool_actions": 1,
+        "provenance": "openclaw-cli"
+      }
+    },
+    {
+      "case": "research-v3-combined-high-no_history",
+      "condition": "no_history",
+      "format": null,
+      "format_error": "Invalid/duplicate key-value row",
+      "execution_error": null,
+      "extra_fields": [],
+      "check_count": 18,
+      "observed_count": 0,
+      "correct_count": 0,
+      "coverage": 0.0,
+      "correct_over_all": 0.0,
+      "correct_over_observed": null,
+      "checks": [
+        {
+          "qid": "q01",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q02",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q03",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q04",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q05",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q06",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q07",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q08",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q09",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q10",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q11",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q12",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q13",
+          "group": "historical",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q14",
+          "group": "historical",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q15",
+          "group": "historical",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q16",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q17",
+          "group": "boundary",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q18",
+          "group": "boundary",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        }
+      ],
+      "primary_memory_eligible": false,
+      "claim_limit": "Native single-trial record-memory feasibility; no mathematical result or stable capacity estimate.",
+      "agent": "openclaw",
+      "trial": 0,
+      "event_id": "334",
+      "observation_status": "observed",
+      "response_text": "I've searched memory (no hits — the index is degraded to keyword-only with no embedding provider) and checked the workspace for any research record files. No records for these projects exist anywhere I can access.\n\nThe task states these are \"研究登记事实\" (registered research facts) to be restored from records given in the session. No such records were provided in this session, and none are stored in memory or the workspace. Per the rules, values that were never provided must return `null`.\n\n```json\n{\n  \"q01\": null,\n  \"q02\": null,\n  \"q03\": null,\n  \"q04\": null,\n  \"q05\": null,\n  \"q06\": null,\n  \"q07\": null,\n  \"q08\": null,\n  \"q09\": null,\n  \"q10\": null,\n  \"q11\": null,\n  \"q12\": null,\n  \"q13\": null,\n  \"q14\": null,\n  \"q15\": null,\n  \"q16\": null,\n  \"q17\": null,\n  \"q18\": null\n}\n```\n\nNote: memory recall was partial — the semantic index is degraded (no embedding provider auth), so I could only do keyword search, which returned zero hits. No research records for SCHUR-615743-research, SCHUR-320939-research, or SCHUR-397515-research were found in memory or the workspace.",
+      "actual_answers": null,
+      "tool_evidence": {
+        "historical_events": 46,
+        "historical_execution_errors": 0,
+        "historical_tool_actions": 46,
+        "final_tool_actions": 15,
+        "provenance": "openclaw-cli"
+      }
+    },
+    {
+      "case": "research-v3-combined-high-open_book",
+      "condition": "open_book",
+      "format": null,
+      "format_error": "Invalid/duplicate key-value row",
+      "execution_error": null,
+      "extra_fields": [],
+      "check_count": 18,
+      "observed_count": 0,
+      "correct_count": 0,
+      "coverage": 0.0,
+      "correct_over_all": 0.0,
+      "correct_over_observed": null,
+      "checks": [
+        {
+          "qid": "q01",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "2",
+          "actual": null,
+          "literal_evidence": {
+            "value": "2",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-005"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q02",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "branch-blue-6678",
+          "actual": null,
+          "literal_evidence": {
+            "value": "branch-blue-6678",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-008"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q03",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "3",
+          "actual": null,
+          "literal_evidence": {
+            "value": "3",
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-002"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q04",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "branch-blue-9278",
+          "actual": null,
+          "literal_evidence": {
+            "value": "branch-blue-9278",
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-003"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q05",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "4",
+          "actual": null,
+          "literal_evidence": {
+            "value": "4",
+            "supporting_literal_records": [
+              "SCHUR-397515-research-R6808-002"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q06",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "branch-blue-6808",
+          "actual": null,
+          "literal_evidence": {
+            "value": "branch-blue-6808",
+            "supporting_literal_records": [
+              "SCHUR-397515-research-R6808-003"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q07",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "e2",
+          "actual": null,
+          "literal_evidence": {
+            "value": "e2",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q08",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "e3",
+          "actual": null,
+          "literal_evidence": {
+            "value": "e3",
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q09",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "e4",
+          "actual": null,
+          "literal_evidence": {
+            "value": "e4",
+            "supporting_literal_records": [
+              "SCHUR-397515-research-R6808-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q10",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "2/17",
+          "actual": null,
+          "literal_evidence": {
+            "value": "2/17",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-001"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q11",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "3/17",
+          "actual": null,
+          "literal_evidence": {
+            "value": "3/17",
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-001"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q12",
+          "group": "linked",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "9/17",
+          "actual": null,
+          "literal_evidence": {
+            "value": "9/17",
+            "supporting_literal_records": [
+              "SCHUR-397515-research-R6808-001"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q13",
+          "group": "historical",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "7",
+          "actual": null,
+          "literal_evidence": {
+            "value": "7",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q14",
+          "group": "historical",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "5",
+          "actual": null,
+          "literal_evidence": {
+            "value": "5",
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q15",
+          "group": "historical",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "6",
+          "actual": null,
+          "literal_evidence": {
+            "value": "6",
+            "supporting_literal_records": [
+              "SCHUR-397515-research-R6808-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q16",
+          "group": "atomic",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": "v6",
+          "actual": null,
+          "literal_evidence": {
+            "value": "v6",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-009"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q17",
+          "group": "boundary",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-006"
+            ],
+            "reason": "withdrawn_by_record"
+          }
+        },
+        {
+          "qid": "q18",
+          "group": "boundary",
+          "status": "unknown",
+          "reason": "unparseable_response",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        }
+      ],
+      "primary_memory_eligible": false,
+      "claim_limit": "Native single-trial record-memory feasibility; no mathematical result or stable capacity estimate.",
+      "agent": "hermes",
+      "trial": 0,
+      "event_id": "353",
+      "observation_status": "observed",
+      "response_text": "I'll work through the records for each project.\n\n**SCHUR-615743-research** (base R6678-000, C0: d1=7, branch=branch-green-6678, adoption e2/finite, hint_permission=true, six_order_hint=7/31)\n\nAccepted patches in order:\n- R6678-002 (v8): a11=3\n- R6678-003 (v3): a12=3/13\n- R6678-004 (v7): a22=32/11\n- R6678-005 (v2): d1=2\n- R6678-006 (v1): d2=3\n- R6678-007 (v4): branch=branch-green-6678\n- R6678-008 (v5): d1=19, branch=branch-blue-6678\n- R6678-009 (v6, cancel): cancels d1 of R6678-008 → R6678-008's branch stays, d1 reverts\n- R6678-011: hint_permission=false\n- R6678-010: draft → ignored\n\nd1: last effective d1 patch is R6678-005 (d1=2); R6678-008's d1 cancelled → d1=2.\nbranch: R6678-008 branch=branch-blue-6678 (not cancelled) → branch-blue-6678.\nrevision label: last accepted patch/cancel = R6678-011, which has no revision field → the last accepted record carrying a revision is R6678-009 (v6).\n\n**SCHUR-320939-research** (base R9278-000, C0: d1=5, branch=branch-green-9278, adoption e3/finite, hint_permission=true, six_order_hint=7/31)\n\n- R9278-002 (v4): d1=3, branch=branch-green-9278\n- R9278-003 (v5): d1=19, branch=branch-blue-9278\n- R9278-004 (v6, cancel): cancels d1 of R9278-003 → branch-blue-9278 stays, d1 reverts to 3\n- R9278-005: draft → ignored\n- R9278-006: hint_permission=false\n\nd1=3; branch=branch-blue-9278; hint_permission=false → six_order_hint not reusable → null.\n\n**SCHUR-397515-research** (base R6808-000, C0: d1=6, branch=branch-green-6808, adoption e4/finite, hint_permission=true, six_order_hint=7/31)\n\n- R6808-002 (v4): d1=4, branch=branch-green-6808\n- R6808-003 (v5): d1=19, branch=branch-blue-6808\n- R6808-004 (v6, cancel): cancels d1 of R6808-003 → branch-blue-6808 stays, d1 reverts to 4\n- R6808-005: draft → ignored\n- R6808-006: hint_permission=false\n\nd1=4; branch=branch-blue-6808.\n\n**Editions (q07–q09):** each project's own adoption edition — 615743→e2, 320939→e3, 397515→e4.\n\n**Bounds (q10–q12):** match project + lemma_id=L-Schur-shared + edition + regime=finite.\n- 615743: e2/finite → R6678-001 bound=2/17 (R6678-012 is e3, R6678-013 e4/infinite, etc. — no match)\n- 320939: e3/finite → R9278-001 bound=3/17\n- 397515: e4/finite → R6808-001 bound=9/17\n\n**C0 D1 (q13–q15):** 7, 5, 6.\n\n**q16:** last accepted patch/cancel with a revision label = R6678-009 → v6.\n**q17:** hint_permission=false → null.\n**q18:** error_bound_o8 never registered → null.\n\n```json\n{\n  \"q01\": \"2\",\n  \"q02\": \"branch-blue-6678\",\n  \"q03\": \"3\",\n  \"q04\": \"branch-blue-9278\",\n  \"q05\": \"4\",\n  \"q06\": \"branch-blue-6808\",\n  \"q07\": \"e2\",\n  \"q08\": \"e3\",\n  \"q09\": \"e4\",\n  \"q10\": \"2/17\",\n  \"q11\": \"3/17\",\n  \"q12\": \"9/17\",\n  \"q13\": \"7\",\n  \"q14\": \"5\",\n  \"q15\": \"6\",\n  \"q16\": \"v6\",\n  \"q17\": null,\n  \"q18\": null\n}\n```",
+      "actual_answers": null,
+      "tool_evidence": {
+        "historical_events": 78,
+        "historical_execution_errors": 0,
+        "historical_tool_actions": 99,
+        "final_tool_actions": 0,
+        "provenance": "hermes-cli"
+      }
+    },
+    {
+      "case": "research-v3-combined-high-memory",
+      "condition": "memory",
+      "format": null,
+      "format_error": null,
+      "execution_error": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is e41304cd33d1c21cf4f6bda34e2d514b25ec9f321630bba19c70a0b6c8b59047",
+      "extra_fields": [],
+      "check_count": 18,
+      "observed_count": 0,
+      "correct_count": 0,
+      "coverage": 0.0,
+      "correct_over_all": 0.0,
+      "correct_over_observed": null,
+      "checks": [
+        {
+          "qid": "q01",
+          "group": "atomic",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": "2",
+          "actual": null,
+          "literal_evidence": {
+            "value": "2",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-005"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q02",
+          "group": "atomic",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": "branch-blue-6678",
+          "actual": null,
+          "literal_evidence": {
+            "value": "branch-blue-6678",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-008"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q03",
+          "group": "atomic",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": "3",
+          "actual": null,
+          "literal_evidence": {
+            "value": "3",
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-002"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q04",
+          "group": "atomic",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": "branch-blue-9278",
+          "actual": null,
+          "literal_evidence": {
+            "value": "branch-blue-9278",
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-003"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q05",
+          "group": "atomic",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": "4",
+          "actual": null,
+          "literal_evidence": {
+            "value": "4",
+            "supporting_literal_records": [
+              "SCHUR-397515-research-R6808-002"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q06",
+          "group": "atomic",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": "branch-blue-6808",
+          "actual": null,
+          "literal_evidence": {
+            "value": "branch-blue-6808",
+            "supporting_literal_records": [
+              "SCHUR-397515-research-R6808-003"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q07",
+          "group": "linked",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": "e2",
+          "actual": null,
+          "literal_evidence": {
+            "value": "e2",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q08",
+          "group": "linked",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": "e3",
+          "actual": null,
+          "literal_evidence": {
+            "value": "e3",
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q09",
+          "group": "linked",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": "e4",
+          "actual": null,
+          "literal_evidence": {
+            "value": "e4",
+            "supporting_literal_records": [
+              "SCHUR-397515-research-R6808-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q10",
+          "group": "linked",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": "2/17",
+          "actual": null,
+          "literal_evidence": {
+            "value": "2/17",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-001"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q11",
+          "group": "linked",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": "3/17",
+          "actual": null,
+          "literal_evidence": {
+            "value": "3/17",
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-001"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q12",
+          "group": "linked",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": "9/17",
+          "actual": null,
+          "literal_evidence": {
+            "value": "9/17",
+            "supporting_literal_records": [
+              "SCHUR-397515-research-R6808-001"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q13",
+          "group": "historical",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": "7",
+          "actual": null,
+          "literal_evidence": {
+            "value": "7",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q14",
+          "group": "historical",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": "5",
+          "actual": null,
+          "literal_evidence": {
+            "value": "5",
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q15",
+          "group": "historical",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": "6",
+          "actual": null,
+          "literal_evidence": {
+            "value": "6",
+            "supporting_literal_records": [
+              "SCHUR-397515-research-R6808-000"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q16",
+          "group": "atomic",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": "v6",
+          "actual": null,
+          "literal_evidence": {
+            "value": "v6",
+            "supporting_literal_records": [
+              "SCHUR-615743-research-R6678-009"
+            ],
+            "reason": "literal_from_record_with_declared_selection_rules"
+          }
+        },
+        {
+          "qid": "q17",
+          "group": "boundary",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [
+              "SCHUR-320939-research-R9278-006"
+            ],
+            "reason": "withdrawn_by_record"
+          }
+        },
+        {
+          "qid": "q18",
+          "group": "boundary",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        }
+      ],
+      "primary_memory_eligible": true,
+      "claim_limit": "Native single-trial record-memory feasibility; no mathematical result or stable capacity estimate.",
+      "agent": "hermes",
+      "trial": 0,
+      "event_id": "191",
+      "observation_status": "execution_error",
+      "response_text": null,
+      "actual_answers": null,
+      "tool_evidence": {
+        "historical_events": 78,
+        "historical_execution_errors": 51,
+        "historical_tool_actions": 47,
+        "final_tool_actions": 0,
+        "provenance": null
+      }
+    },
+    {
+      "case": "research-v3-combined-high-no_history",
+      "condition": "no_history",
+      "format": null,
+      "format_error": null,
+      "execution_error": "Adapter exited 1; stderr SHA256 is 28786143e730eea4646af36b3707c0ccc734e728de7e196153084ae491c6d71a",
+      "extra_fields": [],
+      "check_count": 18,
+      "observed_count": 0,
+      "correct_count": 0,
+      "coverage": 0.0,
+      "correct_over_all": 0.0,
+      "correct_over_observed": null,
+      "checks": [
+        {
+          "qid": "q01",
+          "group": "atomic",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q02",
+          "group": "atomic",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q03",
+          "group": "atomic",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q04",
+          "group": "atomic",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q05",
+          "group": "atomic",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q06",
+          "group": "atomic",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q07",
+          "group": "linked",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q08",
+          "group": "linked",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q09",
+          "group": "linked",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q10",
+          "group": "linked",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q11",
+          "group": "linked",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q12",
+          "group": "linked",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q13",
+          "group": "historical",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q14",
+          "group": "historical",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q15",
+          "group": "historical",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q16",
+          "group": "atomic",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q17",
+          "group": "boundary",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        },
+        {
+          "qid": "q18",
+          "group": "boundary",
+          "status": "error",
+          "reason": "execution_error",
+          "expected": null,
+          "actual": null,
+          "literal_evidence": {
+            "value": null,
+            "supporting_literal_records": [],
+            "reason": "not_provided_for_target"
+          }
+        }
+      ],
+      "primary_memory_eligible": false,
+      "claim_limit": "Native single-trial record-memory feasibility; no mathematical result or stable capacity estimate.",
+      "agent": "hermes",
+      "trial": 0,
+      "event_id": "295",
+      "observation_status": "execution_error",
+      "response_text": null,
+      "actual_answers": null,
+      "tool_evidence": {
+        "historical_events": 46,
+        "historical_execution_errors": 0,
+        "historical_tool_actions": 72,
+        "final_tool_actions": 0,
+        "provenance": null
+      }
+    }
+  ],
+  "summary": {
+    "openclaw": {
+      "conditions": {
+        "open_book": {
+          "correct_count": 0,
+          "observed_count": 0,
+          "check_count": 18,
+          "coverage": 0.0,
+          "correct_over_all": 0.0
+        },
+        "memory": {
+          "correct_count": 0,
+          "observed_count": 0,
+          "check_count": 18,
+          "coverage": 0.0,
+          "correct_over_all": 0.0
+        },
+        "no_history": {
+          "correct_count": 0,
+          "observed_count": 0,
+          "check_count": 18,
+          "coverage": 0.0,
+          "correct_over_all": 0.0
+        }
+      },
+      "open_book_reading_gate_pass": false,
+      "memory_interpretation": "Descriptive retrieval only; open-book results and execution/format failures must be considered together."
+    },
+    "hermes": {
+      "conditions": {
+        "open_book": {
+          "correct_count": 0,
+          "observed_count": 0,
+          "check_count": 18,
+          "coverage": 0.0,
+          "correct_over_all": 0.0
+        },
+        "memory": {
+          "correct_count": 0,
+          "observed_count": 0,
+          "check_count": 18,
+          "coverage": 0.0,
+          "correct_over_all": 0.0
+        },
+        "no_history": {
+          "correct_count": 0,
+          "observed_count": 0,
+          "check_count": 18,
+          "coverage": 0.0,
+          "correct_over_all": 0.0
+        }
+      },
+      "open_book_reading_gate_pass": false,
+      "memory_interpretation": "Descriptive retrieval only; open-book results and execution/format failures must be considered together."
+    }
+  },
+  "protocol": {
+    "status": "frozen-before-paid-run",
+    "version": "3-transport-revision",
+    "seed": 20261011,
+    "selected_cases": [
+      "research-v3-combined-high-open_book",
+      "research-v3-combined-high-memory",
+      "research-v3-combined-high-no_history"
+    ],
+    "repeats": 1,
+    "agents": [
+      "openclaw",
+      "hermes"
+    ],
+    "scheduled_final_slots": 6,
+    "checks_per_slot": 18,
+    "primary_condition": "memory",
+    "selection": "One predeclared composite high-load example with two matched controls; no result-selected cases or retries.",
+    "claim_limit": "One-round feasibility only; no low/high difficulty effect, repetition stability, ranking or final-release gate.",
+    "controls": "memory/open_book have identical prior sessions in separate workspaces; no_history removes every queried project.",
+    "scoring": "V3 independent semantic grading; core strict JSON equality retained as supplemental evidence.",
+    "isolation": "Unprivileged user/mount/PID namespaces; only current workspace and installed runtimes exposed; no-new-privileges and capabilities dropped.",
+    "data_sha256": {
+      "answer-trace.evaluator.json": "c38f34feafa0d18bf2118e2626665eebc7b1896b84ef38d6fac9f51cdd4edf9b",
+      "config.template.json": "1d5f6d3d48f4ddfc3d23c6a5edcfe09d548b6e669d2f7b442e5ec596efe3d601",
+      "dataset.evaluator.jsonl": "a94587b34b6c1dd08a7eb448d9e8cd3b22ceba135a19da860abc6d1819c85322",
+      "gold.json": "266dfc3bc3e18faa6db0a0536dbff9952ea117184741c451b35fdd2b6bce5c6b",
+      "learner-cases.json": "05fa230187853eb1aed512be3c17b61c84d9675b90d3fc0e9eee3566ff49bdc3"
+    },
+    "implementation_sha256": {
+      "experiments/math_memory/record_pilot.py": "2fff29dccceef4e6d3c39c3c57ff6a8c6da0ec4371976f29f3edaa363011600e",
+      "experiments/math_memory/memory_only.py": "132d4c8ff15332786e3a428982499b48839e014fd036205c5be2c864434542b3",
+      "scripts/isolated_native.sh": "60ab733d397af989c7f327bc073cccfe1aec86e544096494bbf42cd87680434c",
+      "scripts/live_deepseek.py": "adb3cfb6c1d8c5e5ee59127a65e7b8203a05df474baa1c2980e3f5963fef5db1"
+    },
+    "budget": "Retain cumulative ledger; additional authorization and execution freeze required before live run; video allowance excluded.",
+    "revision": "Uniform upstream-status propagation and synchronized parallel budget reservations. Prompts/gold/semantic scoring unchanged; original interrupted attempt retained.",
+    "shared_additional_limit_cny": "10",
+    "original_attempt": "docs/evidence/research-v3-interrupted-accounting.json",
+    "retry_policy": "Benchmark cases are not automatically rerun. Native transport recovery remains native; every request/failure is audited and budgeted."
+  },
+  "analysis_sha256": "2fff29dccceef4e6d3c39c3c57ff6a8c6da0ec4371976f29f3edaa363011600e",
+  "claim_limit": "One-round feasibility only; no low/high difficulty effect, repetition stability, ranking or final-release gate."
+}

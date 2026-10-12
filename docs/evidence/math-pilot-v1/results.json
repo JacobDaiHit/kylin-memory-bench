@@ -1,0 +1,48 @@
+{
+  "verification": {
+    "valid": true,
+    "events": 45,
+    "cases": 6,
+    "run_id": "d1d550b5-8754-4bfa-8e78-2917769c59b3",
+    "status": "interrupted",
+    "note": "Checks integrity and scoring consistency; hashes are not a signature or proof of honest adapter behavior."
+  },
+  "run_id": "d1d550b5-8754-4bfa-8e78-2917769c59b3",
+  "status": "interrupted",
+  "rows": [
+    {
+      "agent": "hermes",
+      "case": "reasoning-low--memory",
+      "condition": "memory",
+      "event_id": "17",
+      "execution_error": "Adapter exited 1; stderr SHA256 is aff922d9ca81b7f34a60c48108e7df304efdc6209416bd3bcf3efaff54370dfc",
+      "format": null,
+      "inputs": null,
+      "math": null,
+      "artifact": null
+    },
+    {
+      "agent": "openclaw",
+      "case": "reasoning-low--memory",
+      "condition": "memory",
+      "event_id": "30",
+      "execution_error": null,
+      "format": false,
+      "inputs": null,
+      "math": null,
+      "math_given_correct_inputs": null,
+      "consistent_with_reported_inputs": null,
+      "algebra_residual": null,
+      "abstention": null,
+      "artifact": false,
+      "tool_trace": {
+        "actions": 26,
+        "provenance": "openclaw-cli"
+      },
+      "artifact_evidence": {
+        "exists": false
+      }
+    }
+  ],
+  "claim_limit": "one trial feasibility; not a ranking or validated difficulty"
+}

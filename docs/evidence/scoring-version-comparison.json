@@ -1,0 +1,64 @@
+{
+  "calibration_changed_fixtures": [
+    {
+      "after": {
+        "category": "correct",
+        "check_id": "answer",
+        "evidence_id": "fixture-response-02",
+        "reason": "Deterministic one_of check on response evidence.",
+        "source": "response",
+        "status": "pass",
+        "weight": 1
+      },
+      "before": {
+        "category": "confusion",
+        "check_id": "answer",
+        "evidence_id": "fixture-response-02",
+        "reason": "Deterministic one_of check on response evidence.",
+        "source": "response",
+        "status": "fail",
+        "weight": 1
+      },
+      "expected": {
+        "category": "correct",
+        "status": "pass"
+      },
+      "id": "response-02"
+    }
+  ],
+  "historical_runs": [
+    {
+      "changed_checks": [],
+      "current_scores_match_020": true,
+      "frozen_scores_match_020": true,
+      "run_id": "dc318856-004f-4b1c-9910-2ab94d6b2633",
+      "source_sha256": {
+        "dataset.jsonl": "6296c3fe4c1ea63ec13d6e1a847ea73e2071a12c90146329bed5015b98df89c7",
+        "evidence.jsonl": "648de93aa313dabfe525967319c1012c189f7420df9decead2f9702cec4d8fef",
+        "manifest.json": "7648986aeff5b0b0618e1d012cdd854d873dbba326c24639f23c2b895a288c93",
+        "scores.json": "02910aaabde186fbeb8b41134df7c0004892724317e158d275bfaed749f5ee14"
+      },
+      "suite": "openkylin-core"
+    },
+    {
+      "changed_checks": [],
+      "current_scores_match_020": true,
+      "frozen_scores_match_020": true,
+      "run_id": "23b54cdd-32a1-430b-b749-e0e8adadfff4",
+      "source_sha256": {
+        "dataset.jsonl": "5270554d74a7b01d8e35c7d5089921a59d5a006872fbd1d352d60468cc8a2e02",
+        "evidence.jsonl": "48969b39861dd7fcda6542c823b6941dde9f6f5bfaa288352488c62baa99ddf0",
+        "manifest.json": "4b325b8b7a9acc38cdb2c5adefd7210dbf875701ee043e159272ee23c7519608",
+        "scores.json": "e2a68640550bcf055fc9079a2dbcddc479c086eb8330a35a7949d5a3b435f527"
+      },
+      "suite": "openkylin-challenge"
+    }
+  ],
+  "kind": "versioned_scoring_comparison",
+  "new_scorer_sha256": "c182e3d0d7c65b318b86eb2cfac0a353b5763fa8c0176cec9d1a7256a2ea95e8",
+  "new_version": "0.2.1",
+  "old_scorer_sha256": "c770cb034cafbbc5bc0bddeaac5071c5ca3b88266ab94f9b5f418b37623a8590",
+  "old_version": "0.2.0",
+  "schema_version": "1.0",
+  "scope": "Strict JSON artifact parsing; response code-fence acceptance remains unchanged. Original results are read only."
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "shared_pilot_limit_cny": "5",
+  "combined_incremental_estimated_upper_cny": "3.02572592",
+  "within_shared_estimated_limit": true,
+  "attempts": [
+    "5adbf74e-5a59-4c46-a2e8-55e2ae2025b8",
+    "c49728c3-101a-4c94-9556-18b85d9c3406"
+  ],
+  "note": "Conservative ledger estimate across both attempts; not an independently reconciled bill. Account values are private. Video 1 CNY is separate and unused."
+}

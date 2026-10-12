@@ -1,0 +1,13 @@
+{
+  "all_difficulty_incremental_conservative_estimate_cny": "4.84334800",
+  "all_difficulty_limit_cny": "5",
+  "math_incremental_conservative_estimate_cny": "1.81762208",
+  "math_shared_limit_cny": "1.9",
+  "math_versions": [
+    "v1",
+    "v2"
+  ],
+  "note": "Conservative estimate of recorded token usage; interrupted in-flight requests may lack usage. Observed account decrease is not an individually reconciled invoice. Original private balances omitted.",
+  "observed_math_account_balance_decrease_cny": "0.73",
+  "video_reserved_limit_cny": "1"
+}

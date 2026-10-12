@@ -1,0 +1,3483 @@
+{
+  "agents": [
+    {
+      "cases": [
+        {
+          "case_id": "difficulty-retention-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "delivery",
+              "evidence_id": "3",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "approval",
+              "evidence_id": "3",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "retention",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "retention / 低负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retention-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "delivery",
+              "evidence_id": "11",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "approval",
+              "evidence_id": "11",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "retention",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "retention / 高负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-low",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "first",
+              "evidence_id": "16",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "second",
+              "evidence_id": "16",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "budget",
+              "evidence_id": "16",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "retrieval",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 3
+          },
+          "title": "retrieval / 低负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-high",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "first",
+              "evidence_id": "26",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "second",
+              "evidence_id": "26",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "budget",
+              "evidence_id": "26",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "retrieval",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 3
+          },
+          "title": "retrieval / 高负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "test",
+              "evidence_id": "31",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "production",
+              "evidence_id": "31",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "update",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "update / 低负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "test",
+              "evidence_id": "37",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "production",
+              "evidence_id": "37",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "update",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "update / 高负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "active",
+              "evidence_id": "43",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "archive",
+              "evidence_id": "43",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "disambiguation",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "disambiguation / 低负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "active",
+              "evidence_id": "57",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "archive",
+              "evidence_id": "57",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "disambiguation",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "disambiguation / 高负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-boundary-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "revoked",
+              "evidence_id": "61",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "public",
+              "evidence_id": "61",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "boundary",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "boundary / 低负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-boundary-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "revoked",
+              "evidence_id": "73",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "public",
+              "evidence_id": "73",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "boundary",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "boundary / 高负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-reuse-low",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "file",
+              "evidence_id": "81",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "audience",
+              "evidence_id": "81",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "code",
+              "evidence_id": "81",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "style",
+              "evidence_id": "81",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "approval",
+              "evidence_id": "81",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "revision",
+              "evidence_id": "81",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "write",
+              "evidence_id": "81",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "actions",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 7
+          },
+          "title": "reuse / 低负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-reuse-high",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "file",
+              "evidence_id": "86",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "audience",
+              "evidence_id": "86",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "code",
+              "evidence_id": "86",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "style",
+              "evidence_id": "86",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "approval",
+              "evidence_id": "86",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "revision",
+              "evidence_id": "86",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "write",
+              "evidence_id": "86",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "actions",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 7
+          },
+          "title": "reuse / 高负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retention-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "delivery",
+              "evidence_id": "93",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "approval",
+              "evidence_id": "93",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "retention",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "retention / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retention-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "delivery",
+              "evidence_id": "101",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "approval",
+              "evidence_id": "101",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 0f88a857c8a6425cd42e29a4c840a3ecf6113bfe108fae9654dee4be0eb60d56",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "retention",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "retention / 高负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-low",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "first",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "second",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "budget",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "retrieval",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 3
+          },
+          "title": "retrieval / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-high",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "first",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "second",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "budget",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "retrieval",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 3
+          },
+          "title": "retrieval / 高负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "test",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "production",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "update",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "update / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "test",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "production",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "update",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "update / 高负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "active",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "archive",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "disambiguation",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "disambiguation / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "active",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "archive",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "disambiguation",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "disambiguation / 高负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-boundary-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "revoked",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "public",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "boundary",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "boundary / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-boundary-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "revoked",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "public",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "boundary",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "boundary / 高负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-reuse-low",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "file",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "audience",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "code",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "style",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "approval",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "revision",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "write",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "actions",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 7
+          },
+          "title": "reuse / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-reuse-high",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "file",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "audience",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "code",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "style",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "approval",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "revision",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "write",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "actions",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 7
+          },
+          "title": "reuse / 高负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retention-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "delivery",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "approval",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "retention",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "retention / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retention-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "delivery",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "approval",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "retention",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "retention / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-low",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "first",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "second",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "budget",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "retrieval",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 3
+          },
+          "title": "retrieval / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-high",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "first",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "second",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "budget",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "retrieval",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 3
+          },
+          "title": "retrieval / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "test",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "production",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "update",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "update / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "test",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "production",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "update",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "update / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "active",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "archive",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "disambiguation",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "disambiguation / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "active",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "archive",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "disambiguation",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "disambiguation / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-boundary-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "revoked",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "public",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "boundary",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "boundary / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-boundary-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "revoked",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "public",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "boundary",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "boundary / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-reuse-low",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "file",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "audience",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "code",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "style",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "approval",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "revision",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "write",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "actions",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 7
+          },
+          "title": "reuse / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-reuse-high",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "file",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "audience",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "code",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "style",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "approval",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "revision",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "write",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "actions",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 7
+          },
+          "title": "reuse / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        }
+      ],
+      "categories": {
+        "execution_error": 40,
+        "insufficient_evidence": 68
+      },
+      "dimensions": {
+        "boundary": {
+          "cases": 6,
+          "coverage": 0.0,
+          "lower_bound": 0.0,
+          "score": null,
+          "upper_bound": 1.0
+        },
+        "disambiguation": {
+          "cases": 6,
+          "coverage": 0.0,
+          "lower_bound": 0.0,
+          "score": null,
+          "upper_bound": 1.0
+        },
+        "retention": {
+          "cases": 6,
+          "coverage": 0.0,
+          "lower_bound": 0.0,
+          "score": null,
+          "upper_bound": 1.0
+        },
+        "retrieval": {
+          "cases": 6,
+          "coverage": 0.0,
+          "lower_bound": 0.0,
+          "score": null,
+          "upper_bound": 1.0
+        },
+        "reuse": {
+          "cases": 6,
+          "coverage": 0.0,
+          "lower_bound": 0.0,
+          "score": null,
+          "upper_bound": 1.0
+        },
+        "update": {
+          "cases": 6,
+          "coverage": 0.0,
+          "lower_bound": 0.0,
+          "score": null,
+          "upper_bound": 1.0
+        }
+      },
+      "evaluated_dimensions": 6,
+      "id": "openclaw",
+      "is_baseline": false,
+      "kind": "openclaw",
+      "label": "OpenClaw 2026.9.8 / DeepSeek Flash",
+      "overall": {
+        "coverage": 0.0,
+        "lower_bound": 0.0,
+        "score": null,
+        "upper_bound": 1.0
+      },
+      "runtime": {
+        "errors": 56,
+        "latency_p50_ms": 0.002,
+        "latency_p95_ms": 8397.716,
+        "steps": 56
+      },
+      "stability": {
+        "repeats": 3,
+        "stddev": 0.0,
+        "trial_lower_bounds": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "cases": [
+        {
+          "case_id": "difficulty-retention-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "invalid_response",
+              "check_id": "delivery",
+              "evidence_id": "14",
+              "reason": "Evidence is not the requested structured JSON, or its field is missing.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "invalid_response",
+              "check_id": "approval",
+              "evidence_id": "14",
+              "reason": "Evidence is not the requested structured JSON, or its field is missing.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retention",
+          "lower_bound": 0.0,
+          "score": 0.0,
+          "statuses": {
+            "fail": 2
+          },
+          "title": "retention / 低负载",
+          "trial": 0,
+          "upper_bound": 0.0
+        },
+        {
+          "case_id": "difficulty-retention-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "delivery",
+              "evidence_id": "24",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is dd41ae3ad2e2a841f656debd28fb4f357c788a2123138ec5f9c1c2af3f87797f",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "approval",
+              "evidence_id": "24",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is dd41ae3ad2e2a841f656debd28fb4f357c788a2123138ec5f9c1c2af3f87797f",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "retention",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "retention / 高负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-low",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "omission",
+              "check_id": "first",
+              "evidence_id": "28",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "omission",
+              "check_id": "second",
+              "evidence_id": "28",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "budget",
+              "evidence_id": "28",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 0.333333,
+          "score": 0.333333,
+          "statuses": {
+            "fail": 2,
+            "pass": 1
+          },
+          "title": "retrieval / 低负载",
+          "trial": 0,
+          "upper_bound": 0.333333
+        },
+        {
+          "case_id": "difficulty-retrieval-high",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "omission",
+              "check_id": "first",
+              "evidence_id": "34",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "omission",
+              "check_id": "second",
+              "evidence_id": "34",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "budget",
+              "evidence_id": "34",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "pass",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "retrieval",
+          "lower_bound": 0.333333,
+          "score": 0.333333,
+          "statuses": {
+            "fail": 2,
+            "pass": 1
+          },
+          "title": "retrieval / 高负载",
+          "trial": 0,
+          "upper_bound": 0.333333
+        },
+        {
+          "case_id": "difficulty-update-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "test",
+              "evidence_id": "40",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is bdf6268b0f7196527017c2f8c935ffe7ddb2be8ade85cd53b2f51c3d1ccd0af4",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "production",
+              "evidence_id": "40",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is bdf6268b0f7196527017c2f8c935ffe7ddb2be8ade85cd53b2f51c3d1ccd0af4",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "update",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "update / 低负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "test",
+              "evidence_id": "47",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 6f197087eff3175a353acedd6dc4f6b2f6ff65dfd821188d2398feed0636aab5",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "production",
+              "evidence_id": "47",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 6f197087eff3175a353acedd6dc4f6b2f6ff65dfd821188d2398feed0636aab5",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "update",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "update / 高负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "omission",
+              "check_id": "active",
+              "evidence_id": "48",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "omission",
+              "check_id": "archive",
+              "evidence_id": "48",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "disambiguation",
+          "lower_bound": 0.0,
+          "score": 0.0,
+          "statuses": {
+            "fail": 2
+          },
+          "title": "disambiguation / 低负载",
+          "trial": 0,
+          "upper_bound": 0.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "active",
+              "evidence_id": "79",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 5fe61f4b5f4fc7f9656cab8182d3647840b61ecaccaad88ce2d644f8b9cf2aa9",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "archive",
+              "evidence_id": "79",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 5fe61f4b5f4fc7f9656cab8182d3647840b61ecaccaad88ce2d644f8b9cf2aa9",
+              "source": "response",
+              "status": "error",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "disambiguation",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "disambiguation / 高负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-boundary-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "revoked",
+              "evidence_id": "68",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 942e4233974daae1365fd76fc57f626ef386953aad7725a8cf7e1b72b9b5e4e7",
+              "source": "response",
+              "status": "error",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "public",
+              "evidence_id": "68",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 942e4233974daae1365fd76fc57f626ef386953aad7725a8cf7e1b72b9b5e4e7",
+              "source": "response",
+              "status": "error",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "boundary",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "boundary / 低负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-boundary-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "revoked",
+              "evidence_id": "84",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is cc9b9b3407b79f8fc6c502d356330e5f9f1e3cb4d36661fa773b92f1f3291bfa",
+              "source": "response",
+              "status": "error",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "public",
+              "evidence_id": "84",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is cc9b9b3407b79f8fc6c502d356330e5f9f1e3cb4d36661fa773b92f1f3291bfa",
+              "source": "response",
+              "status": "error",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "boundary",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "boundary / 高负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-reuse-low",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "file",
+              "evidence_id": "90",
+              "reason": "Adapter exited 1; stderr SHA256 is 34cb9e8e135481108a03d49c5434244db4f82091eec420fdf70b063ddbae52e5",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "audience",
+              "evidence_id": "90",
+              "reason": "Adapter exited 1; stderr SHA256 is 34cb9e8e135481108a03d49c5434244db4f82091eec420fdf70b063ddbae52e5",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "code",
+              "evidence_id": "90",
+              "reason": "Adapter exited 1; stderr SHA256 is 34cb9e8e135481108a03d49c5434244db4f82091eec420fdf70b063ddbae52e5",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "style",
+              "evidence_id": "90",
+              "reason": "Adapter exited 1; stderr SHA256 is 34cb9e8e135481108a03d49c5434244db4f82091eec420fdf70b063ddbae52e5",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "approval",
+              "evidence_id": "90",
+              "reason": "Adapter exited 1; stderr SHA256 is 34cb9e8e135481108a03d49c5434244db4f82091eec420fdf70b063ddbae52e5",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "revision",
+              "evidence_id": "90",
+              "reason": "Adapter exited 1; stderr SHA256 is 34cb9e8e135481108a03d49c5434244db4f82091eec420fdf70b063ddbae52e5",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "write",
+              "evidence_id": "90",
+              "reason": "Adapter exited 1; stderr SHA256 is 34cb9e8e135481108a03d49c5434244db4f82091eec420fdf70b063ddbae52e5",
+              "source": "actions",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 7
+          },
+          "title": "reuse / 低负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-reuse-high",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "file",
+              "evidence_id": "89",
+              "reason": "Adapter exited 1; stderr SHA256 is cf52c7f9bac7881ea4f32d6cad6d2a499bf3ab772881a9b4baf3092992718c61",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "audience",
+              "evidence_id": "89",
+              "reason": "Adapter exited 1; stderr SHA256 is cf52c7f9bac7881ea4f32d6cad6d2a499bf3ab772881a9b4baf3092992718c61",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "code",
+              "evidence_id": "89",
+              "reason": "Adapter exited 1; stderr SHA256 is cf52c7f9bac7881ea4f32d6cad6d2a499bf3ab772881a9b4baf3092992718c61",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "style",
+              "evidence_id": "89",
+              "reason": "Adapter exited 1; stderr SHA256 is cf52c7f9bac7881ea4f32d6cad6d2a499bf3ab772881a9b4baf3092992718c61",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "approval",
+              "evidence_id": "89",
+              "reason": "Adapter exited 1; stderr SHA256 is cf52c7f9bac7881ea4f32d6cad6d2a499bf3ab772881a9b4baf3092992718c61",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "revision",
+              "evidence_id": "89",
+              "reason": "Adapter exited 1; stderr SHA256 is cf52c7f9bac7881ea4f32d6cad6d2a499bf3ab772881a9b4baf3092992718c61",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "write",
+              "evidence_id": "89",
+              "reason": "Adapter exited 1; stderr SHA256 is cf52c7f9bac7881ea4f32d6cad6d2a499bf3ab772881a9b4baf3092992718c61",
+              "source": "actions",
+              "status": "error",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 7
+          },
+          "title": "reuse / 高负载",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retention-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "delivery",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "approval",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "retention",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "retention / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retention-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "delivery",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "approval",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "retention",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "retention / 高负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-low",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "first",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "second",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "budget",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "retrieval",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 3
+          },
+          "title": "retrieval / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-high",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "first",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "second",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "budget",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "retrieval",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 3
+          },
+          "title": "retrieval / 高负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "test",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "production",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "update",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "update / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "test",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "production",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "update",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "update / 高负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "active",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "archive",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "disambiguation",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "disambiguation / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "active",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "archive",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "disambiguation",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "disambiguation / 高负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-boundary-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "revoked",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "public",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "boundary",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "boundary / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-boundary-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "revoked",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "public",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "boundary",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "boundary / 高负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-reuse-low",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "file",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "audience",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "code",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "style",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "approval",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "revision",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "write",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "actions",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 7
+          },
+          "title": "reuse / 低负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-reuse-high",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "file",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "audience",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "code",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "style",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "approval",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "revision",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "write",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "actions",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 7
+          },
+          "title": "reuse / 高负载",
+          "trial": 1,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retention-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "delivery",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "approval",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "retention",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "retention / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retention-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "delivery",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "approval",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "retention",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "retention / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-low",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "first",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "second",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "budget",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "retrieval",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 3
+          },
+          "title": "retrieval / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-retrieval-high",
+          "check_count": 3,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "first",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "second",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "budget",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "retrieve",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "retrieval",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 3
+          },
+          "title": "retrieval / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "test",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "production",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "update",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "update / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-update-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "test",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "production",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "update",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "update / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "active",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "archive",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "disambiguation",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "disambiguation / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-disambiguation-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "active",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "archive",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "recall",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "disambiguation",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "disambiguation / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-boundary-low",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "revoked",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "public",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "boundary",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "boundary / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-boundary-high",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "revoked",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "after-revoke",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "public",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "after-revoke",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "boundary",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "boundary / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-reuse-low",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "file",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "audience",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "code",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "style",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "approval",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "revision",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "write",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "actions",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 7
+          },
+          "title": "reuse / 低负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "difficulty-reuse-high",
+          "check_count": 7,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "file",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "audience",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "code",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "style",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "approval",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "revision",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "write",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "actions",
+              "status": "unknown",
+              "step_id": "produce",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 7
+          },
+          "title": "reuse / 高负载",
+          "trial": 2,
+          "upper_bound": 1.0
+        }
+      ],
+      "categories": {
+        "correct": 2,
+        "execution_error": 26,
+        "insufficient_evidence": 72,
+        "invalid_response": 2,
+        "omission": 6
+      },
+      "dimensions": {
+        "boundary": {
+          "cases": 6,
+          "coverage": 0.0,
+          "lower_bound": 0.0,
+          "score": null,
+          "upper_bound": 1.0
+        },
+        "disambiguation": {
+          "cases": 6,
+          "coverage": 0.166667,
+          "lower_bound": 0.0,
+          "score": 0.0,
+          "upper_bound": 0.833333
+        },
+        "retention": {
+          "cases": 6,
+          "coverage": 0.166667,
+          "lower_bound": 0.0,
+          "score": 0.0,
+          "upper_bound": 0.833333
+        },
+        "retrieval": {
+          "cases": 6,
+          "coverage": 0.333333,
+          "lower_bound": 0.111111,
+          "score": 0.333333,
+          "upper_bound": 0.777778
+        },
+        "reuse": {
+          "cases": 6,
+          "coverage": 0.0,
+          "lower_bound": 0.0,
+          "score": null,
+          "upper_bound": 1.0
+        },
+        "update": {
+          "cases": 6,
+          "coverage": 0.0,
+          "lower_bound": 0.0,
+          "score": null,
+          "upper_bound": 1.0
+        }
+      },
+      "evaluated_dimensions": 6,
+      "id": "hermes",
+      "is_baseline": false,
+      "kind": "hermes",
+      "label": "Hermes 4b8a437 / DeepSeek Flash",
+      "overall": {
+        "coverage": 0.111111,
+        "lower_bound": 0.018519,
+        "score": 0.111111,
+        "upper_bound": 0.907407
+      },
+      "runtime": {
+        "errors": 25,
+        "latency_p50_ms": 17778.964,
+        "latency_p95_ms": 68266.741,
+        "steps": 45
+      },
+      "stability": {
+        "repeats": 3,
+        "stddev": 0.026189,
+        "trial_lower_bounds": [
+          0.055556,
+          0.0,
+          0.0
+        ]
+      }
+    }
+  ],
+  "dataset_sha256": "0aae4ecc47af860221ff0e6dbd26d009033f13e3c4e78a30ed613426c9d3bb5b",
+  "method": "Equal dimension macro average of equal case/trial weighted-check scores; unknown/error remain in coverage bounds.",
+  "run_id": "5adbf74e-5a59-4c46-a2e8-55e2ae2025b8",
+  "run_status": "interrupted",
+  "schema_version": "1.0",
+  "scorer_version": "1.0"
+}

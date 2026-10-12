@@ -1,0 +1,76 @@
+{
+  "status": "interrupted",
+  "run_id": "afc06e27-c42b-4915-9858-b4b982adb50a",
+  "events": 279,
+  "rows": [
+    {
+      "agent": "openclaw",
+      "case": "research-v3-combined-high-open_book",
+      "event_id": null,
+      "status": "unknown_not_executed",
+      "correct_count": 0,
+      "observed_count": 0,
+      "check_count": 18,
+      "claim": "Not a memory-content failure"
+    },
+    {
+      "agent": "openclaw",
+      "case": "research-v3-combined-high-memory",
+      "event_id": null,
+      "status": "unknown_not_executed",
+      "correct_count": 0,
+      "observed_count": 0,
+      "check_count": 18,
+      "claim": "Not a memory-content failure"
+    },
+    {
+      "agent": "openclaw",
+      "case": "research-v3-combined-high-no_history",
+      "event_id": null,
+      "status": "unknown_not_executed",
+      "correct_count": 0,
+      "observed_count": 0,
+      "check_count": 18,
+      "claim": "Not a memory-content failure"
+    },
+    {
+      "agent": "hermes",
+      "case": "research-v3-combined-high-open_book",
+      "event_id": "140",
+      "status": "execution_error",
+      "correct_count": 0,
+      "observed_count": 0,
+      "check_count": 18,
+      "claim": "Not a memory-content failure"
+    },
+    {
+      "agent": "hermes",
+      "case": "research-v3-combined-high-memory",
+      "event_id": "266",
+      "status": "execution_error",
+      "correct_count": 0,
+      "observed_count": 0,
+      "check_count": 18,
+      "claim": "Not a memory-content failure"
+    },
+    {
+      "agent": "hermes",
+      "case": "research-v3-combined-high-no_history",
+      "event_id": "178",
+      "status": "execution_error",
+      "correct_count": 0,
+      "observed_count": 0,
+      "check_count": 18,
+      "claim": "Not a memory-content failure"
+    }
+  ],
+  "original_execution_errors": 3,
+  "incremental_conservative_estimate_cny": "1.82198504",
+  "observed_account_balance_decrease_cny": "0.77",
+  "stop_reason": "Uniform infrastructure defect: upstream timeouts incorrectly returned as HTTP 400; single-threaded proxy also queues independent callers. Original evidence preserved; no math, memory or ranking claim.",
+  "source_copy_sha256": "ef01bd400639a3a536a791c4895a6c2f048e78acb3a6c2904164dcc757ed7cb6",
+  "source_freeze_unchanged": true,
+  "planned_final_slots": 6,
+  "planned_field_denominator": 108,
+  "effective_observed_fields": 0
+}

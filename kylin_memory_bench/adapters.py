@@ -54,6 +54,10 @@ def load_config(path):
                 raise BenchError(field + ' must be a nonempty string')
         if 'native_config' in agent and not isinstance(agent['native_config'], dict):
             raise BenchError('native_config must be an object')
+        if 'per_turn_proxy_limits' in agent and not isinstance(agent['per_turn_proxy_limits'], bool):
+            raise BenchError('per_turn_proxy_limits must be boolean')
+        if agent.get('state_isolation', 'none') not in ('none', 'mount_namespace'):
+            raise BenchError('state_isolation must identify a mount-namespace wrapper or none')
     return config
 
 
@@ -236,6 +240,24 @@ class External:
         prompt = f"[Benchmark simulated day: {request['day']}]\n" + request['prompt']
         prompt_file = self.workspace / '.turn-prompt.txt'
         prompt_file.write_text(prompt, encoding='utf-8')
+        if self.config.get('per_turn_proxy_limits'):
+            from urllib.parse import urlsplit
+            limit = request.get('output_tokens', 1024)
+            if type(limit) is not int or not 256 <= limit <= 8192:
+                raise BenchError('Invalid per-turn output limit')
+            native = strict_json(canonical(self.config.get('native_config', {})))
+            providers = native.get('models', {}).get('providers', {}) if kind == 'openclaw' else native.get('providers', {})
+            settings = list(providers.values()) + ([native['model']] if kind == 'hermes' and 'model' in native else [])
+            for setting in settings:
+                for key in ('baseUrl', 'base_url'):
+                    if key in setting:
+                        url = setting[key].rstrip('/')
+                        if urlsplit(url).hostname not in {'127.0.0.1', 'localhost', '::1'}:
+                            raise BenchError('Per-turn proxy limits require a loopback budget proxy')
+                        setting[key] = url + '/cap/' + str(limit)
+                for model in setting.get('models', []):
+                    model['maxTokens'] = limit
+            write_json(self.workspace / ('.openclaw/openclaw.json' if kind == 'openclaw' else '.hermes/config.yaml'), native)
         if kind == 'openclaw':
             before = native_trace.cursor(self.workspace, request['session_id'])
             argv = [self.config.get('executable', 'openclaw'), 'agent', '--local', '--session-id',

@@ -1,0 +1,116 @@
+{
+  "agents": [
+    {
+      "env_allow": [
+        "KMB_PROXY_KEY"
+      ],
+      "executable": "/home/maedaily/.local/share/kmb-live/openclaw/bin/openclaw",
+      "id": "openclaw",
+      "kind": "openclaw",
+      "label": "OpenClaw 2026.9.8 / DeepSeek Flash",
+      "memory_complete": false,
+      "model": "kmb-deepseek/deepseek-flash",
+      "native_config": {
+        "agents": {
+          "defaults": {
+            "skipBootstrap": true,
+            "thinkingDefault": "off"
+          }
+        },
+        "models": {
+          "mode": "replace",
+          "providers": {
+            "kmb-deepseek": {
+              "api": "openai-completions",
+              "apiKey": "[REDACTED]",
+              "baseUrl": "http://127.0.0.1:45213/v1",
+              "models": [
+                {
+                  "compat": {
+                    "maxTokensField": "max_tokens",
+                    "supportsDeveloperRole": false,
+                    "supportsUsageInStreaming": true
+                  },
+                  "contextWindow": 1048576,
+                  "id": "deepseek-flash",
+                  "input": [
+                    "text"
+                  ],
+                  "maxTokens": 2048,
+                  "name": "DeepSeek Flash (budget bridge)",
+                  "reasoning": false
+                }
+              ]
+            }
+          }
+        },
+        "tools": {
+          "allow": [
+            "read",
+            "write",
+            "edit",
+            "memory_search",
+            "memory_get"
+          ],
+          "fs": {
+            "workspaceOnly": true
+          }
+        },
+        "update": {
+          "checkOnStart": false
+        }
+      },
+      "timeout": 600
+    },
+    {
+      "dependency_home": "/home/maedaily/.local/share/kmb-live/hermes-home",
+      "env_allow": [
+        "KMB_PROXY_KEY"
+      ],
+      "executable": "/home/maedaily/.local/share/kmb-live/hermes-source/.hermes/bin/hermes",
+      "id": "hermes",
+      "kind": "hermes",
+      "label": "Hermes 4b8a437 / DeepSeek Flash",
+      "memory_complete": false,
+      "model": "deepseek-flash",
+      "native_config": {
+        "agent": {
+          "max_turns": 6,
+          "reasoning_effort": "none"
+        },
+        "auxiliary": {
+          "title_generation": {
+            "enabled": false
+          }
+        },
+        "curator": {
+          "enabled": false
+        },
+        "memory": {
+          "memory_enabled": true,
+          "user_profile_enabled": true
+        },
+        "model": {
+          "base_url": "http://127.0.0.1:45213/v1",
+          "default": "deepseek-flash",
+          "provider": "kmb-deepseek"
+        },
+        "platform_toolsets": {
+          "cli": [
+            "file",
+            "memory"
+          ]
+        },
+        "providers": {
+          "kmb-deepseek": {
+            "base_url": "http://127.0.0.1:45213/v1",
+            "key_env": "KMB_PROXY_KEY"
+          }
+        }
+      },
+      "provider": "kmb-deepseek",
+      "timeout": 600
+    }
+  ],
+  "schema_version": "1.0"
+}

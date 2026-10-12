@@ -1,0 +1,61 @@
+{
+  "at_utc": "2026-10-11T11:21:15.908256+00:00",
+  "credential_environment_absent": true,
+  "environment": {
+    "execution_context": "wsl2",
+    "is_openkylin": true,
+    "machine": "x86_64",
+    "os_release": {
+      "ID": "openkylin",
+      "PRETTY_NAME": "openKylin 2.0 SP1",
+      "VERSION_ID": "2.0"
+    },
+    "python": "3.12.2",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "system": "Linux"
+  },
+  "network_interfaces": [
+    "lo"
+  ],
+  "original_runs": [
+    {
+      "cases": 36,
+      "events": 1008,
+      "evidence_sha256": "648de93aa313dabfe525967319c1012c189f7420df9decead2f9702cec4d8fef",
+      "note": "Checks integrity and scoring consistency; hashes are not a signature or proof of honest adapter behavior.",
+      "run_id": "dc318856-004f-4b1c-9910-2ab94d6b2633",
+      "status": "completed_with_errors",
+      "suite": "openkylin-core",
+      "valid": true
+    },
+    {
+      "cases": 12,
+      "events": 258,
+      "evidence_sha256": "48969b39861dd7fcda6542c823b6941dde9f6f5bfaa288352488c62baa99ddf0",
+      "note": "Checks integrity and scoring consistency; hashes are not a signature or proof of honest adapter behavior.",
+      "run_id": "23b54cdd-32a1-430b-b749-e0e8adadfff4",
+      "status": "completed_with_errors",
+      "suite": "openkylin-challenge",
+      "valid": true
+    }
+  ],
+  "passed": true,
+  "reference_process_observations": [
+    {
+      "count": 1,
+      "pid": 2915
+    },
+    {
+      "count": 2,
+      "pid": 2916
+    },
+    {
+      "count": 1,
+      "pid": 2917
+    }
+  ],
+  "rejection_reason": "Evidence request does not match dataset step",
+  "schema_version": "1.0",
+  "scope": "Offline replay in a new credential-free network namespace; reference subprocess persistence and workspace isolation only. Not real-agent TTL, complete deletion or bare-metal validation.",
+  "tampered_copy_rejected": true
+}

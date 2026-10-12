@@ -1,0 +1,21 @@
+{
+  "status": "frozen-before-paid-run",
+  "seed": 20261012,
+  "selected_cases": [
+    "reasoning-low--memory",
+    "reasoning-low--oracle",
+    "reasoning-high--memory",
+    "reasoning-high--oracle",
+    "reasoning-high--no_history",
+    "applicability-singular--oracle"
+  ],
+  "selection": "predeclared feasibility subset, not result-selected",
+  "repeats": 1,
+  "support": "same explicit coefficient formula for all final prompts",
+  "claim_limit": "feasibility only; no repeat stability or difficulty gate claim",
+  "sha256": {
+    "dataset.jsonl": "f7aef8cf77b9c0ae26c6d36251f08e9b7c16e381ac4dc1bb4ae6b7faa26044ea",
+    "gold.json": "08ed54ba989ecafeae4179d3414d0d4be1211f5e8ab4a09ae73d95b7573af957",
+    "learner-cases.json": "be6a67ef155487093489c64e6851c05188502fcf8327e6a7f8f684af0c9775e4"
+  }
+}

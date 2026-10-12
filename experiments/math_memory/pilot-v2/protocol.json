@@ -1,0 +1,18 @@
+{
+  "status": "frozen-before-paid-run",
+  "version": 2,
+  "cases": 6,
+  "repeats": 1,
+  "changes": [
+    "Explicit chronological supersession and source order",
+    "Two-dimensional Q block with small rationals",
+    "Oracle is a fresh-current-input capability control; histories are not matched"
+  ],
+  "claim_limit": "Feasibility only; no causal memory attribution, ranking or difficulty gate claim",
+  "prior_attempt": "v1 retained in full; stopped after identifying specification ambiguity",
+  "sha256": {
+    "dataset.jsonl": "f1e461e2964e208c53a7a681cab86fe4c0dd73a8e034b8a913b2b433c5651fae",
+    "gold.json": "b454fea4566019a2e9c47de4f671d77e605b3c4b96e77829ec31f94072b2d5de",
+    "learner-cases.json": "881de6237f520b0ca3b12734eee9eed0aef0759e8cc3769033bdc664bc10aea3"
+  }
+}

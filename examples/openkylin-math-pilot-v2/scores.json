@@ -1,0 +1,597 @@
+{
+  "agents": [
+    {
+      "cases": [
+        {
+          "case_id": "math-v2-reasoning-low--memory",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "invalid_response",
+              "check_id": "status",
+              "evidence_id": "17",
+              "reason": "Evidence is not the requested structured JSON, or its field is missing.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "wrong_reuse",
+              "check_id": "actual-file",
+              "evidence_id": "17",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "fail",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": 0.0,
+          "statuses": {
+            "fail": 2
+          },
+          "title": "math-v2-reasoning-low--memory",
+          "trial": 0,
+          "upper_bound": 0.0
+        },
+        {
+          "case_id": "math-v2-reasoning-low--oracle",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "wrong_reuse",
+              "check_id": "status",
+              "evidence_id": "15",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "actual-file",
+              "evidence_id": "15",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 0.5,
+          "score": 0.5,
+          "statuses": {
+            "fail": 1,
+            "pass": 1
+          },
+          "title": "math-v2-reasoning-low--oracle",
+          "trial": 0,
+          "upper_bound": 0.5
+        },
+        {
+          "case_id": "math-v2-reasoning-high--memory",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "wrong_reuse",
+              "check_id": "status",
+              "evidence_id": "33",
+              "reason": "Deterministic equals check on response evidence.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "correct",
+              "check_id": "actual-file",
+              "evidence_id": "33",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "pass",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 0.5,
+          "score": 0.5,
+          "statuses": {
+            "fail": 1,
+            "pass": 1
+          },
+          "title": "math-v2-reasoning-high--memory",
+          "trial": 0,
+          "upper_bound": 0.5
+        },
+        {
+          "case_id": "math-v2-reasoning-high--oracle",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "status",
+              "evidence_id": "34",
+              "reason": "Adapter exited 1; stderr SHA256 is e3a52f31ae161dce209a92d34e06361f133208d9688d5c81df13aa9975381481",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "actual-file",
+              "evidence_id": "34",
+              "reason": "Adapter exited 1; stderr SHA256 is e3a52f31ae161dce209a92d34e06361f133208d9688d5c81df13aa9975381481",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "math-v2-reasoning-high--oracle",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "math-v2-reasoning-high--no_history",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "status",
+              "evidence_id": "40",
+              "reason": "Adapter exited 1; stderr SHA256 is 9e354508a2ca2e20437ebaad246e0a71f33ca33b58f8fdc9f504d850951ecf3d",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "actual-file",
+              "evidence_id": "40",
+              "reason": "Adapter exited 1; stderr SHA256 is 9e354508a2ca2e20437ebaad246e0a71f33ca33b58f8fdc9f504d850951ecf3d",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "math-v2-reasoning-high--no_history",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "math-v2-applicability-singular--oracle",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "status",
+              "evidence_id": "44",
+              "reason": "Adapter exited 1; stderr SHA256 is a0d85da1d04cf4ccea571bc00f5e9988d8047d1819b55a0aa7bf21149a9d7ba4",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "actual-file",
+              "evidence_id": "44",
+              "reason": "Adapter exited 1; stderr SHA256 is a0d85da1d04cf4ccea571bc00f5e9988d8047d1819b55a0aa7bf21149a9d7ba4",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "math-v2-applicability-singular--oracle",
+          "trial": 0,
+          "upper_bound": 1.0
+        }
+      ],
+      "categories": {
+        "correct": 2,
+        "execution_error": 6,
+        "invalid_response": 1,
+        "wrong_reuse": 3
+      },
+      "dimensions": {
+        "boundary": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "disambiguation": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "retention": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "retrieval": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "reuse": {
+          "cases": 6,
+          "coverage": 0.5,
+          "lower_bound": 0.166667,
+          "score": 0.333333,
+          "upper_bound": 0.666667
+        },
+        "update": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        }
+      },
+      "evaluated_dimensions": 1,
+      "id": "openclaw",
+      "is_baseline": false,
+      "kind": "openclaw",
+      "label": "OpenClaw 2026.9.8 / DeepSeek Flash",
+      "overall": {
+        "coverage": 0.5,
+        "lower_bound": 0.166667,
+        "score": 0.333333,
+        "upper_bound": 0.666667
+      },
+      "runtime": {
+        "errors": 3,
+        "latency_p50_ms": 29814.878,
+        "latency_p95_ms": 190087.088,
+        "steps": 22
+      },
+      "stability": {
+        "repeats": 1,
+        "stddev": null,
+        "trial_lower_bounds": [
+          0.166667
+        ]
+      }
+    },
+    {
+      "cases": [
+        {
+          "case_id": "math-v2-reasoning-low--memory",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "status",
+              "evidence_id": "10",
+              "reason": "Adapter exited 1; stderr SHA256 is f9c1d5a35cbc537acfe60c885bc8573951e919c2546bab731c28ee03f6d1f73f",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "actual-file",
+              "evidence_id": "10",
+              "reason": "Adapter exited 1; stderr SHA256 is f9c1d5a35cbc537acfe60c885bc8573951e919c2546bab731c28ee03f6d1f73f",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "math-v2-reasoning-low--memory",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "math-v2-reasoning-low--oracle",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "status",
+              "evidence_id": "18",
+              "reason": "Adapter exited 1; stderr SHA256 is 302788351092223be34830e07c4f402cc85e41f84c52cfef19c6ce0c51a0f4b2",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "actual-file",
+              "evidence_id": "18",
+              "reason": "Adapter exited 1; stderr SHA256 is 302788351092223be34830e07c4f402cc85e41f84c52cfef19c6ce0c51a0f4b2",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "math-v2-reasoning-low--oracle",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "math-v2-reasoning-high--memory",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "status",
+              "evidence_id": "29",
+              "reason": "Adapter exited 1; stderr SHA256 is 3bb0986c76ef538264014e5f2600585b48d7738fe0d75051aab374f2608aa13f",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "actual-file",
+              "evidence_id": "29",
+              "reason": "Adapter exited 1; stderr SHA256 is 3bb0986c76ef538264014e5f2600585b48d7738fe0d75051aab374f2608aa13f",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "math-v2-reasoning-high--memory",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "math-v2-reasoning-high--oracle",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "status",
+              "evidence_id": "37",
+              "reason": "Adapter exited 1; stderr SHA256 is 590cd23d3b8d5c535d5f810e8af7924fc90b5758352e8f2f0b89923234143a29",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "actual-file",
+              "evidence_id": "37",
+              "reason": "Adapter exited 1; stderr SHA256 is 590cd23d3b8d5c535d5f810e8af7924fc90b5758352e8f2f0b89923234143a29",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "math-v2-reasoning-high--oracle",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "math-v2-reasoning-high--no_history",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "status",
+              "evidence_id": "39",
+              "reason": "Adapter exited 1; stderr SHA256 is 3fdcabe6d604b3485096b9c479f507476a14357d343cef6d15caa87120df7b23",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "actual-file",
+              "evidence_id": "39",
+              "reason": "Adapter exited 1; stderr SHA256 is 3fdcabe6d604b3485096b9c479f507476a14357d343cef6d15caa87120df7b23",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "math-v2-reasoning-high--no_history",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "math-v2-applicability-singular--oracle",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "status",
+              "evidence_id": "43",
+              "reason": "Adapter exited 1; stderr SHA256 is c0f246f1f7804b78028ff27d8e700bef1eaaa026d34b7c0082640f20660fc297",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "actual-file",
+              "evidence_id": "43",
+              "reason": "Adapter exited 1; stderr SHA256 is c0f246f1f7804b78028ff27d8e700bef1eaaa026d34b7c0082640f20660fc297",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "math-v2-applicability-singular--oracle",
+          "trial": 0,
+          "upper_bound": 1.0
+        }
+      ],
+      "categories": {
+        "execution_error": 12
+      },
+      "dimensions": {
+        "boundary": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "disambiguation": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "retention": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "retrieval": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "reuse": {
+          "cases": 6,
+          "coverage": 0.0,
+          "lower_bound": 0.0,
+          "score": null,
+          "upper_bound": 1.0
+        },
+        "update": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        }
+      },
+      "evaluated_dimensions": 1,
+      "id": "hermes",
+      "is_baseline": false,
+      "kind": "hermes",
+      "label": "Hermes 4b8a437 / DeepSeek Flash",
+      "overall": {
+        "coverage": 0.0,
+        "lower_bound": 0.0,
+        "score": null,
+        "upper_bound": 1.0
+      },
+      "runtime": {
+        "errors": 6,
+        "latency_p50_ms": 13799.657,
+        "latency_p95_ms": 37457.896,
+        "steps": 22
+      },
+      "stability": {
+        "repeats": 1,
+        "stddev": null,
+        "trial_lower_bounds": [
+          0.0
+        ]
+      }
+    }
+  ],
+  "dataset_sha256": "afe18b321b3e3ba528ac58a895fd12f90f2c2905bdf917438de988e8f37c0d0f",
+  "method": "Equal dimension macro average of equal case/trial weighted-check scores; unknown/error remain in coverage bounds.",
+  "run_id": "ff83360a-2791-4035-9c1a-67646b250a4a",
+  "run_status": "completed_with_errors",
+  "schema_version": "1.0",
+  "scorer_version": "1.0"
+}

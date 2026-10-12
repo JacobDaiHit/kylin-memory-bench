@@ -1,0 +1,56 @@
+{
+  "status": "frozen-before-paid-run",
+  "at_utc": "2026-10-11T14:23:01.975553+00:00",
+  "environment": {
+    "system": "Linux",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "machine": "x86_64",
+    "python": "3.12.2",
+    "os_release": {
+      "ID": "openkylin",
+      "PRETTY_NAME": "openKylin 2.0 SP1",
+      "VERSION_ID": "2.0"
+    },
+    "is_openkylin": true,
+    "execution_context": "wsl2"
+  },
+  "selected_cases": [
+    "research-v3-combined-high-open_book",
+    "research-v3-combined-high-memory",
+    "research-v3-combined-high-no_history"
+  ],
+  "repeats": 1,
+  "jobs": 6,
+  "scheduled_final_slots": 6,
+  "incremental_authorized_limit_cny": "10",
+  "cumulative_estimate_start_cny": "16.43897704",
+  "cumulative_estimate_ceiling_cny": "26.43897704",
+  "budget_policy": "Preserve original ledger; cap both current incremental estimate and account decrease; no video allowance used.",
+  "retry_policy": "No automatic retry or result-selected replacement.",
+  "model": "deepseek-flash",
+  "thinking": "disabled",
+  "temperature": 0,
+  "max_output_tokens": 2048,
+  "hermes_max_turns": 6,
+  "native_tools": "Native file and memory tools; no math solver or file-delivery check.",
+  "selection_note": "Three predeclared conditions of this mathematical research-record example; concurrent cases have isolated state.",
+  "dataset_sha256": "6b118425de7a17ad20162690accb980151dd82aad74c25236564c0468d5feca9",
+  "frozen_material_sha256": "f4bd26a80af15c1610c7e69580c121e5f958719e489a28c8e8a4de3d1c00b299",
+  "preflight_sha256": "db5ba4772805363eabc7d2ed7830c077b1b2eece95054c5c90e2f6adc8b2ddf5",
+  "source_sha256": {
+    "scripts/run_record_pilot.py": "cdbc291890d02713bda794a7640616df83660b8682f7c86fef26186bc740e634",
+    "scripts/live_deepseek.py": "ef01bd400639a3a536a791c4895a6c2f048e78acb3a6c2904164dcc757ed7cb6",
+    "scripts/isolated_native.sh": "60ab733d397af989c7f327bc073cccfe1aec86e544096494bbf42cd87680434c",
+    "experiments/math_memory/record_pilot.py": "2fff29dccceef4e6d3c39c3c57ff6a8c6da0ec4371976f29f3edaa363011600e",
+    "experiments/math_memory/memory_only.py": "132d4c8ff15332786e3a428982499b48839e014fd036205c5be2c864434542b3"
+  },
+  "price_check": {
+    "official_url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "guard_cny_per_million": {
+      "input_cache_miss": 2,
+      "input_cache_hit": 0.04,
+      "output": 8
+    },
+    "note": "Verified current official peak rates; deliberately retain peak bound during off-peak hours."
+  }
+}

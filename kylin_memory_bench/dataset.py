@@ -4,8 +4,8 @@ from pathlib import Path
 from .common import BenchError, DIMENSIONS, ID_RE, digest, positive_number, relative_path, strict_json
 
 SOURCES = {"response", "memory", "actions", "artifact"}
-OPS = {"equals", "one_of", "contains", "excludes", "exists", "absent", "json_subset"}
-FAILURES = {"omission", "confusion", "stale_memory", "wrong_persistence", "wrong_reuse"}
+OPS = {"equals", "one_of", "contains", "excludes", "exists", "absent", "json_subset", "json_keys", "json_exact"}
+FAILURES = {"omission", "confusion", "stale_memory", "wrong_persistence", "wrong_reuse", "invalid_format"}
 
 
 def _require(condition, message):
@@ -20,6 +20,8 @@ def validate_case(case):
     _require(isinstance(case.get("title"), str) and case["title"].strip(), "title is required")
     _require(isinstance(case.get("dimension"), str) and case["dimension"] in DIMENSIONS, "invalid dimension")
     _require(case.get("synthetic") is True, "v1 datasets must explicitly be synthetic=true")
+    _require(isinstance(case.get('state_policy', 'persistent'), str) and case.get('state_policy', 'persistent') in {'persistent', 'fresh_each_session'}, 'invalid state_policy')
+    _require(isinstance(case.get('grading_contract', '1.0'), str) and case.get('grading_contract', '1.0') in {'1.0', '1.1'}, 'invalid grading_contract')
     steps = case.get("steps")
     _require(isinstance(steps, list) and 1 <= len(steps) <= 2000, "steps must contain 1..2000 entries")
     ids, checks, previous_day = set(), set(), -1
@@ -34,6 +36,9 @@ def validate_case(case):
         _require(type(day) is int and day >= 0 and day >= previous_day, "day must be a monotonic nonnegative integer")
         previous_day = day
         _require(isinstance(step.get("prompt"), str) and 0 < len(step["prompt"]) <= 100000, "invalid prompt")
+        if 'output_tokens' in step:
+            _require(type(step['output_tokens']) is int and 256 <= step['output_tokens'] <= 8192,
+                     'output_tokens must be an integer in 256..8192')
         validations = step.get("checks", [])
         _require(isinstance(validations, list), "checks must be a list")
         for check in validations:
@@ -45,12 +50,26 @@ def validate_case(case):
             _require(isinstance(source, str) and isinstance(op, str) and source in SOURCES and op in OPS, "invalid check source/op")
             _require(isinstance(check.get("failure"), str) and check["failure"] in FAILURES, "check requires an explicit failure category")
             _require(positive_number(check.get("weight", 1)), "weight must be positive and finite")
+            mappings = check.get('mismatch_values', [])
+            _require(isinstance(mappings, list), 'mismatch_values must be a list')
+            _require(len(mappings) <= 32, 'Too many mismatch mappings')
+            for mapping in mappings:
+                _require(isinstance(mapping, dict) and set(mapping) == {'value', 'category'}, 'invalid mismatch mapping')
+                _require(isinstance(mapping['category'], str) and mapping['category'] in FAILURES, 'invalid mismatch category')
+                _require(mapping['value'] is None or type(mapping['value']) in (str, int, float, bool), 'mismatch value must be scalar')
+            _require(len({(type(m['value']).__name__, digest(m['value'])) for m in mappings}) == len(mappings), 'Duplicate mismatch mappings')
             if op not in {"exists", "absent"}:
                 _require("value" in check, "check requires value")
             if op in {"contains", "excludes"}:
                 _require(isinstance(check["value"], str) and check["value"], "contains/excludes needs nonempty text")
             if op == "json_subset":
                 _require(isinstance(check["value"], dict) and bool(check["value"]), "json_subset requires a nonempty object")
+            if op in {'json_keys', 'json_exact'}:
+                _require(source in {'response', 'artifact'}, 'JSON shape checks require response or artifact')
+                _require(not check.get('pointer'), 'JSON shape checks inspect the whole object')
+            if op == 'json_keys':
+                _require(isinstance(check['value'], list) and all(isinstance(k, str) for k in check['value']) and
+                         len(check['value']) == len(set(check['value'])), 'json_keys requires unique string keys')
             if op == "one_of":
                 values = check["value"]
                 _require(isinstance(values, list) and 1 <= len(values) <= 32,

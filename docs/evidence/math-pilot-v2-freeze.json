@@ -1,0 +1,35 @@
+{
+  "status": "frozen-before-paid-run",
+  "at_utc": "2026-10-11T13:03:16.329034+00:00",
+  "dataset_sha256": "afe18b321b3e3ba528ac58a895fd12f90f2c2905bdf917438de988e8f37c0d0f",
+  "config_sha256": "39a82579cb8ccec53942b19baa3c736148c56f1d7a496c47278db889519d4745",
+  "implementation_sha256": "4be0c96f82cb805d63837a678a71cc378e27760104279843596378a1ff7a01e5",
+  "analysis_revision_note": "Analyzer unpack fix, HTML and field diagnostics added after V1 freeze; no V1 prompts, gold or primary equality policy changed.",
+  "math_sources_sha256": {
+    "math_core.py": "861d535280760efa6503ceb5119f3596fdeccee85c46610a006f271df0e2ff6c",
+    "native_pilot.py": "c5893c3c3d855649957294f4a12b7bd58a18afc2672404b6b14d3d9fa9457241",
+    "prototype.py": "94b7f52ca9fcbf1c77b7483d467c737a317b204d8b907846f4f887ad600f5104",
+    "revised_pilot.py": "3d463d916890374650157191b97ea44b8a8e474efce3d54c52ce4a8859048382",
+    "__init__.py": "cd8fdff2b8ccce2f6392aaf0dd87b5d48919663cc1f1a3e05cd8bb12b14ff37a"
+  },
+  "additional_limit_cny": "0.96372648",
+  "repeats": 1,
+  "jobs": 2,
+  "cases": 6,
+  "budget_note": "V1+V2 shared 1.9 CNY and original 5 CNY ceiling; video allowance untouched.",
+  "selection_policy": "Six predeclared cases; no selective retries; failures and unknowns retained.",
+  "preflight": "Linux-owned state, chmod and subprocess SQLite checked",
+  "environment": {
+    "system": "Linux",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "machine": "x86_64",
+    "python": "3.12.2",
+    "os_release": {
+      "ID": "openkylin",
+      "PRETTY_NAME": "openKylin 2.0 SP1",
+      "VERSION_ID": "2.0"
+    },
+    "is_openkylin": true,
+    "execution_context": "wsl2"
+  }
+}

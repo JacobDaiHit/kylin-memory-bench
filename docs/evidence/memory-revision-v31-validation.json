@@ -1,0 +1,218 @@
+{
+  "schema_version": "1.0",
+  "kind": "memory_revision_v31_offline_validation",
+  "created_at_utc": "2026-10-12T16:15:48.249787+00:00",
+  "software_version": "0.2.1",
+  "revision": "3.1",
+  "status": "offline_revision_verified",
+  "paid_model_calls": 0,
+  "provider_network_calls_in_native_stub": 0,
+  "tests": {
+    "host": {
+      "python": "3.13.13",
+      "scheduled": 148,
+      "passed_inside_sandbox": 146,
+      "blocked_inside_sandbox": 2,
+      "sandbox_block_reason": "Loopback socket creation prohibited; no test assertion failed.",
+      "loopback_retest_with_local_socket_access": {
+        "count": 2,
+        "passed": 2
+      },
+      "combined_passed": 148,
+      "unresolved_failures": 0
+    },
+    "openkylin_targeted": {
+      "count": 39,
+      "passed": 39,
+      "scope": "Memory revision and proxy unit tests in openKylin 2.0 SP1 / WSL2; not a paid native memory test."
+    }
+  },
+  "calibration": {
+    "prespecified_revision_fixtures": {
+      "count": 16,
+      "matched": 16,
+      "false_passes": 0
+    },
+    "existing_scoring_fixtures": {
+      "fixtures": 30,
+      "matched": 30,
+      "aggregate_groups": 4,
+      "aggregate_matched": 4,
+      "false_passes": 0
+    },
+    "historical_changed_checks": 0,
+    "independent_human_review": false
+  },
+  "research_cases": {
+    "count": 48,
+    "families": 6,
+    "conditions": 4,
+    "checks_per_case": 18,
+    "formal_families": [
+      "binding",
+      "updates",
+      "scope"
+    ],
+    "status": "prepared_not_executed"
+  },
+  "prepared_stages": [
+    {
+      "stage": "health",
+      "status": "prepared_not_executed",
+      "paid_calls": 0,
+      "repeats": 2,
+      "scheduled_final_slots": 8,
+      "checks_per_final": 3,
+      "protocol_sha256": "8c340856c1a4bbd07e52c07db4792f9acae0e36f7cf903831e1169b1000a0c23"
+    },
+    {
+      "stage": "pilot",
+      "status": "prepared_not_executed",
+      "paid_calls": 0,
+      "repeats": 1,
+      "scheduled_final_slots": 12,
+      "checks_per_final": 18,
+      "protocol_sha256": "534471a35c5b88f86d72cfed966535e823b5544fc9446cf1cebb6eb2b1c9a8fa"
+    },
+    {
+      "stage": "formal",
+      "status": "prepared_not_executed",
+      "paid_calls": 0,
+      "repeats": 3,
+      "scheduled_final_slots": 108,
+      "checks_per_final": 18,
+      "protocol_sha256": "e09e48d758b70ac8f7b73f7c2db2608287553a53a222c14deb1284afce22177d"
+    }
+  ],
+  "ui_checks": {
+    "passed": true,
+    "cases_checked": 48,
+    "conditions": [
+      "memory",
+      "stateless",
+      "open_book",
+      "no_history"
+    ],
+    "selector_and_reveal_dom_checked": true,
+    "compiled_scripts": 2,
+    "real_browser_checked": false
+  },
+  "native_offline": {
+    "evidence": "research-v31-native-offline.json",
+    "native_stub_turns": 4,
+    "all_isolation_flags_passed": true,
+    "isolation_flag_count": 11,
+    "effective_output_caps": [
+      1024,
+      4096
+    ],
+    "native_health_status": "not_paid_tested"
+  },
+  "historical_replay": [
+    {
+      "directory": "examples/live-run",
+      "valid": true,
+      "events": 56,
+      "status": "completed"
+    },
+    {
+      "directory": "examples/openkylin-challenge",
+      "valid": true,
+      "events": 258,
+      "status": "completed_with_errors"
+    },
+    {
+      "directory": "examples/openkylin-core",
+      "valid": true,
+      "events": 1008,
+      "status": "completed_with_errors"
+    },
+    {
+      "directory": "examples/openkylin-difficulty",
+      "valid": true,
+      "events": 270,
+      "status": "completed_with_errors"
+    },
+    {
+      "directory": "examples/openkylin-difficulty-interrupted",
+      "valid": true,
+      "events": 101,
+      "status": "interrupted"
+    },
+    {
+      "directory": "examples/openkylin-math-pilot-v1",
+      "valid": true,
+      "events": 45,
+      "status": "interrupted"
+    },
+    {
+      "directory": "examples/openkylin-math-pilot-v2",
+      "valid": true,
+      "events": 44,
+      "status": "completed_with_errors"
+    },
+    {
+      "directory": "examples/openkylin-research-memory-v3",
+      "valid": true,
+      "events": 410,
+      "status": "completed_with_errors"
+    },
+    {
+      "directory": "examples/openkylin-research-memory-v3-interrupted",
+      "valid": true,
+      "events": 279,
+      "status": "interrupted"
+    },
+    {
+      "directory": "examples/sample-run",
+      "valid": true,
+      "events": 1512,
+      "status": "completed"
+    }
+  ],
+  "publication_checks": {
+    "public_candidate_files_checked": 602,
+    "provider_key_scan_passed": true,
+    "private_account_fields_scan_passed": true,
+    "prepared_materials_verified": true,
+    "source_bytes_preserved_by_git_attributes": true
+  },
+  "no_new_cost": {
+    "paid_calls_this_revision": 0,
+    "provider_network_calls_in_native_stub": 0,
+    "cumulative_estimate_unchanged_since_v3": true,
+    "ledger_preserved": true,
+    "scope": "Read-only local ledger estimate comparison with prior V3 accounting and local stub execution; no provider balance request or invoice claim.",
+    "local_counters_unchanged_during_final_checks": true
+  },
+  "implementation_sha256": {
+    "scripts/prepare_memory_validation.py": "6ad15b1c317a4859c80551ec29623dcc693afcbe4a90dc4210639b33e6b33f7b",
+    "experiments/math_memory/memory_v31.py": "d4a4c15eb7cbab1b84e45badac68383266b5aab445a805dfe42f9392844777d1",
+    "scripts/isolated_native_v31.sh": "1470ec782ff2765d5a0926de35ee76e778a282f447019ce498b1b3161b893a63",
+    "scripts/live_deepseek.py": "e4f0914cfa0bc6e8e3ac7d0e0c21e507cdd2d879d1700e7f7bf63b66978b51fb",
+    "kylin_memory_bench/adapters.py": "888b25f4f6803c65f972c39a716d1bd83cde8170c0c6a29593b31ae65bc49098",
+    "kylin_memory_bench/runner.py": "a2195a0dffac7b5adf488d5a2c9bd339a2810e7120717c3b5aa45af3cc3cbfc8",
+    "kylin_memory_bench/scoring.py": "44ca6bd401b37b5d6b3ce3ccbac8f953df7461970af44d813d8b250585d4ca78",
+    "kylin_memory_bench/dataset.py": "b9cec11a275f1e447c1b32fa9c0d0fd3ce47045ac48c7a10f7f69aeab1489a9d"
+  },
+  "claim_limits": [
+    "Software contracts, input freezes, transport controls and offline replay only.",
+    "No new paid native health, difficulty or agent ranking result.",
+    "No final package installation acceptance, final video freeze or Release publication."
+  ],
+  "local_links": {
+    "passed": true,
+    "files_checked": 7,
+    "local_links_checked": 82,
+    "missing": []
+  },
+  "staged_publication_scan": {
+    "passed": true,
+    "staged_public_files": 602,
+    "archive_members_checked": 21,
+    "provider_key_scan_passed": true,
+    "private_account_fields_scan_passed": true,
+    "staged_freezes_verified": true,
+    "published_historical_runs_unchanged": true
+  }
+}

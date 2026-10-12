@@ -1,0 +1,1336 @@
+{
+  "agents": [
+    {
+      "cases": [
+        {
+          "case_id": "research-v3-combined-high-open_book",
+          "check_count": 18,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q01",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q02",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q03",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q04",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q05",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q06",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q07",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q08",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q09",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q10",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q11",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q12",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q13",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q14",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q15",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q16",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q17",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q18",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 18
+          },
+          "title": "research-v3-combined-high-open_book",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "research-v3-combined-high-memory",
+          "check_count": 18,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q01",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q02",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q03",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q04",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q05",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q06",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q07",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q08",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q09",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q10",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q11",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q12",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q13",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q14",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q15",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q16",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q17",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q18",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 18
+          },
+          "title": "research-v3-combined-high-memory",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "research-v3-combined-high-no_history",
+          "check_count": 18,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q01",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q02",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q03",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q04",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q05",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q06",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q07",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q08",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q09",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q10",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q11",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q12",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q13",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q14",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q15",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q16",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q17",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "q18",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 18
+          },
+          "title": "research-v3-combined-high-no_history",
+          "trial": 0,
+          "upper_bound": 1.0
+        }
+      ],
+      "categories": {
+        "insufficient_evidence": 54
+      },
+      "dimensions": {
+        "boundary": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "disambiguation": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "retention": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "retrieval": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "reuse": {
+          "cases": 3,
+          "coverage": 0.0,
+          "lower_bound": 0.0,
+          "score": null,
+          "upper_bound": 1.0
+        },
+        "update": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        }
+      },
+      "evaluated_dimensions": 1,
+      "id": "openclaw",
+      "is_baseline": false,
+      "kind": "openclaw",
+      "label": "OpenClaw 2026.9.8 / DeepSeek Flash",
+      "overall": {
+        "coverage": 0.0,
+        "lower_bound": 0.0,
+        "score": null,
+        "upper_bound": 1.0
+      },
+      "runtime": {
+        "errors": 0,
+        "latency_p50_ms": 42256.412,
+        "latency_p95_ms": 187496.083,
+        "steps": 74
+      },
+      "stability": {
+        "repeats": 1,
+        "stddev": null,
+        "trial_lower_bounds": [
+          0.0
+        ]
+      }
+    },
+    {
+      "cases": [
+        {
+          "case_id": "research-v3-combined-high-open_book",
+          "check_count": 18,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "q01",
+              "evidence_id": "140",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 6f4335b123f9ba5a0b07b183d86974a89fee356a46f0e9a0be942d2a10abcdc8",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q02",
+              "evidence_id": "140",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 6f4335b123f9ba5a0b07b183d86974a89fee356a46f0e9a0be942d2a10abcdc8",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q03",
+              "evidence_id": "140",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 6f4335b123f9ba5a0b07b183d86974a89fee356a46f0e9a0be942d2a10abcdc8",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q04",
+              "evidence_id": "140",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 6f4335b123f9ba5a0b07b183d86974a89fee356a46f0e9a0be942d2a10abcdc8",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q05",
+              "evidence_id": "140",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 6f4335b123f9ba5a0b07b183d86974a89fee356a46f0e9a0be942d2a10abcdc8",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q06",
+              "evidence_id": "140",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 6f4335b123f9ba5a0b07b183d86974a89fee356a46f0e9a0be942d2a10abcdc8",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q07",
+              "evidence_id": "140",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 6f4335b123f9ba5a0b07b183d86974a89fee356a46f0e9a0be942d2a10abcdc8",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q08",
+              "evidence_id": "140",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 6f4335b123f9ba5a0b07b183d86974a89fee356a46f0e9a0be942d2a10abcdc8",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q09",
+              "evidence_id": "140",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 6f4335b123f9ba5a0b07b183d86974a89fee356a46f0e9a0be942d2a10abcdc8",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q10",
+              "evidence_id": "140",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 6f4335b123f9ba5a0b07b183d86974a89fee356a46f0e9a0be942d2a10abcdc8",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q11",
+              "evidence_id": "140",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 6f4335b123f9ba5a0b07b183d86974a89fee356a46f0e9a0be942d2a10abcdc8",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q12",
+              "evidence_id": "140",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 6f4335b123f9ba5a0b07b183d86974a89fee356a46f0e9a0be942d2a10abcdc8",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q13",
+              "evidence_id": "140",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 6f4335b123f9ba5a0b07b183d86974a89fee356a46f0e9a0be942d2a10abcdc8",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q14",
+              "evidence_id": "140",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 6f4335b123f9ba5a0b07b183d86974a89fee356a46f0e9a0be942d2a10abcdc8",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q15",
+              "evidence_id": "140",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 6f4335b123f9ba5a0b07b183d86974a89fee356a46f0e9a0be942d2a10abcdc8",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q16",
+              "evidence_id": "140",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 6f4335b123f9ba5a0b07b183d86974a89fee356a46f0e9a0be942d2a10abcdc8",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q17",
+              "evidence_id": "140",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 6f4335b123f9ba5a0b07b183d86974a89fee356a46f0e9a0be942d2a10abcdc8",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q18",
+              "evidence_id": "140",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 6f4335b123f9ba5a0b07b183d86974a89fee356a46f0e9a0be942d2a10abcdc8",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 18
+          },
+          "title": "research-v3-combined-high-open_book",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "research-v3-combined-high-memory",
+          "check_count": 18,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "q01",
+              "evidence_id": "266",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is d129cb16e8f7d676703ebb7f9938b59932f1ecd52aca8371b7e681d141190016",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q02",
+              "evidence_id": "266",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is d129cb16e8f7d676703ebb7f9938b59932f1ecd52aca8371b7e681d141190016",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q03",
+              "evidence_id": "266",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is d129cb16e8f7d676703ebb7f9938b59932f1ecd52aca8371b7e681d141190016",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q04",
+              "evidence_id": "266",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is d129cb16e8f7d676703ebb7f9938b59932f1ecd52aca8371b7e681d141190016",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q05",
+              "evidence_id": "266",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is d129cb16e8f7d676703ebb7f9938b59932f1ecd52aca8371b7e681d141190016",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q06",
+              "evidence_id": "266",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is d129cb16e8f7d676703ebb7f9938b59932f1ecd52aca8371b7e681d141190016",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q07",
+              "evidence_id": "266",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is d129cb16e8f7d676703ebb7f9938b59932f1ecd52aca8371b7e681d141190016",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q08",
+              "evidence_id": "266",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is d129cb16e8f7d676703ebb7f9938b59932f1ecd52aca8371b7e681d141190016",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q09",
+              "evidence_id": "266",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is d129cb16e8f7d676703ebb7f9938b59932f1ecd52aca8371b7e681d141190016",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q10",
+              "evidence_id": "266",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is d129cb16e8f7d676703ebb7f9938b59932f1ecd52aca8371b7e681d141190016",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q11",
+              "evidence_id": "266",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is d129cb16e8f7d676703ebb7f9938b59932f1ecd52aca8371b7e681d141190016",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q12",
+              "evidence_id": "266",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is d129cb16e8f7d676703ebb7f9938b59932f1ecd52aca8371b7e681d141190016",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q13",
+              "evidence_id": "266",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is d129cb16e8f7d676703ebb7f9938b59932f1ecd52aca8371b7e681d141190016",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q14",
+              "evidence_id": "266",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is d129cb16e8f7d676703ebb7f9938b59932f1ecd52aca8371b7e681d141190016",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q15",
+              "evidence_id": "266",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is d129cb16e8f7d676703ebb7f9938b59932f1ecd52aca8371b7e681d141190016",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q16",
+              "evidence_id": "266",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is d129cb16e8f7d676703ebb7f9938b59932f1ecd52aca8371b7e681d141190016",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q17",
+              "evidence_id": "266",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is d129cb16e8f7d676703ebb7f9938b59932f1ecd52aca8371b7e681d141190016",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q18",
+              "evidence_id": "266",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is d129cb16e8f7d676703ebb7f9938b59932f1ecd52aca8371b7e681d141190016",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 18
+          },
+          "title": "research-v3-combined-high-memory",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "research-v3-combined-high-no_history",
+          "check_count": 18,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "q01",
+              "evidence_id": "178",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 595b0be61d552df67c5b4fe605da4400cc7b3b9f463c14bec62f2a35fd1144d2",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q02",
+              "evidence_id": "178",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 595b0be61d552df67c5b4fe605da4400cc7b3b9f463c14bec62f2a35fd1144d2",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q03",
+              "evidence_id": "178",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 595b0be61d552df67c5b4fe605da4400cc7b3b9f463c14bec62f2a35fd1144d2",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q04",
+              "evidence_id": "178",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 595b0be61d552df67c5b4fe605da4400cc7b3b9f463c14bec62f2a35fd1144d2",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q05",
+              "evidence_id": "178",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 595b0be61d552df67c5b4fe605da4400cc7b3b9f463c14bec62f2a35fd1144d2",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q06",
+              "evidence_id": "178",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 595b0be61d552df67c5b4fe605da4400cc7b3b9f463c14bec62f2a35fd1144d2",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q07",
+              "evidence_id": "178",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 595b0be61d552df67c5b4fe605da4400cc7b3b9f463c14bec62f2a35fd1144d2",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q08",
+              "evidence_id": "178",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 595b0be61d552df67c5b4fe605da4400cc7b3b9f463c14bec62f2a35fd1144d2",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q09",
+              "evidence_id": "178",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 595b0be61d552df67c5b4fe605da4400cc7b3b9f463c14bec62f2a35fd1144d2",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q10",
+              "evidence_id": "178",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 595b0be61d552df67c5b4fe605da4400cc7b3b9f463c14bec62f2a35fd1144d2",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q11",
+              "evidence_id": "178",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 595b0be61d552df67c5b4fe605da4400cc7b3b9f463c14bec62f2a35fd1144d2",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q12",
+              "evidence_id": "178",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 595b0be61d552df67c5b4fe605da4400cc7b3b9f463c14bec62f2a35fd1144d2",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q13",
+              "evidence_id": "178",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 595b0be61d552df67c5b4fe605da4400cc7b3b9f463c14bec62f2a35fd1144d2",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q14",
+              "evidence_id": "178",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 595b0be61d552df67c5b4fe605da4400cc7b3b9f463c14bec62f2a35fd1144d2",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q15",
+              "evidence_id": "178",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 595b0be61d552df67c5b4fe605da4400cc7b3b9f463c14bec62f2a35fd1144d2",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q16",
+              "evidence_id": "178",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 595b0be61d552df67c5b4fe605da4400cc7b3b9f463c14bec62f2a35fd1144d2",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q17",
+              "evidence_id": "178",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 595b0be61d552df67c5b4fe605da4400cc7b3b9f463c14bec62f2a35fd1144d2",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "q18",
+              "evidence_id": "178",
+              "reason": "Earlier step failed; remaining case steps were skipped: Adapter exited 1; stderr SHA256 is 595b0be61d552df67c5b4fe605da4400cc7b3b9f463c14bec62f2a35fd1144d2",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 18
+          },
+          "title": "research-v3-combined-high-no_history",
+          "trial": 0,
+          "upper_bound": 1.0
+        }
+      ],
+      "categories": {
+        "execution_error": 54
+      },
+      "dimensions": {
+        "boundary": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "disambiguation": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "retention": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "retrieval": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "reuse": {
+          "cases": 3,
+          "coverage": 0.0,
+          "lower_bound": 0.0,
+          "score": null,
+          "upper_bound": 1.0
+        },
+        "update": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        }
+      },
+      "evaluated_dimensions": 1,
+      "id": "hermes",
+      "is_baseline": false,
+      "kind": "hermes",
+      "label": "Hermes 4b8a437 / DeepSeek Flash",
+      "overall": {
+        "coverage": 0.0,
+        "lower_bound": 0.0,
+        "score": null,
+        "upper_bound": 1.0
+      },
+      "runtime": {
+        "errors": 125,
+        "latency_p50_ms": 0.003,
+        "latency_p95_ms": 57204.567,
+        "steps": 205
+      },
+      "stability": {
+        "repeats": 1,
+        "stddev": null,
+        "trial_lower_bounds": [
+          0.0
+        ]
+      }
+    }
+  ],
+  "dataset_sha256": "6b118425de7a17ad20162690accb980151dd82aad74c25236564c0468d5feca9",
+  "method": "Equal dimension macro average of equal case/trial weighted-check scores; unknown/error remain in coverage bounds.",
+  "run_id": "afc06e27-c42b-4915-9858-b4b982adb50a",
+  "run_status": "interrupted",
+  "schema_version": "1.0",
+  "scorer_version": "1.0"
+}

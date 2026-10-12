@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "status": "frozen_before_paid_run",
+  "at_utc": "2026-10-11T11:30:41.200174+00:00",
+  "dataset_sha256": "0aae4ecc47af860221ff0e6dbd26d009033f13e3c4e78a30ed613426c9d3bb5b",
+  "implementation_sha256": "4be0c96f82cb805d63837a678a71cc378e27760104279843596378a1ff7a01e5",
+  "config_sha256": "39a82579cb8ccec53942b19baa3c736148c56f1d7a496c47278db889519d4745",
+  "budget_bridge_sha256": "ef01bd400639a3a536a791c4895a6c2f048e78acb3a6c2904164dcc757ed7cb6",
+  "prior_attempt_run_id": "5adbf74e-5a59-4c46-a2e8-55e2ae2025b8",
+  "prior_attempt_status": "interrupted",
+  "change": "Only run/workspace root moved from Windows shared filesystem to owned openKylin Linux filesystem; tasks, answers, native configuration and scoring unchanged.",
+  "selection_policy": "All 12 original tasks and all three trials; no selective case rerun; both attempts retained and separately disclosed.",
+  "shared_additional_limit_cny": "5",
+  "remaining_additional_limit_cny": "4.46660104",
+  "preflight": {
+    "owned_state_directories": true,
+    "chmod_verified": true,
+    "sqlite_reopened_in_new_process": true
+  },
+  "output": "/home/kmb/runs/kmb-difficulty-20261011-local/result",
+  "environment": {
+    "system": "Linux",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "machine": "x86_64",
+    "python": "3.12.2",
+    "os_release": {
+      "ID": "openkylin",
+      "PRETTY_NAME": "openKylin 2.0 SP1",
+      "VERSION_ID": "2.0"
+    },
+    "is_openkylin": true,
+    "execution_context": "wsl2"
+  },
+  "repeats": 3,
+  "jobs": 2
+}

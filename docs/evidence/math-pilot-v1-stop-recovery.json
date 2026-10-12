@@ -1,0 +1,8 @@
+{
+  "analysis_revision": "Analyzer read_run unpack fixed and diagnostic fields/HTML added after freeze; input/gold and original equality policy unchanged.",
+  "at_utc": "2026-10-11T13:02:55.781974+00:00",
+  "events": 45,
+  "no_active_runner_verified": true,
+  "operation": "Preserve original running manifest separately; update lifecycle status to interrupted. Evidence, dataset, configuration, event hashes and scores are unchanged.",
+  "reason": "Explicit SIGINT stopped budget bridge; WSL subprocess tree exited before engine finally handler persisted terminal status."
+}

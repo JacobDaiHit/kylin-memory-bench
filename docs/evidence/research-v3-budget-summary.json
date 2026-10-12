@@ -1,0 +1,12 @@
+{
+  "additional_authorized_limit_cny": "10",
+  "incremental_conservative_ledger_estimate_cny": "7.31213504",
+  "observed_account_balance_decrease_cny": "3.07",
+  "final_balance_fresh": true,
+  "video_reserved_limit_cny": "1",
+  "cumulative_ledger_preserved": true,
+  "completed_requests": 1376,
+  "budget_stop_count": 0,
+  "includes_interrupted_first_attempt": true,
+  "note": "Peak-rate token estimate and account-interval decrease are separate; neither is an individually reconciled invoice. In-flight failures may retain conservative reserves. Original balances omitted."
+}

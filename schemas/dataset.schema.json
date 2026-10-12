@@ -111,7 +111,9 @@
                     "exists",
                     "absent",
                     "json_subset",
-                    "one_of"
+                    "one_of",
+                    "json_keys",
+                    "json_exact"
                   ]
                 },
                 "failure": {
@@ -120,7 +122,8 @@
                     "confusion",
                     "stale_memory",
                     "wrong_persistence",
-                    "wrong_reuse"
+                    "wrong_reuse",
+                    "invalid_format"
                   ]
                 },
                 "weight": {
@@ -134,7 +137,48 @@
                   "type": "string",
                   "pattern": "^(/.*)?$"
                 },
-                "value": {}
+                "value": {},
+                "measurement_domain": {
+                  "enum": [
+                    "content",
+                    "format",
+                    "authorization",
+                    "storage",
+                    "artifact",
+                    "actions"
+                  ]
+                },
+                "mismatch_values": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "value",
+                      "category"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": [
+                          "string",
+                          "number",
+                          "boolean",
+                          "null"
+                        ]
+                      },
+                      "category": {
+                        "enum": [
+                          "omission",
+                          "confusion",
+                          "stale_memory",
+                          "wrong_persistence",
+                          "wrong_reuse",
+                          "invalid_format"
+                        ]
+                      }
+                    }
+                  }
+                }
               },
               "allOf": [
                 {
@@ -160,7 +204,9 @@
                           "contains",
                           "excludes",
                           "json_subset",
-                          "one_of"
+                          "one_of",
+                          "json_keys",
+                          "json_exact"
                         ]
                       }
                     }
@@ -196,12 +242,49 @@
                       }
                     }
                   }
+                },
+                {
+                  "if": {
+                    "properties": {
+                      "op": {
+                        "const": "json_keys"
+                      }
+                    }
+                  },
+                  "then": {
+                    "properties": {
+                      "value": {
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
                 }
               ]
             }
+          },
+          "output_tokens": {
+            "type": "integer",
+            "minimum": 256,
+            "maximum": 8192
           }
         }
       }
+    },
+    "grading_contract": {
+      "enum": [
+        "1.0",
+        "1.1"
+      ]
+    },
+    "state_policy": {
+      "enum": [
+        "persistent",
+        "fresh_each_session"
+      ]
     }
   }
 }

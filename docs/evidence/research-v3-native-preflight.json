@@ -1,0 +1,86 @@
+{
+  "paid_calls": 0,
+  "provider_network_calls": 0,
+  "isolation": {
+    "capabilities_dropped": true,
+    "global_hermes_config_hidden": true,
+    "hermes_runtime_present": true,
+    "no_new_privileges": true,
+    "old_tmp_hidden": true,
+    "openclaw_runtime_present": true,
+    "other_run_files_hidden": true,
+    "other_workspaces_hidden": true,
+    "pid_namespace": true,
+    "repository_hidden": true,
+    "workspace_read_write": true
+  },
+  "native_stub_turns": [
+    {
+      "agent": "openclaw",
+      "separate_session": 0,
+      "decoded": true,
+      "provenance": "openclaw-cli"
+    },
+    {
+      "agent": "openclaw",
+      "separate_session": 1,
+      "decoded": true,
+      "provenance": "openclaw-cli"
+    },
+    {
+      "agent": "hermes",
+      "separate_session": 0,
+      "decoded": true,
+      "provenance": "hermes-cli"
+    },
+    {
+      "agent": "hermes",
+      "separate_session": 1,
+      "decoded": true,
+      "provenance": "hermes-cli"
+    }
+  ],
+  "local_stub_requests": [
+    {
+      "path": "/v1/chat/completions",
+      "model": "deepseek-flash",
+      "stream": true
+    },
+    {
+      "path": "/v1/chat/completions",
+      "model": "deepseek-flash",
+      "stream": true
+    },
+    {
+      "path": "/api/show",
+      "model": null,
+      "stream": null
+    },
+    {
+      "path": "/api/show",
+      "model": null,
+      "stream": null
+    },
+    {
+      "path": "/v1/chat/completions",
+      "model": "deepseek-flash",
+      "stream": true
+    },
+    {
+      "path": "/api/show",
+      "model": null,
+      "stream": null
+    },
+    {
+      "path": "/api/show",
+      "model": null,
+      "stream": null
+    },
+    {
+      "path": "/v1/chat/completions",
+      "model": "deepseek-flash",
+      "stream": true
+    }
+  ],
+  "scope": "Filesystem/PID visibility and native startup/response decoding only; stub does not test memory capacity."
+}

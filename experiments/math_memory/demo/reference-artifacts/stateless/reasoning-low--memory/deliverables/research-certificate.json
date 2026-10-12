@@ -1,0 +1,16 @@
+{
+  "inputs": null,
+  "result": {
+    "status": "insufficient",
+    "c2": null,
+    "c4": null,
+    "c6": null,
+    "certificate": {
+      "K": null,
+      "r11": null,
+      "r12": null,
+      "t11": null,
+      "residual": null
+    }
+  }
+}

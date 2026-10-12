@@ -1,0 +1,13 @@
+agent,kind,dimension,score,coverage,lower_bound,upper_bound,cases
+openclaw,openclaw,retention,,0.0,0.0,1.0,6
+openclaw,openclaw,retrieval,,0.0,0.0,1.0,6
+openclaw,openclaw,update,,0.0,0.0,1.0,6
+openclaw,openclaw,disambiguation,,0.0,0.0,1.0,6
+openclaw,openclaw,boundary,,0.0,0.0,1.0,6
+openclaw,openclaw,reuse,,0.0,0.0,1.0,6
+hermes,hermes,retention,0.0,0.166667,0.0,0.833333,6
+hermes,hermes,retrieval,0.333333,0.333333,0.111111,0.777778,6
+hermes,hermes,update,,0.0,0.0,1.0,6
+hermes,hermes,disambiguation,0.0,0.166667,0.0,0.833333,6
+hermes,hermes,boundary,,0.0,0.0,1.0,6
+hermes,hermes,reuse,,0.0,0.0,1.0,6

@@ -1,0 +1,379 @@
+{
+  "version": 3,
+  "status": "offline-design-not-native-validated",
+  "seed": 20261011,
+  "cases": 36,
+  "checks_per_case": 18,
+  "design": "6 families x 2 loads x 3 information conditions",
+  "paid_calls": 0,
+  "query_spec": [
+    [
+      "q01",
+      "当前A11",
+      "field",
+      "a11",
+      "rational",
+      "atomic"
+    ],
+    [
+      "q02",
+      "当前A12",
+      "field",
+      "a12",
+      "rational",
+      "atomic"
+    ],
+    [
+      "q03",
+      "当前A22",
+      "field",
+      "a22",
+      "rational",
+      "atomic"
+    ],
+    [
+      "q04",
+      "当前D1",
+      "field",
+      "d1",
+      "rational",
+      "atomic"
+    ],
+    [
+      "q05",
+      "当前D2",
+      "field",
+      "d2",
+      "rational",
+      "atomic"
+    ],
+    [
+      "q06",
+      "当前耦合矩阵的登记标识",
+      "field",
+      "coupling",
+      "text",
+      "atomic"
+    ],
+    [
+      "q07",
+      "当前批准的研究分支",
+      "field",
+      "branch",
+      "text",
+      "atomic"
+    ],
+    [
+      "q08",
+      "当前批准修改的revision标签",
+      "revision",
+      null,
+      "text",
+      "atomic"
+    ],
+    [
+      "q09",
+      "当前引用的lemma_id",
+      "adoption",
+      "lemma_id",
+      "text",
+      "linked"
+    ],
+    [
+      "q10",
+      "该引用明确指定的edition",
+      "adoption",
+      "edition",
+      "text",
+      "linked"
+    ],
+    [
+      "q11",
+      "该引用明确指定的regime",
+      "adoption",
+      "regime",
+      "text",
+      "linked"
+    ],
+    [
+      "q12",
+      "与该引用四项完全匹配的引理记录中的bound",
+      "lemma",
+      "bound",
+      "rational",
+      "linked"
+    ],
+    [
+      "q13",
+      "当前归一化约定",
+      "field",
+      "normalization",
+      "text",
+      "atomic"
+    ],
+    [
+      "q14",
+      "当前记录的review_decision（抄登记结论，不自行审稿）",
+      "field",
+      "review_decision",
+      "text",
+      "atomic"
+    ],
+    [
+      "q15",
+      "C0检查点当时的D1",
+      "historical",
+      "d1",
+      "rational",
+      "historical"
+    ],
+    [
+      "q16",
+      "C0检查点当时的研究分支",
+      "historical",
+      "branch",
+      "text",
+      "historical"
+    ],
+    [
+      "q17",
+      "当前允许复用的暂存six_order_hint",
+      "hint",
+      "six_order_hint",
+      "rational",
+      "boundary"
+    ],
+    [
+      "q18",
+      "登记的error_bound_o8",
+      "field",
+      "error_bound_o8",
+      "rational",
+      "boundary"
+    ]
+  ],
+  "combined_query_plan": [
+    {
+      "qid": "q01",
+      "project": "SCHUR-615743-research",
+      "source_qid": "q04",
+      "label": "当前D1",
+      "kind": "field",
+      "key": "d1",
+      "type": "rational",
+      "group": "atomic"
+    },
+    {
+      "qid": "q02",
+      "project": "SCHUR-615743-research",
+      "source_qid": "q07",
+      "label": "当前批准的研究分支",
+      "kind": "field",
+      "key": "branch",
+      "type": "text",
+      "group": "atomic"
+    },
+    {
+      "qid": "q03",
+      "project": "SCHUR-320939-research",
+      "source_qid": "q04",
+      "label": "当前D1",
+      "kind": "field",
+      "key": "d1",
+      "type": "rational",
+      "group": "atomic"
+    },
+    {
+      "qid": "q04",
+      "project": "SCHUR-320939-research",
+      "source_qid": "q07",
+      "label": "当前批准的研究分支",
+      "kind": "field",
+      "key": "branch",
+      "type": "text",
+      "group": "atomic"
+    },
+    {
+      "qid": "q05",
+      "project": "SCHUR-397515-research",
+      "source_qid": "q04",
+      "label": "当前D1",
+      "kind": "field",
+      "key": "d1",
+      "type": "rational",
+      "group": "atomic"
+    },
+    {
+      "qid": "q06",
+      "project": "SCHUR-397515-research",
+      "source_qid": "q07",
+      "label": "当前批准的研究分支",
+      "kind": "field",
+      "key": "branch",
+      "type": "text",
+      "group": "atomic"
+    },
+    {
+      "qid": "q07",
+      "project": "SCHUR-615743-research",
+      "source_qid": "q10",
+      "label": "该引用明确指定的edition",
+      "kind": "adoption",
+      "key": "edition",
+      "type": "text",
+      "group": "linked"
+    },
+    {
+      "qid": "q08",
+      "project": "SCHUR-320939-research",
+      "source_qid": "q10",
+      "label": "该引用明确指定的edition",
+      "kind": "adoption",
+      "key": "edition",
+      "type": "text",
+      "group": "linked"
+    },
+    {
+      "qid": "q09",
+      "project": "SCHUR-397515-research",
+      "source_qid": "q10",
+      "label": "该引用明确指定的edition",
+      "kind": "adoption",
+      "key": "edition",
+      "type": "text",
+      "group": "linked"
+    },
+    {
+      "qid": "q10",
+      "project": "SCHUR-615743-research",
+      "source_qid": "q12",
+      "label": "与该引用四项完全匹配的引理记录中的bound",
+      "kind": "lemma",
+      "key": "bound",
+      "type": "rational",
+      "group": "linked"
+    },
+    {
+      "qid": "q11",
+      "project": "SCHUR-320939-research",
+      "source_qid": "q12",
+      "label": "与该引用四项完全匹配的引理记录中的bound",
+      "kind": "lemma",
+      "key": "bound",
+      "type": "rational",
+      "group": "linked"
+    },
+    {
+      "qid": "q12",
+      "project": "SCHUR-397515-research",
+      "source_qid": "q12",
+      "label": "与该引用四项完全匹配的引理记录中的bound",
+      "kind": "lemma",
+      "key": "bound",
+      "type": "rational",
+      "group": "linked"
+    },
+    {
+      "qid": "q13",
+      "project": "SCHUR-615743-research",
+      "source_qid": "q15",
+      "label": "C0检查点当时的D1",
+      "kind": "historical",
+      "key": "d1",
+      "type": "rational",
+      "group": "historical"
+    },
+    {
+      "qid": "q14",
+      "project": "SCHUR-320939-research",
+      "source_qid": "q15",
+      "label": "C0检查点当时的D1",
+      "kind": "historical",
+      "key": "d1",
+      "type": "rational",
+      "group": "historical"
+    },
+    {
+      "qid": "q15",
+      "project": "SCHUR-397515-research",
+      "source_qid": "q15",
+      "label": "C0检查点当时的D1",
+      "kind": "historical",
+      "key": "d1",
+      "type": "rational",
+      "group": "historical"
+    },
+    {
+      "qid": "q16",
+      "project": "SCHUR-615743-research",
+      "source_qid": "q08",
+      "label": "当前批准修改的revision标签",
+      "kind": "revision",
+      "key": null,
+      "type": "text",
+      "group": "atomic"
+    },
+    {
+      "qid": "q17",
+      "project": "SCHUR-320939-research",
+      "source_qid": "q17",
+      "label": "当前允许复用的暂存six_order_hint",
+      "kind": "hint",
+      "key": "six_order_hint",
+      "type": "rational",
+      "group": "boundary"
+    },
+    {
+      "qid": "q18",
+      "project": "SCHUR-397515-research",
+      "source_qid": "q18",
+      "label": "登记的error_bound_o8",
+      "kind": "field",
+      "key": "error_bound_o8",
+      "type": "rational",
+      "group": "boundary"
+    }
+  ],
+  "accepted_aliases": {
+    "q13": [
+      "u^T u=1",
+      "uTu=1",
+      "unit_norm"
+    ],
+    "q14": [
+      "approved",
+      "已批准"
+    ]
+  },
+  "numeric_formats": [
+    "integer",
+    "fraction",
+    "finite_decimal_string"
+  ],
+  "primary_memory_conditions": [
+    "memory"
+  ],
+  "separate_conditions": [
+    "open_book",
+    "no_history"
+  ],
+  "rules": "研究档案规则：这里只恢复明确给出的研究记录，不求特征值、不计算常数、不证明引理。\n每份记录有唯一ID、项目、状态和内容，按会话到达顺序处理。只有accepted生效，draft不生效。\npatch只替换列出的字段，其余字段保持不变；当前revision取最后一份accepted patch/cancel登记的标签，不能按版本号大小选择。\ncancel仅取消同项目指定patch的指定字段（all表示该patch全部字段），其他patch和未取消字段仍有效；按剩余有效修改恢复当前值。\n采用引理必须匹配登记的project、lemma_id、edition、regime四项，不自行改用最新引理或别的项目/范围。\n审阅结论、适用范围和常数都是已给出的登记事实，请原样恢复，不判断其数学真伪。\nC0是标为checkpoint=C0的初始记录，查询C0时不应用后续修改。当前修改不能覆盖历史回答。\nhint_permission=false表示暂存常数不允许在当前回答中复用；这不撤回已批准的引理常数。\n从未提供的值，以及明确禁止复用的hint，返回null。允许保存研究笔记供后续独立会话使用。\n",
+  "inference": "Record selection and bookkeeping only; no math derivation. Open-book controls rule reading, not internal memory mechanism.",
+  "difficulty_gate": {
+    "open_book_correct_over_all": 0.95,
+    "effective_observation": 0.9,
+    "pure_family_load_effects": 3,
+    "drop_pp": 15,
+    "repeats": 3,
+    "consistent_rounds": 2,
+    "note": "Predeclared descriptive targets; combined is excluded from independent load-effect count. No claim these targets are achieved."
+  },
+  "data_sha256": {
+    "inputs.jsonl": "e8d2060b925450ec11bd3b4bed3e3022079c8640047d853e1344caaa7145e163",
+    "gold.json": "0f347374b7826caaef219a8630a9db8a59dfa9681dc8d21caad583cf85a2174c",
+    "native-dataset.evaluator.jsonl": "ead8b79960fb47cb36c3a139c1df154c989d198f7b15ed0bf5bdd3fe2c943041",
+    "answer-trace.evaluator.json": "25452356bf3b8c530bae33f04daaa03e955c3c90ad36fd8e7f5ec61801b6e7ff"
+  },
+  "source_sha256": "132d4c8ff15332786e3a428982499b48839e014fd036205c5be2c864434542b3",
+  "runner_note": "Native dataset contains evaluator checks. Send only step.prompt, never complete cases, gold, reference results or this viewer."
+}

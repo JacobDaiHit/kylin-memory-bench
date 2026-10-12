@@ -1,0 +1,64 @@
+{
+  "note": "Derived categories from private audit; no balances, credentials or free-form provider errors. Aggregate counts do not establish each native CLI exit cause.",
+  "versions": {
+    "v1": {
+      "completed_requests": 152,
+      "finish_reason_counts": {
+        "length": 1,
+        "stop": 43,
+        "tool_calls": 108
+      },
+      "rejected": [
+        {
+          "at": "2026-10-11T12:53:24.593678+00:00",
+          "category": "upstream_timeout"
+        }
+      ],
+      "rejection_counts": {
+        "upstream_timeout": 1
+      }
+    },
+    "v2": {
+      "completed_requests": 145,
+      "finish_reason_counts": {
+        "length": 1,
+        "stop": 37,
+        "tool_calls": 107
+      },
+      "rejected": [
+        {
+          "at": "2026-10-11T13:12:16.852159+00:00",
+          "category": "upstream_timeout"
+        },
+        {
+          "at": "2026-10-11T13:13:33.665002+00:00",
+          "category": "budget_guard"
+        },
+        {
+          "at": "2026-10-11T13:14:23.609958+00:00",
+          "category": "budget_guard"
+        },
+        {
+          "at": "2026-10-11T13:14:53.599218+00:00",
+          "category": "budget_guard"
+        },
+        {
+          "at": "2026-10-11T13:14:54.967962+00:00",
+          "category": "budget_guard"
+        },
+        {
+          "at": "2026-10-11T13:15:21.900621+00:00",
+          "category": "budget_guard"
+        },
+        {
+          "at": "2026-10-11T13:15:35.779866+00:00",
+          "category": "budget_guard"
+        }
+      ],
+      "rejection_counts": {
+        "budget_guard": 6,
+        "upstream_timeout": 1
+      }
+    }
+  }
+}

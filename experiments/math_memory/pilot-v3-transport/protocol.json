@@ -1,0 +1,41 @@
+{
+  "status": "frozen-before-paid-run",
+  "version": "3-transport-revision",
+  "seed": 20261011,
+  "selected_cases": [
+    "research-v3-combined-high-open_book",
+    "research-v3-combined-high-memory",
+    "research-v3-combined-high-no_history"
+  ],
+  "repeats": 1,
+  "agents": [
+    "openclaw",
+    "hermes"
+  ],
+  "scheduled_final_slots": 6,
+  "checks_per_slot": 18,
+  "primary_condition": "memory",
+  "selection": "One predeclared composite high-load example with two matched controls; no result-selected cases or retries.",
+  "claim_limit": "One-round feasibility only; no low/high difficulty effect, repetition stability, ranking or final-release gate.",
+  "controls": "memory/open_book have identical prior sessions in separate workspaces; no_history removes every queried project.",
+  "scoring": "V3 independent semantic grading; core strict JSON equality retained as supplemental evidence.",
+  "isolation": "Unprivileged user/mount/PID namespaces; only current workspace and installed runtimes exposed; no-new-privileges and capabilities dropped.",
+  "data_sha256": {
+    "answer-trace.evaluator.json": "c38f34feafa0d18bf2118e2626665eebc7b1896b84ef38d6fac9f51cdd4edf9b",
+    "config.template.json": "1d5f6d3d48f4ddfc3d23c6a5edcfe09d548b6e669d2f7b442e5ec596efe3d601",
+    "dataset.evaluator.jsonl": "a94587b34b6c1dd08a7eb448d9e8cd3b22ceba135a19da860abc6d1819c85322",
+    "gold.json": "266dfc3bc3e18faa6db0a0536dbff9952ea117184741c451b35fdd2b6bce5c6b",
+    "learner-cases.json": "05fa230187853eb1aed512be3c17b61c84d9675b90d3fc0e9eee3566ff49bdc3"
+  },
+  "implementation_sha256": {
+    "experiments/math_memory/record_pilot.py": "2fff29dccceef4e6d3c39c3c57ff6a8c6da0ec4371976f29f3edaa363011600e",
+    "experiments/math_memory/memory_only.py": "132d4c8ff15332786e3a428982499b48839e014fd036205c5be2c864434542b3",
+    "scripts/isolated_native.sh": "60ab733d397af989c7f327bc073cccfe1aec86e544096494bbf42cd87680434c",
+    "scripts/live_deepseek.py": "adb3cfb6c1d8c5e5ee59127a65e7b8203a05df474baa1c2980e3f5963fef5db1"
+  },
+  "budget": "Retain cumulative ledger; additional authorization and execution freeze required before live run; video allowance excluded.",
+  "revision": "Uniform upstream-status propagation and synchronized parallel budget reservations. Prompts/gold/semantic scoring unchanged; original interrupted attempt retained.",
+  "shared_additional_limit_cny": "10",
+  "original_attempt": "docs/evidence/research-v3-interrupted-accounting.json",
+  "retry_policy": "Benchmark cases are not automatically rerun. Native transport recovery remains native; every request/failure is audited and budgeted."
+}

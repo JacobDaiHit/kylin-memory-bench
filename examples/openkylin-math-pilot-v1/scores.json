@@ -1,0 +1,595 @@
+{
+  "agents": [
+    {
+      "cases": [
+        {
+          "case_id": "reasoning-low--memory",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "invalid_response",
+              "check_id": "status",
+              "evidence_id": "30",
+              "reason": "Evidence is not the requested structured JSON, or its field is missing.",
+              "source": "response",
+              "status": "fail",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "wrong_reuse",
+              "check_id": "actual-file",
+              "evidence_id": "30",
+              "reason": "File existence verified in the case workspace.",
+              "source": "artifact",
+              "status": "fail",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 1.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": 0.0,
+          "statuses": {
+            "fail": 2
+          },
+          "title": "reasoning-low--memory",
+          "trial": 0,
+          "upper_bound": 0.0
+        },
+        {
+          "case_id": "reasoning-low--oracle",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "status",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "actual-file",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "reasoning-low--oracle",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "reasoning-high--memory",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "status",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "actual-file",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "reasoning-high--memory",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "reasoning-high--oracle",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "status",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "actual-file",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "reasoning-high--oracle",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "reasoning-high--no_history",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "status",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "actual-file",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "reasoning-high--no_history",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "applicability-singular--oracle",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "status",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "actual-file",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "applicability-singular--oracle",
+          "trial": 0,
+          "upper_bound": 1.0
+        }
+      ],
+      "categories": {
+        "insufficient_evidence": 10,
+        "invalid_response": 1,
+        "wrong_reuse": 1
+      },
+      "dimensions": {
+        "boundary": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "disambiguation": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "retention": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "retrieval": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "reuse": {
+          "cases": 6,
+          "coverage": 0.166667,
+          "lower_bound": 0.0,
+          "score": 0.0,
+          "upper_bound": 0.833333
+        },
+        "update": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        }
+      },
+      "evaluated_dimensions": 1,
+      "id": "openclaw",
+      "is_baseline": false,
+      "kind": "openclaw",
+      "label": "OpenClaw 2026.9.8 / DeepSeek Flash",
+      "overall": {
+        "coverage": 0.166667,
+        "lower_bound": 0.0,
+        "score": 0.0,
+        "upper_bound": 0.833333
+      },
+      "runtime": {
+        "errors": 0,
+        "latency_p50_ms": 38256.45,
+        "latency_p95_ms": 81801.786,
+        "steps": 23
+      },
+      "stability": {
+        "repeats": 1,
+        "stddev": null,
+        "trial_lower_bounds": [
+          0.0
+        ]
+      }
+    },
+    {
+      "cases": [
+        {
+          "case_id": "reasoning-low--memory",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "execution_error",
+              "check_id": "status",
+              "evidence_id": "17",
+              "reason": "Adapter exited 1; stderr SHA256 is aff922d9ca81b7f34a60c48108e7df304efdc6209416bd3bcf3efaff54370dfc",
+              "source": "response",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "execution_error",
+              "check_id": "actual-file",
+              "evidence_id": "17",
+              "reason": "Adapter exited 1; stderr SHA256 is aff922d9ca81b7f34a60c48108e7df304efdc6209416bd3bcf3efaff54370dfc",
+              "source": "artifact",
+              "status": "error",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "error": 2
+          },
+          "title": "reasoning-low--memory",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "reasoning-low--oracle",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "status",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "actual-file",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "reasoning-low--oracle",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "reasoning-high--memory",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "status",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "actual-file",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "reasoning-high--memory",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "reasoning-high--oracle",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "status",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "actual-file",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "reasoning-high--oracle",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "reasoning-high--no_history",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "status",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "actual-file",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "reasoning-high--no_history",
+          "trial": 0,
+          "upper_bound": 1.0
+        },
+        {
+          "case_id": "applicability-singular--oracle",
+          "check_count": 2,
+          "checks": [
+            {
+              "category": "insufficient_evidence",
+              "check_id": "status",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "response",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            },
+            {
+              "category": "insufficient_evidence",
+              "check_id": "actual-file",
+              "evidence_id": null,
+              "reason": "No evidence event was recorded for this step.",
+              "source": "artifact",
+              "status": "unknown",
+              "step_id": "final",
+              "weight": 1
+            }
+          ],
+          "coverage": 0.0,
+          "dimension": "reuse",
+          "lower_bound": 0.0,
+          "score": null,
+          "statuses": {
+            "unknown": 2
+          },
+          "title": "applicability-singular--oracle",
+          "trial": 0,
+          "upper_bound": 1.0
+        }
+      ],
+      "categories": {
+        "execution_error": 2,
+        "insufficient_evidence": 10
+      },
+      "dimensions": {
+        "boundary": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "disambiguation": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "retention": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "retrieval": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        },
+        "reuse": {
+          "cases": 6,
+          "coverage": 0.0,
+          "lower_bound": 0.0,
+          "score": null,
+          "upper_bound": 1.0
+        },
+        "update": {
+          "cases": 0,
+          "coverage": null,
+          "lower_bound": null,
+          "score": null,
+          "upper_bound": null
+        }
+      },
+      "evaluated_dimensions": 1,
+      "id": "hermes",
+      "is_baseline": false,
+      "kind": "hermes",
+      "label": "Hermes 4b8a437 / DeepSeek Flash",
+      "overall": {
+        "coverage": 0.0,
+        "lower_bound": 0.0,
+        "score": null,
+        "upper_bound": 1.0
+      },
+      "runtime": {
+        "errors": 1,
+        "latency_p50_ms": 15032.602,
+        "latency_p95_ms": 30546.38,
+        "steps": 22
+      },
+      "stability": {
+        "repeats": 1,
+        "stddev": null,
+        "trial_lower_bounds": [
+          0.0
+        ]
+      }
+    }
+  ],
+  "dataset_sha256": "a44bf76a7020030f8ee2670678943181ec7e7b6f2247709c7c4cc3a0d13d0450",
+  "method": "Equal dimension macro average of equal case/trial weighted-check scores; unknown/error remain in coverage bounds.",
+  "run_id": "d1d550b5-8754-4bfa-8e78-2917769c59b3",
+  "run_status": "interrupted",
+  "schema_version": "1.0",
+  "scorer_version": "1.0"
+}

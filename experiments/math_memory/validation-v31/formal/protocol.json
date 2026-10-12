@@ -1,0 +1,44 @@
+{
+  "version": "3.1",
+  "stage": "formal",
+  "status": "prepared_not_executed",
+  "paid_calls": 0,
+  "seed": 20261011,
+  "agents": [
+    "openclaw",
+    "hermes"
+  ],
+  "repeats": 3,
+  "jobs": 1,
+  "scheduled_final_slots": 108,
+  "checks_per_final": 18,
+  "selection": "Frozen before model calls. No result-selected replacement or automatic case rerun.",
+  "output_limits": {
+    "lesson": 1024,
+    "final": 4096
+  },
+  "gates": {
+    "health": "Both systems, both repeats: all persistence and isolation answers correct; actual native writes visible; native wrapper isolation verified.",
+    "pilot": "Both open-book controls 18/18; memory content coverage >=90%; no execution errors.",
+    "formal": "Each discussed family/agent content coverage >=90%; three family mean difficulty drops >=15pp and at least two of three round directions positive; system differences reported separately."
+  },
+  "paid_policy": "No live call in preparation. Require separately recorded current prices, remaining cumulative authorization and successful live native health before a paid pilot.",
+  "scope": "Persistent-state availability control, not a pure native memory-module switch; byte/slot matching is not native context-token matching.",
+  "data_sha256": {
+    "answer-trace.evaluator.json": "9eab4c1778a5725c17fed5964fde754e9bfeba74c51ae4209d4aa1d88f3b448f",
+    "config.template.json": "c6594374fe10dc23f1f2dd47f6e9a0f7f592e792e29c357b037846da15c45614",
+    "dataset.evaluator.jsonl": "678ee7a9102885535f434be2c88c4d045765a090adaf10910f43c654ee486575",
+    "gold.json": "85727ffc9bdd3d553285fd7d7e9c2cdc4b5d3068c70d822a109c177cc0cf983f",
+    "learner-cases.json": "94637b01794b8fccebca0577d6669693ad31acbf2060179326024dcea6dd5a6c"
+  },
+  "implementation_sha256": {
+    "scripts/prepare_memory_validation.py": "6ad15b1c317a4859c80551ec29623dcc693afcbe4a90dc4210639b33e6b33f7b",
+    "experiments/math_memory/memory_v31.py": "d4a4c15eb7cbab1b84e45badac68383266b5aab445a805dfe42f9392844777d1",
+    "scripts/isolated_native_v31.sh": "1470ec782ff2765d5a0926de35ee76e778a282f447019ce498b1b3161b893a63",
+    "scripts/live_deepseek.py": "e4f0914cfa0bc6e8e3ac7d0e0c21e507cdd2d879d1700e7f7bf63b66978b51fb",
+    "kylin_memory_bench/adapters.py": "888b25f4f6803c65f972c39a716d1bd83cde8170c0c6a29593b31ae65bc49098",
+    "kylin_memory_bench/runner.py": "a2195a0dffac7b5adf488d5a2c9bd339a2810e7120717c3b5aa45af3cc3cbfc8",
+    "kylin_memory_bench/scoring.py": "44ca6bd401b37b5d6b3ce3ccbac8f953df7461970af44d813d8b250585d4ca78",
+    "kylin_memory_bench/dataset.py": "b9cec11a275f1e447c1b32fa9c0d0fd3ce47045ac48c7a10f7f69aeab1489a9d"
+  }
+}

@@ -22,6 +22,17 @@ def subset(expected, actual):
     return type(expected) is type(actual) and expected == actual
 
 
+def json_equal(expected, actual):
+    """Exact JSON shape and values, including scalar types; key order is irrelevant."""
+    if type(expected) is not type(actual):
+        return False
+    if isinstance(expected, dict):
+        return expected.keys() == actual.keys() and all(json_equal(v, actual[k]) for k, v in expected.items())
+    if isinstance(expected, list):
+        return len(expected) == len(actual) and all(json_equal(a, b) for a, b in zip(expected, actual))
+    return expected == actual
+
+
 def evaluate(check, event):
     result = {'check_id': check['id'], 'source': check['source'], 'weight': check.get('weight', 1),
               'status': 'unknown', 'category': 'insufficient_evidence', 'reason': '', 'evidence_id': None}
@@ -64,7 +75,10 @@ def evaluate(check, event):
         observed = artifact['text']
     if check.get('pointer'):
         try:
-            observed = json_pointer(parse_answer(observed), check['pointer'])
+            # A response may be a single JSON code fence; an actual JSON file
+            # must be valid JSON bytes rather than Markdown that resembles it.
+            parsed = strict_json(observed) if source == 'artifact' else parse_answer(observed)
+            observed = json_pointer(parsed, check['pointer'])
         except (BenchError, KeyError, IndexError, TypeError):
             result.update(status='fail', category='invalid_response',
                           reason='Evidence is not the requested structured JSON, or its field is missing.')
@@ -87,15 +101,26 @@ def evaluate(check, event):
             passed = any(action.get('status') != 'failed' and subset(expected, action) for action in observed)
         else:
             try:
-                actual = parse_answer(observed) if isinstance(observed, str) else observed
+                actual = (strict_json(observed) if source == 'artifact' else parse_answer(observed)) if isinstance(observed, str) else observed
                 passed = subset(expected, actual)
             except BenchError:
                 passed = False
+    elif op in ('json_keys', 'json_exact'):
+        try:
+            actual = (strict_json(observed) if source == 'artifact' else parse_answer(observed)) if isinstance(observed, str) else observed
+            passed = (isinstance(actual, dict) and set(actual) == set(expected)) if op == 'json_keys' else json_equal(expected, actual)
+        except BenchError:
+            passed = False
     elif op == 'exists':
         passed = observed is not None
     else:
         passed = not observed
     result = finish(result, check, passed, f'Deterministic {op} check on {source} evidence.')
+    if not passed:
+        for mapping in check.get('mismatch_values', []):
+            if json_equal(mapping['value'], observed):
+                result['category'] = mapping['category']
+                break
     if not passed and source == 'response' and observed is None and expected is not None:
         result['category'] = 'omission'
     elif not passed and source == 'response' and result['category'] == 'omission':
@@ -172,6 +197,19 @@ def score_run(manifest, cases, events):
                        'runtime': {'steps': len(agent_events), 'errors': sum(bool(e.get('error')) for e in agent_events),
                                    'latency_p50_ms': latencies[len(latencies)//2] if latencies else None,
                                    'latency_p95_ms': latencies[min(len(latencies)-1, int(len(latencies)*0.95))] if latencies else None}})
-    return {'schema_version': '1.0', 'scorer_version': '1.0', 'run_id': manifest['run_id'],
+        # Legacy run scores retain their exact shape. New contracts expose domains separately.
+        if any(c.get('grading_contract') == '1.1' for c in cases):
+            domain_checks = {}
+            for case in cases:
+                for step in case['steps']:
+                    for check in step.get('checks', []):
+                        domain_checks[(case['id'], step['id'], check['id'])] = check.get('measurement_domain', 'content')
+            domains = {}
+            for row in rows:
+                for check in row['checks']:
+                    name = domain_checks[(row['case_id'], check['step_id'], check['check_id'])]
+                    domains.setdefault(name, []).append(check)
+            agents[-1]['measurement_domains'] = {name: metric(values) for name, values in domains.items()}
+    return {'schema_version': '1.0', 'scorer_version': '1.1' if any(c.get('grading_contract')=='1.1' for c in cases) else '1.0', 'run_id': manifest['run_id'],
             'dataset_sha256': digest(cases), 'run_status': manifest['status'], 'agents': agents,
             'method': 'Equal dimension macro average of equal case/trial weighted-check scores; unknown/error remain in coverage bounds.'}

@@ -1,0 +1,35 @@
+kind,id,group,title,expected,actual,matched,rationale
+fixture,response-01,response,明确实体与标准值一致,"{""category"":""correct"",""status"":""pass""}","{""category"":""correct"",""status"":""pass""}",true,完整 JSON 对象中的 answer 是事先声明的实体，类型和值均相等。
+fixture,response-02,response,预先列出的合法实体别名,"{""category"":""correct"",""status"":""pass""}","{""category"":""correct"",""status"":""pass""}",true,松柏项目是规则预先列出的合法别名；不依赖评测后临时放宽匹配。
+fixture,response-03,response,合法 JSON 中的错误实体,"{""category"":""confusion"",""status"":""fail""}","{""category"":""confusion"",""status"":""fail""}",true,纸鸢项目不属于预先声明的实体别名集合，应作为实体混淆失败。
+fixture,response-04,response,否定句提到答案不能通过,"{""category"":""confusion"",""status"":""fail""}","{""category"":""confusion"",""status"":""fail""}",true,字符串提到答案不等于 answer 值相等；否定句不能作为正确实体。
+fixture,response-05,response,未知事实明确返回 null,"{""category"":""correct"",""status"":""pass""}","{""category"":""correct"",""status"":""pass""}",true,题目明确没有可靠事实，契约要求 null；未知事实的正确弃答不等于缺少证据。
+fixture,response-06,response,已知事实却返回 null,"{""category"":""omission"",""status"":""fail""}","{""category"":""omission"",""status"":""fail""}",true,有明确应答值时返回 null 是回答遗漏，不是采集证据不足。
+fixture,response-07,response,布尔值不能冒充整数,"{""category"":""confusion"",""status"":""fail""}","{""category"":""confusion"",""status"":""fail""}",true,JSON 布尔值 true 与整数 1 的类型不同，即使 Python 比较时相等也不得通过。
+fixture,response-08,response,缺少契约规定的字段,"{""category"":""invalid_response"",""status"":""fail""}","{""category"":""invalid_response"",""status"":""fail""}",true,已采集到回答，但规定的 answer 字段缺失，属于结构化输出契约错误。
+fixture,response-09,response,仅有 JSON 代码围栏合法,"{""category"":""correct"",""status"":""pass""}","{""category"":""correct"",""status"":""pass""}",true,契约允许整段 JSON 代码围栏，围栏内部仍必须是完整的严格 JSON。
+fixture,response-10,response,正确 JSON 前有额外解释,"{""category"":""invalid_response"",""status"":""fail""}","{""category"":""invalid_response"",""status"":""fail""}",true,题目要求只返回完整 JSON；额外解释导致契约失败，但不能据此证明记忆内容错误。
+fixture,response-11,response,适配器未提供回答文本,"{""category"":""insufficient_evidence"",""status"":""unknown""}","{""category"":""insufficient_evidence"",""status"":""unknown""}",true,未采集到回答文本，不能将缺失证据记成智能体答错或答对。
+fixture,response-12,response,执行超时不能归因成记忆遗漏,"{""category"":""execution_error"",""status"":""error""}","{""category"":""execution_error"",""status"":""error""}",true,已知执行层超时优先报告 execution_error，不能算作正常能力回答失败。
+fixture,memory-01,memory,部分可见快照中已观察到正向值,"{""category"":""correct"",""status"":""pass""}","{""category"":""correct"",""status"":""pass""}",true,部分可见性不否定已实际观察到的存在证据；此规则仅检查文本出现。
+fixture,memory-02,memory,部分快照没出现应记值,"{""category"":""insufficient_evidence"",""status"":""unknown""}","{""category"":""insufficient_evidence"",""status"":""unknown""}",true,值可能保存在不可见位置，局部未出现无法证明没有保存。
+fixture,memory-03,memory,部分空快照不能证明全局禁存,"{""category"":""insufficient_evidence"",""status"":""unknown""}","{""category"":""insufficient_evidence"",""status"":""unknown""}",true,部分存储没有禁存值不能证明整个存储都没有该值。
+fixture,memory-04,memory,部分快照出现禁存值即为反例,"{""category"":""wrong_persistence"",""status"":""fail""}","{""category"":""wrong_persistence"",""status"":""fail""}",true,已经观察到禁存值，即使快照不完整也足以否定不持久化断言。
+fixture,memory-05,memory,完整空存储可支持不存在判断,"{""category"":""correct"",""status"":""pass""}","{""category"":""correct"",""status"":""pass""}",true,参考存储已明确全部可见，完整存储中的不存在可满足禁存检查。
+fixture,memory-06,memory,完整存储缺少应记值,"{""category"":""omission"",""status"":""fail""}","{""category"":""omission"",""status"":""fail""}",true,完整可见的存储缺少明确应记值，contains 契约失败。
+fixture,memory-07,memory,完整存储出现应记值,"{""category"":""correct"",""status"":""pass""}","{""category"":""correct"",""status"":""pass""}",true,完整存储中已存在明确应记值，满足文本存在契约。
+fixture,memory-08,memory,没有可观察的记忆存储,"{""category"":""insufficient_evidence"",""status"":""unknown""}","{""category"":""insufficient_evidence"",""status"":""unknown""}",true,适配器没有暴露存储，不能将无快照解释为已经删除或从未保存。
+fixture,action-01,tool_file,成功写入轨迹与目标路径一致,"{""category"":""correct"",""status"":""pass""}","{""category"":""correct"",""status"":""pass""}",true,结构化轨迹记录了成功的写入且路径匹配；仍不代替独立文件内容检查。
+fixture,action-02,tool_file,参数正确但工具结果失败,"{""category"":""wrong_reuse"",""status"":""fail""}","{""category"":""wrong_reuse"",""status"":""fail""}",true,失败工具不能因为请求参数匹配就获得成功行动分。
+fixture,action-03,tool_file,口头写入声明不能代替轨迹,"{""category"":""insufficient_evidence"",""status"":""unknown""}","{""category"":""insufficient_evidence"",""status"":""unknown""}",true,没有结构化行动证据，口头声明不能通过工具轨迹检查，也不足以证明实际未调用。
+fixture,action-04,tool_file,已观测到的空工具列表,"{""category"":""wrong_reuse"",""status"":""fail""}","{""category"":""wrong_reuse"",""status"":""fail""}",true,轨迹已提供且为空，所要求的写入行动没有出现在已记录轨迹中。
+fixture,action-05,tool_file,成功工具写入了错误路径,"{""category"":""wrong_reuse"",""status"":""fail""}","{""category"":""wrong_reuse"",""status"":""fail""}",true,成功调用其他路径不满足历史目标路径的任务复用契约。
+fixture,artifact-01,tool_file,目标文件确实存在,"{""category"":""correct"",""status"":""pass""}","{""category"":""correct"",""status"":""pass""}",true,文件观测记录明确目标文件存在；存在性通过不自动代表内容正确。
+fixture,artifact-02,tool_file,目标文件确认不存在,"{""category"":""wrong_reuse"",""status"":""fail""}","{""category"":""wrong_reuse"",""status"":""fail""}",true,实际观测确认目标文件不存在，口头完成声明不能改变文件判据。
+fixture,artifact-03,tool_file,目标文件文本严格正确,"{""category"":""correct"",""status"":""pass""}","{""category"":""correct"",""status"":""pass""}",true,实际文件内容与预设文本逐字一致，包含约定换行。
+fixture,artifact-04,tool_file,目标存在但使用错误模板,"{""category"":""wrong_reuse"",""status"":""fail""}","{""category"":""wrong_reuse"",""status"":""fail""}",true,文件存在但内容违反历史模板约定，不能用存在性掩盖内容失败。
+fixture,artifact-05,tool_file,文件未观测不能当作不存在,"{""category"":""insufficient_evidence"",""status"":""unknown""}","{""category"":""insufficient_evidence"",""status"":""unknown""}",true,没有目标文件的观测记录，未知不等于实际不存在，也不因口头声明通过。
+aggregate,metrics-complete,metrics,全部可观测的两通过一失败,"{""check_count"":3,""coverage"":1.0,""lower_bound"":0.666667,""score"":0.666667,""statuses"":{""fail"":1,""pass"":2},""upper_bound"":0.666667}","{""check_count"":3,""coverage"":1.0,""lower_bound"":0.666667,""score"":0.666667,""statuses"":{""fail"":1,""pass"":2},""upper_bound"":0.666667}",true,通过权重2/总权重3；证据全部可观测，上下界与已观测分相同。
+aggregate,metrics-unknown-error,metrics,未知与执行错误保留在总分母,"{""check_count"":4,""coverage"":0.5,""lower_bound"":0.25,""score"":0.5,""statuses"":{""error"":1,""fail"":1,""pass"":1,""unknown"":1},""upper_bound"":0.75}","{""check_count"":4,""coverage"":0.5,""lower_bound"":0.25,""score"":0.5,""statuses"":{""error"":1,""fail"":1,""pass"":1,""unknown"":1},""upper_bound"":0.75}",true,可观测通过1/可观测2；覆盖2/4，下界1/4，上界(1+2)/4。
+aggregate,metrics-weighted,metrics,不同检查权重参与覆盖率和边界,"{""check_count"":4,""coverage"":0.4,""lower_bound"":0.1,""score"":0.25,""statuses"":{""error"":1,""fail"":1,""pass"":1,""unknown"":1},""upper_bound"":0.7}","{""check_count"":4,""coverage"":0.4,""lower_bound"":0.1,""score"":0.25,""statuses"":{""error"":1,""fail"":1,""pass"":1,""unknown"":1},""upper_bound"":0.7}",true,总权重10，可观测权重4；通过1，未知/错误权重6。
+aggregate,metrics-case-dimension-macro,metrics,先案例等权，再六维等权,"{""coverage"":1.0,""lower_bound"":0.125,""score"":0.125,""upper_bound"":0.125}","{""coverage"":1.0,""lower_bound"":0.125,""score"":0.125,""upper_bound"":0.125}",true,保持维度=(1/2+1)/2=3/4；其他五维为0；六维均值=1/8。不能用总检查项通过4/10替代。

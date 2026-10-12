@@ -155,6 +155,16 @@ class ScoringTests(unittest.TestCase):
         self.assertEqual(evaluate(rule, self.event(artifacts={'out.txt': {'exists': False}}))['status'], 'fail')
         self.assertEqual(evaluate(rule, self.event(artifacts={'out.txt': {'exists': True, 'text': 'ok'}}))['status'], 'pass')
 
+    def test_json_artifact_is_not_a_markdown_response(self):
+        rule = check('code', 'artifact', 'equals', 'alpha', path='out.json', pointer='/code', failure='wrong_reuse')
+        valid = self.event(artifacts={'out.json': {'exists': True, 'text': '{"code":"alpha"}'}})
+        fenced = '```json\n{"code":"alpha"}\n```'
+        invalid = self.event(artifacts={'out.json': {'exists': True, 'text': fenced}})
+        self.assertEqual(evaluate(rule, valid)['status'], 'pass')
+        self.assertEqual(evaluate(rule, invalid)['category'], 'invalid_response')
+        response = check('code', 'response', 'equals', 'alpha', pointer='/code')
+        self.assertEqual(evaluate(response, self.event(fenced))['status'], 'pass')
+
     def test_actions_require_actual_trace(self):
         rule = check('a', 'actions', 'json_subset', {'name': 'write_file', 'arguments': {'path': 'a'}})
         self.assertEqual(evaluate(rule, self.event())['status'], 'unknown')

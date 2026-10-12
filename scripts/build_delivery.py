@@ -43,13 +43,25 @@ for name, expected in manifest['files'].items():
     if hashlib.sha256(path.read_bytes()).hexdigest() != expected:
         raise SystemExit('Checksum mismatch: ' + name)
 print('SHA256 verified:', len(manifest['files']), 'files', flush=True)
-for name in ('sample-run', 'live-run', 'openkylin-core', 'openkylin-challenge'):
+for name in ('sample-run', 'live-run', 'openkylin-core', 'openkylin-challenge',
+             'openkylin-difficulty', 'openkylin-difficulty-interrupted'):
     if (root/'source/examples'/name).exists():
         result = subprocess.run([sys.executable, '-m', 'kylin_memory_bench', 'verify', 'examples/'+name], cwd=root/'source')
         if result.returncode:
             raise SystemExit(result.returncode)
 result = subprocess.run([sys.executable, 'scripts/review_challenge.py', '--check'], cwd=root/'source')
 if result.returncode: raise SystemExit(result.returncode)
+for command in ([sys.executable, 'scripts/calibrate_scoring.py', '--check', 'docs/evidence/scoring-calibration-v31'],
+                [sys.executable, 'scripts/compare_scoring_versions.py', '--check', 'docs/evidence/scoring-version-comparison-v31.json'],
+                [sys.executable, 'scripts/calibrate_revision.py', '--check', '--output', 'docs/evidence/scoring-revision']):
+    result = subprocess.run(command, cwd=root/'source')
+    if result.returncode: raise SystemExit(result.returncode)
+if (root/'source/examples/openkylin-difficulty').exists():
+    result = subprocess.run([sys.executable, 'scripts/analyze_difficulty.py', '--run',
+                             'examples/openkylin-difficulty', '--output',
+                             'docs/evidence/difficulty-analysis', '--check'], cwd=root/'source')
+    if result.returncode not in (0, 3): raise SystemExit(result.returncode)
+    print('Difficulty acceptance gate:', 'passed' if result.returncode == 0 else 'not met; claims remain limited')
 '''
 
 SH = """#!/bin/sh
@@ -113,7 +125,12 @@ def build():
                 name = path.relative_to(ROOT).as_posix()
                 if archive.read(name) != path.read_bytes():
                     raise RuntimeError('Wheel is stale: ' + name)
-    entries = {'START_HERE.md': START.replace('@@VERSION@@',__version__).encode('utf-8'), 'verify-delivery.py': VERIFY.encode('utf-8'),
+    start = START.replace('@@VERSION@@', __version__).replace('材料日期：2026-10-03', '材料日期：以本包冻结记录为准')
+    start += ('\n## 0.2.1 修订材料\n\n先打开 source/docs/presentation/index.html，按问题、运行、结果、证据、校准与复核路径阅读。'
+              '数据说明见 source/docs/dataset-card.md；评分修订及底座验证见 source/docs/revision-validation.md。'
+              '新增难度试测与历史正式实验分别报告；共享盘基础设施中断尝试也保留，不当成完成的三轮成绩。'
+              '难度验收是否通过以 source/docs/evidence/difficulty-analysis/report.html 为准，不能把交付校验成功当成难度通过。\n')
+    entries = {'START_HERE.md': start.encode('utf-8'), 'verify-delivery.py': VERIFY.encode('utf-8'),
                'run-demo.sh': SH.encode('utf-8'), 'run-demo.ps1': PS.encode('utf-8'),
                'Technical-Report.pdf':pdf.read_bytes(), 'validation/package-lifecycle.log':validation.read_bytes(),
                'packages/'+deb.name: deb.read_bytes(), 'packages/'+wheel.name: wheel.read_bytes()}

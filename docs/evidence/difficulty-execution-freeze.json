@@ -1,0 +1,42 @@
+{
+  "at_utc": "2026-10-11T11:18:20.852078+00:00",
+  "additional_limit_cny": "5",
+  "dataset_sha256": "0aae4ecc47af860221ff0e6dbd26d009033f13e3c4e78a30ed613426c9d3bb5b",
+  "implementation_sha256": "4be0c96f82cb805d63837a678a71cc378e27760104279843596378a1ff7a01e5",
+  "config_sha256": "39a82579cb8ccec53942b19baa3c736148c56f1d7a496c47278db889519d4745",
+  "model": "deepseek-flash",
+  "paid_requests_made": 0,
+  "repeats": 3,
+  "jobs": 2,
+  "case_count": 12,
+  "status": "frozen_before_paid_run",
+  "price_bound_cny_per_million": {
+    "input_cache_miss": 2,
+    "input_cache_hit": 0.04,
+    "output": 8
+  },
+  "price_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+  "output": "runs/openkylin-difficulty-20261011/result",
+  "scoring_note": "0.2.1 requires JSON artifacts to contain strict JSON; historical evidence is preserved",
+  "input_isolation": "runner.case_events sends only protocol_version, session_id, day, prompt, workspace; no check or expected-answer fields",
+  "native_tools": {
+    "openclaw": {
+      "allow": [
+        "read",
+        "write",
+        "edit",
+        "memory_search",
+        "memory_get"
+      ],
+      "fs": {
+        "workspaceOnly": true
+      }
+    },
+    "hermes": {
+      "cli": [
+        "file",
+        "memory"
+      ]
+    }
+  }
+}

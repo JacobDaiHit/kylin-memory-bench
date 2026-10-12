@@ -1,0 +1,758 @@
+{
+  "research-v31-updates-low-memory": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-updates-low-stateless": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-updates-low-open_book": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-updates-high-memory": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-003"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-005"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-006"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-007"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-007"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-009"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-updates-high-stateless": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-003"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-005"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-006"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-007"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-007"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-009"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  },
+  "research-v31-updates-high-open_book": {
+    "q01": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-002"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q02": {
+      "value": "3/13",
+      "supporting_literal_records": [
+        "R6678-003"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q03": {
+      "value": "32/11",
+      "supporting_literal_records": [
+        "R6678-004"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q04": {
+      "value": "2",
+      "supporting_literal_records": [
+        "R6678-005"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q05": {
+      "value": "3",
+      "supporting_literal_records": [
+        "R6678-006"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q06": {
+      "value": "B-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q07": {
+      "value": "branch-blue-6678",
+      "supporting_literal_records": [
+        "R6678-007"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q08": {
+      "value": "v4",
+      "supporting_literal_records": [
+        "R6678-007"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q09": {
+      "value": "L-Schur-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q10": {
+      "value": "e2",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q11": {
+      "value": "finite",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q12": {
+      "value": "2/17",
+      "supporting_literal_records": [
+        "R6678-001"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q13": {
+      "value": "u^T u=1",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q14": {
+      "value": "approved",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q15": {
+      "value": "7",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q16": {
+      "value": "branch-green-6678",
+      "supporting_literal_records": [
+        "R6678-000"
+      ],
+      "reason": "literal_from_record_with_declared_selection_rules"
+    },
+    "q17": {
+      "value": null,
+      "supporting_literal_records": [
+        "R6678-009"
+      ],
+      "reason": "withdrawn_by_record"
+    },
+    "q18": {
+      "value": null,
+      "supporting_literal_records": [],
+      "reason": "not_provided_for_target"
+    }
+  }
+}

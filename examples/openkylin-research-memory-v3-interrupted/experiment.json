@@ -1,0 +1,82 @@
+{
+  "audit_counts": {
+    "balance_check_failed": 1,
+    "balance_checked": 371,
+    "completion": 371,
+    "finished": 1,
+    "rejected": 4,
+    "start": 1
+  },
+  "audit_privacy_note": "Whitelist metadata export; private account values and free-form errors removed. Original local audit is retained.",
+  "cases": 3,
+  "dataset_sha256": "6b118425de7a17ad20162690accb980151dd82aad74c25236564c0468d5feca9",
+  "environment": {
+    "execution_context": "wsl2",
+    "is_openkylin": true,
+    "machine": "x86_64",
+    "os_release": {
+      "ID": "openkylin",
+      "PRETTY_NAME": "openKylin 2.0 SP1",
+      "VERSION_ID": "2.0"
+    },
+    "python": "3.12.2",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "system": "Linux"
+  },
+  "events": 279,
+  "execution_errors": 125,
+  "implementation_sha256": "4be0c96f82cb805d63837a678a71cc378e27760104279843596378a1ff7a01e5",
+  "model": "deepseek-flash",
+  "native_versions": {
+    "hermes_commit": "4b8a43719b2a259cea88a72f9f13a2b6962e7ac3",
+    "openclaw": "2026.9.8 (fc23bc8)"
+  },
+  "network_or_guard_failures": [
+    {
+      "at": "2026-10-11T14:32:31.938104+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T14:36:45.068046+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T14:38:10.900112+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T14:41:19.016738+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    }
+  ],
+  "parameters": {
+    "max_tokens": 2048,
+    "temperature": 0,
+    "thinking": "disabled"
+  },
+  "presentation_note": "HTML/SVG regenerated with delivery source; original evidence and scores unchanged.",
+  "repeats": 1,
+  "retry_policy": "No selective rerun or replacement of failed cases.",
+  "run_id": "afc06e27-c42b-4915-9858-b4b982adb50a",
+  "scores_origin": "derived independent replay of interrupted evidence; missing steps remain unknown; not a completed three-trial result",
+  "status": "interrupted",
+  "usage": {
+    "completion_tokens": 84341,
+    "prompt_cache_hit_tokens": 1846784,
+    "prompt_cache_miss_tokens": 450568,
+    "prompt_tokens": 2297352,
+    "total_tokens": 2381693
+  }
+}

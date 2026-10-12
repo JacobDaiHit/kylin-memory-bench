@@ -18,20 +18,33 @@ EPOCH = int(os.environ.get('SOURCE_DATE_EPOCH', '1790985600'))
 LAUNCHER = b'#!/usr/bin/python3\nimport sys\nfrom pathlib import Path, PurePosixPath\nsys.path.insert(0, str(Path(__file__).resolve().parent.parent / "share/kylin-memory-bench"))\nfrom kylin_memory_bench.cli import main\nraise SystemExit(main())\n'
 
 
+def public_source_file(path):
+    relative = path.relative_to(ROOT)
+    private_parts = {'__pycache__', '.venv', '.git', '.home', '.hermes', '.openclaw', 'workspaces', 'runs', 'tmp'}
+    return (path.is_file() and not path.is_symlink() and not private_parts.intersection(relative.parts)
+            and path.suffix != '.pyc' and not path.name.endswith('.local.json')
+            and (not path.name.startswith('.env') or path.name == '.env.example')
+            and path.name != 'account-balance-final.json')
+
+
 def files():
-    roots = ['kylin_memory_bench', 'docs', 'schemas', 'configs', 'scripts', 'tests', '.github', 'reproducibility']
+    roots = ['kylin_memory_bench', 'docs', 'schemas', 'configs', 'scripts', 'tests', '.github', 'reproducibility', 'experiments']
     for folder in roots:
         for path in sorted((ROOT / folder).rglob('*')):
-            if path.is_file() and '__pycache__' not in path.parts and path.suffix != '.pyc' and not path.name.endswith('.local.json') and path.name != 'account-balance-final.json':
+            if public_source_file(path):
                 yield path.relative_to(ROOT).as_posix(), path.read_bytes()
-    for name in ('README.md', 'LICENSE', 'NOTICE', 'pyproject.toml', '.gitignore'):
+    for name in ('README.md', 'LICENSE', 'NOTICE', 'pyproject.toml', '.gitignore',
+                 'CHANGELOG.md', 'CONTRIBUTING.md', 'ROADMAP.md'):
         path = ROOT / name
         if path.is_file():
             yield name, path.read_bytes()
     # Sample run is deliberately self-contained and excludes mutable workspaces.
-    for folder in ('examples/sample-run', 'examples/live-run', 'examples/openkylin-core', 'examples/openkylin-challenge'):
+    for folder in ('examples/sample-run', 'examples/live-run', 'examples/openkylin-core', 'examples/openkylin-challenge',
+                   'examples/openkylin-difficulty', 'examples/openkylin-difficulty-interrupted',
+                   'examples/openkylin-math-pilot-v1', 'examples/openkylin-math-pilot-v2',
+                   'examples/openkylin-research-memory-v3', 'examples/openkylin-research-memory-v3-interrupted'):
         for path in sorted((ROOT / folder).glob('*')):
-            if path.is_file():
+            if public_source_file(path):
                 yield path.relative_to(ROOT).as_posix(), path.read_bytes()
     for path in sorted((ROOT / 'examples').glob('*.py')):
         yield path.relative_to(ROOT).as_posix(), path.read_bytes()
@@ -76,7 +89,7 @@ def build(output):
     for name, data in source:
         if name.startswith('kylin_memory_bench/'):
             entries.append(('usr/share/kylin-memory-bench/' + name, data, 0o644))
-        elif name.startswith(('docs/', 'schemas/', 'configs/', 'examples/')) or name in ('README.md', 'LICENSE', 'NOTICE'):
+        elif name.startswith(('docs/', 'schemas/', 'configs/', 'examples/', 'experiments/')) or name in ('README.md', 'LICENSE', 'NOTICE', 'CHANGELOG.md', 'CONTRIBUTING.md', 'ROADMAP.md'):
             entries.append(('usr/share/doc/kylin-memory-bench/' + name, data, 0o644))
     size = sum(len(data) for _, data, _ in entries)
     control = (f'Package: kylin-memory-bench\nVersion: {__version__}\nSection: science\nPriority: optional\n'

@@ -26,6 +26,11 @@
     },
     "workspace": {
       "type": "string"
+    },
+    "output_tokens": {
+      "type": "integer",
+      "minimum": 256,
+      "maximum": 8192
     }
   }
 }

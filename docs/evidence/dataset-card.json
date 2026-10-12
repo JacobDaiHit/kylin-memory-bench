@@ -1,0 +1,818 @@
+{
+  "schema_version": "1.0",
+  "suites": {
+    "challenge_original": {
+      "case_count": 12,
+      "cases": [
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "retention",
+          "id": "challenge-episodic-join",
+          "interference_step_count": 1,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 4,
+          "simulated_day_span": 30,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "retention",
+          "id": "challenge-negation",
+          "interference_step_count": 1,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 4,
+          "simulated_day_span": 91,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "retrieval",
+          "id": "challenge-conditional",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 3,
+          "simulated_day_span": 8,
+          "step_count": 3
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "retrieval",
+          "id": "challenge-abstention-near-match",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 4,
+          "simulated_day_span": 9,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "update",
+          "id": "challenge-scoped-revision",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 4,
+          "simulated_day_span": 31,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "update",
+          "id": "challenge-temporary-override",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 4,
+          "simulated_day_span": 8,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "disambiguation",
+          "id": "challenge-homonym",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 4,
+          "simulated_day_span": 9,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "disambiguation",
+          "id": "challenge-version-scope",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 4,
+          "simulated_day_span": 8,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "boundary",
+          "id": "challenge-quoted-override",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 3,
+          "simulated_day_span": 30,
+          "step_count": 3
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "boundary",
+          "id": "challenge-selective-delete",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 4,
+          "simulated_day_span": 31,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "reuse",
+          "id": "challenge-conditional-artifact",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 2,
+          "simulated_day_span": 30,
+          "step_count": 2
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "reuse",
+          "id": "challenge-revised-artifact",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 3,
+          "simulated_day_span": 30,
+          "step_count": 3
+        }
+      ],
+      "check_count": 27,
+      "dataset_sha256": "12aee151ac934ac885bd90a2a5c7d18f5f061a72b788a81aa734c2033627c73a",
+      "dimension_source_counts": {
+        "boundary": {
+          "response": 3
+        },
+        "disambiguation": {
+          "response": 5
+        },
+        "retention": {
+          "response": 3
+        },
+        "retrieval": {
+          "response": 5
+        },
+        "reuse": {
+          "actions": 2,
+          "artifact": 5
+        },
+        "update": {
+          "response": 4
+        }
+      },
+      "source": "examples/openkylin-challenge/dataset.jsonl",
+      "step_count": 43
+    },
+    "difficulty": {
+      "case_count": 12,
+      "cases": [
+        {
+          "difficulty_level": "low",
+          "difficulty_pair": "retention",
+          "dimension": "retention",
+          "id": "difficulty-retention-low",
+          "interference_step_count": 1,
+          "load_axis": "interference_sessions",
+          "load_value": 1,
+          "session_count": 3,
+          "simulated_day_span": 30,
+          "step_count": 3
+        },
+        {
+          "difficulty_level": "high",
+          "difficulty_pair": "retention",
+          "dimension": "retention",
+          "id": "difficulty-retention-high",
+          "interference_step_count": 6,
+          "load_axis": "interference_sessions",
+          "load_value": 6,
+          "session_count": 8,
+          "simulated_day_span": 30,
+          "step_count": 8
+        },
+        {
+          "difficulty_level": "low",
+          "difficulty_pair": "retrieval",
+          "dimension": "retrieval",
+          "id": "difficulty-retrieval-low",
+          "interference_step_count": 0,
+          "load_axis": "candidate_fact_count",
+          "load_value": 4,
+          "session_count": 2,
+          "simulated_day_span": 7,
+          "step_count": 2
+        },
+        {
+          "difficulty_level": "high",
+          "difficulty_pair": "retrieval",
+          "dimension": "retrieval",
+          "id": "difficulty-retrieval-high",
+          "interference_step_count": 0,
+          "load_axis": "candidate_fact_count",
+          "load_value": 64,
+          "session_count": 2,
+          "simulated_day_span": 7,
+          "step_count": 2
+        },
+        {
+          "difficulty_level": "low",
+          "difficulty_pair": "update",
+          "dimension": "update",
+          "id": "difficulty-update-low",
+          "interference_step_count": 0,
+          "load_axis": "untouched_neighbour_fields",
+          "load_value": 1,
+          "session_count": 3,
+          "simulated_day_span": 30,
+          "step_count": 3
+        },
+        {
+          "difficulty_level": "high",
+          "difficulty_pair": "update",
+          "dimension": "update",
+          "id": "difficulty-update-high",
+          "interference_step_count": 0,
+          "load_axis": "untouched_neighbour_fields",
+          "load_value": 13,
+          "session_count": 3,
+          "simulated_day_span": 30,
+          "step_count": 3
+        },
+        {
+          "difficulty_level": "low",
+          "difficulty_pair": "disambiguation",
+          "dimension": "disambiguation",
+          "id": "difficulty-disambiguation-low",
+          "interference_step_count": 0,
+          "load_axis": "near_entity_count",
+          "load_value": 2,
+          "session_count": 3,
+          "simulated_day_span": 30,
+          "step_count": 3
+        },
+        {
+          "difficulty_level": "high",
+          "difficulty_pair": "disambiguation",
+          "dimension": "disambiguation",
+          "id": "difficulty-disambiguation-high",
+          "interference_step_count": 0,
+          "load_axis": "near_entity_count",
+          "load_value": 8,
+          "session_count": 9,
+          "simulated_day_span": 30,
+          "step_count": 9
+        },
+        {
+          "difficulty_level": "low",
+          "difficulty_pair": "boundary",
+          "dimension": "boundary",
+          "id": "difficulty-boundary-low",
+          "interference_step_count": 0,
+          "load_axis": "authorised_fields_remaining",
+          "load_value": 0,
+          "session_count": 4,
+          "simulated_day_span": 30,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": "high",
+          "difficulty_pair": "boundary",
+          "dimension": "boundary",
+          "id": "difficulty-boundary-high",
+          "interference_step_count": 0,
+          "load_axis": "authorised_fields_remaining",
+          "load_value": 2,
+          "session_count": 4,
+          "simulated_day_span": 30,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": "low",
+          "difficulty_pair": "reuse",
+          "dimension": "reuse",
+          "id": "difficulty-reuse-low",
+          "interference_step_count": 0,
+          "load_axis": "non_null_history_constraints",
+          "load_value": 2,
+          "session_count": 2,
+          "simulated_day_span": 30,
+          "step_count": 2
+        },
+        {
+          "difficulty_level": "high",
+          "difficulty_pair": "reuse",
+          "dimension": "reuse",
+          "id": "difficulty-reuse-high",
+          "interference_step_count": 0,
+          "load_axis": "non_null_history_constraints",
+          "load_value": 5,
+          "session_count": 2,
+          "simulated_day_span": 30,
+          "step_count": 2
+        }
+      ],
+      "check_count": 36,
+      "dataset_sha256": "0aae4ecc47af860221ff0e6dbd26d009033f13e3c4e78a30ed613426c9d3bb5b",
+      "dimension_source_counts": {
+        "boundary": {
+          "response": 4
+        },
+        "disambiguation": {
+          "response": 4
+        },
+        "retention": {
+          "response": 4
+        },
+        "retrieval": {
+          "response": 6
+        },
+        "reuse": {
+          "actions": 2,
+          "artifact": 12
+        },
+        "update": {
+          "response": 4
+        }
+      },
+      "source": "kylin_memory_bench/data/difficulty.jsonl",
+      "step_count": 45
+    },
+    "standard": {
+      "case_count": 36,
+      "cases": [
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "retention",
+          "id": "retention-001-224906",
+          "interference_step_count": 3,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 5,
+          "simulated_day_span": 7,
+          "step_count": 5
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "retrieval",
+          "id": "retrieval-001-224906",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 3,
+          "simulated_day_span": 2,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "update",
+          "id": "update-001-224906",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 5,
+          "simulated_day_span": 4,
+          "step_count": 5
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "disambiguation",
+          "id": "disambiguation-001-224906",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 4,
+          "simulated_day_span": 3,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "boundary",
+          "id": "boundary-001-224906",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 4,
+          "simulated_day_span": 3,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "reuse",
+          "id": "reuse-001-224906",
+          "interference_step_count": 3,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 5,
+          "simulated_day_span": 7,
+          "step_count": 6
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "retention",
+          "id": "retention-002-207622",
+          "interference_step_count": 3,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 5,
+          "simulated_day_span": 30,
+          "step_count": 5
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "retrieval",
+          "id": "retrieval-002-207622",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 3,
+          "simulated_day_span": 2,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "update",
+          "id": "update-002-207622",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 5,
+          "simulated_day_span": 4,
+          "step_count": 5
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "disambiguation",
+          "id": "disambiguation-002-207622",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 4,
+          "simulated_day_span": 3,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "boundary",
+          "id": "boundary-002-207622",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 4,
+          "simulated_day_span": 3,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "reuse",
+          "id": "reuse-002-207622",
+          "interference_step_count": 3,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 5,
+          "simulated_day_span": 30,
+          "step_count": 6
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "retention",
+          "id": "retention-003-541046",
+          "interference_step_count": 3,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 5,
+          "simulated_day_span": 90,
+          "step_count": 5
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "retrieval",
+          "id": "retrieval-003-541046",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 3,
+          "simulated_day_span": 2,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "update",
+          "id": "update-003-541046",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 5,
+          "simulated_day_span": 4,
+          "step_count": 5
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "disambiguation",
+          "id": "disambiguation-003-541046",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 4,
+          "simulated_day_span": 3,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "boundary",
+          "id": "boundary-003-541046",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 4,
+          "simulated_day_span": 3,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "reuse",
+          "id": "reuse-003-541046",
+          "interference_step_count": 3,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 5,
+          "simulated_day_span": 90,
+          "step_count": 6
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "retention",
+          "id": "retention-004-351589",
+          "interference_step_count": 3,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 5,
+          "simulated_day_span": 7,
+          "step_count": 5
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "retrieval",
+          "id": "retrieval-004-351589",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 3,
+          "simulated_day_span": 2,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "update",
+          "id": "update-004-351589",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 5,
+          "simulated_day_span": 4,
+          "step_count": 5
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "disambiguation",
+          "id": "disambiguation-004-351589",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 4,
+          "simulated_day_span": 3,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "boundary",
+          "id": "boundary-004-351589",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 4,
+          "simulated_day_span": 3,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "reuse",
+          "id": "reuse-004-351589",
+          "interference_step_count": 3,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 5,
+          "simulated_day_span": 7,
+          "step_count": 6
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "retention",
+          "id": "retention-005-401193",
+          "interference_step_count": 3,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 5,
+          "simulated_day_span": 30,
+          "step_count": 5
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "retrieval",
+          "id": "retrieval-005-401193",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 3,
+          "simulated_day_span": 2,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "update",
+          "id": "update-005-401193",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 5,
+          "simulated_day_span": 4,
+          "step_count": 5
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "disambiguation",
+          "id": "disambiguation-005-401193",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 4,
+          "simulated_day_span": 3,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "boundary",
+          "id": "boundary-005-401193",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 4,
+          "simulated_day_span": 3,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "reuse",
+          "id": "reuse-005-401193",
+          "interference_step_count": 3,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 5,
+          "simulated_day_span": 30,
+          "step_count": 6
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "retention",
+          "id": "retention-006-614102",
+          "interference_step_count": 3,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 5,
+          "simulated_day_span": 90,
+          "step_count": 5
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "retrieval",
+          "id": "retrieval-006-614102",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 3,
+          "simulated_day_span": 2,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "update",
+          "id": "update-006-614102",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 5,
+          "simulated_day_span": 4,
+          "step_count": 5
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "disambiguation",
+          "id": "disambiguation-006-614102",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 4,
+          "simulated_day_span": 3,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "boundary",
+          "id": "boundary-006-614102",
+          "interference_step_count": 0,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 4,
+          "simulated_day_span": 3,
+          "step_count": 4
+        },
+        {
+          "difficulty_level": null,
+          "difficulty_pair": null,
+          "dimension": "reuse",
+          "id": "reuse-006-614102",
+          "interference_step_count": 3,
+          "load_axis": null,
+          "load_value": null,
+          "session_count": 5,
+          "simulated_day_span": 90,
+          "step_count": 6
+        }
+      ],
+      "check_count": 108,
+      "dataset_sha256": "65b84203c8c2c3b6c7826be1b65742e0ad64c1b023b04f3c4de37a64393ac573",
+      "dimension_source_counts": {
+        "boundary": {
+          "memory": 12,
+          "response": 12
+        },
+        "disambiguation": {
+          "response": 12
+        },
+        "retention": {
+          "memory": 12,
+          "response": 6
+        },
+        "retrieval": {
+          "response": 12
+        },
+        "reuse": {
+          "actions": 6,
+          "artifact": 12
+        },
+        "update": {
+          "memory": 12,
+          "response": 12
+        }
+      },
+      "source": "examples/openkylin-core/dataset.jsonl",
+      "step_count": 168
+    }
+  }
+}

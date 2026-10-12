@@ -1,0 +1,151 @@
+{
+  "audit_counts": {
+    "balance_checked": 146,
+    "budget_stop": 6,
+    "completion": 145,
+    "finished": 1,
+    "rejected": 7,
+    "start": 1
+  },
+  "audit_privacy_note": "Whitelist metadata export; private account values and free-form errors removed. Original local audit is retained.",
+  "cases": 6,
+  "dataset_sha256": "afe18b321b3e3ba528ac58a895fd12f90f2c2905bdf917438de988e8f37c0d0f",
+  "environment": {
+    "execution_context": "wsl2",
+    "is_openkylin": true,
+    "machine": "x86_64",
+    "os_release": {
+      "ID": "openkylin",
+      "PRETTY_NAME": "openKylin 2.0 SP1",
+      "VERSION_ID": "2.0"
+    },
+    "python": "3.12.2",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "system": "Linux"
+  },
+  "events": 44,
+  "execution_errors": 9,
+  "implementation_sha256": "4be0c96f82cb805d63837a678a71cc378e27760104279843596378a1ff7a01e5",
+  "model": "deepseek-flash",
+  "native_versions": {
+    "hermes_commit": "4b8a43719b2a259cea88a72f9f13a2b6962e7ac3",
+    "openclaw": "2026.9.8 (fc23bc8)"
+  },
+  "network_or_guard_failures": [
+    {
+      "at": "2026-10-11T13:12:16.852159+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T13:13:33.657703+00:00",
+      "event": "budget_stop",
+      "private_fields_removed": [
+        "balance_cny",
+        "reserve_cny"
+      ]
+    },
+    {
+      "at": "2026-10-11T13:13:33.665002+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T13:14:23.604311+00:00",
+      "event": "budget_stop",
+      "private_fields_removed": [
+        "balance_cny",
+        "reserve_cny"
+      ]
+    },
+    {
+      "at": "2026-10-11T13:14:23.609958+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T13:14:53.590338+00:00",
+      "event": "budget_stop",
+      "private_fields_removed": [
+        "balance_cny",
+        "reserve_cny"
+      ]
+    },
+    {
+      "at": "2026-10-11T13:14:53.599218+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T13:14:54.961464+00:00",
+      "event": "budget_stop",
+      "private_fields_removed": [
+        "balance_cny",
+        "reserve_cny"
+      ]
+    },
+    {
+      "at": "2026-10-11T13:14:54.967962+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T13:15:21.892189+00:00",
+      "event": "budget_stop",
+      "private_fields_removed": [
+        "balance_cny",
+        "reserve_cny"
+      ]
+    },
+    {
+      "at": "2026-10-11T13:15:21.900621+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T13:15:35.772982+00:00",
+      "event": "budget_stop",
+      "private_fields_removed": [
+        "balance_cny",
+        "reserve_cny"
+      ]
+    },
+    {
+      "at": "2026-10-11T13:15:35.779866+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    }
+  ],
+  "parameters": {
+    "max_tokens": 2048,
+    "temperature": 0,
+    "thinking": "disabled"
+  },
+  "presentation_note": "HTML/SVG regenerated with delivery source; original evidence and scores unchanged.",
+  "repeats": 1,
+  "retry_policy": "No selective rerun or replacement of failed cases.",
+  "run_id": "ff83360a-2791-4035-9c1a-67646b250a4a",
+  "scores_origin": "original",
+  "status": "completed_with_errors",
+  "usage": {
+    "completion_tokens": 39272,
+    "prompt_cache_hit_tokens": 1070464,
+    "prompt_cache_miss_tokens": 218523,
+    "prompt_tokens": 1288987,
+    "total_tokens": 1328259
+  }
+}

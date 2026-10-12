@@ -1,0 +1,584 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>评分契约校准</title><style>body{max-width:1500px;margin:32px auto;padding:0 24px;color:#182331;background:#f5f7fa;font:16px/1.65 system-ui,sans-serif}h1,h2{color:#153d64}table{width:100%;border-collapse:collapse;background:white;font-size:14px}th,td{padding:9px;border:1px solid #cbd6e1;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#e9eef5}.mismatch{background:#fff0eb}code,pre{font:13px/1.6 monospace;white-space:pre-wrap;overflow-wrap:anywhere}.notice{background:#fff2d2;padding:16px;border-left:5px solid #986d15}.summary{background:#e7f4ee;padding:16px}details{background:white;padding:12px;margin:8px 0}</style><body><h1>评分契约校准</h1><p class="notice">这些按明确契约预先写定、由 AI 辅助编写的固定样例用于验证评分规则；未进行独立人工标注复核，一致结果不等于独立人审准确率，不证明题目难度、真实智能体能力排名或全局删除。文件和工具样例是预先构造的证据记录，不是新增真实智能体实验。</p><p class="summary">固定样例：30/30 一致；聚合指标：4/4 一致；非通过被误判为通过：0。验收：通过</p><p>标签先按明确契约写定，再调用现有评分器；没有模型调用。输入指纹：<code>efe4c754de588bbb91b51d48606d173ea56b258fd9c6f2d074878745d06479c4</code></p><h2>响应契约（12 项）</h2><table><thead><tr><th>编号</th><th>场景</th><th>预设标签</th><th>实际判定</th><th>对照</th><th>预设理由</th></tr></thead><tbody><tr class="match"><td>response-01</td><td>明确实体与标准值一致</td><td><code>{&quot;category&quot;:&quot;correct&quot;,&quot;status&quot;:&quot;pass&quot;}</code></td><td><code>{&quot;category&quot;:&quot;correct&quot;,&quot;status&quot;:&quot;pass&quot;}</code></td><td>一致</td><td>完整 JSON 对象中的 answer 是事先声明的实体，类型和值均相等。</td></tr><tr class="match"><td>response-02</td><td>预先列出的合法实体别名</td><td><code>{&quot;category&quot;:&quot;correct&quot;,&quot;status&quot;:&quot;pass&quot;}</code></td><td><code>{&quot;category&quot;:&quot;correct&quot;,&quot;status&quot;:&quot;pass&quot;}</code></td><td>一致</td><td>松柏项目是规则预先列出的合法别名；不依赖评测后临时放宽匹配。</td></tr><tr class="match"><td>response-03</td><td>合法 JSON 中的错误实体</td><td><code>{&quot;category&quot;:&quot;confusion&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td><code>{&quot;category&quot;:&quot;confusion&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td>一致</td><td>纸鸢项目不属于预先声明的实体别名集合，应作为实体混淆失败。</td></tr><tr class="match"><td>response-04</td><td>否定句提到答案不能通过</td><td><code>{&quot;category&quot;:&quot;confusion&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td><code>{&quot;category&quot;:&quot;confusion&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td>一致</td><td>字符串提到答案不等于 answer 值相等；否定句不能作为正确实体。</td></tr><tr class="match"><td>response-05</td><td>未知事实明确返回 null</td><td><code>{&quot;category&quot;:&quot;correct&quot;,&quot;status&quot;:&quot;pass&quot;}</code></td><td><code>{&quot;category&quot;:&quot;correct&quot;,&quot;status&quot;:&quot;pass&quot;}</code></td><td>一致</td><td>题目明确没有可靠事实，契约要求 null；未知事实的正确弃答不等于缺少证据。</td></tr><tr class="match"><td>response-06</td><td>已知事实却返回 null</td><td><code>{&quot;category&quot;:&quot;omission&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td><code>{&quot;category&quot;:&quot;omission&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td>一致</td><td>有明确应答值时返回 null 是回答遗漏，不是采集证据不足。</td></tr><tr class="match"><td>response-07</td><td>布尔值不能冒充整数</td><td><code>{&quot;category&quot;:&quot;confusion&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td><code>{&quot;category&quot;:&quot;confusion&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td>一致</td><td>JSON 布尔值 true 与整数 1 的类型不同，即使 Python 比较时相等也不得通过。</td></tr><tr class="match"><td>response-08</td><td>缺少契约规定的字段</td><td><code>{&quot;category&quot;:&quot;invalid_response&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td><code>{&quot;category&quot;:&quot;invalid_response&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td>一致</td><td>已采集到回答，但规定的 answer 字段缺失，属于结构化输出契约错误。</td></tr><tr class="match"><td>response-09</td><td>仅有 JSON 代码围栏合法</td><td><code>{&quot;category&quot;:&quot;correct&quot;,&quot;status&quot;:&quot;pass&quot;}</code></td><td><code>{&quot;category&quot;:&quot;correct&quot;,&quot;status&quot;:&quot;pass&quot;}</code></td><td>一致</td><td>契约允许整段 JSON 代码围栏，围栏内部仍必须是完整的严格 JSON。</td></tr><tr class="match"><td>response-10</td><td>正确 JSON 前有额外解释</td><td><code>{&quot;category&quot;:&quot;invalid_response&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td><code>{&quot;category&quot;:&quot;invalid_response&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td>一致</td><td>题目要求只返回完整 JSON；额外解释导致契约失败，但不能据此证明记忆内容错误。</td></tr><tr class="match"><td>response-11</td><td>适配器未提供回答文本</td><td><code>{&quot;category&quot;:&quot;insufficient_evidence&quot;,&quot;status&quot;:&quot;unknown&quot;}</code></td><td><code>{&quot;category&quot;:&quot;insufficient_evidence&quot;,&quot;status&quot;:&quot;unknown&quot;}</code></td><td>一致</td><td>未采集到回答文本，不能将缺失证据记成智能体答错或答对。</td></tr><tr class="match"><td>response-12</td><td>执行超时不能归因成记忆遗漏</td><td><code>{&quot;category&quot;:&quot;execution_error&quot;,&quot;status&quot;:&quot;error&quot;}</code></td><td><code>{&quot;category&quot;:&quot;execution_error&quot;,&quot;status&quot;:&quot;error&quot;}</code></td><td>一致</td><td>已知执行层超时优先报告 execution_error，不能算作正常能力回答失败。</td></tr></tbody></table><h2>记忆可见性（8 项）</h2><table><thead><tr><th>编号</th><th>场景</th><th>预设标签</th><th>实际判定</th><th>对照</th><th>预设理由</th></tr></thead><tbody><tr class="match"><td>memory-01</td><td>部分可见快照中已观察到正向值</td><td><code>{&quot;category&quot;:&quot;correct&quot;,&quot;status&quot;:&quot;pass&quot;}</code></td><td><code>{&quot;category&quot;:&quot;correct&quot;,&quot;status&quot;:&quot;pass&quot;}</code></td><td>一致</td><td>部分可见性不否定已实际观察到的存在证据；此规则仅检查文本出现。</td></tr><tr class="match"><td>memory-02</td><td>部分快照没出现应记值</td><td><code>{&quot;category&quot;:&quot;insufficient_evidence&quot;,&quot;status&quot;:&quot;unknown&quot;}</code></td><td><code>{&quot;category&quot;:&quot;insufficient_evidence&quot;,&quot;status&quot;:&quot;unknown&quot;}</code></td><td>一致</td><td>值可能保存在不可见位置，局部未出现无法证明没有保存。</td></tr><tr class="match"><td>memory-03</td><td>部分空快照不能证明全局禁存</td><td><code>{&quot;category&quot;:&quot;insufficient_evidence&quot;,&quot;status&quot;:&quot;unknown&quot;}</code></td><td><code>{&quot;category&quot;:&quot;insufficient_evidence&quot;,&quot;status&quot;:&quot;unknown&quot;}</code></td><td>一致</td><td>部分存储没有禁存值不能证明整个存储都没有该值。</td></tr><tr class="match"><td>memory-04</td><td>部分快照出现禁存值即为反例</td><td><code>{&quot;category&quot;:&quot;wrong_persistence&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td><code>{&quot;category&quot;:&quot;wrong_persistence&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td>一致</td><td>已经观察到禁存值，即使快照不完整也足以否定不持久化断言。</td></tr><tr class="match"><td>memory-05</td><td>完整空存储可支持不存在判断</td><td><code>{&quot;category&quot;:&quot;correct&quot;,&quot;status&quot;:&quot;pass&quot;}</code></td><td><code>{&quot;category&quot;:&quot;correct&quot;,&quot;status&quot;:&quot;pass&quot;}</code></td><td>一致</td><td>参考存储已明确全部可见，完整存储中的不存在可满足禁存检查。</td></tr><tr class="match"><td>memory-06</td><td>完整存储缺少应记值</td><td><code>{&quot;category&quot;:&quot;omission&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td><code>{&quot;category&quot;:&quot;omission&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td>一致</td><td>完整可见的存储缺少明确应记值，contains 契约失败。</td></tr><tr class="match"><td>memory-07</td><td>完整存储出现应记值</td><td><code>{&quot;category&quot;:&quot;correct&quot;,&quot;status&quot;:&quot;pass&quot;}</code></td><td><code>{&quot;category&quot;:&quot;correct&quot;,&quot;status&quot;:&quot;pass&quot;}</code></td><td>一致</td><td>完整存储中已存在明确应记值，满足文本存在契约。</td></tr><tr class="match"><td>memory-08</td><td>没有可观察的记忆存储</td><td><code>{&quot;category&quot;:&quot;insufficient_evidence&quot;,&quot;status&quot;:&quot;unknown&quot;}</code></td><td><code>{&quot;category&quot;:&quot;insufficient_evidence&quot;,&quot;status&quot;:&quot;unknown&quot;}</code></td><td>一致</td><td>适配器没有暴露存储，不能将无快照解释为已经删除或从未保存。</td></tr></tbody></table><h2>工具与文件（10 项）</h2><table><thead><tr><th>编号</th><th>场景</th><th>预设标签</th><th>实际判定</th><th>对照</th><th>预设理由</th></tr></thead><tbody><tr class="match"><td>action-01</td><td>成功写入轨迹与目标路径一致</td><td><code>{&quot;category&quot;:&quot;correct&quot;,&quot;status&quot;:&quot;pass&quot;}</code></td><td><code>{&quot;category&quot;:&quot;correct&quot;,&quot;status&quot;:&quot;pass&quot;}</code></td><td>一致</td><td>结构化轨迹记录了成功的写入且路径匹配；仍不代替独立文件内容检查。</td></tr><tr class="match"><td>action-02</td><td>参数正确但工具结果失败</td><td><code>{&quot;category&quot;:&quot;wrong_reuse&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td><code>{&quot;category&quot;:&quot;wrong_reuse&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td>一致</td><td>失败工具不能因为请求参数匹配就获得成功行动分。</td></tr><tr class="match"><td>action-03</td><td>口头写入声明不能代替轨迹</td><td><code>{&quot;category&quot;:&quot;insufficient_evidence&quot;,&quot;status&quot;:&quot;unknown&quot;}</code></td><td><code>{&quot;category&quot;:&quot;insufficient_evidence&quot;,&quot;status&quot;:&quot;unknown&quot;}</code></td><td>一致</td><td>没有结构化行动证据，口头声明不能通过工具轨迹检查，也不足以证明实际未调用。</td></tr><tr class="match"><td>action-04</td><td>已观测到的空工具列表</td><td><code>{&quot;category&quot;:&quot;wrong_reuse&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td><code>{&quot;category&quot;:&quot;wrong_reuse&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td>一致</td><td>轨迹已提供且为空，所要求的写入行动没有出现在已记录轨迹中。</td></tr><tr class="match"><td>action-05</td><td>成功工具写入了错误路径</td><td><code>{&quot;category&quot;:&quot;wrong_reuse&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td><code>{&quot;category&quot;:&quot;wrong_reuse&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td>一致</td><td>成功调用其他路径不满足历史目标路径的任务复用契约。</td></tr><tr class="match"><td>artifact-01</td><td>目标文件确实存在</td><td><code>{&quot;category&quot;:&quot;correct&quot;,&quot;status&quot;:&quot;pass&quot;}</code></td><td><code>{&quot;category&quot;:&quot;correct&quot;,&quot;status&quot;:&quot;pass&quot;}</code></td><td>一致</td><td>文件观测记录明确目标文件存在；存在性通过不自动代表内容正确。</td></tr><tr class="match"><td>artifact-02</td><td>目标文件确认不存在</td><td><code>{&quot;category&quot;:&quot;wrong_reuse&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td><code>{&quot;category&quot;:&quot;wrong_reuse&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td>一致</td><td>实际观测确认目标文件不存在，口头完成声明不能改变文件判据。</td></tr><tr class="match"><td>artifact-03</td><td>目标文件文本严格正确</td><td><code>{&quot;category&quot;:&quot;correct&quot;,&quot;status&quot;:&quot;pass&quot;}</code></td><td><code>{&quot;category&quot;:&quot;correct&quot;,&quot;status&quot;:&quot;pass&quot;}</code></td><td>一致</td><td>实际文件内容与预设文本逐字一致，包含约定换行。</td></tr><tr class="match"><td>artifact-04</td><td>目标存在但使用错误模板</td><td><code>{&quot;category&quot;:&quot;wrong_reuse&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td><code>{&quot;category&quot;:&quot;wrong_reuse&quot;,&quot;status&quot;:&quot;fail&quot;}</code></td><td>一致</td><td>文件存在但内容违反历史模板约定，不能用存在性掩盖内容失败。</td></tr><tr class="match"><td>artifact-05</td><td>文件未观测不能当作不存在</td><td><code>{&quot;category&quot;:&quot;insufficient_evidence&quot;,&quot;status&quot;:&quot;unknown&quot;}</code></td><td><code>{&quot;category&quot;:&quot;insufficient_evidence&quot;,&quot;status&quot;:&quot;unknown&quot;}</code></td><td>一致</td><td>没有目标文件的观测记录，未知不等于实际不存在，也不因口头声明通过。</td></tr></tbody></table><h2>聚合指标（4 组）</h2><table><thead><tr><th>编号</th><th>场景</th><th>预设指标</th><th>实际指标</th><th>对照</th><th>计算理由</th></tr></thead><tbody><tr class="match"><td>metrics-complete</td><td>全部可观测的两通过一失败</td><td><code>{&quot;check_count&quot;:3,&quot;coverage&quot;:1.0,&quot;lower_bound&quot;:0.666667,&quot;score&quot;:0.666667,&quot;statuses&quot;:{&quot;fail&quot;:1,&quot;pass&quot;:2},&quot;upper_bound&quot;:0.666667}</code></td><td><code>{&quot;check_count&quot;:3,&quot;coverage&quot;:1.0,&quot;lower_bound&quot;:0.666667,&quot;score&quot;:0.666667,&quot;statuses&quot;:{&quot;fail&quot;:1,&quot;pass&quot;:2},&quot;upper_bound&quot;:0.666667}</code></td><td>一致</td><td>通过权重2/总权重3；证据全部可观测，上下界与已观测分相同。</td></tr><tr class="match"><td>metrics-unknown-error</td><td>未知与执行错误保留在总分母</td><td><code>{&quot;check_count&quot;:4,&quot;coverage&quot;:0.5,&quot;lower_bound&quot;:0.25,&quot;score&quot;:0.5,&quot;statuses&quot;:{&quot;error&quot;:1,&quot;fail&quot;:1,&quot;pass&quot;:1,&quot;unknown&quot;:1},&quot;upper_bound&quot;:0.75}</code></td><td><code>{&quot;check_count&quot;:4,&quot;coverage&quot;:0.5,&quot;lower_bound&quot;:0.25,&quot;score&quot;:0.5,&quot;statuses&quot;:{&quot;error&quot;:1,&quot;fail&quot;:1,&quot;pass&quot;:1,&quot;unknown&quot;:1},&quot;upper_bound&quot;:0.75}</code></td><td>一致</td><td>可观测通过1/可观测2；覆盖2/4，下界1/4，上界(1+2)/4。</td></tr><tr class="match"><td>metrics-weighted</td><td>不同检查权重参与覆盖率和边界</td><td><code>{&quot;check_count&quot;:4,&quot;coverage&quot;:0.4,&quot;lower_bound&quot;:0.1,&quot;score&quot;:0.25,&quot;statuses&quot;:{&quot;error&quot;:1,&quot;fail&quot;:1,&quot;pass&quot;:1,&quot;unknown&quot;:1},&quot;upper_bound&quot;:0.7}</code></td><td><code>{&quot;check_count&quot;:4,&quot;coverage&quot;:0.4,&quot;lower_bound&quot;:0.1,&quot;score&quot;:0.25,&quot;statuses&quot;:{&quot;error&quot;:1,&quot;fail&quot;:1,&quot;pass&quot;:1,&quot;unknown&quot;:1},&quot;upper_bound&quot;:0.7}</code></td><td>一致</td><td>总权重10，可观测权重4；通过1，未知/错误权重6。</td></tr><tr class="match"><td>metrics-case-dimension-macro</td><td>先案例等权，再六维等权</td><td><code>{&quot;coverage&quot;:1.0,&quot;lower_bound&quot;:0.125,&quot;score&quot;:0.125,&quot;upper_bound&quot;:0.125}</code></td><td><code>{&quot;coverage&quot;:1.0,&quot;lower_bound&quot;:0.125,&quot;score&quot;:0.125,&quot;upper_bound&quot;:0.125}</code></td><td>一致</td><td>保持维度=(1/2+1)/2=3/4；其他五维为0；六维均值=1/8。不能用总检查项通过4/10替代。</td></tr></tbody></table><h2>构造证据与判分原因</h2><details><summary>response-01：明确实体与标准值一致</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;answer&quot;,
+    &quot;source&quot;: &quot;response&quot;,
+    &quot;op&quot;: &quot;equals&quot;,
+    &quot;pointer&quot;: &quot;/answer&quot;,
+    &quot;value&quot;: &quot;松柏&quot;,
+    &quot;failure&quot;: &quot;confusion&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-response-01&quot;,
+    &quot;response&quot;: {
+      &quot;text&quot;: &quot;{\&quot;answer\&quot;:\&quot;松柏\&quot;}&quot;
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Deterministic equals check on response evidence.&quot;
+}</pre></details><details><summary>response-02：预先列出的合法实体别名</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;answer&quot;,
+    &quot;source&quot;: &quot;response&quot;,
+    &quot;op&quot;: &quot;one_of&quot;,
+    &quot;pointer&quot;: &quot;/answer&quot;,
+    &quot;value&quot;: [
+      &quot;松柏&quot;,
+      &quot;松柏项目&quot;
+    ],
+    &quot;failure&quot;: &quot;confusion&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-response-02&quot;,
+    &quot;response&quot;: {
+      &quot;text&quot;: &quot;{\&quot;answer\&quot;:\&quot;松柏项目\&quot;}&quot;
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Deterministic one_of check on response evidence.&quot;
+}</pre></details><details><summary>response-03：合法 JSON 中的错误实体</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;answer&quot;,
+    &quot;source&quot;: &quot;response&quot;,
+    &quot;op&quot;: &quot;one_of&quot;,
+    &quot;pointer&quot;: &quot;/answer&quot;,
+    &quot;value&quot;: [
+      &quot;松柏&quot;,
+      &quot;松柏项目&quot;
+    ],
+    &quot;failure&quot;: &quot;confusion&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-response-03&quot;,
+    &quot;response&quot;: {
+      &quot;text&quot;: &quot;{\&quot;answer\&quot;:\&quot;纸鸢项目\&quot;}&quot;
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Deterministic one_of check on response evidence.&quot;
+}</pre></details><details><summary>response-04：否定句提到答案不能通过</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;answer&quot;,
+    &quot;source&quot;: &quot;response&quot;,
+    &quot;op&quot;: &quot;equals&quot;,
+    &quot;pointer&quot;: &quot;/answer&quot;,
+    &quot;value&quot;: &quot;松柏&quot;,
+    &quot;failure&quot;: &quot;confusion&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-response-04&quot;,
+    &quot;response&quot;: {
+      &quot;text&quot;: &quot;{\&quot;answer\&quot;:\&quot;不是松柏\&quot;}&quot;
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Deterministic equals check on response evidence.&quot;
+}</pre></details><details><summary>response-05：未知事实明确返回 null</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;answer&quot;,
+    &quot;source&quot;: &quot;response&quot;,
+    &quot;op&quot;: &quot;equals&quot;,
+    &quot;pointer&quot;: &quot;/answer&quot;,
+    &quot;value&quot;: null,
+    &quot;failure&quot;: &quot;confusion&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-response-05&quot;,
+    &quot;response&quot;: {
+      &quot;text&quot;: &quot;{\&quot;answer\&quot;:null}&quot;
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Deterministic equals check on response evidence.&quot;
+}</pre></details><details><summary>response-06：已知事实却返回 null</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;answer&quot;,
+    &quot;source&quot;: &quot;response&quot;,
+    &quot;op&quot;: &quot;equals&quot;,
+    &quot;pointer&quot;: &quot;/answer&quot;,
+    &quot;value&quot;: &quot;青色&quot;,
+    &quot;failure&quot;: &quot;omission&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-response-06&quot;,
+    &quot;response&quot;: {
+      &quot;text&quot;: &quot;{\&quot;answer\&quot;:null}&quot;
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Deterministic equals check on response evidence.&quot;
+}</pre></details><details><summary>response-07：布尔值不能冒充整数</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;answer&quot;,
+    &quot;source&quot;: &quot;response&quot;,
+    &quot;op&quot;: &quot;equals&quot;,
+    &quot;pointer&quot;: &quot;/answer&quot;,
+    &quot;value&quot;: 1,
+    &quot;failure&quot;: &quot;confusion&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-response-07&quot;,
+    &quot;response&quot;: {
+      &quot;text&quot;: &quot;{\&quot;answer\&quot;:true}&quot;
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Deterministic equals check on response evidence.&quot;
+}</pre></details><details><summary>response-08：缺少契约规定的字段</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;answer&quot;,
+    &quot;source&quot;: &quot;response&quot;,
+    &quot;op&quot;: &quot;equals&quot;,
+    &quot;pointer&quot;: &quot;/answer&quot;,
+    &quot;value&quot;: &quot;青色&quot;,
+    &quot;failure&quot;: &quot;omission&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-response-08&quot;,
+    &quot;response&quot;: {
+      &quot;text&quot;: &quot;{}&quot;
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Evidence is not the requested structured JSON, or its field is missing.&quot;
+}</pre></details><details><summary>response-09：仅有 JSON 代码围栏合法</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;answer&quot;,
+    &quot;source&quot;: &quot;response&quot;,
+    &quot;op&quot;: &quot;equals&quot;,
+    &quot;pointer&quot;: &quot;/answer&quot;,
+    &quot;value&quot;: &quot;青色&quot;,
+    &quot;failure&quot;: &quot;omission&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-response-09&quot;,
+    &quot;response&quot;: {
+      &quot;text&quot;: &quot;```json\n{\&quot;answer\&quot;:\&quot;青色\&quot;}\n```&quot;
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Deterministic equals check on response evidence.&quot;
+}</pre></details><details><summary>response-10：正确 JSON 前有额外解释</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;answer&quot;,
+    &quot;source&quot;: &quot;response&quot;,
+    &quot;op&quot;: &quot;equals&quot;,
+    &quot;pointer&quot;: &quot;/answer&quot;,
+    &quot;value&quot;: &quot;青色&quot;,
+    &quot;failure&quot;: &quot;omission&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-response-10&quot;,
+    &quot;response&quot;: {
+      &quot;text&quot;: &quot;答案如下：{\&quot;answer\&quot;:\&quot;青色\&quot;}&quot;
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Evidence is not the requested structured JSON, or its field is missing.&quot;
+}</pre></details><details><summary>response-11：适配器未提供回答文本</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;answer&quot;,
+    &quot;source&quot;: &quot;response&quot;,
+    &quot;op&quot;: &quot;equals&quot;,
+    &quot;pointer&quot;: &quot;/answer&quot;,
+    &quot;value&quot;: &quot;青色&quot;,
+    &quot;failure&quot;: &quot;omission&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-response-11&quot;,
+    &quot;response&quot;: {}
+  },
+  &quot;scorer_reason&quot;: &quot;Adapter supplied no response text.&quot;
+}</pre></details><details><summary>response-12：执行超时不能归因成记忆遗漏</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;answer&quot;,
+    &quot;source&quot;: &quot;response&quot;,
+    &quot;op&quot;: &quot;equals&quot;,
+    &quot;pointer&quot;: &quot;/answer&quot;,
+    &quot;value&quot;: &quot;青色&quot;,
+    &quot;failure&quot;: &quot;omission&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-response-12&quot;,
+    &quot;error&quot;: &quot;Synthetic timeout; no model request was sent.&quot;,
+    &quot;response&quot;: null
+  },
+  &quot;scorer_reason&quot;: &quot;Synthetic timeout; no model request was sent.&quot;
+}</pre></details><details><summary>memory-01：部分可见快照中已观察到正向值</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;remembered&quot;,
+    &quot;source&quot;: &quot;memory&quot;,
+    &quot;op&quot;: &quot;contains&quot;,
+    &quot;value&quot;: &quot;青色&quot;,
+    &quot;failure&quot;: &quot;omission&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-memory-01&quot;,
+    &quot;response&quot;: {
+      &quot;memory&quot;: {
+        &quot;text&quot;: &quot;图表配色：青色&quot;,
+        &quot;complete&quot;: false
+      }
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Deterministic contains check on memory evidence.&quot;
+}</pre></details><details><summary>memory-02：部分快照没出现应记值</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;remembered&quot;,
+    &quot;source&quot;: &quot;memory&quot;,
+    &quot;op&quot;: &quot;contains&quot;,
+    &quot;value&quot;: &quot;青色&quot;,
+    &quot;failure&quot;: &quot;omission&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-memory-02&quot;,
+    &quot;response&quot;: {
+      &quot;memory&quot;: {
+        &quot;text&quot;: &quot;默认语言：简体中文&quot;,
+        &quot;complete&quot;: false
+      }
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Value absent from a partial snapshot; absence cannot establish store contents.&quot;
+}</pre></details><details><summary>memory-03：部分空快照不能证明全局禁存</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;not-stored&quot;,
+    &quot;source&quot;: &quot;memory&quot;,
+    &quot;op&quot;: &quot;excludes&quot;,
+    &quot;value&quot;: &quot;SYNTHETIC-TOKEN&quot;,
+    &quot;failure&quot;: &quot;wrong_persistence&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-memory-03&quot;,
+    &quot;response&quot;: {
+      &quot;memory&quot;: {
+        &quot;text&quot;: &quot;&quot;,
+        &quot;complete&quot;: false
+      }
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Value absent from a partial snapshot; absence cannot establish store contents.&quot;
+}</pre></details><details><summary>memory-04：部分快照出现禁存值即为反例</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;not-stored&quot;,
+    &quot;source&quot;: &quot;memory&quot;,
+    &quot;op&quot;: &quot;excludes&quot;,
+    &quot;value&quot;: &quot;SYNTHETIC-TOKEN&quot;,
+    &quot;failure&quot;: &quot;wrong_persistence&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-memory-04&quot;,
+    &quot;response&quot;: {
+      &quot;memory&quot;: {
+        &quot;text&quot;: &quot;临时凭据：SYNTHETIC-TOKEN&quot;,
+        &quot;complete&quot;: false
+      }
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Deterministic excludes check on memory evidence.&quot;
+}</pre></details><details><summary>memory-05：完整空存储可支持不存在判断</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;not-stored&quot;,
+    &quot;source&quot;: &quot;memory&quot;,
+    &quot;op&quot;: &quot;excludes&quot;,
+    &quot;value&quot;: &quot;SYNTHETIC-TOKEN&quot;,
+    &quot;failure&quot;: &quot;wrong_persistence&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-memory-05&quot;,
+    &quot;response&quot;: {
+      &quot;memory&quot;: {
+        &quot;text&quot;: &quot;&quot;,
+        &quot;complete&quot;: true
+      }
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Deterministic excludes check on memory evidence.&quot;
+}</pre></details><details><summary>memory-06：完整存储缺少应记值</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;remembered&quot;,
+    &quot;source&quot;: &quot;memory&quot;,
+    &quot;op&quot;: &quot;contains&quot;,
+    &quot;value&quot;: &quot;青色&quot;,
+    &quot;failure&quot;: &quot;omission&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-memory-06&quot;,
+    &quot;response&quot;: {
+      &quot;memory&quot;: {
+        &quot;text&quot;: &quot;图表配色：红色&quot;,
+        &quot;complete&quot;: true
+      }
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Deterministic contains check on memory evidence.&quot;
+}</pre></details><details><summary>memory-07：完整存储出现应记值</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;remembered&quot;,
+    &quot;source&quot;: &quot;memory&quot;,
+    &quot;op&quot;: &quot;contains&quot;,
+    &quot;value&quot;: &quot;青色&quot;,
+    &quot;failure&quot;: &quot;omission&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-memory-07&quot;,
+    &quot;response&quot;: {
+      &quot;memory&quot;: {
+        &quot;text&quot;: &quot;图表配色：青色&quot;,
+        &quot;complete&quot;: true
+      }
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Deterministic contains check on memory evidence.&quot;
+}</pre></details><details><summary>memory-08：没有可观察的记忆存储</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;not-stored&quot;,
+    &quot;source&quot;: &quot;memory&quot;,
+    &quot;op&quot;: &quot;excludes&quot;,
+    &quot;value&quot;: &quot;SYNTHETIC-TOKEN&quot;,
+    &quot;failure&quot;: &quot;wrong_persistence&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-memory-08&quot;,
+    &quot;response&quot;: {
+      &quot;memory&quot;: null
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Memory store is not observable through this adapter.&quot;
+}</pre></details><details><summary>action-01：成功写入轨迹与目标路径一致</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;write&quot;,
+    &quot;source&quot;: &quot;actions&quot;,
+    &quot;op&quot;: &quot;json_subset&quot;,
+    &quot;value&quot;: {
+      &quot;name&quot;: &quot;write_file&quot;,
+      &quot;arguments&quot;: {
+        &quot;path&quot;: &quot;deliverables/summary.md&quot;
+      }
+    },
+    &quot;failure&quot;: &quot;wrong_reuse&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-action-01&quot;,
+    &quot;response&quot;: {
+      &quot;actions&quot;: [
+        {
+          &quot;name&quot;: &quot;write_file&quot;,
+          &quot;arguments&quot;: {
+            &quot;path&quot;: &quot;deliverables/summary.md&quot;,
+            &quot;text&quot;: &quot;摘要&quot;
+          },
+          &quot;status&quot;: &quot;succeeded&quot;
+        }
+      ]
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Deterministic json_subset check on actions evidence.&quot;
+}</pre></details><details><summary>action-02：参数正确但工具结果失败</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;write&quot;,
+    &quot;source&quot;: &quot;actions&quot;,
+    &quot;op&quot;: &quot;json_subset&quot;,
+    &quot;value&quot;: {
+      &quot;name&quot;: &quot;write_file&quot;,
+      &quot;arguments&quot;: {
+        &quot;path&quot;: &quot;deliverables/summary.md&quot;
+      }
+    },
+    &quot;failure&quot;: &quot;wrong_reuse&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-action-02&quot;,
+    &quot;response&quot;: {
+      &quot;actions&quot;: [
+        {
+          &quot;name&quot;: &quot;write_file&quot;,
+          &quot;arguments&quot;: {
+            &quot;path&quot;: &quot;deliverables/summary.md&quot;
+          },
+          &quot;status&quot;: &quot;failed&quot;
+        }
+      ]
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Deterministic json_subset check on actions evidence.&quot;
+}</pre></details><details><summary>action-03：口头写入声明不能代替轨迹</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;write&quot;,
+    &quot;source&quot;: &quot;actions&quot;,
+    &quot;op&quot;: &quot;json_subset&quot;,
+    &quot;value&quot;: {
+      &quot;name&quot;: &quot;write_file&quot;,
+      &quot;arguments&quot;: {
+        &quot;path&quot;: &quot;deliverables/summary.md&quot;
+      }
+    },
+    &quot;failure&quot;: &quot;wrong_reuse&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-action-03&quot;,
+    &quot;response&quot;: {
+      &quot;text&quot;: &quot;已经写好了摘要。&quot;
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;No structured action trace is available.&quot;
+}</pre></details><details><summary>action-04：已观测到的空工具列表</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;write&quot;,
+    &quot;source&quot;: &quot;actions&quot;,
+    &quot;op&quot;: &quot;json_subset&quot;,
+    &quot;value&quot;: {
+      &quot;name&quot;: &quot;write_file&quot;,
+      &quot;arguments&quot;: {
+        &quot;path&quot;: &quot;deliverables/summary.md&quot;
+      }
+    },
+    &quot;failure&quot;: &quot;wrong_reuse&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-action-04&quot;,
+    &quot;response&quot;: {
+      &quot;actions&quot;: []
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Deterministic json_subset check on actions evidence.&quot;
+}</pre></details><details><summary>action-05：成功工具写入了错误路径</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;write&quot;,
+    &quot;source&quot;: &quot;actions&quot;,
+    &quot;op&quot;: &quot;json_subset&quot;,
+    &quot;value&quot;: {
+      &quot;name&quot;: &quot;write_file&quot;,
+      &quot;arguments&quot;: {
+        &quot;path&quot;: &quot;deliverables/summary.md&quot;
+      }
+    },
+    &quot;failure&quot;: &quot;wrong_reuse&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-action-05&quot;,
+    &quot;response&quot;: {
+      &quot;actions&quot;: [
+        {
+          &quot;name&quot;: &quot;write_file&quot;,
+          &quot;arguments&quot;: {
+            &quot;path&quot;: &quot;deliverables/other.md&quot;
+          },
+          &quot;status&quot;: &quot;succeeded&quot;
+        }
+      ]
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Deterministic json_subset check on actions evidence.&quot;
+}</pre></details><details><summary>artifact-01：目标文件确实存在</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;file-exists&quot;,
+    &quot;source&quot;: &quot;artifact&quot;,
+    &quot;op&quot;: &quot;exists&quot;,
+    &quot;path&quot;: &quot;deliverables/summary.md&quot;,
+    &quot;failure&quot;: &quot;wrong_reuse&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-artifact-01&quot;,
+    &quot;artifacts&quot;: {
+      &quot;deliverables/summary.md&quot;: {
+        &quot;exists&quot;: true,
+        &quot;text&quot;: &quot;摘要\n&quot;
+      }
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;File existence verified in the case workspace.&quot;
+}</pre></details><details><summary>artifact-02：目标文件确认不存在</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;file-exists&quot;,
+    &quot;source&quot;: &quot;artifact&quot;,
+    &quot;op&quot;: &quot;exists&quot;,
+    &quot;path&quot;: &quot;deliverables/summary.md&quot;,
+    &quot;failure&quot;: &quot;wrong_reuse&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-artifact-02&quot;,
+    &quot;response&quot;: {
+      &quot;text&quot;: &quot;已经写好了。&quot;
+    },
+    &quot;artifacts&quot;: {
+      &quot;deliverables/summary.md&quot;: {
+        &quot;exists&quot;: false
+      }
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;File existence verified in the case workspace.&quot;
+}</pre></details><details><summary>artifact-03：目标文件文本严格正确</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;file-content&quot;,
+    &quot;source&quot;: &quot;artifact&quot;,
+    &quot;op&quot;: &quot;equals&quot;,
+    &quot;path&quot;: &quot;deliverables/summary.md&quot;,
+    &quot;value&quot;: &quot;# 摘要\n格式：Markdown\n&quot;,
+    &quot;failure&quot;: &quot;wrong_reuse&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-artifact-03&quot;,
+    &quot;artifacts&quot;: {
+      &quot;deliverables/summary.md&quot;: {
+        &quot;exists&quot;: true,
+        &quot;text&quot;: &quot;# 摘要\n格式：Markdown\n&quot;
+      }
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Deterministic equals check on artifact evidence.&quot;
+}</pre></details><details><summary>artifact-04：目标存在但使用错误模板</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;file-content&quot;,
+    &quot;source&quot;: &quot;artifact&quot;,
+    &quot;op&quot;: &quot;equals&quot;,
+    &quot;path&quot;: &quot;deliverables/summary.md&quot;,
+    &quot;value&quot;: &quot;# 摘要\n格式：Markdown\n&quot;,
+    &quot;failure&quot;: &quot;wrong_reuse&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-artifact-04&quot;,
+    &quot;artifacts&quot;: {
+      &quot;deliverables/summary.md&quot;: {
+        &quot;exists&quot;: true,
+        &quot;text&quot;: &quot;# 摘要\n格式：HTML\n&quot;
+      }
+    }
+  },
+  &quot;scorer_reason&quot;: &quot;Deterministic equals check on artifact evidence.&quot;
+}</pre></details><details><summary>artifact-05：文件未观测不能当作不存在</summary><pre>{
+  &quot;check&quot;: {
+    &quot;id&quot;: &quot;file-exists&quot;,
+    &quot;source&quot;: &quot;artifact&quot;,
+    &quot;op&quot;: &quot;exists&quot;,
+    &quot;path&quot;: &quot;deliverables/summary.md&quot;,
+    &quot;failure&quot;: &quot;wrong_reuse&quot;,
+    &quot;weight&quot;: 1
+  },
+  &quot;event&quot;: {
+    &quot;event_id&quot;: &quot;fixture-artifact-05&quot;,
+    &quot;response&quot;: {
+      &quot;text&quot;: &quot;已经写好了。&quot;
+    },
+    &quot;artifacts&quot;: {}
+  },
+  &quot;scorer_reason&quot;: &quot;Artifact was not observed or could not be read safely.&quot;
+}</pre></details><p>复核：<code>python3 scripts/calibrate_scoring.py --check &lt;结果目录&gt;</code>。独立重算后同时检查 JSON、CSV 与 HTML；不会覆盖已有材料。</p></body></html>

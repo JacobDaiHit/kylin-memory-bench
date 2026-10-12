@@ -1,0 +1,143 @@
+{
+  "agents": [
+    {
+      "env_allow": [
+        "KMB_PROXY_KEY"
+      ],
+      "executable": "/home/kmb/runs/kmb-research-v3-transport/bin/openclaw-isolated",
+      "id": "openclaw",
+      "kind": "openclaw",
+      "label": "OpenClaw 2026.9.8 / DeepSeek Flash",
+      "memory_complete": false,
+      "model": "kmb-deepseek/deepseek-flash",
+      "native_config": {
+        "agents": {
+          "defaults": {
+            "skipBootstrap": true,
+            "thinkingDefault": "off"
+          }
+        },
+        "models": {
+          "mode": "replace",
+          "providers": {
+            "kmb-deepseek": {
+              "api": "openai-completions",
+              "apiKey": "[REDACTED]",
+              "baseUrl": "http://127.0.0.1:44699/v1",
+              "models": [
+                {
+                  "compat": {
+                    "maxTokensField": "max_tokens",
+                    "supportsDeveloperRole": false,
+                    "supportsUsageInStreaming": true
+                  },
+                  "contextWindow": 1048576,
+                  "id": "deepseek-flash",
+                  "input": [
+                    "text"
+                  ],
+                  "maxTokens": 2048,
+                  "name": "DeepSeek Flash (budget bridge)",
+                  "reasoning": false
+                }
+              ]
+            }
+          }
+        },
+        "tools": {
+          "allow": [
+            "read",
+            "write",
+            "edit",
+            "memory_search",
+            "memory_get"
+          ],
+          "fs": {
+            "workspaceOnly": true
+          }
+        },
+        "update": {
+          "checkOnStart": false
+        }
+      },
+      "timeout": 600
+    },
+    {
+      "dependency_home": "/home/maedaily/.local/share/kmb-live/hermes-home",
+      "env_allow": [
+        "KMB_PROXY_KEY"
+      ],
+      "executable": "/home/kmb/runs/kmb-research-v3-transport/bin/hermes-isolated",
+      "id": "hermes",
+      "kind": "hermes",
+      "label": "Hermes 4b8a437 / DeepSeek Flash",
+      "memory_complete": false,
+      "model": "deepseek-flash",
+      "native_config": {
+        "agent": {
+          "max_turns": 6,
+          "reasoning_effort": "none"
+        },
+        "auxiliary": {
+          "title_generation": {
+            "enabled": false
+          }
+        },
+        "curator": {
+          "enabled": false
+        },
+        "memory": {
+          "memory_enabled": true,
+          "user_profile_enabled": true
+        },
+        "model": {
+          "base_url": "http://127.0.0.1:44699/v1",
+          "default": "deepseek-flash",
+          "provider": "kmb-deepseek"
+        },
+        "platform_toolsets": {
+          "cli": [
+            "file",
+            "memory"
+          ]
+        },
+        "providers": {
+          "kmb-deepseek": {
+            "base_url": "http://127.0.0.1:44699/v1",
+            "key_env": "KMB_PROXY_KEY"
+          }
+        }
+      },
+      "provider": "kmb-deepseek",
+      "timeout": 600
+    }
+  ],
+  "clock": "simulated integer days; no real-time ageing claim",
+  "config_sha256": "5269505da9640293eb65b21c63f5d4cfc54ef1bd34cc5fea481a672167b2c138",
+  "dataset_sha256": "6b118425de7a17ad20162690accb980151dd82aad74c25236564c0468d5feca9",
+  "environment": {
+    "execution_context": "wsl2",
+    "is_openkylin": true,
+    "machine": "x86_64",
+    "os_release": {
+      "ID": "openkylin",
+      "PRETTY_NAME": "openKylin 2.0 SP1",
+      "VERSION_ID": "2.0"
+    },
+    "python": "3.12.2",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "system": "Linux"
+  },
+  "event_count": 410,
+  "evidence_head": "fcc931d9ead7b63f18b57002cb25bd30760db472505ab8d6ccf858fba92fd2fe",
+  "execution_errors": 53,
+  "finished_at": "2026-10-11T15:27:17.356618+00:00",
+  "implementation_sha256": "4be0c96f82cb805d63837a678a71cc378e27760104279843596378a1ff7a01e5",
+  "jobs": 6,
+  "repeats": 1,
+  "run_id": "49cb7544-05db-4561-8a71-6334756b31e7",
+  "schema_version": "1.0",
+  "started_at": "2026-10-11T14:57:10.640884+00:00",
+  "status": "completed_with_errors",
+  "version": "0.2.1"
+}

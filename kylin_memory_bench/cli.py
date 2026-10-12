@@ -39,7 +39,7 @@ def parser():
     gen = sub.add_parser('generate', help='Generate reproducible synthetic dataset variants')
     gen.add_argument('--output', '-o', required=True)
     gen.add_argument('--seed', type=int, default=2026)
-    gen.add_argument('--suite', choices=['core', 'challenge'], default='core')
+    gen.add_argument('--suite', choices=['core', 'challenge', 'challenge-v21'], default='core')
     gen.add_argument('--variants', type=int, default=6)
     gen.add_argument('--noise', type=int, default=3)
     gen.add_argument('--force', action='store_true')
@@ -71,9 +71,9 @@ def main(argv=None):
                 raise BenchError('variants must be 1..1000; noise must be 0..100')
             if Path(args.output).exists() and not args.force:
                 raise BenchError('Dataset already exists; use --force to replace it')
-            if args.suite == 'challenge':
-                from .challenges import generate_challenges
-                cases = generate_challenges(args.seed)
+            if args.suite in ('challenge', 'challenge-v21'):
+                from .challenges import generate_challenges, generate_revised_challenges
+                cases = (generate_revised_challenges if args.suite == 'challenge-v21' else generate_challenges)(args.seed)
             else:
                 cases = generate(args.seed, args.variants, args.noise)
             save_dataset(args.output, cases)

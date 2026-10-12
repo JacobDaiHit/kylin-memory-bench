@@ -1,0 +1,29 @@
+{
+  "signals": [
+    {
+      "case": "research-v3-combined-high-open_book",
+      "log_sha256": "e42309fef9f5e3d5315fc365092e54503e47875cacd350dbb633f25e0755fa27",
+      "exception_names": [
+        "BadRequestError"
+      ],
+      "contains_timeout_message": true,
+      "contains_memory_limit_message": false,
+      "bytes": 11965
+    },
+    {
+      "case": "research-v3-combined-high-no_history",
+      "log_sha256": "3789a139e978ecfd9206cc723bb2de1451c74398314fb0ca2d2e076af38c3995",
+      "exception_names": [
+        "APIConnectionError",
+        "APITimeoutError",
+        "BadRequestError",
+        "ConnectTimeout",
+        "RemoteProtocolError"
+      ],
+      "contains_timeout_message": true,
+      "contains_memory_limit_message": false,
+      "bytes": 59701
+    }
+  ],
+  "scope": "Supplementary exception-name signals from this run only; no raw logs, request bodies or credentials published. Do not infer a mathematical or memory error from these signals."
+}

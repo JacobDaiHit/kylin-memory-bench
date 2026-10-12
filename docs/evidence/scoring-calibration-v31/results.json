@@ -1,0 +1,1318 @@
+{
+  "aggregate_checks": [
+    {
+      "actual": {
+        "check_count": 3,
+        "coverage": 1.0,
+        "lower_bound": 0.666667,
+        "score": 0.666667,
+        "statuses": {
+          "fail": 1,
+          "pass": 2
+        },
+        "upper_bound": 0.666667
+      },
+      "checks": [
+        {
+          "status": "pass",
+          "weight": 1
+        },
+        {
+          "status": "fail",
+          "weight": 1
+        },
+        {
+          "status": "pass",
+          "weight": 1
+        }
+      ],
+      "expected": {
+        "check_count": 3,
+        "coverage": 1.0,
+        "lower_bound": 0.666667,
+        "score": 0.666667,
+        "statuses": {
+          "fail": 1,
+          "pass": 2
+        },
+        "upper_bound": 0.666667
+      },
+      "id": "metrics-complete",
+      "matched": true,
+      "rationale": "通过权重2/总权重3；证据全部可观测，上下界与已观测分相同。",
+      "title": "全部可观测的两通过一失败"
+    },
+    {
+      "actual": {
+        "check_count": 4,
+        "coverage": 0.5,
+        "lower_bound": 0.25,
+        "score": 0.5,
+        "statuses": {
+          "error": 1,
+          "fail": 1,
+          "pass": 1,
+          "unknown": 1
+        },
+        "upper_bound": 0.75
+      },
+      "checks": [
+        {
+          "status": "pass",
+          "weight": 1
+        },
+        {
+          "status": "fail",
+          "weight": 1
+        },
+        {
+          "status": "unknown",
+          "weight": 1
+        },
+        {
+          "status": "error",
+          "weight": 1
+        }
+      ],
+      "expected": {
+        "check_count": 4,
+        "coverage": 0.5,
+        "lower_bound": 0.25,
+        "score": 0.5,
+        "statuses": {
+          "error": 1,
+          "fail": 1,
+          "pass": 1,
+          "unknown": 1
+        },
+        "upper_bound": 0.75
+      },
+      "id": "metrics-unknown-error",
+      "matched": true,
+      "rationale": "可观测通过1/可观测2；覆盖2/4，下界1/4，上界(1+2)/4。",
+      "title": "未知与执行错误保留在总分母"
+    },
+    {
+      "actual": {
+        "check_count": 4,
+        "coverage": 0.4,
+        "lower_bound": 0.1,
+        "score": 0.25,
+        "statuses": {
+          "error": 1,
+          "fail": 1,
+          "pass": 1,
+          "unknown": 1
+        },
+        "upper_bound": 0.7
+      },
+      "checks": [
+        {
+          "status": "pass",
+          "weight": 1
+        },
+        {
+          "status": "fail",
+          "weight": 3
+        },
+        {
+          "status": "unknown",
+          "weight": 2
+        },
+        {
+          "status": "error",
+          "weight": 4
+        }
+      ],
+      "expected": {
+        "check_count": 4,
+        "coverage": 0.4,
+        "lower_bound": 0.1,
+        "score": 0.25,
+        "statuses": {
+          "error": 1,
+          "fail": 1,
+          "pass": 1,
+          "unknown": 1
+        },
+        "upper_bound": 0.7
+      },
+      "id": "metrics-weighted",
+      "matched": true,
+      "rationale": "总权重10，可观测权重4；通过1，未知/错误权重6。",
+      "title": "不同检查权重参与覆盖率和边界"
+    },
+    {
+      "actual": {
+        "coverage": 1.0,
+        "lower_bound": 0.125,
+        "score": 0.125,
+        "upper_bound": 0.125
+      },
+      "dimensions": [
+        {
+          "cases": [
+            [
+              {
+                "status": "pass",
+                "weight": 1
+              },
+              {
+                "status": "fail",
+                "weight": 1
+              }
+            ],
+            [
+              {
+                "status": "pass",
+                "weight": 1
+              },
+              {
+                "status": "pass",
+                "weight": 1
+              },
+              {
+                "status": "pass",
+                "weight": 1
+              }
+            ]
+          ],
+          "dimension": "retention"
+        },
+        {
+          "cases": [
+            [
+              {
+                "status": "fail",
+                "weight": 1
+              }
+            ]
+          ],
+          "dimension": "retrieval"
+        },
+        {
+          "cases": [
+            [
+              {
+                "status": "fail",
+                "weight": 1
+              }
+            ]
+          ],
+          "dimension": "update"
+        },
+        {
+          "cases": [
+            [
+              {
+                "status": "fail",
+                "weight": 1
+              }
+            ]
+          ],
+          "dimension": "disambiguation"
+        },
+        {
+          "cases": [
+            [
+              {
+                "status": "fail",
+                "weight": 1
+              }
+            ]
+          ],
+          "dimension": "boundary"
+        },
+        {
+          "cases": [
+            [
+              {
+                "status": "fail",
+                "weight": 1
+              }
+            ]
+          ],
+          "dimension": "reuse"
+        }
+      ],
+      "expected": {
+        "coverage": 1.0,
+        "lower_bound": 0.125,
+        "score": 0.125,
+        "upper_bound": 0.125
+      },
+      "id": "metrics-case-dimension-macro",
+      "matched": true,
+      "rationale": "保持维度=(1/2+1)/2=3/4；其他五维为0；六维均值=1/8。不能用总检查项通过4/10替代。",
+      "title": "先案例等权，再六维等权"
+    }
+  ],
+  "dataset_hash_basis": "canonical JSON rows; UTF-8; sorted object keys",
+  "dataset_sha256": "efe4c754de588bbb91b51d48606d173ea56b258fd9c6f2d074878745d06479c4",
+  "fixtures": [
+    {
+      "actual": {
+        "category": "correct",
+        "status": "pass"
+      },
+      "check": {
+        "failure": "confusion",
+        "id": "answer",
+        "op": "equals",
+        "pointer": "/answer",
+        "source": "response",
+        "value": "松柏",
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-response-01",
+        "response": {
+          "text": "{\"answer\":\"松柏\"}"
+        }
+      },
+      "expected": {
+        "category": "correct",
+        "status": "pass"
+      },
+      "group": "response",
+      "id": "response-01",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "完整 JSON 对象中的 answer 是事先声明的实体，类型和值均相等。",
+      "scorer_reason": "Deterministic equals check on response evidence.",
+      "title": "明确实体与标准值一致"
+    },
+    {
+      "actual": {
+        "category": "correct",
+        "status": "pass"
+      },
+      "check": {
+        "failure": "confusion",
+        "id": "answer",
+        "op": "one_of",
+        "pointer": "/answer",
+        "source": "response",
+        "value": [
+          "松柏",
+          "松柏项目"
+        ],
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-response-02",
+        "response": {
+          "text": "{\"answer\":\"松柏项目\"}"
+        }
+      },
+      "expected": {
+        "category": "correct",
+        "status": "pass"
+      },
+      "group": "response",
+      "id": "response-02",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "松柏项目是规则预先列出的合法别名；不依赖评测后临时放宽匹配。",
+      "scorer_reason": "Deterministic one_of check on response evidence.",
+      "title": "预先列出的合法实体别名"
+    },
+    {
+      "actual": {
+        "category": "confusion",
+        "status": "fail"
+      },
+      "check": {
+        "failure": "confusion",
+        "id": "answer",
+        "op": "one_of",
+        "pointer": "/answer",
+        "source": "response",
+        "value": [
+          "松柏",
+          "松柏项目"
+        ],
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-response-03",
+        "response": {
+          "text": "{\"answer\":\"纸鸢项目\"}"
+        }
+      },
+      "expected": {
+        "category": "confusion",
+        "status": "fail"
+      },
+      "group": "response",
+      "id": "response-03",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "纸鸢项目不属于预先声明的实体别名集合，应作为实体混淆失败。",
+      "scorer_reason": "Deterministic one_of check on response evidence.",
+      "title": "合法 JSON 中的错误实体"
+    },
+    {
+      "actual": {
+        "category": "confusion",
+        "status": "fail"
+      },
+      "check": {
+        "failure": "confusion",
+        "id": "answer",
+        "op": "equals",
+        "pointer": "/answer",
+        "source": "response",
+        "value": "松柏",
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-response-04",
+        "response": {
+          "text": "{\"answer\":\"不是松柏\"}"
+        }
+      },
+      "expected": {
+        "category": "confusion",
+        "status": "fail"
+      },
+      "group": "response",
+      "id": "response-04",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "字符串提到答案不等于 answer 值相等；否定句不能作为正确实体。",
+      "scorer_reason": "Deterministic equals check on response evidence.",
+      "title": "否定句提到答案不能通过"
+    },
+    {
+      "actual": {
+        "category": "correct",
+        "status": "pass"
+      },
+      "check": {
+        "failure": "confusion",
+        "id": "answer",
+        "op": "equals",
+        "pointer": "/answer",
+        "source": "response",
+        "value": null,
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-response-05",
+        "response": {
+          "text": "{\"answer\":null}"
+        }
+      },
+      "expected": {
+        "category": "correct",
+        "status": "pass"
+      },
+      "group": "response",
+      "id": "response-05",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "题目明确没有可靠事实，契约要求 null；未知事实的正确弃答不等于缺少证据。",
+      "scorer_reason": "Deterministic equals check on response evidence.",
+      "title": "未知事实明确返回 null"
+    },
+    {
+      "actual": {
+        "category": "omission",
+        "status": "fail"
+      },
+      "check": {
+        "failure": "omission",
+        "id": "answer",
+        "op": "equals",
+        "pointer": "/answer",
+        "source": "response",
+        "value": "青色",
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-response-06",
+        "response": {
+          "text": "{\"answer\":null}"
+        }
+      },
+      "expected": {
+        "category": "omission",
+        "status": "fail"
+      },
+      "group": "response",
+      "id": "response-06",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "有明确应答值时返回 null 是回答遗漏，不是采集证据不足。",
+      "scorer_reason": "Deterministic equals check on response evidence.",
+      "title": "已知事实却返回 null"
+    },
+    {
+      "actual": {
+        "category": "confusion",
+        "status": "fail"
+      },
+      "check": {
+        "failure": "confusion",
+        "id": "answer",
+        "op": "equals",
+        "pointer": "/answer",
+        "source": "response",
+        "value": 1,
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-response-07",
+        "response": {
+          "text": "{\"answer\":true}"
+        }
+      },
+      "expected": {
+        "category": "confusion",
+        "status": "fail"
+      },
+      "group": "response",
+      "id": "response-07",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "JSON 布尔值 true 与整数 1 的类型不同，即使 Python 比较时相等也不得通过。",
+      "scorer_reason": "Deterministic equals check on response evidence.",
+      "title": "布尔值不能冒充整数"
+    },
+    {
+      "actual": {
+        "category": "invalid_response",
+        "status": "fail"
+      },
+      "check": {
+        "failure": "omission",
+        "id": "answer",
+        "op": "equals",
+        "pointer": "/answer",
+        "source": "response",
+        "value": "青色",
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-response-08",
+        "response": {
+          "text": "{}"
+        }
+      },
+      "expected": {
+        "category": "invalid_response",
+        "status": "fail"
+      },
+      "group": "response",
+      "id": "response-08",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "已采集到回答，但规定的 answer 字段缺失，属于结构化输出契约错误。",
+      "scorer_reason": "Evidence is not the requested structured JSON, or its field is missing.",
+      "title": "缺少契约规定的字段"
+    },
+    {
+      "actual": {
+        "category": "correct",
+        "status": "pass"
+      },
+      "check": {
+        "failure": "omission",
+        "id": "answer",
+        "op": "equals",
+        "pointer": "/answer",
+        "source": "response",
+        "value": "青色",
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-response-09",
+        "response": {
+          "text": "```json\n{\"answer\":\"青色\"}\n```"
+        }
+      },
+      "expected": {
+        "category": "correct",
+        "status": "pass"
+      },
+      "group": "response",
+      "id": "response-09",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "契约允许整段 JSON 代码围栏，围栏内部仍必须是完整的严格 JSON。",
+      "scorer_reason": "Deterministic equals check on response evidence.",
+      "title": "仅有 JSON 代码围栏合法"
+    },
+    {
+      "actual": {
+        "category": "invalid_response",
+        "status": "fail"
+      },
+      "check": {
+        "failure": "omission",
+        "id": "answer",
+        "op": "equals",
+        "pointer": "/answer",
+        "source": "response",
+        "value": "青色",
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-response-10",
+        "response": {
+          "text": "答案如下：{\"answer\":\"青色\"}"
+        }
+      },
+      "expected": {
+        "category": "invalid_response",
+        "status": "fail"
+      },
+      "group": "response",
+      "id": "response-10",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "题目要求只返回完整 JSON；额外解释导致契约失败，但不能据此证明记忆内容错误。",
+      "scorer_reason": "Evidence is not the requested structured JSON, or its field is missing.",
+      "title": "正确 JSON 前有额外解释"
+    },
+    {
+      "actual": {
+        "category": "insufficient_evidence",
+        "status": "unknown"
+      },
+      "check": {
+        "failure": "omission",
+        "id": "answer",
+        "op": "equals",
+        "pointer": "/answer",
+        "source": "response",
+        "value": "青色",
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-response-11",
+        "response": {}
+      },
+      "expected": {
+        "category": "insufficient_evidence",
+        "status": "unknown"
+      },
+      "group": "response",
+      "id": "response-11",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "未采集到回答文本，不能将缺失证据记成智能体答错或答对。",
+      "scorer_reason": "Adapter supplied no response text.",
+      "title": "适配器未提供回答文本"
+    },
+    {
+      "actual": {
+        "category": "execution_error",
+        "status": "error"
+      },
+      "check": {
+        "failure": "omission",
+        "id": "answer",
+        "op": "equals",
+        "pointer": "/answer",
+        "source": "response",
+        "value": "青色",
+        "weight": 1
+      },
+      "event": {
+        "error": "Synthetic timeout; no model request was sent.",
+        "event_id": "fixture-response-12",
+        "response": null
+      },
+      "expected": {
+        "category": "execution_error",
+        "status": "error"
+      },
+      "group": "response",
+      "id": "response-12",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "已知执行层超时优先报告 execution_error，不能算作正常能力回答失败。",
+      "scorer_reason": "Synthetic timeout; no model request was sent.",
+      "title": "执行超时不能归因成记忆遗漏"
+    },
+    {
+      "actual": {
+        "category": "correct",
+        "status": "pass"
+      },
+      "check": {
+        "failure": "omission",
+        "id": "remembered",
+        "op": "contains",
+        "source": "memory",
+        "value": "青色",
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-memory-01",
+        "response": {
+          "memory": {
+            "complete": false,
+            "text": "图表配色：青色"
+          }
+        }
+      },
+      "expected": {
+        "category": "correct",
+        "status": "pass"
+      },
+      "group": "memory",
+      "id": "memory-01",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "部分可见性不否定已实际观察到的存在证据；此规则仅检查文本出现。",
+      "scorer_reason": "Deterministic contains check on memory evidence.",
+      "title": "部分可见快照中已观察到正向值"
+    },
+    {
+      "actual": {
+        "category": "insufficient_evidence",
+        "status": "unknown"
+      },
+      "check": {
+        "failure": "omission",
+        "id": "remembered",
+        "op": "contains",
+        "source": "memory",
+        "value": "青色",
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-memory-02",
+        "response": {
+          "memory": {
+            "complete": false,
+            "text": "默认语言：简体中文"
+          }
+        }
+      },
+      "expected": {
+        "category": "insufficient_evidence",
+        "status": "unknown"
+      },
+      "group": "memory",
+      "id": "memory-02",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "值可能保存在不可见位置，局部未出现无法证明没有保存。",
+      "scorer_reason": "Value absent from a partial snapshot; absence cannot establish store contents.",
+      "title": "部分快照没出现应记值"
+    },
+    {
+      "actual": {
+        "category": "insufficient_evidence",
+        "status": "unknown"
+      },
+      "check": {
+        "failure": "wrong_persistence",
+        "id": "not-stored",
+        "op": "excludes",
+        "source": "memory",
+        "value": "SYNTHETIC-TOKEN",
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-memory-03",
+        "response": {
+          "memory": {
+            "complete": false,
+            "text": ""
+          }
+        }
+      },
+      "expected": {
+        "category": "insufficient_evidence",
+        "status": "unknown"
+      },
+      "group": "memory",
+      "id": "memory-03",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "部分存储没有禁存值不能证明整个存储都没有该值。",
+      "scorer_reason": "Value absent from a partial snapshot; absence cannot establish store contents.",
+      "title": "部分空快照不能证明全局禁存"
+    },
+    {
+      "actual": {
+        "category": "wrong_persistence",
+        "status": "fail"
+      },
+      "check": {
+        "failure": "wrong_persistence",
+        "id": "not-stored",
+        "op": "excludes",
+        "source": "memory",
+        "value": "SYNTHETIC-TOKEN",
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-memory-04",
+        "response": {
+          "memory": {
+            "complete": false,
+            "text": "临时凭据：SYNTHETIC-TOKEN"
+          }
+        }
+      },
+      "expected": {
+        "category": "wrong_persistence",
+        "status": "fail"
+      },
+      "group": "memory",
+      "id": "memory-04",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "已经观察到禁存值，即使快照不完整也足以否定不持久化断言。",
+      "scorer_reason": "Deterministic excludes check on memory evidence.",
+      "title": "部分快照出现禁存值即为反例"
+    },
+    {
+      "actual": {
+        "category": "correct",
+        "status": "pass"
+      },
+      "check": {
+        "failure": "wrong_persistence",
+        "id": "not-stored",
+        "op": "excludes",
+        "source": "memory",
+        "value": "SYNTHETIC-TOKEN",
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-memory-05",
+        "response": {
+          "memory": {
+            "complete": true,
+            "text": ""
+          }
+        }
+      },
+      "expected": {
+        "category": "correct",
+        "status": "pass"
+      },
+      "group": "memory",
+      "id": "memory-05",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "参考存储已明确全部可见，完整存储中的不存在可满足禁存检查。",
+      "scorer_reason": "Deterministic excludes check on memory evidence.",
+      "title": "完整空存储可支持不存在判断"
+    },
+    {
+      "actual": {
+        "category": "omission",
+        "status": "fail"
+      },
+      "check": {
+        "failure": "omission",
+        "id": "remembered",
+        "op": "contains",
+        "source": "memory",
+        "value": "青色",
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-memory-06",
+        "response": {
+          "memory": {
+            "complete": true,
+            "text": "图表配色：红色"
+          }
+        }
+      },
+      "expected": {
+        "category": "omission",
+        "status": "fail"
+      },
+      "group": "memory",
+      "id": "memory-06",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "完整可见的存储缺少明确应记值，contains 契约失败。",
+      "scorer_reason": "Deterministic contains check on memory evidence.",
+      "title": "完整存储缺少应记值"
+    },
+    {
+      "actual": {
+        "category": "correct",
+        "status": "pass"
+      },
+      "check": {
+        "failure": "omission",
+        "id": "remembered",
+        "op": "contains",
+        "source": "memory",
+        "value": "青色",
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-memory-07",
+        "response": {
+          "memory": {
+            "complete": true,
+            "text": "图表配色：青色"
+          }
+        }
+      },
+      "expected": {
+        "category": "correct",
+        "status": "pass"
+      },
+      "group": "memory",
+      "id": "memory-07",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "完整存储中已存在明确应记值，满足文本存在契约。",
+      "scorer_reason": "Deterministic contains check on memory evidence.",
+      "title": "完整存储出现应记值"
+    },
+    {
+      "actual": {
+        "category": "insufficient_evidence",
+        "status": "unknown"
+      },
+      "check": {
+        "failure": "wrong_persistence",
+        "id": "not-stored",
+        "op": "excludes",
+        "source": "memory",
+        "value": "SYNTHETIC-TOKEN",
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-memory-08",
+        "response": {
+          "memory": null
+        }
+      },
+      "expected": {
+        "category": "insufficient_evidence",
+        "status": "unknown"
+      },
+      "group": "memory",
+      "id": "memory-08",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "适配器没有暴露存储，不能将无快照解释为已经删除或从未保存。",
+      "scorer_reason": "Memory store is not observable through this adapter.",
+      "title": "没有可观察的记忆存储"
+    },
+    {
+      "actual": {
+        "category": "correct",
+        "status": "pass"
+      },
+      "check": {
+        "failure": "wrong_reuse",
+        "id": "write",
+        "op": "json_subset",
+        "source": "actions",
+        "value": {
+          "arguments": {
+            "path": "deliverables/summary.md"
+          },
+          "name": "write_file"
+        },
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-action-01",
+        "response": {
+          "actions": [
+            {
+              "arguments": {
+                "path": "deliverables/summary.md",
+                "text": "摘要"
+              },
+              "name": "write_file",
+              "status": "succeeded"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "category": "correct",
+        "status": "pass"
+      },
+      "group": "tool_file",
+      "id": "action-01",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "结构化轨迹记录了成功的写入且路径匹配；仍不代替独立文件内容检查。",
+      "scorer_reason": "Deterministic json_subset check on actions evidence.",
+      "title": "成功写入轨迹与目标路径一致"
+    },
+    {
+      "actual": {
+        "category": "wrong_reuse",
+        "status": "fail"
+      },
+      "check": {
+        "failure": "wrong_reuse",
+        "id": "write",
+        "op": "json_subset",
+        "source": "actions",
+        "value": {
+          "arguments": {
+            "path": "deliverables/summary.md"
+          },
+          "name": "write_file"
+        },
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-action-02",
+        "response": {
+          "actions": [
+            {
+              "arguments": {
+                "path": "deliverables/summary.md"
+              },
+              "name": "write_file",
+              "status": "failed"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "category": "wrong_reuse",
+        "status": "fail"
+      },
+      "group": "tool_file",
+      "id": "action-02",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "失败工具不能因为请求参数匹配就获得成功行动分。",
+      "scorer_reason": "Deterministic json_subset check on actions evidence.",
+      "title": "参数正确但工具结果失败"
+    },
+    {
+      "actual": {
+        "category": "insufficient_evidence",
+        "status": "unknown"
+      },
+      "check": {
+        "failure": "wrong_reuse",
+        "id": "write",
+        "op": "json_subset",
+        "source": "actions",
+        "value": {
+          "arguments": {
+            "path": "deliverables/summary.md"
+          },
+          "name": "write_file"
+        },
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-action-03",
+        "response": {
+          "text": "已经写好了摘要。"
+        }
+      },
+      "expected": {
+        "category": "insufficient_evidence",
+        "status": "unknown"
+      },
+      "group": "tool_file",
+      "id": "action-03",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "没有结构化行动证据，口头声明不能通过工具轨迹检查，也不足以证明实际未调用。",
+      "scorer_reason": "No structured action trace is available.",
+      "title": "口头写入声明不能代替轨迹"
+    },
+    {
+      "actual": {
+        "category": "wrong_reuse",
+        "status": "fail"
+      },
+      "check": {
+        "failure": "wrong_reuse",
+        "id": "write",
+        "op": "json_subset",
+        "source": "actions",
+        "value": {
+          "arguments": {
+            "path": "deliverables/summary.md"
+          },
+          "name": "write_file"
+        },
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-action-04",
+        "response": {
+          "actions": []
+        }
+      },
+      "expected": {
+        "category": "wrong_reuse",
+        "status": "fail"
+      },
+      "group": "tool_file",
+      "id": "action-04",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "轨迹已提供且为空，所要求的写入行动没有出现在已记录轨迹中。",
+      "scorer_reason": "Deterministic json_subset check on actions evidence.",
+      "title": "已观测到的空工具列表"
+    },
+    {
+      "actual": {
+        "category": "wrong_reuse",
+        "status": "fail"
+      },
+      "check": {
+        "failure": "wrong_reuse",
+        "id": "write",
+        "op": "json_subset",
+        "source": "actions",
+        "value": {
+          "arguments": {
+            "path": "deliverables/summary.md"
+          },
+          "name": "write_file"
+        },
+        "weight": 1
+      },
+      "event": {
+        "event_id": "fixture-action-05",
+        "response": {
+          "actions": [
+            {
+              "arguments": {
+                "path": "deliverables/other.md"
+              },
+              "name": "write_file",
+              "status": "succeeded"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "category": "wrong_reuse",
+        "status": "fail"
+      },
+      "group": "tool_file",
+      "id": "action-05",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "成功调用其他路径不满足历史目标路径的任务复用契约。",
+      "scorer_reason": "Deterministic json_subset check on actions evidence.",
+      "title": "成功工具写入了错误路径"
+    },
+    {
+      "actual": {
+        "category": "correct",
+        "status": "pass"
+      },
+      "check": {
+        "failure": "wrong_reuse",
+        "id": "file-exists",
+        "op": "exists",
+        "path": "deliverables/summary.md",
+        "source": "artifact",
+        "weight": 1
+      },
+      "event": {
+        "artifacts": {
+          "deliverables/summary.md": {
+            "exists": true,
+            "text": "摘要\n"
+          }
+        },
+        "event_id": "fixture-artifact-01"
+      },
+      "expected": {
+        "category": "correct",
+        "status": "pass"
+      },
+      "group": "tool_file",
+      "id": "artifact-01",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "文件观测记录明确目标文件存在；存在性通过不自动代表内容正确。",
+      "scorer_reason": "File existence verified in the case workspace.",
+      "title": "目标文件确实存在"
+    },
+    {
+      "actual": {
+        "category": "wrong_reuse",
+        "status": "fail"
+      },
+      "check": {
+        "failure": "wrong_reuse",
+        "id": "file-exists",
+        "op": "exists",
+        "path": "deliverables/summary.md",
+        "source": "artifact",
+        "weight": 1
+      },
+      "event": {
+        "artifacts": {
+          "deliverables/summary.md": {
+            "exists": false
+          }
+        },
+        "event_id": "fixture-artifact-02",
+        "response": {
+          "text": "已经写好了。"
+        }
+      },
+      "expected": {
+        "category": "wrong_reuse",
+        "status": "fail"
+      },
+      "group": "tool_file",
+      "id": "artifact-02",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "实际观测确认目标文件不存在，口头完成声明不能改变文件判据。",
+      "scorer_reason": "File existence verified in the case workspace.",
+      "title": "目标文件确认不存在"
+    },
+    {
+      "actual": {
+        "category": "correct",
+        "status": "pass"
+      },
+      "check": {
+        "failure": "wrong_reuse",
+        "id": "file-content",
+        "op": "equals",
+        "path": "deliverables/summary.md",
+        "source": "artifact",
+        "value": "# 摘要\n格式：Markdown\n",
+        "weight": 1
+      },
+      "event": {
+        "artifacts": {
+          "deliverables/summary.md": {
+            "exists": true,
+            "text": "# 摘要\n格式：Markdown\n"
+          }
+        },
+        "event_id": "fixture-artifact-03"
+      },
+      "expected": {
+        "category": "correct",
+        "status": "pass"
+      },
+      "group": "tool_file",
+      "id": "artifact-03",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "实际文件内容与预设文本逐字一致，包含约定换行。",
+      "scorer_reason": "Deterministic equals check on artifact evidence.",
+      "title": "目标文件文本严格正确"
+    },
+    {
+      "actual": {
+        "category": "wrong_reuse",
+        "status": "fail"
+      },
+      "check": {
+        "failure": "wrong_reuse",
+        "id": "file-content",
+        "op": "equals",
+        "path": "deliverables/summary.md",
+        "source": "artifact",
+        "value": "# 摘要\n格式：Markdown\n",
+        "weight": 1
+      },
+      "event": {
+        "artifacts": {
+          "deliverables/summary.md": {
+            "exists": true,
+            "text": "# 摘要\n格式：HTML\n"
+          }
+        },
+        "event_id": "fixture-artifact-04"
+      },
+      "expected": {
+        "category": "wrong_reuse",
+        "status": "fail"
+      },
+      "group": "tool_file",
+      "id": "artifact-04",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "文件存在但内容违反历史模板约定，不能用存在性掩盖内容失败。",
+      "scorer_reason": "Deterministic equals check on artifact evidence.",
+      "title": "目标存在但使用错误模板"
+    },
+    {
+      "actual": {
+        "category": "insufficient_evidence",
+        "status": "unknown"
+      },
+      "check": {
+        "failure": "wrong_reuse",
+        "id": "file-exists",
+        "op": "exists",
+        "path": "deliverables/summary.md",
+        "source": "artifact",
+        "weight": 1
+      },
+      "event": {
+        "artifacts": {},
+        "event_id": "fixture-artifact-05",
+        "response": {
+          "text": "已经写好了。"
+        }
+      },
+      "expected": {
+        "category": "insufficient_evidence",
+        "status": "unknown"
+      },
+      "group": "tool_file",
+      "id": "artifact-05",
+      "matched": true,
+      "provenance": "synthetic_contract_fixture",
+      "rationale": "没有目标文件的观测记录，未知不等于实际不存在，也不因口头声明通过。",
+      "scorer_reason": "Artifact was not observed or could not be read safely.",
+      "title": "文件未观测不能当作不存在"
+    }
+  ],
+  "kind": "fixed_scoring_contract_calibration",
+  "label_policy": "prespecified_contract_labels; authored_with_AI_assistance; no independent human review",
+  "notice": "这些按明确契约预先写定、由 AI 辅助编写的固定样例用于验证评分规则；未进行独立人工标注复核，一致结果不等于独立人审准确率，不证明题目难度、真实智能体能力排名或全局删除。文件和工具样例是预先构造的证据记录，不是新增真实智能体实验。",
+  "passed": true,
+  "schema_version": "1.0",
+  "scorer_hash_basis": "UTF-8 source text with normalized newlines",
+  "scorer_sha256": "cb0a7cefc8df33c2b60e9a1382af70bdfb6bccf4b6b544597848a471b41b381a",
+  "summary": {
+    "actual_statuses": {
+      "error": 1,
+      "fail": 13,
+      "pass": 10,
+      "unknown": 6
+    },
+    "aggregate_groups": 4,
+    "aggregate_matched": 4,
+    "expected_statuses": {
+      "error": 1,
+      "fail": 13,
+      "pass": 10,
+      "unknown": 6
+    },
+    "false_passes": 0,
+    "fixtures": 30,
+    "groups": {
+      "memory": 8,
+      "response": 12,
+      "tool_file": 10
+    },
+    "matched": 30
+  }
+}

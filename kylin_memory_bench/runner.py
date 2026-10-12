@@ -60,16 +60,33 @@ def case_events(agent, trial, case, output, run_id, stopped):
     workspace = output / 'workspaces' / agent['id'] / str(trial) / case['id']
     workspace.mkdir(parents=True)
     adapter, setup_error, case_error = None, None, None
+    fresh_sessions = case.get('state_policy') == 'fresh_each_session'
+    session_adapters = {}
     try:
-        adapter = create_adapter(agent, workspace)
+        if fresh_sessions and agent['kind'] in {'openclaw', 'hermes'} and agent.get('state_isolation') != 'mount_namespace':
+            raise BenchError('Native fresh_each_session requires a verified mount-namespace wrapper')
+        if not fresh_sessions:
+            adapter = create_adapter(agent, workspace)
     except (BenchError, OSError, ValueError, TypeError) as exc:
         setup_error = str(exc)
     for step in case['steps']:
         if stopped.is_set():
             return
         session_id = str(uuid.uuid5(uuid.UUID(run_id), f"{agent['id']}/{trial}/{case['id']}/{step['session']}"))
+        active_workspace = workspace
+        if fresh_sessions and not (setup_error or case_error):
+            try:
+                if session_id not in session_adapters:
+                    active_workspace = workspace / 'sessions' / step['session']
+                    active_workspace.mkdir(parents=True)
+                    session_adapters[session_id] = (create_adapter(agent, active_workspace), active_workspace)
+                adapter, active_workspace = session_adapters[session_id]
+            except (BenchError, OSError, ValueError, TypeError) as exc:
+                setup_error = str(exc)
         request = {'protocol_version': '1.0', 'session_id': session_id,
-                   'day': step['day'], 'prompt': step['prompt'], 'workspace': str(workspace)}
+                   'day': step['day'], 'prompt': step['prompt'], 'workspace': str(active_workspace)}
+        if step.get('output_tokens') is not None:
+            request['output_tokens'] = step['output_tokens']
         started = time.perf_counter()
         response, error = None, setup_error or case_error
         if not error:
@@ -83,8 +100,11 @@ def case_events(agent, trial, case, output, run_id, stopped):
                  'session_id': session_id, 'day': step['day'], 'kind': step['kind'],
                  'prompt': step['prompt'], 'response': response, 'error': error,
                  'duration_ms': round((time.perf_counter() - started) * 1000, 3),
-                 'artifacts': collect_artifacts(workspace, step.get('checks', [])),
+                 'artifacts': collect_artifacts(active_workspace, step.get('checks', [])),
                  }
+        if fresh_sessions:
+            event['state_control'] = {'policy': 'fresh_each_session', 'workspace': str(active_workspace.relative_to(output)),
+                                      'scope': 'Cross-session persistent-state availability; not a native memory-module-only switch.'}
         yield event
 
 

@@ -1,0 +1,180 @@
+{
+  "audit_counts": {
+    "balance_check_failed": 5,
+    "balance_checked": 1001,
+    "completion": 1005,
+    "finished": 1,
+    "rejected": 18,
+    "start": 1
+  },
+  "audit_privacy_note": "Whitelist metadata export; private account values and free-form errors removed. Original local audit is retained.",
+  "cases": 3,
+  "dataset_sha256": "6b118425de7a17ad20162690accb980151dd82aad74c25236564c0468d5feca9",
+  "environment": {
+    "execution_context": "wsl2",
+    "is_openkylin": true,
+    "machine": "x86_64",
+    "os_release": {
+      "ID": "openkylin",
+      "PRETTY_NAME": "openKylin 2.0 SP1",
+      "VERSION_ID": "2.0"
+    },
+    "python": "3.12.2",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "system": "Linux"
+  },
+  "events": 410,
+  "execution_errors": 53,
+  "implementation_sha256": "4be0c96f82cb805d63837a678a71cc378e27760104279843596378a1ff7a01e5",
+  "model": "deepseek-flash",
+  "native_versions": {
+    "hermes_commit": "4b8a43719b2a259cea88a72f9f13a2b6962e7ac3",
+    "openclaw": "2026.9.8 (fc23bc8)"
+  },
+  "network_or_guard_failures": [
+    {
+      "at": "2026-10-11T14:59:12.808490+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T15:00:44.224544+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T15:01:10.275421+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T15:01:54.604551+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T15:03:44.720801+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T15:04:42.427541+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T15:07:22.013584+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T15:07:22.019280+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T15:07:49.833514+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T15:07:53.082949+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T15:08:03.156932+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T15:10:05.956420+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T15:12:47.080331+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T15:14:06.878851+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T15:14:53.931638+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T15:16:32.634649+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T15:17:45.564380+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    },
+    {
+      "at": "2026-10-11T15:23:07.918793+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    }
+  ],
+  "parameters": {
+    "max_tokens": 2048,
+    "temperature": 0,
+    "thinking": "disabled"
+  },
+  "presentation_note": "HTML/SVG regenerated with delivery source; original evidence and scores unchanged.",
+  "repeats": 1,
+  "retry_policy": "No selective rerun or replacement of failed cases.",
+  "run_id": "49cb7544-05db-4561-8a71-6334756b31e7",
+  "scores_origin": "original",
+  "status": "completed_with_errors",
+  "usage": {
+    "completion_tokens": 223465,
+    "prompt_cache_hit_tokens": 7417600,
+    "prompt_cache_miss_tokens": 1380788,
+    "prompt_tokens": 8798388,
+    "total_tokens": 9021853
+  }
+}

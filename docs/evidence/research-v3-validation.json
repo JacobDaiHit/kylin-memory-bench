@@ -1,0 +1,121 @@
+{
+  "status": "offline-acceptance-passed-before-native-pilot",
+  "at_utc": "2026-10-11T14:24:01.543638+00:00",
+  "host_tests": {
+    "passed": 114,
+    "command": "python3 -m unittest discover -s tests",
+    "log_sha256": "0ba263929979c869cfce5d90f61ae46af28d58778f69811072468beaa8351207"
+  },
+  "openkylin_specialized_tests": {
+    "passed": 14,
+    "command": "python3 -m unittest tests.test_research_memory -v",
+    "log_sha256": "392be7148f1b1a512e392829ce907da471e9e2d056752b04b49b2a0812e77fa7"
+  },
+  "native_stub_checks": {
+    "paid_calls": 0,
+    "provider_network_calls": 0,
+    "isolation": {
+      "capabilities_dropped": true,
+      "global_hermes_config_hidden": true,
+      "hermes_runtime_present": true,
+      "no_new_privileges": true,
+      "old_tmp_hidden": true,
+      "openclaw_runtime_present": true,
+      "other_run_files_hidden": true,
+      "other_workspaces_hidden": true,
+      "pid_namespace": true,
+      "repository_hidden": true,
+      "workspace_read_write": true
+    },
+    "native_stub_turns": [
+      {
+        "agent": "openclaw",
+        "separate_session": 0,
+        "decoded": true,
+        "provenance": "openclaw-cli"
+      },
+      {
+        "agent": "openclaw",
+        "separate_session": 1,
+        "decoded": true,
+        "provenance": "openclaw-cli"
+      },
+      {
+        "agent": "hermes",
+        "separate_session": 0,
+        "decoded": true,
+        "provenance": "hermes-cli"
+      },
+      {
+        "agent": "hermes",
+        "separate_session": 1,
+        "decoded": true,
+        "provenance": "hermes-cli"
+      }
+    ],
+    "local_stub_requests": [
+      {
+        "path": "/v1/chat/completions",
+        "model": "deepseek-flash",
+        "stream": true
+      },
+      {
+        "path": "/v1/chat/completions",
+        "model": "deepseek-flash",
+        "stream": true
+      },
+      {
+        "path": "/api/show",
+        "model": null,
+        "stream": null
+      },
+      {
+        "path": "/api/show",
+        "model": null,
+        "stream": null
+      },
+      {
+        "path": "/v1/chat/completions",
+        "model": "deepseek-flash",
+        "stream": true
+      },
+      {
+        "path": "/api/show",
+        "model": null,
+        "stream": null
+      },
+      {
+        "path": "/api/show",
+        "model": null,
+        "stream": null
+      },
+      {
+        "path": "/v1/chat/completions",
+        "model": "deepseek-flash",
+        "stream": true
+      }
+    ],
+    "scope": "Filesystem/PID visibility and native startup/response decoding only; stub does not test memory capacity."
+  },
+  "offline_design": {
+    "cases": 36,
+    "reference_trials": 324,
+    "check_count": 5832,
+    "all_literal_evidence_checked": true,
+    "ledger_all_pass": true,
+    "mathematical_solver_calls": 0
+  },
+  "viewer_checks": {
+    "javascript_syntax": "passed",
+    "simulated_dom_cases": 36,
+    "real_browser_rendering": "not_checked"
+  },
+  "source_sha256": "132d4c8ff15332786e3a428982499b48839e014fd036205c5be2c864434542b3",
+  "data_sha256": {
+    "inputs.jsonl": "e8d2060b925450ec11bd3b4bed3e3022079c8640047d853e1344caaa7145e163",
+    "gold.json": "0f347374b7826caaef219a8630a9db8a59dfa9681dc8d21caad583cf85a2174c",
+    "native-dataset.evaluator.jsonl": "ead8b79960fb47cb36c3a139c1df154c989d198f7b15ed0bf5bdd3fe2c943041",
+    "answer-trace.evaluator.json": "25452356bf3b8c530bae33f04daaa03e955c3c90ad36fd8e7f5ec61801b6e7ff"
+  },
+  "claim_limit": "Offline correctness, startup and isolation only. Actual memory capacity and difficulty require native observations."
+}

@@ -1,0 +1,73 @@
+{
+  "version": "3.1",
+  "status": "offline_prepared_no_paid_run",
+  "seed": 20261011,
+  "paid_calls": 0,
+  "conditions": [
+    "memory",
+    "stateless",
+    "open_book",
+    "no_history"
+  ],
+  "cases": 48,
+  "checks_per_case": 18,
+  "formal_families": [
+    "binding",
+    "updates",
+    "scope"
+  ],
+  "difficulty_gate": {
+    "coverage_min": 0.9,
+    "effect_pp_min": 15,
+    "families_required": 3,
+    "directions_required_of_three": 2
+  },
+  "pilot": {
+    "family": "updates",
+    "levels": [
+      "low",
+      "high"
+    ],
+    "conditions": [
+      "memory",
+      "stateless",
+      "open_book"
+    ],
+    "repeats": 1,
+    "agents": [
+      "openclaw",
+      "hermes"
+    ],
+    "final_slots": 12
+  },
+  "formal": {
+    "families": [
+      "binding",
+      "updates",
+      "scope"
+    ],
+    "levels": [
+      "low",
+      "high"
+    ],
+    "conditions": [
+      "memory",
+      "stateless",
+      "open_book"
+    ],
+    "repeats": 3,
+    "final_slots": 108
+  },
+  "control_scope": "Persistent-state availability, not a native module-only switch; general model/tool config is shared and previous session files must be hidden by namespace.",
+  "claim_limit": "Reference strategies are software checks. Native health, genuine difficulty, repeated differences and release readiness remain untested.",
+  "data_sha256": {
+    "answer-trace.evaluator.json": "d3a5db9482a3b3c6bc097b15c832609f6b174bff2c5d02b40ccc3c4b64285b12",
+    "gold.json": "d9b78291bd05962d3954e9e08dda7e9687f4d66e419aed7bb02cdd93cd82014f",
+    "inputs.jsonl": "8c53969a3d800398ea7d5af405b78df346c19fde3f40909836cf86d1406805da",
+    "learner-cases.json": "b7a0aa4120149917cc9ac02b04064fe7f111bbd2892bb92ef9455dcc31871add",
+    "native-dataset.evaluator.jsonl": "5c416aa39c102af8e109447378fb5248b8888d3e1ffee27ad39258d8fc717d82",
+    "reference-results.json": "833d9a0205b36ed78c930fc224fe506837070991044cab5c6f9537ed699d5726"
+  },
+  "source_sha256": "d4a4c15eb7cbab1b84e45badac68383266b5aab445a805dfe42f9392844777d1",
+  "v3_unchanged_source_sha256": "132d4c8ff15332786e3a428982499b48839e014fd036205c5be2c864434542b3"
+}

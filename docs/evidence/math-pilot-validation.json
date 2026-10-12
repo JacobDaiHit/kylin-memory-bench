@@ -1,0 +1,31 @@
+{
+  "host_tests": {
+    "count": 100,
+    "passed": true
+  },
+  "openkylin_tests": {
+    "count": 100,
+    "passed": true
+  },
+  "runs": {
+    "examples/openkylin-math-pilot-v1": {
+      "valid": true,
+      "events": 45,
+      "cases": 6,
+      "run_id": "d1d550b5-8754-4bfa-8e78-2917769c59b3",
+      "status": "interrupted",
+      "note": "Checks integrity and scoring consistency; hashes are not a signature or proof of honest adapter behavior."
+    },
+    "examples/openkylin-math-pilot-v2": {
+      "valid": true,
+      "events": 44,
+      "cases": 6,
+      "run_id": "ff83360a-2791-4035-9c1a-67646b250a4a",
+      "status": "completed_with_errors",
+      "note": "Checks integrity and scoring consistency; hashes are not a signature or proof of honest adapter behavior."
+    }
+  },
+  "scope": "Offline tests and evidence/scoring consistency; no ranking or difficulty validation claim.",
+  "host_test_log_sha256": "054f3609742d4b66ef3b0b102161bf23822c85fe4383a2ae080dd63c55042338",
+  "openkylin_test_log_sha256": "deff2b3279c671a836b365851865acad82fa5723a4a8928041b37d5621e84c90"
+}

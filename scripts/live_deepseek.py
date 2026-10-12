@@ -90,17 +90,30 @@ def budget_lock(path):
                 fcntl.flock(file.fileno(), fcntl.LOCK_UN)
 
 
+class UpstreamFailure(RuntimeError):
+    def __init__(self, status, message):
+        super().__init__(message)
+        self.status = status
+
+
 class Service:
     def __init__(self, args):
         self.args = args
+        self.guard = threading.RLock()
+        self.pending_reserves = D("0")
         self.key = read_key(args.env_file, args.key_name)
         self.token = secrets.token_urlsafe(32)
         self.requests = 0
-        self.max_output = 2048
+        self.max_output = getattr(args, 'max_output_tokens', 2048)
+        self.balance_interval = getattr(args, 'balance_check_interval', 0)
         self.audit = Path(args.audit)
         self.audit.parent.mkdir(parents=True, exist_ok=True)
         self.ledger_path = Path(args.ledger)
         current = self.balance()
+        self.period_balance_start = current
+        self.cached_balance = current
+        self.balance_checked_mono = time.monotonic()
+        self.balance_failure_mono = None
         if self.ledger_path.exists():
             self.ledger = json.loads(self.ledger_path.read_text(encoding="utf-8"))
             if self.ledger.get("model") != MODEL:
@@ -109,6 +122,15 @@ class Service:
             self.ledger = {"started_at": now(), "initial_balance_cny": str(current),
                            "model": MODEL, "estimated_upper_cny": "0", "completed_requests": 0}
         self.floor = D(self.ledger["initial_balance_cny"]) - D(str(args.budget_cny))
+        self.additional_budget = getattr(args, "additional_budget_cny", None)
+        self.period_estimated_start = D(self.ledger["estimated_upper_cny"])
+        if self.additional_budget is not None:
+            self.additional_budget = D(str(self.additional_budget))
+            self.floor = max(self.floor, current - self.additional_budget)
+            self.ledger.setdefault("budget_periods", []).append({
+                "started_at": now(), "additional_limit_cny": str(self.additional_budget),
+                "estimated_start_cny": str(self.period_estimated_start),
+                "balance_start_cny": str(current), "audit": str(self.audit)})
         self.ledger["budget_cny"] = str(args.budget_cny)
         self.ledger["minimum_balance_cny"] = str(self.floor)
         self.ledger["last_balance_cny"] = str(current)
@@ -116,12 +138,13 @@ class Service:
         self.log({"event": "start", "balance_cny": str(current), "floor_cny": str(self.floor),
                   "model": MODEL, "thinking": "disabled", "temperature": 0,
                   "max_output_tokens": self.max_output, "request_limit": args.request_limit,
+                  "balance_check_interval_seconds": self.balance_interval,
                   "stream_transport": "buffered upstream response converted to SSE when requested",
                   "price_bound_cny_per_million": {"input_cache_miss": 2, "input_cache_hit": 0.04, "output": 8}})
 
     def log(self, item):
         # Audit only metadata/usage: no prompts, response text, headers or credentials.
-        with self.audit.open("a", encoding="utf-8") as file:
+        with self.guard, self.audit.open("a", encoding="utf-8") as file:
             file.write(json.dumps({"at": now(), **item}, ensure_ascii=False) + "\n")
 
     def remote(self, path, data=None):
@@ -134,9 +157,9 @@ class Service:
         except urllib.error.HTTPError as exc:
             # A bounded provider error is redacted before reaching local logs.
             raw = exc.read(4096).decode("utf-8", "replace").replace(self.key, "[REDACTED]")
-            raise RuntimeError("DeepSeek HTTP " + str(exc.code) + ": " + raw) from None
+            raise UpstreamFailure(exc.code, "DeepSeek HTTP " + str(exc.code) + ": " + raw) from None
         except urllib.error.URLError:
-            raise RuntimeError("DeepSeek network request failed") from None
+            raise UpstreamFailure(503, "DeepSeek network request failed") from None
 
     def balance(self):
         value = self.remote("/user/balance")
@@ -154,25 +177,41 @@ class Service:
             self.log({"event": "balance_check_failed", "context": context, "reason": detail,
                       "model_response_preserved": context == "after-completion"})
             return False
-        self.ledger["last_balance_cny"] = str(value)
-        self.ledger["balance_checked_at"] = now()
-        if context == "finished":
-            self.ledger["final_balance_checked_at"] = self.ledger["balance_checked_at"]
-        save(self.ledger_path, self.ledger)
+        with self.guard:
+            self.cached_balance = value
+            self.balance_checked_mono = time.monotonic()
+            self.balance_failure_mono = None
+            self.ledger["last_balance_cny"] = str(value)
+            self.ledger["balance_checked_at"] = now()
+            if context == "finished":
+                self.ledger["final_balance_checked_at"] = self.ledger["balance_checked_at"]
+            save(self.ledger_path, self.ledger)
         self.log({"event": "balance_checked", "context": context, "balance_cny": str(value)})
         return True
 
-    def completion(self, body):
+    def preflight_balance(self):
+        """Caller holds guard. One bounded refresh; stale failures stop new calls."""
+        if not self.balance_interval:
+            return self.balance()
+        instant = time.monotonic()
+        if instant - self.balance_checked_mono >= self.balance_interval:
+            if self.balance_failure_mono is not None and instant - self.balance_failure_mono < 2:
+                raise UpstreamFailure(503, 'Balance unavailable; no provider completion sent')
+            if not self.refresh_balance('preflight-periodic'):
+                self.balance_failure_mono = time.monotonic()
+                raise UpstreamFailure(503, 'Balance unavailable; no provider completion sent')
+        return self.cached_balance
+
+    def completion(self, body, output_limit=None):
         if body.get("model") != MODEL:
             raise ValueError("Only the fixed benchmark model is allowed")
-        if self.requests >= self.args.request_limit:
-            raise ValueError("Live request limit reached")
         stream = bool(body.get("stream"))
         body = dict(body)
         body.pop("stream_options", None)
         body.pop("max_completion_tokens", None)
         body["stream"] = False
-        body["max_tokens"] = min(int(body.get("max_tokens") or self.max_output), self.max_output)
+        requested_limit = output_limit if output_limit is not None else body.get('max_tokens') or self.max_output
+        body["max_tokens"] = min(int(requested_limit), self.max_output)
         if body["max_tokens"] <= 0:
             raise ValueError("Invalid output limit")
         body["thinking"] = {"type": "disabled"}
@@ -182,32 +221,55 @@ class Service:
             raise ValueError("Live request exceeds 1 MiB")
         # UTF-8 bytes plus protocol margin intentionally overestimate input tokens.
         reserve = (D(len(raw) + 8192) * 2 + D(body["max_tokens"]) * 8) / 1000000
-        balance = self.balance()
-        estimated = D(self.ledger["estimated_upper_cny"])
-        if balance - reserve < self.floor or estimated + reserve > D(str(self.args.budget_cny)):
-            self.log({"event": "budget_stop", "balance_cny": str(balance), "reserve_cny": str(reserve)})
-            raise ValueError("Live budget exhausted; no upstream completion was sent")
-        # Reserve BEFORE sending, retaining the bound if interrupted or usage missing.
-        self.ledger["estimated_upper_cny"] = str(estimated + reserve)
-        save(self.ledger_path, self.ledger)
-        self.requests += 1
+        with self.guard:
+            if self.requests >= self.args.request_limit:
+                raise ValueError("Live request limit reached")
+            balance = self.preflight_balance()
+            estimated = D(self.ledger["estimated_upper_cny"])
+            available = balance - self.pending_reserves
+            if self.balance_interval:
+                # Keep the whole period's conservative spend protected even if provider
+                # balance updates lag. A fresh sample can lower, never enlarge, this bound.
+                available = min(available, self.period_balance_start - max(D('0'), estimated - self.period_estimated_start))
+            additional_exhausted = (getattr(self, "additional_budget", None) is not None and
+                                   estimated - self.period_estimated_start + reserve > self.additional_budget)
+            if available - reserve < self.floor or estimated + reserve > D(str(self.args.budget_cny)) or additional_exhausted:
+                self.log({"event": "budget_stop", "balance_cny": str(balance), "reserve_cny": str(reserve)})
+                raise ValueError("Live budget exhausted; no upstream completion was sent")
+            # Every parallel call reserves its bound before sending. Unknown failures retain it.
+            self.ledger["estimated_upper_cny"] = str(estimated + reserve)
+            self.pending_reserves += reserve
+            save(self.ledger_path, self.ledger)
+            self.requests += 1
         started = now()
-        result = self.remote("/chat/completions", body)
-        usage = result.get("usage", {})
-        if isinstance(usage.get("prompt_tokens"), int) and isinstance(usage.get("completion_tokens"), int):
-            cached = usage.get("prompt_cache_hit_tokens", 0)
-            if type(cached) is not int or not 0 <= cached <= usage["prompt_tokens"]:
-                cached = 0
-            cost = (D(usage["prompt_tokens"] - cached) * 2 + D(cached) * D("0.04")
-                    + D(usage["completion_tokens"]) * 8) / 1000000
-            self.ledger["estimated_upper_cny"] = str(estimated + cost)
-        self.ledger["completed_requests"] += 1
-        save(self.ledger_path, self.ledger)
-        self.log({"event": "completion", "started_at": started, "model": result.get("model"),
-                  "request_sha256": hashlib.sha256(raw).hexdigest(), "usage": usage,
-                  "finish_reasons": [c.get("finish_reason") for c in result.get("choices", [])],
-                  "balance_before_cny": str(balance)})
-        self.refresh_balance("after-completion")
+        try:
+            result = self.remote("/chat/completions", body)
+            if not isinstance(result, dict):
+                raise UpstreamFailure(502, 'Invalid provider completion object')
+        except BaseException:
+            with self.guard:
+                self.pending_reserves -= reserve
+            raise
+        usage = result.get('usage') if isinstance(result.get('usage'), dict) else {}
+        with self.guard:
+            estimated = D(self.ledger["estimated_upper_cny"])
+            if type(usage.get("prompt_tokens")) is int and usage['prompt_tokens'] >= 0 and type(usage.get("completion_tokens")) is int and usage['completion_tokens'] >= 0:
+                cached = usage.get("prompt_cache_hit_tokens", 0)
+                if type(cached) is not int or not 0 <= cached <= usage["prompt_tokens"]:
+                    cached = 0
+                cost = (D(usage["prompt_tokens"] - cached) * 2 + D(cached) * D("0.04")
+                        + D(usage["completion_tokens"]) * 8) / 1000000
+                # Remove only this call's reservation, preserving all other pending calls.
+                self.ledger["estimated_upper_cny"] = str(estimated - reserve + cost)
+            self.pending_reserves -= reserve
+            self.ledger["completed_requests"] += 1
+            save(self.ledger_path, self.ledger)
+            self.log({"event": "completion", "started_at": started, "model": result.get("model"),
+                      "request_sha256": hashlib.sha256(raw).hexdigest(), "usage": usage,
+                      "finish_reasons": [c.get("finish_reason") for c in result.get('choices', []) if isinstance(c, dict)] if isinstance(result.get('choices'), list) else [],
+                      "balance_before_cny": str(balance)})
+        if not self.balance_interval:
+            self.refresh_balance("after-completion")
         return result, stream
 
 
@@ -244,30 +306,51 @@ def server_for(service):
         def authorized(self):
             return secrets.compare_digest(self.headers.get("Authorization", ""), "Bearer " + service.token)
 
+        def controlled_path(self):
+            match = re.fullmatch(r'/v1/cap/(\d+)/(models|chat/completions)', self.path)
+            if match:
+                limit = int(match[1])
+                if not 256 <= limit <= service.max_output:
+                    raise ValueError('Per-turn cap exceeds configured proxy bound')
+                return '/v1/' + match[2], limit
+            return self.path, None
+
         def do_GET(self):
             if not self.authorized():
                 return self.reply(401, {"error": {"message": "Unauthorized"}})
-            if self.path not in ("/models", "/v1/models"):
+            try:
+                path, _ = self.controlled_path()
+            except ValueError:
+                return self.reply(400, {'error': {'message': 'Invalid per-turn cap'}})
+            if path not in ("/models", "/v1/models"):
                 return self.reply(404, {"error": {"message": "Unsupported path"}})
             return self.reply(200, {"object": "list", "data": [{"id": MODEL, "object": "model", "owned_by": "deepseek"}]})
 
         def do_POST(self):
             if not self.authorized():
                 return self.reply(401, {"error": {"message": "Unauthorized"}})
-            if self.path not in ("/chat/completions", "/v1/chat/completions"):
-                return self.reply(404, {"error": {"message": "Unsupported path"}})
             try:
+                path, limit = self.controlled_path()
+                if path not in ('/chat/completions', '/v1/chat/completions'):
+                    return self.reply(404, {'error': {'message': 'Unsupported path'}})
                 size = int(self.headers.get("Content-Length", "0"))
                 if size < 1 or size > 1024 * 1024:
                     raise ValueError("Invalid body length")
-                result, stream = service.completion(json.loads(self.rfile.read(size)))
+                body = json.loads(self.rfile.read(size))
+                result, stream = service.completion(body, output_limit=limit) if limit is not None else service.completion(body)
                 self.reply(200, sse(result) if stream else result,
                            "text/event-stream" if stream else "application/json")
             except Exception as exc:
                 detail = str(exc).replace(service.key, "[REDACTED]").replace(service.token, "[REDACTED]")
                 service.log({"event": "rejected", "reason": detail})
-                self.reply(400, {"error": {"message": detail, "type": "live_guard"}})
-    return http.server.HTTPServer(("127.0.0.1", 0), Handler)
+                status = (exc.status if isinstance(exc, UpstreamFailure) else
+                          504 if isinstance(exc, TimeoutError) else
+                          400 if isinstance(exc, ValueError) else 502)
+                self.reply(status, {"error": {"message": detail, "type": "live_guard"}})
+    server = http.server.ThreadingHTTPServer(("127.0.0.1", 0), Handler)
+    # Drain in-flight calls on close so billing/usage is finalized before the ledger is released.
+    server.daemon_threads = False
+    return server
 
 
 def main():
@@ -275,7 +358,12 @@ def main():
     parser.add_argument("--env-file", required=True)
     parser.add_argument("--key-name", default="MATHAGENT_DEEPSEEK_API_KEY")
     parser.add_argument("--budget-cny", type=float, default=10)
+    parser.add_argument("--additional-budget-cny", type=float,
+                        help="Also cap this process's incremental estimate and balance decrease; preserve cumulative ledger")
     parser.add_argument("--request-limit", type=int, default=30)
+    parser.add_argument('--max-output-tokens', type=int, default=2048)
+    parser.add_argument('--balance-check-interval', type=float, default=30,
+                        help='Balance refresh interval, 0..60 seconds; stale failures block new paid requests')
     parser.add_argument("--ledger", default="runs/deepseek-budget.local.json")
     parser.add_argument("--audit", required=True)
     parser.add_argument("--probe", action="store_true")
@@ -288,6 +376,10 @@ def main():
     args = parser.parse_args()
     if not math.isfinite(args.budget_cny) or args.budget_cny <= 0 or args.request_limit < 1:
         parser.error("Budget and request limit must be positive")
+    if args.additional_budget_cny is not None and (not math.isfinite(args.additional_budget_cny) or args.additional_budget_cny <= 0):
+        parser.error("Additional budget must be finite and positive")
+    if not 256 <= args.max_output_tokens <= 8192 or not math.isfinite(args.balance_check_interval) or not 0 <= args.balance_check_interval <= 60:
+        parser.error('Output cap must be 256..8192; balance interval must be finite and 0..60')
     if not args.probe and (not args.config or not args.output):
         parser.error('--config and --output are required for a benchmark')
     with budget_lock(args.ledger):

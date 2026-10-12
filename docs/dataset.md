@@ -68,3 +68,17 @@ python3 -m kylin_memory_bench validate expanded.jsonl
 挑战集不是标准集的随机编号扩容。它保留严格 JSON 与实际文件检查，避免引入不稳定的自由文本裁判；也不宣称涵盖任意同义改写。默认模型输入仍不包含检查条件。标准集与挑战集分别报告，不能用数据数量差异或存储可见性差异进行跨集排名。
 
 `one_of` 接受 1–32 个显式列出的 JSON 标量答案，逐项严格比较类型和值，不做包含或模糊匹配。用于预先声明同一实体的合法别名。挑战集“松柏/松柏项目”的实测后标注订正单独保存，见 `examples/openkylin-challenge/score-review.json`；原始证据与分数保持不变。
+
+
+## 0.2.1可选修订契约
+
+旧案例、原始证据和旧分数保持原样。`generate --suite challenge-v21`生成独立修订集：精确文件字段、撤销归因和引文后续探针。新契约使用`grading_contract: "1.1"`；仍兼容外层schema_version 1.0，并额外报告判据来源域，不与旧数据混分。
+
+- `json_keys`：response/artifact的完整JSON对象键集合须与value中的唯一字符串列表精确相同。
+- `json_exact`：完整JSON对象、列表及标量类型和值匹配；对象键顺序不影响结果。文件始终使用严格JSON解析，重复键及代码围栏拒绝。
+- `mismatch_values`：显式标量值与失败类别的映射；用于区分已撤销备注复用和合法公开编号混淆。不能给同一值重复登记冲突分类。
+- `measurement_domain`：content、format、authorization、storage、artifact、actions。新契约分域指标另列；既有总分保留。
+- `state_policy`：默认persistent；fresh_each_session让不同session进入不同HOME、工作区及原生状态目录。同一session内继续使用其状态。原生适配器必须有挂载命名空间包装器，先验证其他状态和评分端不可见。
+- `steps[].output_tokens`：可选256..8192整数。V3.1学习1024、最终4096，使用per_turn_proxy_limits与回环费用代理执行共同额度。该标签不是答案，不携带checks或gold。
+
+V3.1的内容封装评分是独立实验契约，支持唯一明确JSON答案块并单列外围格式。它不会回写本协议下的旧严格响应评分；完整JSON文件仍严格验证。[设计与范围](../experiments/math_memory/memory-v31-design.md)。

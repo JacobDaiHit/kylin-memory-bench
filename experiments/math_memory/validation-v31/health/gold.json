@@ -1,0 +1,12 @@
+{
+  "research-v31-health-persistence": {
+    "q01": "2",
+    "q02": "branch-green-health",
+    "q03": "7"
+  },
+  "research-v31-health-isolation": {
+    "q01": null,
+    "q02": null,
+    "q03": null
+  }
+}

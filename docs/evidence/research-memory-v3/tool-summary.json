@@ -1,0 +1,65 @@
+[
+  {
+    "agent": "openclaw",
+    "condition": "open_book",
+    "historical_tools": {
+      "tool_search": 2,
+      "read_file": 74,
+      "write_file": 12,
+      "edit": 66
+    },
+    "final_tools": {}
+  },
+  {
+    "agent": "openclaw",
+    "condition": "memory",
+    "historical_tools": {
+      "write_file": 6,
+      "tool_search": 2,
+      "read_file": 132,
+      "edit": 72
+    },
+    "final_tools": {
+      "read_file": 1
+    }
+  },
+  {
+    "agent": "openclaw",
+    "condition": "no_history",
+    "historical_tools": {
+      "write_file": 46
+    },
+    "final_tools": {
+      "tool_search": 4,
+      "tool_call": 2,
+      "read_file": 9
+    }
+  },
+  {
+    "agent": "hermes",
+    "condition": "open_book",
+    "historical_tools": {
+      "memory": 98,
+      "write_file": 1
+    },
+    "final_tools": {}
+  },
+  {
+    "agent": "hermes",
+    "condition": "memory",
+    "historical_tools": {
+      "memory": 46,
+      "write_file": 1
+    },
+    "final_tools": {}
+  },
+  {
+    "agent": "hermes",
+    "condition": "no_history",
+    "historical_tools": {
+      "memory": 69,
+      "write_file": 3
+    },
+    "final_tools": {}
+  }
+]

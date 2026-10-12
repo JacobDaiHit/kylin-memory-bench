@@ -1,0 +1,56 @@
+{
+  "status": "offline_diagnostic_tests_passed",
+  "host_python": "3.13",
+  "host_full_suite": {
+    "count": 121,
+    "passed": true,
+    "command": "python -m unittest discover -s tests -q"
+  },
+  "openkylin_python": "3.12.2",
+  "openkylin_diagnostic_suite": {
+    "count": 3,
+    "passed": true,
+    "command": "python3 -m unittest tests.test_record_diagnostics -v"
+  },
+  "contracts": [
+    "post-run inspection does not change frozen primary score or denominator",
+    "multiple answer candidates are not selected",
+    "unread records can remain in separate persistent files"
+  ],
+  "primary_result_sha256": "06b8b279b76ee73449b6cb03353fa434abd5e8744791f0cdc4fd1c001c4cc2ec",
+  "primary_result_unchanged": true,
+  "export_verification": {
+    "completed_with_errors": {
+      "valid": true,
+      "events": 410
+    },
+    "interrupted": {
+      "valid": true,
+      "events": 279
+    }
+  },
+  "frozen_pilot_materials_and_primary_implementation_unchanged": true,
+  "additional_paid_attempts": 0,
+  "presentation_overlay": "Only explanatory report, diagnostic links and the offline viewer status notice were updated; frozen data and grading code were preserved.",
+  "scope": "Regression and post-run diagnostic checks; not native memory ability, sufficient difficulty, stable ranking or release acceptance.",
+  "source_sha256": {
+    "scripts/report_record_pilot.py": "008384028ddd7ca25fbcfb9eb7a1f27bc36bf8323424e1a479d7ace8089ac2dd",
+    "tests/test_record_diagnostics.py": "156d51c875e94654fbd9b832ff643c9ad785ccf3f223e041993d3d067b2ab6fe"
+  },
+  "local_links": {
+    "checked": 48,
+    "passed": true,
+    "event_fragments_resolve": true
+  },
+  "public_json_privacy": {
+    "objects_checked": 3483,
+    "passed": true,
+    "scope": "No original account-balance fields or unredacted credential fields in the public run JSON."
+  },
+  "offline_viewer": {
+    "javascript_and_dom_checks_passed": true,
+    "prototype_cases": 36,
+    "evidence_hash_routes": 8,
+    "real_browser_checked": false
+  }
+}

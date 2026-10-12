@@ -1,0 +1,12 @@
+{
+  "seed": 20261011,
+  "cases": 24,
+  "status": "exploratory-not-native-agent-results",
+  "input_sha256": "095367c8adce7592f26d9f053fafe3143e9b5c361db820e01c2fb7bee38787bb",
+  "gold_sha256": "1508b48e96317a0d3023aaca50ad43fc375521c9e60b0e4343c7d5fbd70ec2f7",
+  "sources_sha256": {
+    "math_core.py": "861d535280760efa6503ceb5119f3596fdeccee85c46610a006f271df0e2ff6c",
+    "prototype.py": "94b7f52ca9fcbf1c77b7483d467c737a317b204d8b907846f4f887ad600f5104",
+    "__init__.py": "cd8fdff2b8ccce2f6392aaf0dd87b5d48919663cc1f1a3e05cd8bb12b14ff37a"
+  }
+}

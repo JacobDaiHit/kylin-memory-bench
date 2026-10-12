@@ -1,0 +1,343 @@
+{
+  "math-v2-reasoning-low--memory": {
+    "inputs": {
+      "A": [
+        [
+          "11/6",
+          "1/6"
+        ],
+        [
+          "1/6",
+          "29/6"
+        ]
+      ],
+      "B": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "-1"
+        ]
+      ],
+      "D": [
+        "2",
+        "3"
+      ],
+      "branch": {
+        "vector": [
+          "1",
+          "0"
+        ],
+        "kappa": "1",
+        "other": "4"
+      },
+      "version": "v4",
+      "sources": [
+        "SCHUR-V2-731942-B",
+        "SCHUR-V2-731942-branch",
+        "SCHUR-V2-731942-v4"
+      ]
+    },
+    "result": {
+      "status": "ok",
+      "c2": "1",
+      "c4": "-13/36",
+      "c6": null,
+      "certificate": {
+        "K": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "4"
+          ]
+        ],
+        "r11": "13/36",
+        "r12": "5/36",
+        "t11": "35/216",
+        "residual": [
+          "0",
+          "0"
+        ]
+      }
+    }
+  },
+  "math-v2-reasoning-low--oracle": {
+    "inputs": {
+      "A": [
+        [
+          "11/6",
+          "1/6"
+        ],
+        [
+          "1/6",
+          "29/6"
+        ]
+      ],
+      "B": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "-1"
+        ]
+      ],
+      "D": [
+        "2",
+        "3"
+      ],
+      "branch": {
+        "vector": [
+          "1",
+          "0"
+        ],
+        "kappa": "1",
+        "other": "4"
+      },
+      "version": "v4",
+      "sources": [
+        "SCHUR-V2-731942-B",
+        "SCHUR-V2-731942-branch",
+        "SCHUR-V2-731942-v4"
+      ]
+    },
+    "result": {
+      "status": "ok",
+      "c2": "1",
+      "c4": "-13/36",
+      "c6": null,
+      "certificate": {
+        "K": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "4"
+          ]
+        ],
+        "r11": "13/36",
+        "r12": "5/36",
+        "t11": "35/216",
+        "residual": [
+          "0",
+          "0"
+        ]
+      }
+    }
+  },
+  "math-v2-reasoning-high--memory": {
+    "inputs": {
+      "A": [
+        [
+          "11/6",
+          "1/6"
+        ],
+        [
+          "1/6",
+          "29/6"
+        ]
+      ],
+      "B": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "-1"
+        ]
+      ],
+      "D": [
+        "2",
+        "3"
+      ],
+      "branch": {
+        "vector": [
+          "1",
+          "0"
+        ],
+        "kappa": "1",
+        "other": "4"
+      },
+      "version": "v4",
+      "sources": [
+        "SCHUR-V2-731942-B",
+        "SCHUR-V2-731942-branch",
+        "SCHUR-V2-731942-v4"
+      ]
+    },
+    "result": {
+      "status": "ok",
+      "c2": "1",
+      "c4": "-13/36",
+      "c6": "-37/972",
+      "certificate": {
+        "K": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "4"
+          ]
+        ],
+        "r11": "13/36",
+        "r12": "5/36",
+        "t11": "35/216",
+        "residual": [
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    }
+  },
+  "math-v2-reasoning-high--oracle": {
+    "inputs": {
+      "A": [
+        [
+          "11/6",
+          "1/6"
+        ],
+        [
+          "1/6",
+          "29/6"
+        ]
+      ],
+      "B": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "-1"
+        ]
+      ],
+      "D": [
+        "2",
+        "3"
+      ],
+      "branch": {
+        "vector": [
+          "1",
+          "0"
+        ],
+        "kappa": "1",
+        "other": "4"
+      },
+      "version": "v4",
+      "sources": [
+        "SCHUR-V2-731942-B",
+        "SCHUR-V2-731942-branch",
+        "SCHUR-V2-731942-v4"
+      ]
+    },
+    "result": {
+      "status": "ok",
+      "c2": "1",
+      "c4": "-13/36",
+      "c6": "-37/972",
+      "certificate": {
+        "K": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "4"
+          ]
+        ],
+        "r11": "13/36",
+        "r12": "5/36",
+        "t11": "35/216",
+        "residual": [
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    }
+  },
+  "math-v2-reasoning-high--no_history": {
+    "inputs": null,
+    "result": {
+      "status": "insufficient",
+      "c2": null,
+      "c4": null,
+      "c6": null,
+      "certificate": {
+        "K": null,
+        "r11": null,
+        "r12": null,
+        "t11": null,
+        "residual": null
+      }
+    }
+  },
+  "math-v2-applicability-singular--oracle": {
+    "inputs": {
+      "A": [
+        [
+          "11/6",
+          "1/6"
+        ],
+        [
+          "1/6",
+          "29/6"
+        ]
+      ],
+      "B": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "-1"
+        ]
+      ],
+      "D": [
+        "0",
+        "3"
+      ],
+      "branch": {
+        "vector": [
+          "1",
+          "0"
+        ],
+        "kappa": "1",
+        "other": "4"
+      },
+      "version": "v4",
+      "sources": [
+        "SCHUR-V2-731942-B",
+        "SCHUR-V2-731942-branch",
+        "SCHUR-V2-731942-v4"
+      ]
+    },
+    "result": {
+      "status": "method_invalid",
+      "c2": null,
+      "c4": null,
+      "c6": null,
+      "certificate": {
+        "K": null,
+        "r11": null,
+        "r12": null,
+        "t11": null,
+        "residual": null
+      }
+    }
+  }
+}

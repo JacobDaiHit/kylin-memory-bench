@@ -1,3 +1,5 @@
 # Preserve recorded evidence and frozen source bytes on every platform.
 * -text
 *.sh text eol=lf
+# The frozen V1 prototype retains its original source bytes, including whitespace.
+experiments/math_memory/prototype.py -whitespace

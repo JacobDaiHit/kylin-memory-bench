@@ -1,0 +1,18 @@
+{
+  "status": "passed-before-transport-revision-paid-run",
+  "host_all_tests": 118,
+  "openkylin_transport_and_memory_tests": 28,
+  "added_contracts": [
+    "HTTP timeout 504, provider status retained, invalid/budget request 400",
+    "Parallel cost settlement preserves other in-flight reservations",
+    "In-flight account reservation cannot be spent twice",
+    "Failed parallel request retains unknown-usage budget"
+  ],
+  "semantic_inputs_golds_checks": "Byte-identical to first V3 attempt",
+  "shared_additional_limit_cny": "10",
+  "prior_attempt": "research-v3-interrupted-accounting.json",
+  "scope": "Uniform transport/budget correction; no proof of difficulty or ability ranking",
+  "source_sha256": "adb3cfb6c1d8c5e5ee59127a65e7b8203a05df474baa1c2980e3f5963fef5db1",
+  "host_log_sha256": "7c5ed361069add3224de70e87a318afa4190cd838a3827669f737cc385f9a6ef",
+  "target_log_sha256": "3abfdbffd37076fecc169c459f08014a66db21c6210f3ab5903f4f57b1ab3822"
+}

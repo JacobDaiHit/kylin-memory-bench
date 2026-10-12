@@ -1,0 +1,174 @@
+{
+  "status": "post_run_retrieval_diagnostic_not_primary_score",
+  "agent": "openclaw",
+  "case": "research-v3-combined-high-memory",
+  "final_event_id": "410",
+  "primary_unchanged": true,
+  "eligible_for_predeclared_gate": false,
+  "historical_record_count": 78,
+  "explicitly_read_record_count": 73,
+  "final_reads": [
+    {
+      "path": "MEMORY.md",
+      "literal_record_count": 73,
+      "record_ids": [
+        "SCHUR-320939-research-R9278-002",
+        "SCHUR-320939-research-R9278-003",
+        "SCHUR-320939-research-R9278-004",
+        "SCHUR-320939-research-R9278-005",
+        "SCHUR-320939-research-R9278-006",
+        "SCHUR-320939-research-R9278-007",
+        "SCHUR-320939-research-R9278-008",
+        "SCHUR-320939-research-R9278-009",
+        "SCHUR-320939-research-R9278-010",
+        "SCHUR-320939-research-R9278-011",
+        "SCHUR-320939-research-R9278-012",
+        "SCHUR-397515-research-R6808-001",
+        "SCHUR-397515-research-R6808-002",
+        "SCHUR-397515-research-R6808-003",
+        "SCHUR-397515-research-R6808-004",
+        "SCHUR-397515-research-R6808-005",
+        "SCHUR-397515-research-R6808-006",
+        "SCHUR-397515-research-R6808-007",
+        "SCHUR-397515-research-R6808-008",
+        "SCHUR-397515-research-R6808-009",
+        "SCHUR-397515-research-R6808-010",
+        "SCHUR-397515-research-R6808-011",
+        "SCHUR-397515-research-R6808-012",
+        "SCHUR-615743-research-R6678-002",
+        "SCHUR-615743-research-R6678-003",
+        "SCHUR-615743-research-R6678-004",
+        "SCHUR-615743-research-R6678-005",
+        "SCHUR-615743-research-R6678-006",
+        "SCHUR-615743-research-R6678-007",
+        "SCHUR-615743-research-R6678-008",
+        "SCHUR-615743-research-R6678-009",
+        "SCHUR-615743-research-R6678-010",
+        "SCHUR-615743-research-R6678-011",
+        "SCHUR-615743-research-R6678-012",
+        "SCHUR-615743-research-R6678-013",
+        "SCHUR-615743-research-R6678-014",
+        "SCHUR-615743-research-R6678-015",
+        "SCHUR-615743-research-R6678-016",
+        "SCHUR-615743-research-R6678-017",
+        "SCHUR-615743-research-R6678-018",
+        "SCHUR-615743-research-R6678-019",
+        "SCHUR-615743-research-R6678-020",
+        "SCHUR-615743-research-R6678-021",
+        "SCHUR-615743-research-R6678-022",
+        "SCHUR-615743-research-R6678-023",
+        "SCHUR-615743-research-R6678-024",
+        "SCHUR-615743-research-R6678-025",
+        "SCHUR-615743-research-R6678-026",
+        "SCHUR-615743-research-R6678-027",
+        "SCHUR-615743-research-R6678-028",
+        "SCHUR-615743-research-R6678-029",
+        "SCHUR-615743-research-R6678-030",
+        "SCHUR-615743-research-R6678-031",
+        "SCHUR-615743-research-R6678-032",
+        "SCHUR-615743-research-R6678-033",
+        "SCHUR-615743-research-R6678-034",
+        "SCHUR-615743-research-R6678-035",
+        "SCHUR-615743-research-R6678-036",
+        "SCHUR-615743-research-R6678-037",
+        "SCHUR-615743-research-R6678-038",
+        "SCHUR-615743-research-R6678-039",
+        "SCHUR-615743-research-R6678-040",
+        "SCHUR-615743-research-R6678-041",
+        "SCHUR-615743-research-R6678-042",
+        "SCHUR-615743-research-R6678-043",
+        "SCHUR-615743-research-R6678-044",
+        "SCHUR-615743-research-R6678-045",
+        "SCHUR-615743-research-R6678-046",
+        "SCHUR-615743-research-R6678-047",
+        "SCHUR-615743-research-R6678-048",
+        "SCHUR-615743-research-R6678-049",
+        "SCHUR-615743-research-R6678-050",
+        "SCHUR-615743-research-R6678-051"
+      ]
+    }
+  ],
+  "not_in_explicit_final_reads": [
+    {
+      "record_id": "SCHUR-320939-research-R9278-000",
+      "project": "SCHUR-320939-research",
+      "kind": "patch",
+      "writes": [
+        {
+          "event_id": "21",
+          "path": ".openclaw/tmp/SCHUR-320939-research-R9278-000.json",
+          "written_content_sha256": "85c42e5aca6ab56680a303b27bdc7c4c1f5687865cf8d30745f976ba10abde32",
+          "current_file_exists": true,
+          "current_file_matches_write": true,
+          "current_file_sha256": "85c42e5aca6ab56680a303b27bdc7c4c1f5687865cf8d30745f976ba10abde32"
+        }
+      ]
+    },
+    {
+      "record_id": "SCHUR-320939-research-R9278-001",
+      "project": "SCHUR-320939-research",
+      "kind": "lemma",
+      "writes": [
+        {
+          "event_id": "48",
+          "path": "memory/SCHUR-320939-research-R9278-001.md",
+          "written_content_sha256": "e773fe640ecc3d4c16576a56782c5f3839818ea7a44621dc4f0af91385a2aa63",
+          "current_file_exists": true,
+          "current_file_matches_write": true,
+          "current_file_sha256": "e773fe640ecc3d4c16576a56782c5f3839818ea7a44621dc4f0af91385a2aa63"
+        }
+      ]
+    },
+    {
+      "record_id": "SCHUR-397515-research-R6808-000",
+      "project": "SCHUR-397515-research",
+      "kind": "patch",
+      "writes": [
+        {
+          "event_id": "31",
+          "path": ".openclaw/tmp/SCHUR-397515-research-R6808-000.json",
+          "written_content_sha256": "89a156f8bb9f9d8d5683c2413d8f32731978240e01c93f0131b5180f5a90ab52",
+          "current_file_exists": true,
+          "current_file_matches_write": true,
+          "current_file_sha256": "89a156f8bb9f9d8d5683c2413d8f32731978240e01c93f0131b5180f5a90ab52"
+        }
+      ]
+    },
+    {
+      "record_id": "SCHUR-615743-research-R6678-000",
+      "project": "SCHUR-615743-research",
+      "kind": "patch",
+      "writes": [
+        {
+          "event_id": "7",
+          "path": ".openclaw/tmp/SCHUR-615743-research-R6678-000.json",
+          "written_content_sha256": "d7f9ac0c9b290697fd9926e54e5e0ddbec908a91e94d23b8c489f50e722905a0",
+          "current_file_exists": true,
+          "current_file_matches_write": true,
+          "current_file_sha256": "d7f9ac0c9b290697fd9926e54e5e0ddbec908a91e94d23b8c489f50e722905a0"
+        }
+      ]
+    },
+    {
+      "record_id": "SCHUR-615743-research-R6678-001",
+      "project": "SCHUR-615743-research",
+      "kind": "lemma",
+      "writes": [
+        {
+          "event_id": "38",
+          "path": ".openclaw/tmp/SCHUR-615743-research-R6678-001.json",
+          "written_content_sha256": "7aca34f4ec964f4aca8a4bb604d24d00f4aa553a022c2daaf3dab78984863587",
+          "current_file_exists": true,
+          "current_file_matches_write": true,
+          "current_file_sha256": "7aca34f4ec964f4aca8a4bb604d24d00f4aa553a022c2daaf3dab78984863587"
+        }
+      ]
+    }
+  ],
+  "stored_files_inspected": true,
+  "native_output_limit_marker": true,
+  "claim_limit": "Explicit tool reads and persisted files only. Does not prove absence from automatic context, deletion, internal forgetting or a field-level memory score.",
+  "run_id": "49cb7544-05db-4561-8a71-6334756b31e7",
+  "diagnostic_source_sha256": "008384028ddd7ca25fbcfb9eb7a1f27bc36bf8323424e1a479d7ace8089ac2dd",
+  "evidence_file_sha256": "173323032287d693c08bbe23236a160b99f66031b34da62766ce061cd5290aec"
+}

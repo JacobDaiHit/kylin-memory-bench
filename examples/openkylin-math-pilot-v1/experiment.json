@@ -1,0 +1,60 @@
+{
+  "audit_counts": {
+    "balance_checked": 153,
+    "completion": 152,
+    "finished": 1,
+    "rejected": 1,
+    "start": 1
+  },
+  "audit_privacy_note": "Whitelist metadata export; private account values and free-form errors removed. Original local audit is retained.",
+  "cases": 6,
+  "dataset_sha256": "a44bf76a7020030f8ee2670678943181ec7e7b6f2247709c7c4cc3a0d13d0450",
+  "environment": {
+    "execution_context": "wsl2",
+    "is_openkylin": true,
+    "machine": "x86_64",
+    "os_release": {
+      "ID": "openkylin",
+      "PRETTY_NAME": "openKylin 2.0 SP1",
+      "VERSION_ID": "2.0"
+    },
+    "python": "3.12.2",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "system": "Linux"
+  },
+  "events": 45,
+  "execution_errors": 1,
+  "implementation_sha256": "4be0c96f82cb805d63837a678a71cc378e27760104279843596378a1ff7a01e5",
+  "model": "deepseek-flash",
+  "native_versions": {
+    "hermes_commit": "4b8a43719b2a259cea88a72f9f13a2b6962e7ac3",
+    "openclaw": "2026.9.8 (fc23bc8)"
+  },
+  "network_or_guard_failures": [
+    {
+      "at": "2026-10-11T12:53:24.593678+00:00",
+      "event": "rejected",
+      "private_fields_removed": [
+        "reason"
+      ]
+    }
+  ],
+  "parameters": {
+    "max_tokens": 2048,
+    "temperature": 0,
+    "thinking": "disabled"
+  },
+  "presentation_note": "HTML/SVG regenerated with delivery source; original evidence and scores unchanged.",
+  "repeats": 1,
+  "retry_policy": "No selective rerun or replacement of failed cases.",
+  "run_id": "d1d550b5-8754-4bfa-8e78-2917769c59b3",
+  "scores_origin": "derived independent replay of interrupted evidence; missing steps remain unknown; not a completed three-trial result",
+  "status": "interrupted",
+  "usage": {
+    "completion_tokens": 40362,
+    "prompt_cache_hit_tokens": 1157888,
+    "prompt_cache_miss_tokens": 230769,
+    "prompt_tokens": 1388657,
+    "total_tokens": 1429019
+  }
+}

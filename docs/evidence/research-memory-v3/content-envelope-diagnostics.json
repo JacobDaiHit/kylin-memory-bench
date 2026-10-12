@@ -1,0 +1,449 @@
+{
+  "status": "post_run_diagnostic_not_primary_score",
+  "policy": "Uniform inspection of one explicit JSON block; multiple blocks are not selected. Original raw response and frozen score are unchanged.",
+  "claim_limit": "Explains content versus surrounding-format loss only; not eligible for predeclared gates or system ranking.",
+  "diagnostic_source_sha256": "008384028ddd7ca25fbcfb9eb7a1f27bc36bf8323424e1a479d7ace8089ac2dd",
+  "rows": [
+    {
+      "agent": "openclaw",
+      "case": "research-v3-combined-high-open_book",
+      "condition": "open_book",
+      "event_id": "401",
+      "primary_unchanged": true,
+      "post_run_diagnostic": true,
+      "eligible_for_predeclared_gate": false,
+      "extraction": "single_json_block_with_extra_prose",
+      "grade": {
+        "case": "research-v3-combined-high-open_book",
+        "condition": "open_book",
+        "format": "json",
+        "format_error": null,
+        "execution_error": null,
+        "extra_fields": [],
+        "check_count": 18,
+        "observed_count": 18,
+        "correct_count": 18,
+        "coverage": 1.0,
+        "correct_over_all": 1.0,
+        "correct_over_observed": 1.0,
+        "checks": [
+          {
+            "qid": "q01",
+            "group": "atomic",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q02",
+            "group": "atomic",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q03",
+            "group": "atomic",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q04",
+            "group": "atomic",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q05",
+            "group": "atomic",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q06",
+            "group": "atomic",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q07",
+            "group": "linked",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q08",
+            "group": "linked",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q09",
+            "group": "linked",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q10",
+            "group": "linked",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q11",
+            "group": "linked",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q12",
+            "group": "linked",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q13",
+            "group": "historical",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q14",
+            "group": "historical",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q15",
+            "group": "historical",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q16",
+            "group": "atomic",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q17",
+            "group": "boundary",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q18",
+            "group": "boundary",
+            "status": "pass",
+            "reason": "correct"
+          }
+        ],
+        "primary_memory_eligible": false,
+        "claim_limit": "Reference/offline or external-answer scoring; no proof of native-agent difficulty"
+      }
+    },
+    {
+      "agent": "openclaw",
+      "case": "research-v3-combined-high-memory",
+      "condition": "memory",
+      "event_id": "410",
+      "primary_unchanged": true,
+      "post_run_diagnostic": true,
+      "eligible_for_predeclared_gate": false,
+      "extraction": null,
+      "grade": null
+    },
+    {
+      "agent": "openclaw",
+      "case": "research-v3-combined-high-no_history",
+      "condition": "no_history",
+      "event_id": "334",
+      "primary_unchanged": true,
+      "post_run_diagnostic": true,
+      "eligible_for_predeclared_gate": false,
+      "extraction": "single_json_block_with_extra_prose",
+      "grade": {
+        "case": "research-v3-combined-high-no_history",
+        "condition": "no_history",
+        "format": "json",
+        "format_error": null,
+        "execution_error": null,
+        "extra_fields": [],
+        "check_count": 18,
+        "observed_count": 18,
+        "correct_count": 18,
+        "coverage": 1.0,
+        "correct_over_all": 1.0,
+        "correct_over_observed": 1.0,
+        "checks": [
+          {
+            "qid": "q01",
+            "group": "atomic",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q02",
+            "group": "atomic",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q03",
+            "group": "atomic",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q04",
+            "group": "atomic",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q05",
+            "group": "atomic",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q06",
+            "group": "atomic",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q07",
+            "group": "linked",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q08",
+            "group": "linked",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q09",
+            "group": "linked",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q10",
+            "group": "linked",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q11",
+            "group": "linked",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q12",
+            "group": "linked",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q13",
+            "group": "historical",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q14",
+            "group": "historical",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q15",
+            "group": "historical",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q16",
+            "group": "atomic",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q17",
+            "group": "boundary",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q18",
+            "group": "boundary",
+            "status": "pass",
+            "reason": "correct"
+          }
+        ],
+        "primary_memory_eligible": false,
+        "claim_limit": "Reference/offline or external-answer scoring; no proof of native-agent difficulty"
+      }
+    },
+    {
+      "agent": "hermes",
+      "case": "research-v3-combined-high-open_book",
+      "condition": "open_book",
+      "event_id": "353",
+      "primary_unchanged": true,
+      "post_run_diagnostic": true,
+      "eligible_for_predeclared_gate": false,
+      "extraction": "single_json_block_with_extra_prose",
+      "grade": {
+        "case": "research-v3-combined-high-open_book",
+        "condition": "open_book",
+        "format": "json",
+        "format_error": null,
+        "execution_error": null,
+        "extra_fields": [],
+        "check_count": 18,
+        "observed_count": 18,
+        "correct_count": 18,
+        "coverage": 1.0,
+        "correct_over_all": 1.0,
+        "correct_over_observed": 1.0,
+        "checks": [
+          {
+            "qid": "q01",
+            "group": "atomic",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q02",
+            "group": "atomic",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q03",
+            "group": "atomic",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q04",
+            "group": "atomic",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q05",
+            "group": "atomic",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q06",
+            "group": "atomic",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q07",
+            "group": "linked",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q08",
+            "group": "linked",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q09",
+            "group": "linked",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q10",
+            "group": "linked",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q11",
+            "group": "linked",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q12",
+            "group": "linked",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q13",
+            "group": "historical",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q14",
+            "group": "historical",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q15",
+            "group": "historical",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q16",
+            "group": "atomic",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q17",
+            "group": "boundary",
+            "status": "pass",
+            "reason": "correct"
+          },
+          {
+            "qid": "q18",
+            "group": "boundary",
+            "status": "pass",
+            "reason": "correct"
+          }
+        ],
+        "primary_memory_eligible": false,
+        "claim_limit": "Reference/offline or external-answer scoring; no proof of native-agent difficulty"
+      }
+    },
+    {
+      "agent": "hermes",
+      "case": "research-v3-combined-high-memory",
+      "condition": "memory",
+      "event_id": "191",
+      "primary_unchanged": true,
+      "post_run_diagnostic": true,
+      "eligible_for_predeclared_gate": false,
+      "extraction": null,
+      "grade": null
+    },
+    {
+      "agent": "hermes",
+      "case": "research-v3-combined-high-no_history",
+      "condition": "no_history",
+      "event_id": "295",
+      "primary_unchanged": true,
+      "post_run_diagnostic": true,
+      "eligible_for_predeclared_gate": false,
+      "extraction": null,
+      "grade": null
+    }
+  ]
+}
