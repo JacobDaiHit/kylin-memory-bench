@@ -33,6 +33,7 @@ def configurations(bin_dir,base):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--embedding-url')
     parser.add_argument('--request-limit',type=int,default=24,choices=range(1,25))
     parser.add_argument('--output',type=Path,required=True); parser.add_argument('--live',action='store_true')
     args=parser.parse_args(); output=args.output.resolve()
@@ -44,7 +45,11 @@ def main():
     bridge=Bridge(output/'requests',capture=not args.live,limit=args.request_limit)
     server=bridge.server(); thread=threading.Thread(target=server.serve_forever,daemon=True); thread.start()
     os.environ['KMB_PROXY_KEY']=bridge.key
-    configs=configurations(bins,'http://127.0.0.1:%d/v1'%server.server_port)
+    base='http://127.0.0.1:%d/v1'%server.server_port
+    if args.embedding_url:
+        from scripts.plan_native_config import full_configurations
+        configs=full_configurations(bins,base,args.embedding_url)
+    else: configs=configurations(bins,base)
     # Freeze exact prompts and expected outcome BEFORE the first native call.
     stages=[('learn', '请按你自己的持久记忆机制保存：项目 Cedar-Q7 的对外交付编号是 MEM-47291，测试环境版本为 11。以后会在新会话询问，请现在完成保存。',None),
             ('recall','请检索历史记忆：项目 Cedar-Q7 的对外交付编号和测试环境版本是什么？只回答 JSON {"code":字符串或null,"version":整数或null}。',{'code':'MEM-47291','version':11}),

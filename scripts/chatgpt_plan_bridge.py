@@ -8,11 +8,13 @@ import json
 import os
 import secrets
 import time
+import threading
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 from scripts import chatgpt_plan as plan
 
 NAMESPACE = 'native_tools'
+AUTH_LOCK = threading.Lock()
 # Native clients send these automatically. Their absence upstream is disclosed
 # in every request record; this route is NOT the DeepSeek capped protocol.
 UNSUPPORTED = {'temperature', 'top_p', 'max_tokens', 'max_completion_tokens'}
@@ -90,12 +92,12 @@ def append(path, data):
 
 
 class Bridge:
-    def __init__(self, output, *, limit=24, model=plan.TARGET, capture=False, root=None):
+    def __init__(self, output, *, limit=24, model=plan.TARGET, capture=False, root=None, deadline_seconds=1800):
         self.output = Path(output); self.output.mkdir(parents=True,exist_ok=False,mode=0o700)
         self.limit=limit; self.model=model; self.capture=capture
         self.root = root or Path.home()/'.config/kmb-chatgpt-plan'
         self.key=secrets.token_urlsafe(32); self.count=0; self.context='unspecified'
-        self.deadline=time.monotonic()+1800
+        self.deadline=None if deadline_seconds is None else time.monotonic()+deadline_seconds
         self.replay={}
 
     def invoke(self, body):
@@ -103,7 +105,8 @@ class Bridge:
         entry={'request':number,'context':self.context,'started_at':time.time(),
                'status':'reserved','upstream_attempted':False,'model':self.model,
                'server_output_cap':None,'capture_only':self.capture}
-        if number > self.limit or time.monotonic() > self.deadline: raise ValueError('request_budget_exhausted')
+        if (self.limit is not None and number > self.limit) or (self.deadline is not None and time.monotonic() > self.deadline):
+            raise ValueError('request_budget_exhausted')
         path=self.output/('%04d.json'%number)
         plan.atomic_private(path,entry)
         try:
@@ -112,7 +115,8 @@ class Bridge:
             entry.update(native_request=body, upstream_request=translated, unsupported_parameters_omitted=dropped)
             plan.atomic_private(path,entry)
             if self.capture: raise ValueError('capture_only_no_upstream_request')
-            with plan.locked(self.root): token=plan.access(self.root,'default')
+            with AUTH_LOCK:
+                with plan.locked(self.root): token=plan.access(self.root,'default')
             entry['upstream_attempted']=True; plan.atomic_private(path,entry)
             with plan.request('POST',plan.API+'/responses',headers={'Authorization':'Bearer '+token},
                               json=translated,stream=True) as response:

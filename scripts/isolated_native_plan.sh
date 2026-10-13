@@ -14,7 +14,7 @@ native_kind="${2:?Expected native kind}"
 shift 2
 workspace="$(pwd -P)"
 case "$workspace" in
-    /home/maedaily/.local/share/kmb-live/runs/kmb-plan-*/workspaces/*) ;;
+    /home/maedaily/.local/share/kmb-live/runs/kmb-plan-*/workspaces/*|/home/maedaily/.local/share/kmb-live/runs/kmb-plan-*/shards/*/workspaces/*) ;;
     *) echo 'Expected a ChatGPT plan workspace.' >&2; exit 2 ;;
 esac
 runtime_base=/home/maedaily/.local/share/kmb-live

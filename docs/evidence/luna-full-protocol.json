@@ -1,0 +1,5293 @@
+{
+  "protocol": "luna-native-stress-full-1",
+  "model": "gpt-5.6-luna",
+  "histories": 160,
+  "repeats": 1,
+  "conditions": [
+    "memory",
+    "reader_only"
+  ],
+  "jobs": 4,
+  "memory_agent_turns": 41280,
+  "reader_agent_turns": 320,
+  "cumulative_request_cap": null,
+  "server_output_cap": null,
+  "embedding_model": "BAAI/bge-small-zh-v1.5",
+  "cases_sha256": "e22c1f78568a5ea0588b12c1364239cbad8fe01893ae29f3f9904c46b34680c2",
+  "catalog_sha256": "b992fe1b53067f0f14b3fb7b054e3b7d9b2979d8a6fd6cb7e50c3de8d02491a1",
+  "created_at": "2026-10-13T11:09:33.094290+00:00",
+  "limits": [
+    "Native turn timeout 180 seconds. No automatic reruns. Three consecutive execution-error cases stop new scheduling; ordinary incorrect answers do not.",
+    "Native tools and memory mechanisms differ and remain disclosed.",
+    "Reader-only supplies raw necessary evidence with native tools, including artifact tasks, in a fresh workspace.",
+    "Public reserved split is reported separately; not a blind test. One repetition cannot establish stable ranking.",
+    "Transport/configuration failures and unexecuted slots stay in the planned denominator."
+  ],
+  "tasks": [
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-e3e140738d95adeced",
+      "condition": "reader_only",
+      "id": "0000-openclaw-reader_only",
+      "scenario_id": "552dbd66901d837ca9",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-1e230a39c1740862b7",
+      "condition": "memory",
+      "id": "0000-openclaw-memory",
+      "scenario_id": "552dbd66901d837ca9",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-e3e140738d95adeced",
+      "condition": "reader_only",
+      "id": "0000-hermes-reader_only",
+      "scenario_id": "552dbd66901d837ca9",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-1e230a39c1740862b7",
+      "condition": "memory",
+      "id": "0000-hermes-memory",
+      "scenario_id": "552dbd66901d837ca9",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-99c1286d55a1cac7da",
+      "condition": "reader_only",
+      "id": "0001-hermes-reader_only",
+      "scenario_id": "955459165586a41ea4",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-90ecd3fa7e443ba951",
+      "condition": "memory",
+      "id": "0001-hermes-memory",
+      "scenario_id": "955459165586a41ea4",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-99c1286d55a1cac7da",
+      "condition": "reader_only",
+      "id": "0001-openclaw-reader_only",
+      "scenario_id": "955459165586a41ea4",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-90ecd3fa7e443ba951",
+      "condition": "memory",
+      "id": "0001-openclaw-memory",
+      "scenario_id": "955459165586a41ea4",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-99b331cae5191423dd",
+      "condition": "reader_only",
+      "id": "0002-openclaw-reader_only",
+      "scenario_id": "c528268fb51f2d7767",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-e316527bc26ce43eca",
+      "condition": "memory",
+      "id": "0002-openclaw-memory",
+      "scenario_id": "c528268fb51f2d7767",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-99b331cae5191423dd",
+      "condition": "reader_only",
+      "id": "0002-hermes-reader_only",
+      "scenario_id": "c528268fb51f2d7767",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-e316527bc26ce43eca",
+      "condition": "memory",
+      "id": "0002-hermes-memory",
+      "scenario_id": "c528268fb51f2d7767",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-90891e7dc38636171f",
+      "condition": "reader_only",
+      "id": "0003-hermes-reader_only",
+      "scenario_id": "1ff4aee85f7799ed46",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-21d60302281c0f8455",
+      "condition": "memory",
+      "id": "0003-hermes-memory",
+      "scenario_id": "1ff4aee85f7799ed46",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-90891e7dc38636171f",
+      "condition": "reader_only",
+      "id": "0003-openclaw-reader_only",
+      "scenario_id": "1ff4aee85f7799ed46",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-21d60302281c0f8455",
+      "condition": "memory",
+      "id": "0003-openclaw-memory",
+      "scenario_id": "1ff4aee85f7799ed46",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-07b0cc8d1202fe9709",
+      "condition": "reader_only",
+      "id": "0004-openclaw-reader_only",
+      "scenario_id": "9381db7677b3962ab7",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-0cd60227e2cfef2dec",
+      "condition": "memory",
+      "id": "0004-openclaw-memory",
+      "scenario_id": "9381db7677b3962ab7",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-07b0cc8d1202fe9709",
+      "condition": "reader_only",
+      "id": "0004-hermes-reader_only",
+      "scenario_id": "9381db7677b3962ab7",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-0cd60227e2cfef2dec",
+      "condition": "memory",
+      "id": "0004-hermes-memory",
+      "scenario_id": "9381db7677b3962ab7",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-ccd12b78121a0afb45",
+      "condition": "reader_only",
+      "id": "0005-hermes-reader_only",
+      "scenario_id": "985d7fb2f162f5665e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-99e6af93e8107a736d",
+      "condition": "memory",
+      "id": "0005-hermes-memory",
+      "scenario_id": "985d7fb2f162f5665e",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-ccd12b78121a0afb45",
+      "condition": "reader_only",
+      "id": "0005-openclaw-reader_only",
+      "scenario_id": "985d7fb2f162f5665e",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-99e6af93e8107a736d",
+      "condition": "memory",
+      "id": "0005-openclaw-memory",
+      "scenario_id": "985d7fb2f162f5665e",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-715e001cae9ac2e2cc",
+      "condition": "reader_only",
+      "id": "0006-openclaw-reader_only",
+      "scenario_id": "40efee9efbf90a23c4",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-308f15b54b451a25f7",
+      "condition": "memory",
+      "id": "0006-openclaw-memory",
+      "scenario_id": "40efee9efbf90a23c4",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-715e001cae9ac2e2cc",
+      "condition": "reader_only",
+      "id": "0006-hermes-reader_only",
+      "scenario_id": "40efee9efbf90a23c4",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-308f15b54b451a25f7",
+      "condition": "memory",
+      "id": "0006-hermes-memory",
+      "scenario_id": "40efee9efbf90a23c4",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-7a01fb8f2d3caea45f",
+      "condition": "reader_only",
+      "id": "0007-hermes-reader_only",
+      "scenario_id": "5f8f56461d9c8fac1c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-c79fce8a0f3a72da8d",
+      "condition": "memory",
+      "id": "0007-hermes-memory",
+      "scenario_id": "5f8f56461d9c8fac1c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-7a01fb8f2d3caea45f",
+      "condition": "reader_only",
+      "id": "0007-openclaw-reader_only",
+      "scenario_id": "5f8f56461d9c8fac1c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-c79fce8a0f3a72da8d",
+      "condition": "memory",
+      "id": "0007-openclaw-memory",
+      "scenario_id": "5f8f56461d9c8fac1c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-90a58ba552f29b981b",
+      "condition": "reader_only",
+      "id": "0008-openclaw-reader_only",
+      "scenario_id": "6fedc59e68e9d1be64",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-61109a6126a71b272c",
+      "condition": "memory",
+      "id": "0008-openclaw-memory",
+      "scenario_id": "6fedc59e68e9d1be64",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-90a58ba552f29b981b",
+      "condition": "reader_only",
+      "id": "0008-hermes-reader_only",
+      "scenario_id": "6fedc59e68e9d1be64",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-61109a6126a71b272c",
+      "condition": "memory",
+      "id": "0008-hermes-memory",
+      "scenario_id": "6fedc59e68e9d1be64",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-852a312d3e15f097d9",
+      "condition": "reader_only",
+      "id": "0009-hermes-reader_only",
+      "scenario_id": "c076602dadcc3fd08c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-19c40444ba894225ed",
+      "condition": "memory",
+      "id": "0009-hermes-memory",
+      "scenario_id": "c076602dadcc3fd08c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-852a312d3e15f097d9",
+      "condition": "reader_only",
+      "id": "0009-openclaw-reader_only",
+      "scenario_id": "c076602dadcc3fd08c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-19c40444ba894225ed",
+      "condition": "memory",
+      "id": "0009-openclaw-memory",
+      "scenario_id": "c076602dadcc3fd08c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-bd30ed1444066837b5",
+      "condition": "reader_only",
+      "id": "0010-openclaw-reader_only",
+      "scenario_id": "a986c9d8b1bfd4c89b",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-f0a25cc5268b8c0072",
+      "condition": "memory",
+      "id": "0010-openclaw-memory",
+      "scenario_id": "a986c9d8b1bfd4c89b",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-bd30ed1444066837b5",
+      "condition": "reader_only",
+      "id": "0010-hermes-reader_only",
+      "scenario_id": "a986c9d8b1bfd4c89b",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-f0a25cc5268b8c0072",
+      "condition": "memory",
+      "id": "0010-hermes-memory",
+      "scenario_id": "a986c9d8b1bfd4c89b",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-c3d475f1ad01e96340",
+      "condition": "reader_only",
+      "id": "0011-hermes-reader_only",
+      "scenario_id": "01c35ac3bb05db7a4b",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-c2774965f2fa423c14",
+      "condition": "memory",
+      "id": "0011-hermes-memory",
+      "scenario_id": "01c35ac3bb05db7a4b",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-c3d475f1ad01e96340",
+      "condition": "reader_only",
+      "id": "0011-openclaw-reader_only",
+      "scenario_id": "01c35ac3bb05db7a4b",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-c2774965f2fa423c14",
+      "condition": "memory",
+      "id": "0011-openclaw-memory",
+      "scenario_id": "01c35ac3bb05db7a4b",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-38adeb81db4b28ae64",
+      "condition": "reader_only",
+      "id": "0012-openclaw-reader_only",
+      "scenario_id": "3665fa177ac01bcf64",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-48d976860b3051f807",
+      "condition": "memory",
+      "id": "0012-openclaw-memory",
+      "scenario_id": "3665fa177ac01bcf64",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-38adeb81db4b28ae64",
+      "condition": "reader_only",
+      "id": "0012-hermes-reader_only",
+      "scenario_id": "3665fa177ac01bcf64",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-48d976860b3051f807",
+      "condition": "memory",
+      "id": "0012-hermes-memory",
+      "scenario_id": "3665fa177ac01bcf64",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-129891232e4996e312",
+      "condition": "reader_only",
+      "id": "0013-hermes-reader_only",
+      "scenario_id": "07fa42b933cd2b8d7d",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-e1335661e3431ced5f",
+      "condition": "memory",
+      "id": "0013-hermes-memory",
+      "scenario_id": "07fa42b933cd2b8d7d",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-129891232e4996e312",
+      "condition": "reader_only",
+      "id": "0013-openclaw-reader_only",
+      "scenario_id": "07fa42b933cd2b8d7d",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-e1335661e3431ced5f",
+      "condition": "memory",
+      "id": "0013-openclaw-memory",
+      "scenario_id": "07fa42b933cd2b8d7d",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-15538fddf28ff81d7f",
+      "condition": "reader_only",
+      "id": "0014-openclaw-reader_only",
+      "scenario_id": "bff739ebf66a65bbd5",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-fdf33bba21bfe23738",
+      "condition": "memory",
+      "id": "0014-openclaw-memory",
+      "scenario_id": "bff739ebf66a65bbd5",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-15538fddf28ff81d7f",
+      "condition": "reader_only",
+      "id": "0014-hermes-reader_only",
+      "scenario_id": "bff739ebf66a65bbd5",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-fdf33bba21bfe23738",
+      "condition": "memory",
+      "id": "0014-hermes-memory",
+      "scenario_id": "bff739ebf66a65bbd5",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-1045a865beddc2f4c8",
+      "condition": "reader_only",
+      "id": "0015-hermes-reader_only",
+      "scenario_id": "0e4ae9a1d0adf7cb0d",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-86e02a5f7e8021330a",
+      "condition": "memory",
+      "id": "0015-hermes-memory",
+      "scenario_id": "0e4ae9a1d0adf7cb0d",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-1045a865beddc2f4c8",
+      "condition": "reader_only",
+      "id": "0015-openclaw-reader_only",
+      "scenario_id": "0e4ae9a1d0adf7cb0d",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-86e02a5f7e8021330a",
+      "condition": "memory",
+      "id": "0015-openclaw-memory",
+      "scenario_id": "0e4ae9a1d0adf7cb0d",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-933f8940c18c5d61e6",
+      "condition": "reader_only",
+      "id": "0016-openclaw-reader_only",
+      "scenario_id": "de10cb0d6b1d451264",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-16be3442483aa88cdb",
+      "condition": "memory",
+      "id": "0016-openclaw-memory",
+      "scenario_id": "de10cb0d6b1d451264",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-933f8940c18c5d61e6",
+      "condition": "reader_only",
+      "id": "0016-hermes-reader_only",
+      "scenario_id": "de10cb0d6b1d451264",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-16be3442483aa88cdb",
+      "condition": "memory",
+      "id": "0016-hermes-memory",
+      "scenario_id": "de10cb0d6b1d451264",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-fea5119e39cd788d7a",
+      "condition": "reader_only",
+      "id": "0017-hermes-reader_only",
+      "scenario_id": "a64baf48b12706434d",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-ea1adeab5c8b2f1f60",
+      "condition": "memory",
+      "id": "0017-hermes-memory",
+      "scenario_id": "a64baf48b12706434d",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-fea5119e39cd788d7a",
+      "condition": "reader_only",
+      "id": "0017-openclaw-reader_only",
+      "scenario_id": "a64baf48b12706434d",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-ea1adeab5c8b2f1f60",
+      "condition": "memory",
+      "id": "0017-openclaw-memory",
+      "scenario_id": "a64baf48b12706434d",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-a072dcb5bfe6447e42",
+      "condition": "reader_only",
+      "id": "0018-openclaw-reader_only",
+      "scenario_id": "fa9d73e311f3797a6d",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-e01ed728dc5b9d88ad",
+      "condition": "memory",
+      "id": "0018-openclaw-memory",
+      "scenario_id": "fa9d73e311f3797a6d",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-a072dcb5bfe6447e42",
+      "condition": "reader_only",
+      "id": "0018-hermes-reader_only",
+      "scenario_id": "fa9d73e311f3797a6d",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-e01ed728dc5b9d88ad",
+      "condition": "memory",
+      "id": "0018-hermes-memory",
+      "scenario_id": "fa9d73e311f3797a6d",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-f24a481ca0cb3390fd",
+      "condition": "reader_only",
+      "id": "0019-hermes-reader_only",
+      "scenario_id": "766359be416595fbb2",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-dcde320dc40dd4f444",
+      "condition": "memory",
+      "id": "0019-hermes-memory",
+      "scenario_id": "766359be416595fbb2",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-f24a481ca0cb3390fd",
+      "condition": "reader_only",
+      "id": "0019-openclaw-reader_only",
+      "scenario_id": "766359be416595fbb2",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-dcde320dc40dd4f444",
+      "condition": "memory",
+      "id": "0019-openclaw-memory",
+      "scenario_id": "766359be416595fbb2",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-f402a9e66f2ea91623",
+      "condition": "reader_only",
+      "id": "0020-openclaw-reader_only",
+      "scenario_id": "607b9d2524f2812445",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-48d3b3f1bf42d53f92",
+      "condition": "memory",
+      "id": "0020-openclaw-memory",
+      "scenario_id": "607b9d2524f2812445",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-f402a9e66f2ea91623",
+      "condition": "reader_only",
+      "id": "0020-hermes-reader_only",
+      "scenario_id": "607b9d2524f2812445",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-48d3b3f1bf42d53f92",
+      "condition": "memory",
+      "id": "0020-hermes-memory",
+      "scenario_id": "607b9d2524f2812445",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-442f15943bd9db6dab",
+      "condition": "reader_only",
+      "id": "0021-hermes-reader_only",
+      "scenario_id": "0be808e3a092cad32f",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-5c07317adccdb77e70",
+      "condition": "memory",
+      "id": "0021-hermes-memory",
+      "scenario_id": "0be808e3a092cad32f",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-442f15943bd9db6dab",
+      "condition": "reader_only",
+      "id": "0021-openclaw-reader_only",
+      "scenario_id": "0be808e3a092cad32f",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-5c07317adccdb77e70",
+      "condition": "memory",
+      "id": "0021-openclaw-memory",
+      "scenario_id": "0be808e3a092cad32f",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-8cdf6c5c0b5d960d75",
+      "condition": "reader_only",
+      "id": "0022-openclaw-reader_only",
+      "scenario_id": "7cc4a454ccb1d8f7cb",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-b484a56627f3bccc61",
+      "condition": "memory",
+      "id": "0022-openclaw-memory",
+      "scenario_id": "7cc4a454ccb1d8f7cb",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-8cdf6c5c0b5d960d75",
+      "condition": "reader_only",
+      "id": "0022-hermes-reader_only",
+      "scenario_id": "7cc4a454ccb1d8f7cb",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-b484a56627f3bccc61",
+      "condition": "memory",
+      "id": "0022-hermes-memory",
+      "scenario_id": "7cc4a454ccb1d8f7cb",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-d8fb46c91c5cc0b352",
+      "condition": "reader_only",
+      "id": "0023-hermes-reader_only",
+      "scenario_id": "99bd13a9dd6a5c40a4",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-55b3016b53fabc24f0",
+      "condition": "memory",
+      "id": "0023-hermes-memory",
+      "scenario_id": "99bd13a9dd6a5c40a4",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-d8fb46c91c5cc0b352",
+      "condition": "reader_only",
+      "id": "0023-openclaw-reader_only",
+      "scenario_id": "99bd13a9dd6a5c40a4",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-55b3016b53fabc24f0",
+      "condition": "memory",
+      "id": "0023-openclaw-memory",
+      "scenario_id": "99bd13a9dd6a5c40a4",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-bf34dc779688fcbd55",
+      "condition": "reader_only",
+      "id": "0024-openclaw-reader_only",
+      "scenario_id": "33d1e13efe539b322e",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-039aaa499a51122ef9",
+      "condition": "memory",
+      "id": "0024-openclaw-memory",
+      "scenario_id": "33d1e13efe539b322e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-bf34dc779688fcbd55",
+      "condition": "reader_only",
+      "id": "0024-hermes-reader_only",
+      "scenario_id": "33d1e13efe539b322e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-039aaa499a51122ef9",
+      "condition": "memory",
+      "id": "0024-hermes-memory",
+      "scenario_id": "33d1e13efe539b322e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-dc628385e9fb7ec51f",
+      "condition": "reader_only",
+      "id": "0025-hermes-reader_only",
+      "scenario_id": "5bcbdf9cf40e69fd41",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-5d9ccb566b7f093ac1",
+      "condition": "memory",
+      "id": "0025-hermes-memory",
+      "scenario_id": "5bcbdf9cf40e69fd41",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-dc628385e9fb7ec51f",
+      "condition": "reader_only",
+      "id": "0025-openclaw-reader_only",
+      "scenario_id": "5bcbdf9cf40e69fd41",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-5d9ccb566b7f093ac1",
+      "condition": "memory",
+      "id": "0025-openclaw-memory",
+      "scenario_id": "5bcbdf9cf40e69fd41",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-10168d6af77dce9a05",
+      "condition": "reader_only",
+      "id": "0026-openclaw-reader_only",
+      "scenario_id": "094fe4446ed8d0d7b6",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-fcdd60e6493f6332e4",
+      "condition": "memory",
+      "id": "0026-openclaw-memory",
+      "scenario_id": "094fe4446ed8d0d7b6",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-10168d6af77dce9a05",
+      "condition": "reader_only",
+      "id": "0026-hermes-reader_only",
+      "scenario_id": "094fe4446ed8d0d7b6",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-fcdd60e6493f6332e4",
+      "condition": "memory",
+      "id": "0026-hermes-memory",
+      "scenario_id": "094fe4446ed8d0d7b6",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-657ae02657b2be1115",
+      "condition": "reader_only",
+      "id": "0027-hermes-reader_only",
+      "scenario_id": "c4fa4d0781de212134",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-d87cf9a085f0861c0c",
+      "condition": "memory",
+      "id": "0027-hermes-memory",
+      "scenario_id": "c4fa4d0781de212134",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-657ae02657b2be1115",
+      "condition": "reader_only",
+      "id": "0027-openclaw-reader_only",
+      "scenario_id": "c4fa4d0781de212134",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-d87cf9a085f0861c0c",
+      "condition": "memory",
+      "id": "0027-openclaw-memory",
+      "scenario_id": "c4fa4d0781de212134",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-837826b1871a846564",
+      "condition": "reader_only",
+      "id": "0028-openclaw-reader_only",
+      "scenario_id": "1c3661b1fd4c77f5a6",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-30bc5bcbd80cb8cde8",
+      "condition": "memory",
+      "id": "0028-openclaw-memory",
+      "scenario_id": "1c3661b1fd4c77f5a6",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-837826b1871a846564",
+      "condition": "reader_only",
+      "id": "0028-hermes-reader_only",
+      "scenario_id": "1c3661b1fd4c77f5a6",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-30bc5bcbd80cb8cde8",
+      "condition": "memory",
+      "id": "0028-hermes-memory",
+      "scenario_id": "1c3661b1fd4c77f5a6",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-8859d8a6d359409cf6",
+      "condition": "reader_only",
+      "id": "0029-hermes-reader_only",
+      "scenario_id": "a3ba1448bfa379f0ce",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-0235e44527de2bea46",
+      "condition": "memory",
+      "id": "0029-hermes-memory",
+      "scenario_id": "a3ba1448bfa379f0ce",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-8859d8a6d359409cf6",
+      "condition": "reader_only",
+      "id": "0029-openclaw-reader_only",
+      "scenario_id": "a3ba1448bfa379f0ce",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-0235e44527de2bea46",
+      "condition": "memory",
+      "id": "0029-openclaw-memory",
+      "scenario_id": "a3ba1448bfa379f0ce",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-e4f251afe14aafe48b",
+      "condition": "reader_only",
+      "id": "0030-openclaw-reader_only",
+      "scenario_id": "d341ae1ef6d65ed11e",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-be49bfb54113962f9e",
+      "condition": "memory",
+      "id": "0030-openclaw-memory",
+      "scenario_id": "d341ae1ef6d65ed11e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-e4f251afe14aafe48b",
+      "condition": "reader_only",
+      "id": "0030-hermes-reader_only",
+      "scenario_id": "d341ae1ef6d65ed11e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-be49bfb54113962f9e",
+      "condition": "memory",
+      "id": "0030-hermes-memory",
+      "scenario_id": "d341ae1ef6d65ed11e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-d89813ce5262b2bda8",
+      "condition": "reader_only",
+      "id": "0031-hermes-reader_only",
+      "scenario_id": "680bc7e7562a1d337f",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-44f45db5777d56164e",
+      "condition": "memory",
+      "id": "0031-hermes-memory",
+      "scenario_id": "680bc7e7562a1d337f",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-d89813ce5262b2bda8",
+      "condition": "reader_only",
+      "id": "0031-openclaw-reader_only",
+      "scenario_id": "680bc7e7562a1d337f",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-44f45db5777d56164e",
+      "condition": "memory",
+      "id": "0031-openclaw-memory",
+      "scenario_id": "680bc7e7562a1d337f",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-e76f979242aa43d287",
+      "condition": "reader_only",
+      "id": "0032-openclaw-reader_only",
+      "scenario_id": "3128c58e804723cc20",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-a0e501d80c1bde5739",
+      "condition": "memory",
+      "id": "0032-openclaw-memory",
+      "scenario_id": "3128c58e804723cc20",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-e76f979242aa43d287",
+      "condition": "reader_only",
+      "id": "0032-hermes-reader_only",
+      "scenario_id": "3128c58e804723cc20",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-a0e501d80c1bde5739",
+      "condition": "memory",
+      "id": "0032-hermes-memory",
+      "scenario_id": "3128c58e804723cc20",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-ed302f9c65ec12d04e",
+      "condition": "reader_only",
+      "id": "0033-hermes-reader_only",
+      "scenario_id": "3b0be153088de61008",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-ccc1f7706044e00c11",
+      "condition": "memory",
+      "id": "0033-hermes-memory",
+      "scenario_id": "3b0be153088de61008",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-ed302f9c65ec12d04e",
+      "condition": "reader_only",
+      "id": "0033-openclaw-reader_only",
+      "scenario_id": "3b0be153088de61008",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-ccc1f7706044e00c11",
+      "condition": "memory",
+      "id": "0033-openclaw-memory",
+      "scenario_id": "3b0be153088de61008",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-d11b584cadc5b5db37",
+      "condition": "reader_only",
+      "id": "0034-openclaw-reader_only",
+      "scenario_id": "851c14b2ca215ec25e",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-00add9a4116fefba2e",
+      "condition": "memory",
+      "id": "0034-openclaw-memory",
+      "scenario_id": "851c14b2ca215ec25e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-d11b584cadc5b5db37",
+      "condition": "reader_only",
+      "id": "0034-hermes-reader_only",
+      "scenario_id": "851c14b2ca215ec25e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-00add9a4116fefba2e",
+      "condition": "memory",
+      "id": "0034-hermes-memory",
+      "scenario_id": "851c14b2ca215ec25e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-66bbf710e8df46bf9f",
+      "condition": "reader_only",
+      "id": "0035-hermes-reader_only",
+      "scenario_id": "45611cc2a748325099",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-3415313818d44cb265",
+      "condition": "memory",
+      "id": "0035-hermes-memory",
+      "scenario_id": "45611cc2a748325099",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-66bbf710e8df46bf9f",
+      "condition": "reader_only",
+      "id": "0035-openclaw-reader_only",
+      "scenario_id": "45611cc2a748325099",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-3415313818d44cb265",
+      "condition": "memory",
+      "id": "0035-openclaw-memory",
+      "scenario_id": "45611cc2a748325099",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-7946c8fcf7df8afc14",
+      "condition": "reader_only",
+      "id": "0036-openclaw-reader_only",
+      "scenario_id": "103f0b320940070830",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-ee6c87e759c8f5782e",
+      "condition": "memory",
+      "id": "0036-openclaw-memory",
+      "scenario_id": "103f0b320940070830",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-7946c8fcf7df8afc14",
+      "condition": "reader_only",
+      "id": "0036-hermes-reader_only",
+      "scenario_id": "103f0b320940070830",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-ee6c87e759c8f5782e",
+      "condition": "memory",
+      "id": "0036-hermes-memory",
+      "scenario_id": "103f0b320940070830",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-dc4de1afda2974f861",
+      "condition": "reader_only",
+      "id": "0037-hermes-reader_only",
+      "scenario_id": "7f5809c3f0f8928b08",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-775b4ae0e2f928d3cc",
+      "condition": "memory",
+      "id": "0037-hermes-memory",
+      "scenario_id": "7f5809c3f0f8928b08",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-dc4de1afda2974f861",
+      "condition": "reader_only",
+      "id": "0037-openclaw-reader_only",
+      "scenario_id": "7f5809c3f0f8928b08",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-775b4ae0e2f928d3cc",
+      "condition": "memory",
+      "id": "0037-openclaw-memory",
+      "scenario_id": "7f5809c3f0f8928b08",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-e3d9f3d0da214cf8af",
+      "condition": "reader_only",
+      "id": "0038-openclaw-reader_only",
+      "scenario_id": "6215e589bc3126f862",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-752a119c6268252706",
+      "condition": "memory",
+      "id": "0038-openclaw-memory",
+      "scenario_id": "6215e589bc3126f862",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-e3d9f3d0da214cf8af",
+      "condition": "reader_only",
+      "id": "0038-hermes-reader_only",
+      "scenario_id": "6215e589bc3126f862",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-752a119c6268252706",
+      "condition": "memory",
+      "id": "0038-hermes-memory",
+      "scenario_id": "6215e589bc3126f862",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-e719db96626c539ee3",
+      "condition": "reader_only",
+      "id": "0039-hermes-reader_only",
+      "scenario_id": "94155a930050a087db",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-f9e9106d28be99ba50",
+      "condition": "memory",
+      "id": "0039-hermes-memory",
+      "scenario_id": "94155a930050a087db",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-e719db96626c539ee3",
+      "condition": "reader_only",
+      "id": "0039-openclaw-reader_only",
+      "scenario_id": "94155a930050a087db",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-f9e9106d28be99ba50",
+      "condition": "memory",
+      "id": "0039-openclaw-memory",
+      "scenario_id": "94155a930050a087db",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-4fc1c8469747fcc699",
+      "condition": "reader_only",
+      "id": "0040-openclaw-reader_only",
+      "scenario_id": "75b1fd94cca744a040",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-338be1614222131e67",
+      "condition": "memory",
+      "id": "0040-openclaw-memory",
+      "scenario_id": "75b1fd94cca744a040",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-4fc1c8469747fcc699",
+      "condition": "reader_only",
+      "id": "0040-hermes-reader_only",
+      "scenario_id": "75b1fd94cca744a040",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-338be1614222131e67",
+      "condition": "memory",
+      "id": "0040-hermes-memory",
+      "scenario_id": "75b1fd94cca744a040",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-5491c216270cfe7b2d",
+      "condition": "reader_only",
+      "id": "0041-hermes-reader_only",
+      "scenario_id": "d18522cd77a405601e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-60152011964e5f9554",
+      "condition": "memory",
+      "id": "0041-hermes-memory",
+      "scenario_id": "d18522cd77a405601e",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-5491c216270cfe7b2d",
+      "condition": "reader_only",
+      "id": "0041-openclaw-reader_only",
+      "scenario_id": "d18522cd77a405601e",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-60152011964e5f9554",
+      "condition": "memory",
+      "id": "0041-openclaw-memory",
+      "scenario_id": "d18522cd77a405601e",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-5ef7f2864dd83d1975",
+      "condition": "reader_only",
+      "id": "0042-openclaw-reader_only",
+      "scenario_id": "b2729604e30836f699",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-b2ac397302aa07a9b8",
+      "condition": "memory",
+      "id": "0042-openclaw-memory",
+      "scenario_id": "b2729604e30836f699",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-5ef7f2864dd83d1975",
+      "condition": "reader_only",
+      "id": "0042-hermes-reader_only",
+      "scenario_id": "b2729604e30836f699",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-b2ac397302aa07a9b8",
+      "condition": "memory",
+      "id": "0042-hermes-memory",
+      "scenario_id": "b2729604e30836f699",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-ce936594294b26976b",
+      "condition": "reader_only",
+      "id": "0043-hermes-reader_only",
+      "scenario_id": "f4430da9be7da4b3e5",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-601a1bd65c4b52e99f",
+      "condition": "memory",
+      "id": "0043-hermes-memory",
+      "scenario_id": "f4430da9be7da4b3e5",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-ce936594294b26976b",
+      "condition": "reader_only",
+      "id": "0043-openclaw-reader_only",
+      "scenario_id": "f4430da9be7da4b3e5",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-601a1bd65c4b52e99f",
+      "condition": "memory",
+      "id": "0043-openclaw-memory",
+      "scenario_id": "f4430da9be7da4b3e5",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-ebad2f398f7f021fd0",
+      "condition": "reader_only",
+      "id": "0044-openclaw-reader_only",
+      "scenario_id": "dc09a018b1af337f1c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-a8a40163ea9d0659ce",
+      "condition": "memory",
+      "id": "0044-openclaw-memory",
+      "scenario_id": "dc09a018b1af337f1c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-ebad2f398f7f021fd0",
+      "condition": "reader_only",
+      "id": "0044-hermes-reader_only",
+      "scenario_id": "dc09a018b1af337f1c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-a8a40163ea9d0659ce",
+      "condition": "memory",
+      "id": "0044-hermes-memory",
+      "scenario_id": "dc09a018b1af337f1c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-7cb626900f9bd4b9f7",
+      "condition": "reader_only",
+      "id": "0045-hermes-reader_only",
+      "scenario_id": "39507522c29868322c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-268794967913efb2b8",
+      "condition": "memory",
+      "id": "0045-hermes-memory",
+      "scenario_id": "39507522c29868322c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-7cb626900f9bd4b9f7",
+      "condition": "reader_only",
+      "id": "0045-openclaw-reader_only",
+      "scenario_id": "39507522c29868322c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-268794967913efb2b8",
+      "condition": "memory",
+      "id": "0045-openclaw-memory",
+      "scenario_id": "39507522c29868322c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-92ce672f361017081b",
+      "condition": "reader_only",
+      "id": "0046-openclaw-reader_only",
+      "scenario_id": "c9fc781efe290197b5",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-c0e50ec134c9fdcbbd",
+      "condition": "memory",
+      "id": "0046-openclaw-memory",
+      "scenario_id": "c9fc781efe290197b5",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-92ce672f361017081b",
+      "condition": "reader_only",
+      "id": "0046-hermes-reader_only",
+      "scenario_id": "c9fc781efe290197b5",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-c0e50ec134c9fdcbbd",
+      "condition": "memory",
+      "id": "0046-hermes-memory",
+      "scenario_id": "c9fc781efe290197b5",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-4b6e9dcbe9b211325b",
+      "condition": "reader_only",
+      "id": "0047-hermes-reader_only",
+      "scenario_id": "d4651a5a6b6b4adc1e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-16555dfdfb84c3d669",
+      "condition": "memory",
+      "id": "0047-hermes-memory",
+      "scenario_id": "d4651a5a6b6b4adc1e",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-4b6e9dcbe9b211325b",
+      "condition": "reader_only",
+      "id": "0047-openclaw-reader_only",
+      "scenario_id": "d4651a5a6b6b4adc1e",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-16555dfdfb84c3d669",
+      "condition": "memory",
+      "id": "0047-openclaw-memory",
+      "scenario_id": "d4651a5a6b6b4adc1e",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-deb36a0b69b6020470",
+      "condition": "reader_only",
+      "id": "0048-openclaw-reader_only",
+      "scenario_id": "29631d47c738db5a9a",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-ec88cb9ab242fc6390",
+      "condition": "memory",
+      "id": "0048-openclaw-memory",
+      "scenario_id": "29631d47c738db5a9a",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-deb36a0b69b6020470",
+      "condition": "reader_only",
+      "id": "0048-hermes-reader_only",
+      "scenario_id": "29631d47c738db5a9a",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-ec88cb9ab242fc6390",
+      "condition": "memory",
+      "id": "0048-hermes-memory",
+      "scenario_id": "29631d47c738db5a9a",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-24ee505dcbd92bc97f",
+      "condition": "reader_only",
+      "id": "0049-hermes-reader_only",
+      "scenario_id": "da029810681067a1a9",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-ae300784259ae459e4",
+      "condition": "memory",
+      "id": "0049-hermes-memory",
+      "scenario_id": "da029810681067a1a9",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-24ee505dcbd92bc97f",
+      "condition": "reader_only",
+      "id": "0049-openclaw-reader_only",
+      "scenario_id": "da029810681067a1a9",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-ae300784259ae459e4",
+      "condition": "memory",
+      "id": "0049-openclaw-memory",
+      "scenario_id": "da029810681067a1a9",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-910267155a508e2742",
+      "condition": "reader_only",
+      "id": "0050-openclaw-reader_only",
+      "scenario_id": "11590fec50188f813a",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-c5be22a8db2cc0ae2b",
+      "condition": "memory",
+      "id": "0050-openclaw-memory",
+      "scenario_id": "11590fec50188f813a",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-910267155a508e2742",
+      "condition": "reader_only",
+      "id": "0050-hermes-reader_only",
+      "scenario_id": "11590fec50188f813a",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-c5be22a8db2cc0ae2b",
+      "condition": "memory",
+      "id": "0050-hermes-memory",
+      "scenario_id": "11590fec50188f813a",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-895dc3ac36b6268397",
+      "condition": "reader_only",
+      "id": "0051-hermes-reader_only",
+      "scenario_id": "0c7382c8848fcb5078",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-1d96bbdb8760a70451",
+      "condition": "memory",
+      "id": "0051-hermes-memory",
+      "scenario_id": "0c7382c8848fcb5078",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-895dc3ac36b6268397",
+      "condition": "reader_only",
+      "id": "0051-openclaw-reader_only",
+      "scenario_id": "0c7382c8848fcb5078",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-1d96bbdb8760a70451",
+      "condition": "memory",
+      "id": "0051-openclaw-memory",
+      "scenario_id": "0c7382c8848fcb5078",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-c9b38b555a626c49fe",
+      "condition": "reader_only",
+      "id": "0052-openclaw-reader_only",
+      "scenario_id": "932a4bea254a44c16a",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-f68e280760f5f2c2f5",
+      "condition": "memory",
+      "id": "0052-openclaw-memory",
+      "scenario_id": "932a4bea254a44c16a",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-c9b38b555a626c49fe",
+      "condition": "reader_only",
+      "id": "0052-hermes-reader_only",
+      "scenario_id": "932a4bea254a44c16a",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-f68e280760f5f2c2f5",
+      "condition": "memory",
+      "id": "0052-hermes-memory",
+      "scenario_id": "932a4bea254a44c16a",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-d0f0d255176e983a6a",
+      "condition": "reader_only",
+      "id": "0053-hermes-reader_only",
+      "scenario_id": "67dcf6ad4a1edce514",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-d94414b9699ca3ae9e",
+      "condition": "memory",
+      "id": "0053-hermes-memory",
+      "scenario_id": "67dcf6ad4a1edce514",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-d0f0d255176e983a6a",
+      "condition": "reader_only",
+      "id": "0053-openclaw-reader_only",
+      "scenario_id": "67dcf6ad4a1edce514",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-d94414b9699ca3ae9e",
+      "condition": "memory",
+      "id": "0053-openclaw-memory",
+      "scenario_id": "67dcf6ad4a1edce514",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-ef1dbc3a76abf09c12",
+      "condition": "reader_only",
+      "id": "0054-openclaw-reader_only",
+      "scenario_id": "bce5f107ab9001e7ca",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-fd0c16e58287aeb444",
+      "condition": "memory",
+      "id": "0054-openclaw-memory",
+      "scenario_id": "bce5f107ab9001e7ca",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-ef1dbc3a76abf09c12",
+      "condition": "reader_only",
+      "id": "0054-hermes-reader_only",
+      "scenario_id": "bce5f107ab9001e7ca",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-fd0c16e58287aeb444",
+      "condition": "memory",
+      "id": "0054-hermes-memory",
+      "scenario_id": "bce5f107ab9001e7ca",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-3c0571a88bbb55d77e",
+      "condition": "reader_only",
+      "id": "0055-hermes-reader_only",
+      "scenario_id": "29c505048dde8ebc58",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-54739de1db3ab260d4",
+      "condition": "memory",
+      "id": "0055-hermes-memory",
+      "scenario_id": "29c505048dde8ebc58",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-3c0571a88bbb55d77e",
+      "condition": "reader_only",
+      "id": "0055-openclaw-reader_only",
+      "scenario_id": "29c505048dde8ebc58",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-54739de1db3ab260d4",
+      "condition": "memory",
+      "id": "0055-openclaw-memory",
+      "scenario_id": "29c505048dde8ebc58",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-015289b8b048cc2cf6",
+      "condition": "reader_only",
+      "id": "0056-openclaw-reader_only",
+      "scenario_id": "36c8627adb3fa83ae7",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-fcce7271f04fd37e33",
+      "condition": "memory",
+      "id": "0056-openclaw-memory",
+      "scenario_id": "36c8627adb3fa83ae7",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-015289b8b048cc2cf6",
+      "condition": "reader_only",
+      "id": "0056-hermes-reader_only",
+      "scenario_id": "36c8627adb3fa83ae7",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-fcce7271f04fd37e33",
+      "condition": "memory",
+      "id": "0056-hermes-memory",
+      "scenario_id": "36c8627adb3fa83ae7",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-23aefa371520e70c5c",
+      "condition": "reader_only",
+      "id": "0057-hermes-reader_only",
+      "scenario_id": "d504b9d133f42e3c54",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-58ea073c85f84c195f",
+      "condition": "memory",
+      "id": "0057-hermes-memory",
+      "scenario_id": "d504b9d133f42e3c54",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-23aefa371520e70c5c",
+      "condition": "reader_only",
+      "id": "0057-openclaw-reader_only",
+      "scenario_id": "d504b9d133f42e3c54",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-58ea073c85f84c195f",
+      "condition": "memory",
+      "id": "0057-openclaw-memory",
+      "scenario_id": "d504b9d133f42e3c54",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-053a427aaeec5bb197",
+      "condition": "reader_only",
+      "id": "0058-openclaw-reader_only",
+      "scenario_id": "c222f17c7d4dad413e",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-c659df5021d19c4ddf",
+      "condition": "memory",
+      "id": "0058-openclaw-memory",
+      "scenario_id": "c222f17c7d4dad413e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-053a427aaeec5bb197",
+      "condition": "reader_only",
+      "id": "0058-hermes-reader_only",
+      "scenario_id": "c222f17c7d4dad413e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-c659df5021d19c4ddf",
+      "condition": "memory",
+      "id": "0058-hermes-memory",
+      "scenario_id": "c222f17c7d4dad413e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-34f953e316bb7f5cde",
+      "condition": "reader_only",
+      "id": "0059-hermes-reader_only",
+      "scenario_id": "0f66cf60efcaa03533",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-7701b2de33bb26edaa",
+      "condition": "memory",
+      "id": "0059-hermes-memory",
+      "scenario_id": "0f66cf60efcaa03533",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-34f953e316bb7f5cde",
+      "condition": "reader_only",
+      "id": "0059-openclaw-reader_only",
+      "scenario_id": "0f66cf60efcaa03533",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-7701b2de33bb26edaa",
+      "condition": "memory",
+      "id": "0059-openclaw-memory",
+      "scenario_id": "0f66cf60efcaa03533",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-203a3c03c6b5a6566a",
+      "condition": "reader_only",
+      "id": "0060-openclaw-reader_only",
+      "scenario_id": "0619ed0f5e85b08237",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-79ab5dcad8abe0faa3",
+      "condition": "memory",
+      "id": "0060-openclaw-memory",
+      "scenario_id": "0619ed0f5e85b08237",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-203a3c03c6b5a6566a",
+      "condition": "reader_only",
+      "id": "0060-hermes-reader_only",
+      "scenario_id": "0619ed0f5e85b08237",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-79ab5dcad8abe0faa3",
+      "condition": "memory",
+      "id": "0060-hermes-memory",
+      "scenario_id": "0619ed0f5e85b08237",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-30403d0466ca66ff4c",
+      "condition": "reader_only",
+      "id": "0061-hermes-reader_only",
+      "scenario_id": "e5b21faea7a5123503",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-6f743c5731109bd96b",
+      "condition": "memory",
+      "id": "0061-hermes-memory",
+      "scenario_id": "e5b21faea7a5123503",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-30403d0466ca66ff4c",
+      "condition": "reader_only",
+      "id": "0061-openclaw-reader_only",
+      "scenario_id": "e5b21faea7a5123503",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-6f743c5731109bd96b",
+      "condition": "memory",
+      "id": "0061-openclaw-memory",
+      "scenario_id": "e5b21faea7a5123503",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-24ef41ffd182e694d5",
+      "condition": "reader_only",
+      "id": "0062-openclaw-reader_only",
+      "scenario_id": "ae84573795e7935483",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-06f698dd10c8159814",
+      "condition": "memory",
+      "id": "0062-openclaw-memory",
+      "scenario_id": "ae84573795e7935483",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-24ef41ffd182e694d5",
+      "condition": "reader_only",
+      "id": "0062-hermes-reader_only",
+      "scenario_id": "ae84573795e7935483",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-06f698dd10c8159814",
+      "condition": "memory",
+      "id": "0062-hermes-memory",
+      "scenario_id": "ae84573795e7935483",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-f2b1a2c933086cba92",
+      "condition": "reader_only",
+      "id": "0063-hermes-reader_only",
+      "scenario_id": "b1e67245ebd84dcd6d",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-3e9ff77946d707d97e",
+      "condition": "memory",
+      "id": "0063-hermes-memory",
+      "scenario_id": "b1e67245ebd84dcd6d",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-f2b1a2c933086cba92",
+      "condition": "reader_only",
+      "id": "0063-openclaw-reader_only",
+      "scenario_id": "b1e67245ebd84dcd6d",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-3e9ff77946d707d97e",
+      "condition": "memory",
+      "id": "0063-openclaw-memory",
+      "scenario_id": "b1e67245ebd84dcd6d",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-43cbcbc0c8aba46585",
+      "condition": "reader_only",
+      "id": "0064-openclaw-reader_only",
+      "scenario_id": "4b2fd43430a9421592",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-28b65f623634922938",
+      "condition": "memory",
+      "id": "0064-openclaw-memory",
+      "scenario_id": "4b2fd43430a9421592",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-43cbcbc0c8aba46585",
+      "condition": "reader_only",
+      "id": "0064-hermes-reader_only",
+      "scenario_id": "4b2fd43430a9421592",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-28b65f623634922938",
+      "condition": "memory",
+      "id": "0064-hermes-memory",
+      "scenario_id": "4b2fd43430a9421592",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-4079fab46915f813e9",
+      "condition": "reader_only",
+      "id": "0065-hermes-reader_only",
+      "scenario_id": "4254b888f674bbce04",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-18c235ee6135e2b4b7",
+      "condition": "memory",
+      "id": "0065-hermes-memory",
+      "scenario_id": "4254b888f674bbce04",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-4079fab46915f813e9",
+      "condition": "reader_only",
+      "id": "0065-openclaw-reader_only",
+      "scenario_id": "4254b888f674bbce04",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-18c235ee6135e2b4b7",
+      "condition": "memory",
+      "id": "0065-openclaw-memory",
+      "scenario_id": "4254b888f674bbce04",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-a7bdc9d75804b8e3d7",
+      "condition": "reader_only",
+      "id": "0066-openclaw-reader_only",
+      "scenario_id": "f7561d35fb47d5fff2",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-7847635bf850316cc7",
+      "condition": "memory",
+      "id": "0066-openclaw-memory",
+      "scenario_id": "f7561d35fb47d5fff2",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-a7bdc9d75804b8e3d7",
+      "condition": "reader_only",
+      "id": "0066-hermes-reader_only",
+      "scenario_id": "f7561d35fb47d5fff2",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-7847635bf850316cc7",
+      "condition": "memory",
+      "id": "0066-hermes-memory",
+      "scenario_id": "f7561d35fb47d5fff2",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-13e627e6b3125f61f1",
+      "condition": "reader_only",
+      "id": "0067-hermes-reader_only",
+      "scenario_id": "90c542b1868dfb7b42",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-b43578ea81f2dbf82b",
+      "condition": "memory",
+      "id": "0067-hermes-memory",
+      "scenario_id": "90c542b1868dfb7b42",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-13e627e6b3125f61f1",
+      "condition": "reader_only",
+      "id": "0067-openclaw-reader_only",
+      "scenario_id": "90c542b1868dfb7b42",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-b43578ea81f2dbf82b",
+      "condition": "memory",
+      "id": "0067-openclaw-memory",
+      "scenario_id": "90c542b1868dfb7b42",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-d8624bdd4b2466e4dd",
+      "condition": "reader_only",
+      "id": "0068-openclaw-reader_only",
+      "scenario_id": "b7a4ec321f5230795f",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-acae1a7ec982541234",
+      "condition": "memory",
+      "id": "0068-openclaw-memory",
+      "scenario_id": "b7a4ec321f5230795f",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-d8624bdd4b2466e4dd",
+      "condition": "reader_only",
+      "id": "0068-hermes-reader_only",
+      "scenario_id": "b7a4ec321f5230795f",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-acae1a7ec982541234",
+      "condition": "memory",
+      "id": "0068-hermes-memory",
+      "scenario_id": "b7a4ec321f5230795f",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-38b5c5257b6d629e7e",
+      "condition": "reader_only",
+      "id": "0069-hermes-reader_only",
+      "scenario_id": "d9751c9340b6e00268",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-aa909e92e4162a443f",
+      "condition": "memory",
+      "id": "0069-hermes-memory",
+      "scenario_id": "d9751c9340b6e00268",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-38b5c5257b6d629e7e",
+      "condition": "reader_only",
+      "id": "0069-openclaw-reader_only",
+      "scenario_id": "d9751c9340b6e00268",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-aa909e92e4162a443f",
+      "condition": "memory",
+      "id": "0069-openclaw-memory",
+      "scenario_id": "d9751c9340b6e00268",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-a951d20624af7dc978",
+      "condition": "reader_only",
+      "id": "0070-openclaw-reader_only",
+      "scenario_id": "b796ce7829da520873",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-6b7e68e6e3c57f4d52",
+      "condition": "memory",
+      "id": "0070-openclaw-memory",
+      "scenario_id": "b796ce7829da520873",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-a951d20624af7dc978",
+      "condition": "reader_only",
+      "id": "0070-hermes-reader_only",
+      "scenario_id": "b796ce7829da520873",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-6b7e68e6e3c57f4d52",
+      "condition": "memory",
+      "id": "0070-hermes-memory",
+      "scenario_id": "b796ce7829da520873",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-f6091dc82209c07cfd",
+      "condition": "reader_only",
+      "id": "0071-hermes-reader_only",
+      "scenario_id": "48226ba788ae99cf83",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-d5ff96ed060c4c8329",
+      "condition": "memory",
+      "id": "0071-hermes-memory",
+      "scenario_id": "48226ba788ae99cf83",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-f6091dc82209c07cfd",
+      "condition": "reader_only",
+      "id": "0071-openclaw-reader_only",
+      "scenario_id": "48226ba788ae99cf83",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-d5ff96ed060c4c8329",
+      "condition": "memory",
+      "id": "0071-openclaw-memory",
+      "scenario_id": "48226ba788ae99cf83",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-8292c578dd728addda",
+      "condition": "reader_only",
+      "id": "0072-openclaw-reader_only",
+      "scenario_id": "1832036aea06d0e9f4",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-63499a0c9279066a55",
+      "condition": "memory",
+      "id": "0072-openclaw-memory",
+      "scenario_id": "1832036aea06d0e9f4",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-8292c578dd728addda",
+      "condition": "reader_only",
+      "id": "0072-hermes-reader_only",
+      "scenario_id": "1832036aea06d0e9f4",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-63499a0c9279066a55",
+      "condition": "memory",
+      "id": "0072-hermes-memory",
+      "scenario_id": "1832036aea06d0e9f4",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-f7cb40a44d94766789",
+      "condition": "reader_only",
+      "id": "0073-hermes-reader_only",
+      "scenario_id": "b526163b6a31286cc0",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-640855891bd0321e66",
+      "condition": "memory",
+      "id": "0073-hermes-memory",
+      "scenario_id": "b526163b6a31286cc0",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-f7cb40a44d94766789",
+      "condition": "reader_only",
+      "id": "0073-openclaw-reader_only",
+      "scenario_id": "b526163b6a31286cc0",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-640855891bd0321e66",
+      "condition": "memory",
+      "id": "0073-openclaw-memory",
+      "scenario_id": "b526163b6a31286cc0",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-8dde09b51527a5b9bf",
+      "condition": "reader_only",
+      "id": "0074-openclaw-reader_only",
+      "scenario_id": "42c0d41a557620c28e",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-65ae18b14d7e86b442",
+      "condition": "memory",
+      "id": "0074-openclaw-memory",
+      "scenario_id": "42c0d41a557620c28e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-8dde09b51527a5b9bf",
+      "condition": "reader_only",
+      "id": "0074-hermes-reader_only",
+      "scenario_id": "42c0d41a557620c28e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-65ae18b14d7e86b442",
+      "condition": "memory",
+      "id": "0074-hermes-memory",
+      "scenario_id": "42c0d41a557620c28e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-644d3191386b3fccf8",
+      "condition": "reader_only",
+      "id": "0075-hermes-reader_only",
+      "scenario_id": "ff8910d57ad37e8ffc",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-59fc2238583d1f1bde",
+      "condition": "memory",
+      "id": "0075-hermes-memory",
+      "scenario_id": "ff8910d57ad37e8ffc",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-644d3191386b3fccf8",
+      "condition": "reader_only",
+      "id": "0075-openclaw-reader_only",
+      "scenario_id": "ff8910d57ad37e8ffc",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-59fc2238583d1f1bde",
+      "condition": "memory",
+      "id": "0075-openclaw-memory",
+      "scenario_id": "ff8910d57ad37e8ffc",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-576a1a07f9c46e918f",
+      "condition": "reader_only",
+      "id": "0076-openclaw-reader_only",
+      "scenario_id": "eacc809b0278758fb8",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-ba1b57930d4df973f7",
+      "condition": "memory",
+      "id": "0076-openclaw-memory",
+      "scenario_id": "eacc809b0278758fb8",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-576a1a07f9c46e918f",
+      "condition": "reader_only",
+      "id": "0076-hermes-reader_only",
+      "scenario_id": "eacc809b0278758fb8",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-ba1b57930d4df973f7",
+      "condition": "memory",
+      "id": "0076-hermes-memory",
+      "scenario_id": "eacc809b0278758fb8",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-29a79a341dc5a01aa7",
+      "condition": "reader_only",
+      "id": "0077-hermes-reader_only",
+      "scenario_id": "c14cf870f453cee379",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-7e5be67f6430cdfc61",
+      "condition": "memory",
+      "id": "0077-hermes-memory",
+      "scenario_id": "c14cf870f453cee379",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-29a79a341dc5a01aa7",
+      "condition": "reader_only",
+      "id": "0077-openclaw-reader_only",
+      "scenario_id": "c14cf870f453cee379",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-7e5be67f6430cdfc61",
+      "condition": "memory",
+      "id": "0077-openclaw-memory",
+      "scenario_id": "c14cf870f453cee379",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-fd496896d954d07ffc",
+      "condition": "reader_only",
+      "id": "0078-openclaw-reader_only",
+      "scenario_id": "d9019dc1534185ea3c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-b19b99af421f104456",
+      "condition": "memory",
+      "id": "0078-openclaw-memory",
+      "scenario_id": "d9019dc1534185ea3c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-fd496896d954d07ffc",
+      "condition": "reader_only",
+      "id": "0078-hermes-reader_only",
+      "scenario_id": "d9019dc1534185ea3c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-b19b99af421f104456",
+      "condition": "memory",
+      "id": "0078-hermes-memory",
+      "scenario_id": "d9019dc1534185ea3c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-bcbfa61f8e3f949dcc",
+      "condition": "reader_only",
+      "id": "0079-hermes-reader_only",
+      "scenario_id": "4c4f6a323bc19103fc",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-95a8000bd119da9e32",
+      "condition": "memory",
+      "id": "0079-hermes-memory",
+      "scenario_id": "4c4f6a323bc19103fc",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-bcbfa61f8e3f949dcc",
+      "condition": "reader_only",
+      "id": "0079-openclaw-reader_only",
+      "scenario_id": "4c4f6a323bc19103fc",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-95a8000bd119da9e32",
+      "condition": "memory",
+      "id": "0079-openclaw-memory",
+      "scenario_id": "4c4f6a323bc19103fc",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-c27761d3e8c0f29f35",
+      "condition": "reader_only",
+      "id": "0080-openclaw-reader_only",
+      "scenario_id": "034984b065eef44042",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-dc35412d32c7c7866c",
+      "condition": "memory",
+      "id": "0080-openclaw-memory",
+      "scenario_id": "034984b065eef44042",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-c27761d3e8c0f29f35",
+      "condition": "reader_only",
+      "id": "0080-hermes-reader_only",
+      "scenario_id": "034984b065eef44042",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-dc35412d32c7c7866c",
+      "condition": "memory",
+      "id": "0080-hermes-memory",
+      "scenario_id": "034984b065eef44042",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-e603d7ede6608d3919",
+      "condition": "reader_only",
+      "id": "0081-hermes-reader_only",
+      "scenario_id": "95b9aad4418b0fb481",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-2b7b11cdb23bcc9fd5",
+      "condition": "memory",
+      "id": "0081-hermes-memory",
+      "scenario_id": "95b9aad4418b0fb481",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-e603d7ede6608d3919",
+      "condition": "reader_only",
+      "id": "0081-openclaw-reader_only",
+      "scenario_id": "95b9aad4418b0fb481",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-2b7b11cdb23bcc9fd5",
+      "condition": "memory",
+      "id": "0081-openclaw-memory",
+      "scenario_id": "95b9aad4418b0fb481",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-d7522d59b376fd7395",
+      "condition": "reader_only",
+      "id": "0082-openclaw-reader_only",
+      "scenario_id": "54590811fe0654c4a6",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-4aeb54e1f9bf419ea2",
+      "condition": "memory",
+      "id": "0082-openclaw-memory",
+      "scenario_id": "54590811fe0654c4a6",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-d7522d59b376fd7395",
+      "condition": "reader_only",
+      "id": "0082-hermes-reader_only",
+      "scenario_id": "54590811fe0654c4a6",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-4aeb54e1f9bf419ea2",
+      "condition": "memory",
+      "id": "0082-hermes-memory",
+      "scenario_id": "54590811fe0654c4a6",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-c074e43c1bbf4838c0",
+      "condition": "reader_only",
+      "id": "0083-hermes-reader_only",
+      "scenario_id": "4b121addcae5d65efd",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-385cf8b344e949cdfa",
+      "condition": "memory",
+      "id": "0083-hermes-memory",
+      "scenario_id": "4b121addcae5d65efd",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-c074e43c1bbf4838c0",
+      "condition": "reader_only",
+      "id": "0083-openclaw-reader_only",
+      "scenario_id": "4b121addcae5d65efd",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-385cf8b344e949cdfa",
+      "condition": "memory",
+      "id": "0083-openclaw-memory",
+      "scenario_id": "4b121addcae5d65efd",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-5f68b9b5f8271467e3",
+      "condition": "reader_only",
+      "id": "0084-openclaw-reader_only",
+      "scenario_id": "b20a0c4847f852cc99",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-018f6ddce85eb2976f",
+      "condition": "memory",
+      "id": "0084-openclaw-memory",
+      "scenario_id": "b20a0c4847f852cc99",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-5f68b9b5f8271467e3",
+      "condition": "reader_only",
+      "id": "0084-hermes-reader_only",
+      "scenario_id": "b20a0c4847f852cc99",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-018f6ddce85eb2976f",
+      "condition": "memory",
+      "id": "0084-hermes-memory",
+      "scenario_id": "b20a0c4847f852cc99",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-1af1a909421e3eb480",
+      "condition": "reader_only",
+      "id": "0085-hermes-reader_only",
+      "scenario_id": "5aab1d6c7235e9da35",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-d1b7a6b40efde05d39",
+      "condition": "memory",
+      "id": "0085-hermes-memory",
+      "scenario_id": "5aab1d6c7235e9da35",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-1af1a909421e3eb480",
+      "condition": "reader_only",
+      "id": "0085-openclaw-reader_only",
+      "scenario_id": "5aab1d6c7235e9da35",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-d1b7a6b40efde05d39",
+      "condition": "memory",
+      "id": "0085-openclaw-memory",
+      "scenario_id": "5aab1d6c7235e9da35",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-619708f10f998b7c12",
+      "condition": "reader_only",
+      "id": "0086-openclaw-reader_only",
+      "scenario_id": "5f475395b8fc387244",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-e42ee066291898eabb",
+      "condition": "memory",
+      "id": "0086-openclaw-memory",
+      "scenario_id": "5f475395b8fc387244",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-619708f10f998b7c12",
+      "condition": "reader_only",
+      "id": "0086-hermes-reader_only",
+      "scenario_id": "5f475395b8fc387244",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-e42ee066291898eabb",
+      "condition": "memory",
+      "id": "0086-hermes-memory",
+      "scenario_id": "5f475395b8fc387244",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-95fcfeee9bd2338537",
+      "condition": "reader_only",
+      "id": "0087-hermes-reader_only",
+      "scenario_id": "dcf89d0145a09534f1",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-36a43ab38cbe23c4ad",
+      "condition": "memory",
+      "id": "0087-hermes-memory",
+      "scenario_id": "dcf89d0145a09534f1",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-95fcfeee9bd2338537",
+      "condition": "reader_only",
+      "id": "0087-openclaw-reader_only",
+      "scenario_id": "dcf89d0145a09534f1",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-36a43ab38cbe23c4ad",
+      "condition": "memory",
+      "id": "0087-openclaw-memory",
+      "scenario_id": "dcf89d0145a09534f1",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-5a27094a12b7adb69b",
+      "condition": "reader_only",
+      "id": "0088-openclaw-reader_only",
+      "scenario_id": "96c0b0764ee7845c06",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-0246419d2d9f5317f5",
+      "condition": "memory",
+      "id": "0088-openclaw-memory",
+      "scenario_id": "96c0b0764ee7845c06",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-5a27094a12b7adb69b",
+      "condition": "reader_only",
+      "id": "0088-hermes-reader_only",
+      "scenario_id": "96c0b0764ee7845c06",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-0246419d2d9f5317f5",
+      "condition": "memory",
+      "id": "0088-hermes-memory",
+      "scenario_id": "96c0b0764ee7845c06",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-4e470ab2ea8b309137",
+      "condition": "reader_only",
+      "id": "0089-hermes-reader_only",
+      "scenario_id": "415e655eb848bae132",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-cd6ee09605b9d1416f",
+      "condition": "memory",
+      "id": "0089-hermes-memory",
+      "scenario_id": "415e655eb848bae132",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-4e470ab2ea8b309137",
+      "condition": "reader_only",
+      "id": "0089-openclaw-reader_only",
+      "scenario_id": "415e655eb848bae132",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-cd6ee09605b9d1416f",
+      "condition": "memory",
+      "id": "0089-openclaw-memory",
+      "scenario_id": "415e655eb848bae132",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-f1f06efb69a2f525c7",
+      "condition": "reader_only",
+      "id": "0090-openclaw-reader_only",
+      "scenario_id": "2d9eddce6b2612a9c7",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-5131790a9899059155",
+      "condition": "memory",
+      "id": "0090-openclaw-memory",
+      "scenario_id": "2d9eddce6b2612a9c7",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-f1f06efb69a2f525c7",
+      "condition": "reader_only",
+      "id": "0090-hermes-reader_only",
+      "scenario_id": "2d9eddce6b2612a9c7",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-5131790a9899059155",
+      "condition": "memory",
+      "id": "0090-hermes-memory",
+      "scenario_id": "2d9eddce6b2612a9c7",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-4d08355364312b717e",
+      "condition": "reader_only",
+      "id": "0091-hermes-reader_only",
+      "scenario_id": "ab79a167d7fd3829d9",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-6e33c53d2c0e214240",
+      "condition": "memory",
+      "id": "0091-hermes-memory",
+      "scenario_id": "ab79a167d7fd3829d9",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-4d08355364312b717e",
+      "condition": "reader_only",
+      "id": "0091-openclaw-reader_only",
+      "scenario_id": "ab79a167d7fd3829d9",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-6e33c53d2c0e214240",
+      "condition": "memory",
+      "id": "0091-openclaw-memory",
+      "scenario_id": "ab79a167d7fd3829d9",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-4819bbc743dc339087",
+      "condition": "reader_only",
+      "id": "0092-openclaw-reader_only",
+      "scenario_id": "c855e0271039d020fa",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-205cac7e4f3b06645b",
+      "condition": "memory",
+      "id": "0092-openclaw-memory",
+      "scenario_id": "c855e0271039d020fa",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-4819bbc743dc339087",
+      "condition": "reader_only",
+      "id": "0092-hermes-reader_only",
+      "scenario_id": "c855e0271039d020fa",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-205cac7e4f3b06645b",
+      "condition": "memory",
+      "id": "0092-hermes-memory",
+      "scenario_id": "c855e0271039d020fa",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-b1debfbc80897be171",
+      "condition": "reader_only",
+      "id": "0093-hermes-reader_only",
+      "scenario_id": "1bdcb0fc1b0befb57c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-21100539142a9d07cc",
+      "condition": "memory",
+      "id": "0093-hermes-memory",
+      "scenario_id": "1bdcb0fc1b0befb57c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-b1debfbc80897be171",
+      "condition": "reader_only",
+      "id": "0093-openclaw-reader_only",
+      "scenario_id": "1bdcb0fc1b0befb57c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-21100539142a9d07cc",
+      "condition": "memory",
+      "id": "0093-openclaw-memory",
+      "scenario_id": "1bdcb0fc1b0befb57c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-49cbb1efc6daa1b38c",
+      "condition": "reader_only",
+      "id": "0094-openclaw-reader_only",
+      "scenario_id": "8ee6c61531846f4e6f",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-0cb3b6b64797581538",
+      "condition": "memory",
+      "id": "0094-openclaw-memory",
+      "scenario_id": "8ee6c61531846f4e6f",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-49cbb1efc6daa1b38c",
+      "condition": "reader_only",
+      "id": "0094-hermes-reader_only",
+      "scenario_id": "8ee6c61531846f4e6f",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-0cb3b6b64797581538",
+      "condition": "memory",
+      "id": "0094-hermes-memory",
+      "scenario_id": "8ee6c61531846f4e6f",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-9141758acd4071b6d1",
+      "condition": "reader_only",
+      "id": "0095-hermes-reader_only",
+      "scenario_id": "6c9ecac00f41127222",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-708b1ae6aeb908407f",
+      "condition": "memory",
+      "id": "0095-hermes-memory",
+      "scenario_id": "6c9ecac00f41127222",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-9141758acd4071b6d1",
+      "condition": "reader_only",
+      "id": "0095-openclaw-reader_only",
+      "scenario_id": "6c9ecac00f41127222",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-708b1ae6aeb908407f",
+      "condition": "memory",
+      "id": "0095-openclaw-memory",
+      "scenario_id": "6c9ecac00f41127222",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-08a227ff2bf8da1372",
+      "condition": "reader_only",
+      "id": "0096-openclaw-reader_only",
+      "scenario_id": "34f8ce9900fefb581c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-010020a598d5be4d20",
+      "condition": "memory",
+      "id": "0096-openclaw-memory",
+      "scenario_id": "34f8ce9900fefb581c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-08a227ff2bf8da1372",
+      "condition": "reader_only",
+      "id": "0096-hermes-reader_only",
+      "scenario_id": "34f8ce9900fefb581c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-010020a598d5be4d20",
+      "condition": "memory",
+      "id": "0096-hermes-memory",
+      "scenario_id": "34f8ce9900fefb581c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-c6e701027ab627eddc",
+      "condition": "reader_only",
+      "id": "0097-hermes-reader_only",
+      "scenario_id": "545523cffc7f345841",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-e127023f362a25207c",
+      "condition": "memory",
+      "id": "0097-hermes-memory",
+      "scenario_id": "545523cffc7f345841",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-c6e701027ab627eddc",
+      "condition": "reader_only",
+      "id": "0097-openclaw-reader_only",
+      "scenario_id": "545523cffc7f345841",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-e127023f362a25207c",
+      "condition": "memory",
+      "id": "0097-openclaw-memory",
+      "scenario_id": "545523cffc7f345841",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-4af725a44aed3edfe0",
+      "condition": "reader_only",
+      "id": "0098-openclaw-reader_only",
+      "scenario_id": "2aaa3e0dccd9026388",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-ad646509e2ba32b7e5",
+      "condition": "memory",
+      "id": "0098-openclaw-memory",
+      "scenario_id": "2aaa3e0dccd9026388",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-4af725a44aed3edfe0",
+      "condition": "reader_only",
+      "id": "0098-hermes-reader_only",
+      "scenario_id": "2aaa3e0dccd9026388",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-ad646509e2ba32b7e5",
+      "condition": "memory",
+      "id": "0098-hermes-memory",
+      "scenario_id": "2aaa3e0dccd9026388",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-032b1a0632f7c4e0c6",
+      "condition": "reader_only",
+      "id": "0099-hermes-reader_only",
+      "scenario_id": "ff314542ea1f80b4f3",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-2abf90ab703ee5b860",
+      "condition": "memory",
+      "id": "0099-hermes-memory",
+      "scenario_id": "ff314542ea1f80b4f3",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-032b1a0632f7c4e0c6",
+      "condition": "reader_only",
+      "id": "0099-openclaw-reader_only",
+      "scenario_id": "ff314542ea1f80b4f3",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-2abf90ab703ee5b860",
+      "condition": "memory",
+      "id": "0099-openclaw-memory",
+      "scenario_id": "ff314542ea1f80b4f3",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-38e0b71c9118ccf8b5",
+      "condition": "reader_only",
+      "id": "0100-openclaw-reader_only",
+      "scenario_id": "aa0a910ad237adfc1b",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-cde53b6df4b9e38e9d",
+      "condition": "memory",
+      "id": "0100-openclaw-memory",
+      "scenario_id": "aa0a910ad237adfc1b",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-38e0b71c9118ccf8b5",
+      "condition": "reader_only",
+      "id": "0100-hermes-reader_only",
+      "scenario_id": "aa0a910ad237adfc1b",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-cde53b6df4b9e38e9d",
+      "condition": "memory",
+      "id": "0100-hermes-memory",
+      "scenario_id": "aa0a910ad237adfc1b",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-a9115014e0e4468ea8",
+      "condition": "reader_only",
+      "id": "0101-hermes-reader_only",
+      "scenario_id": "c38ab324ee353c5ba2",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-28d20f47e20c7814eb",
+      "condition": "memory",
+      "id": "0101-hermes-memory",
+      "scenario_id": "c38ab324ee353c5ba2",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-a9115014e0e4468ea8",
+      "condition": "reader_only",
+      "id": "0101-openclaw-reader_only",
+      "scenario_id": "c38ab324ee353c5ba2",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-28d20f47e20c7814eb",
+      "condition": "memory",
+      "id": "0101-openclaw-memory",
+      "scenario_id": "c38ab324ee353c5ba2",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-6a836178627e0ea7e2",
+      "condition": "reader_only",
+      "id": "0102-openclaw-reader_only",
+      "scenario_id": "2fc5e3a2f3771275b3",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-715bdf045d3f7ffba3",
+      "condition": "memory",
+      "id": "0102-openclaw-memory",
+      "scenario_id": "2fc5e3a2f3771275b3",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-6a836178627e0ea7e2",
+      "condition": "reader_only",
+      "id": "0102-hermes-reader_only",
+      "scenario_id": "2fc5e3a2f3771275b3",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-715bdf045d3f7ffba3",
+      "condition": "memory",
+      "id": "0102-hermes-memory",
+      "scenario_id": "2fc5e3a2f3771275b3",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-4d7842464e50704173",
+      "condition": "reader_only",
+      "id": "0103-hermes-reader_only",
+      "scenario_id": "af963f2f86b07c186f",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-4a77fb80641d5bd1d0",
+      "condition": "memory",
+      "id": "0103-hermes-memory",
+      "scenario_id": "af963f2f86b07c186f",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-4d7842464e50704173",
+      "condition": "reader_only",
+      "id": "0103-openclaw-reader_only",
+      "scenario_id": "af963f2f86b07c186f",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-4a77fb80641d5bd1d0",
+      "condition": "memory",
+      "id": "0103-openclaw-memory",
+      "scenario_id": "af963f2f86b07c186f",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-9816eb4fd88b722c7c",
+      "condition": "reader_only",
+      "id": "0104-openclaw-reader_only",
+      "scenario_id": "5056814ed1dfdb9c9d",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-3dbc32ee4ea6e1dd36",
+      "condition": "memory",
+      "id": "0104-openclaw-memory",
+      "scenario_id": "5056814ed1dfdb9c9d",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-9816eb4fd88b722c7c",
+      "condition": "reader_only",
+      "id": "0104-hermes-reader_only",
+      "scenario_id": "5056814ed1dfdb9c9d",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-3dbc32ee4ea6e1dd36",
+      "condition": "memory",
+      "id": "0104-hermes-memory",
+      "scenario_id": "5056814ed1dfdb9c9d",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-21569d298207753a61",
+      "condition": "reader_only",
+      "id": "0105-hermes-reader_only",
+      "scenario_id": "89dbdfcd460589f73e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-c76e638aa18225b37c",
+      "condition": "memory",
+      "id": "0105-hermes-memory",
+      "scenario_id": "89dbdfcd460589f73e",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-21569d298207753a61",
+      "condition": "reader_only",
+      "id": "0105-openclaw-reader_only",
+      "scenario_id": "89dbdfcd460589f73e",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-c76e638aa18225b37c",
+      "condition": "memory",
+      "id": "0105-openclaw-memory",
+      "scenario_id": "89dbdfcd460589f73e",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-d1bcd0e0b3fc619bce",
+      "condition": "reader_only",
+      "id": "0106-openclaw-reader_only",
+      "scenario_id": "479f0070bcecd28c11",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-ea736e3024c3206c4a",
+      "condition": "memory",
+      "id": "0106-openclaw-memory",
+      "scenario_id": "479f0070bcecd28c11",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-d1bcd0e0b3fc619bce",
+      "condition": "reader_only",
+      "id": "0106-hermes-reader_only",
+      "scenario_id": "479f0070bcecd28c11",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-ea736e3024c3206c4a",
+      "condition": "memory",
+      "id": "0106-hermes-memory",
+      "scenario_id": "479f0070bcecd28c11",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-016e8880cc0fa14b09",
+      "condition": "reader_only",
+      "id": "0107-hermes-reader_only",
+      "scenario_id": "05385a2e082cdf8b7e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-4626be8952470bfbfa",
+      "condition": "memory",
+      "id": "0107-hermes-memory",
+      "scenario_id": "05385a2e082cdf8b7e",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-016e8880cc0fa14b09",
+      "condition": "reader_only",
+      "id": "0107-openclaw-reader_only",
+      "scenario_id": "05385a2e082cdf8b7e",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-4626be8952470bfbfa",
+      "condition": "memory",
+      "id": "0107-openclaw-memory",
+      "scenario_id": "05385a2e082cdf8b7e",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-e36e0ca4bcf0f2130c",
+      "condition": "reader_only",
+      "id": "0108-openclaw-reader_only",
+      "scenario_id": "5f3cc494dfef69d0ee",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-b9ae061597cd3a8e55",
+      "condition": "memory",
+      "id": "0108-openclaw-memory",
+      "scenario_id": "5f3cc494dfef69d0ee",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-e36e0ca4bcf0f2130c",
+      "condition": "reader_only",
+      "id": "0108-hermes-reader_only",
+      "scenario_id": "5f3cc494dfef69d0ee",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-b9ae061597cd3a8e55",
+      "condition": "memory",
+      "id": "0108-hermes-memory",
+      "scenario_id": "5f3cc494dfef69d0ee",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-cb491bd18e08a08bad",
+      "condition": "reader_only",
+      "id": "0109-hermes-reader_only",
+      "scenario_id": "669984e41c90bd0d06",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-2d559e383a5d505c69",
+      "condition": "memory",
+      "id": "0109-hermes-memory",
+      "scenario_id": "669984e41c90bd0d06",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-cb491bd18e08a08bad",
+      "condition": "reader_only",
+      "id": "0109-openclaw-reader_only",
+      "scenario_id": "669984e41c90bd0d06",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-2d559e383a5d505c69",
+      "condition": "memory",
+      "id": "0109-openclaw-memory",
+      "scenario_id": "669984e41c90bd0d06",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-02b0233ebd55f4c021",
+      "condition": "reader_only",
+      "id": "0110-openclaw-reader_only",
+      "scenario_id": "6c65b94e99f56b98dc",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-cd7c75873b54a9104e",
+      "condition": "memory",
+      "id": "0110-openclaw-memory",
+      "scenario_id": "6c65b94e99f56b98dc",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-02b0233ebd55f4c021",
+      "condition": "reader_only",
+      "id": "0110-hermes-reader_only",
+      "scenario_id": "6c65b94e99f56b98dc",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-cd7c75873b54a9104e",
+      "condition": "memory",
+      "id": "0110-hermes-memory",
+      "scenario_id": "6c65b94e99f56b98dc",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-9ff563c7a26781c6d5",
+      "condition": "reader_only",
+      "id": "0111-hermes-reader_only",
+      "scenario_id": "fd952d9efd9d43fd33",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-d5d3ce8fcc000a2053",
+      "condition": "memory",
+      "id": "0111-hermes-memory",
+      "scenario_id": "fd952d9efd9d43fd33",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-9ff563c7a26781c6d5",
+      "condition": "reader_only",
+      "id": "0111-openclaw-reader_only",
+      "scenario_id": "fd952d9efd9d43fd33",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-d5d3ce8fcc000a2053",
+      "condition": "memory",
+      "id": "0111-openclaw-memory",
+      "scenario_id": "fd952d9efd9d43fd33",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-8855fe1ad27d6440af",
+      "condition": "reader_only",
+      "id": "0112-openclaw-reader_only",
+      "scenario_id": "8462a053d96183f54f",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-4ae56be8f660515c2e",
+      "condition": "memory",
+      "id": "0112-openclaw-memory",
+      "scenario_id": "8462a053d96183f54f",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-8855fe1ad27d6440af",
+      "condition": "reader_only",
+      "id": "0112-hermes-reader_only",
+      "scenario_id": "8462a053d96183f54f",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-4ae56be8f660515c2e",
+      "condition": "memory",
+      "id": "0112-hermes-memory",
+      "scenario_id": "8462a053d96183f54f",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-8ee8a925a9f06cf9a4",
+      "condition": "reader_only",
+      "id": "0113-hermes-reader_only",
+      "scenario_id": "e50776dc260f3cd8c4",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-b15c6071df51aa43e6",
+      "condition": "memory",
+      "id": "0113-hermes-memory",
+      "scenario_id": "e50776dc260f3cd8c4",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-8ee8a925a9f06cf9a4",
+      "condition": "reader_only",
+      "id": "0113-openclaw-reader_only",
+      "scenario_id": "e50776dc260f3cd8c4",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-b15c6071df51aa43e6",
+      "condition": "memory",
+      "id": "0113-openclaw-memory",
+      "scenario_id": "e50776dc260f3cd8c4",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-56ba96628b9ed8c64d",
+      "condition": "reader_only",
+      "id": "0114-openclaw-reader_only",
+      "scenario_id": "3ce22d0d2ec18c1111",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-d2ddee1dce79b5eb8d",
+      "condition": "memory",
+      "id": "0114-openclaw-memory",
+      "scenario_id": "3ce22d0d2ec18c1111",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-56ba96628b9ed8c64d",
+      "condition": "reader_only",
+      "id": "0114-hermes-reader_only",
+      "scenario_id": "3ce22d0d2ec18c1111",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-d2ddee1dce79b5eb8d",
+      "condition": "memory",
+      "id": "0114-hermes-memory",
+      "scenario_id": "3ce22d0d2ec18c1111",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-98ff86bc4a270c7d4f",
+      "condition": "reader_only",
+      "id": "0115-hermes-reader_only",
+      "scenario_id": "45acfb75e4d60ac2c4",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-221c69e1bf36404b13",
+      "condition": "memory",
+      "id": "0115-hermes-memory",
+      "scenario_id": "45acfb75e4d60ac2c4",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-98ff86bc4a270c7d4f",
+      "condition": "reader_only",
+      "id": "0115-openclaw-reader_only",
+      "scenario_id": "45acfb75e4d60ac2c4",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-221c69e1bf36404b13",
+      "condition": "memory",
+      "id": "0115-openclaw-memory",
+      "scenario_id": "45acfb75e4d60ac2c4",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-21a9dfcea639054186",
+      "condition": "reader_only",
+      "id": "0116-openclaw-reader_only",
+      "scenario_id": "e342600e5985530910",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-b76e605452c34a3ef2",
+      "condition": "memory",
+      "id": "0116-openclaw-memory",
+      "scenario_id": "e342600e5985530910",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-21a9dfcea639054186",
+      "condition": "reader_only",
+      "id": "0116-hermes-reader_only",
+      "scenario_id": "e342600e5985530910",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-b76e605452c34a3ef2",
+      "condition": "memory",
+      "id": "0116-hermes-memory",
+      "scenario_id": "e342600e5985530910",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-edcff1d416513693c5",
+      "condition": "reader_only",
+      "id": "0117-hermes-reader_only",
+      "scenario_id": "2a28f7544b0db41c98",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-bf10fe83a0e1c73c74",
+      "condition": "memory",
+      "id": "0117-hermes-memory",
+      "scenario_id": "2a28f7544b0db41c98",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-edcff1d416513693c5",
+      "condition": "reader_only",
+      "id": "0117-openclaw-reader_only",
+      "scenario_id": "2a28f7544b0db41c98",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-bf10fe83a0e1c73c74",
+      "condition": "memory",
+      "id": "0117-openclaw-memory",
+      "scenario_id": "2a28f7544b0db41c98",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-7b4d4587868ea503c3",
+      "condition": "reader_only",
+      "id": "0118-openclaw-reader_only",
+      "scenario_id": "93d18f9aad987dedd9",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-f5658bff7789139b35",
+      "condition": "memory",
+      "id": "0118-openclaw-memory",
+      "scenario_id": "93d18f9aad987dedd9",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-7b4d4587868ea503c3",
+      "condition": "reader_only",
+      "id": "0118-hermes-reader_only",
+      "scenario_id": "93d18f9aad987dedd9",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-f5658bff7789139b35",
+      "condition": "memory",
+      "id": "0118-hermes-memory",
+      "scenario_id": "93d18f9aad987dedd9",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-fd8c0d440a50ae3ba6",
+      "condition": "reader_only",
+      "id": "0119-hermes-reader_only",
+      "scenario_id": "efa8ca9cd89c69a164",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-8b90166f008e761cf4",
+      "condition": "memory",
+      "id": "0119-hermes-memory",
+      "scenario_id": "efa8ca9cd89c69a164",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-fd8c0d440a50ae3ba6",
+      "condition": "reader_only",
+      "id": "0119-openclaw-reader_only",
+      "scenario_id": "efa8ca9cd89c69a164",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-8b90166f008e761cf4",
+      "condition": "memory",
+      "id": "0119-openclaw-memory",
+      "scenario_id": "efa8ca9cd89c69a164",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-5cb2f73860a5383c14",
+      "condition": "reader_only",
+      "id": "0120-openclaw-reader_only",
+      "scenario_id": "4f760bfeb3b1d204d5",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-addb44b91f5f628654",
+      "condition": "memory",
+      "id": "0120-openclaw-memory",
+      "scenario_id": "4f760bfeb3b1d204d5",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-5cb2f73860a5383c14",
+      "condition": "reader_only",
+      "id": "0120-hermes-reader_only",
+      "scenario_id": "4f760bfeb3b1d204d5",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-addb44b91f5f628654",
+      "condition": "memory",
+      "id": "0120-hermes-memory",
+      "scenario_id": "4f760bfeb3b1d204d5",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-780c7b74ccc7ed469b",
+      "condition": "reader_only",
+      "id": "0121-hermes-reader_only",
+      "scenario_id": "8f7196a036d4f0fa32",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-8f35f3f3ced5937017",
+      "condition": "memory",
+      "id": "0121-hermes-memory",
+      "scenario_id": "8f7196a036d4f0fa32",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-780c7b74ccc7ed469b",
+      "condition": "reader_only",
+      "id": "0121-openclaw-reader_only",
+      "scenario_id": "8f7196a036d4f0fa32",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-8f35f3f3ced5937017",
+      "condition": "memory",
+      "id": "0121-openclaw-memory",
+      "scenario_id": "8f7196a036d4f0fa32",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-de2b887687942372ce",
+      "condition": "reader_only",
+      "id": "0122-openclaw-reader_only",
+      "scenario_id": "18a7b7947c8f537274",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-ee041bf0715c25f624",
+      "condition": "memory",
+      "id": "0122-openclaw-memory",
+      "scenario_id": "18a7b7947c8f537274",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-de2b887687942372ce",
+      "condition": "reader_only",
+      "id": "0122-hermes-reader_only",
+      "scenario_id": "18a7b7947c8f537274",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-ee041bf0715c25f624",
+      "condition": "memory",
+      "id": "0122-hermes-memory",
+      "scenario_id": "18a7b7947c8f537274",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-a22f5ff497b4f0eeee",
+      "condition": "reader_only",
+      "id": "0123-hermes-reader_only",
+      "scenario_id": "3a2069a88148bd59bf",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-f081df6978ee812fec",
+      "condition": "memory",
+      "id": "0123-hermes-memory",
+      "scenario_id": "3a2069a88148bd59bf",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-a22f5ff497b4f0eeee",
+      "condition": "reader_only",
+      "id": "0123-openclaw-reader_only",
+      "scenario_id": "3a2069a88148bd59bf",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-f081df6978ee812fec",
+      "condition": "memory",
+      "id": "0123-openclaw-memory",
+      "scenario_id": "3a2069a88148bd59bf",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-376b9922ddaaa27863",
+      "condition": "reader_only",
+      "id": "0124-openclaw-reader_only",
+      "scenario_id": "05b46267037152f179",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-ecf765011a05d9deb0",
+      "condition": "memory",
+      "id": "0124-openclaw-memory",
+      "scenario_id": "05b46267037152f179",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-376b9922ddaaa27863",
+      "condition": "reader_only",
+      "id": "0124-hermes-reader_only",
+      "scenario_id": "05b46267037152f179",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-ecf765011a05d9deb0",
+      "condition": "memory",
+      "id": "0124-hermes-memory",
+      "scenario_id": "05b46267037152f179",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-06ec1994abc31a21bd",
+      "condition": "reader_only",
+      "id": "0125-hermes-reader_only",
+      "scenario_id": "ea8199fff9c91a5abd",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-5a160a78ff2f785f31",
+      "condition": "memory",
+      "id": "0125-hermes-memory",
+      "scenario_id": "ea8199fff9c91a5abd",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-06ec1994abc31a21bd",
+      "condition": "reader_only",
+      "id": "0125-openclaw-reader_only",
+      "scenario_id": "ea8199fff9c91a5abd",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-5a160a78ff2f785f31",
+      "condition": "memory",
+      "id": "0125-openclaw-memory",
+      "scenario_id": "ea8199fff9c91a5abd",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-4613fd147157f92282",
+      "condition": "reader_only",
+      "id": "0126-openclaw-reader_only",
+      "scenario_id": "730e27395cc5311b6b",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-1c987c03cdae15a932",
+      "condition": "memory",
+      "id": "0126-openclaw-memory",
+      "scenario_id": "730e27395cc5311b6b",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-4613fd147157f92282",
+      "condition": "reader_only",
+      "id": "0126-hermes-reader_only",
+      "scenario_id": "730e27395cc5311b6b",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-1c987c03cdae15a932",
+      "condition": "memory",
+      "id": "0126-hermes-memory",
+      "scenario_id": "730e27395cc5311b6b",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-42f1da4db881e1dca0",
+      "condition": "reader_only",
+      "id": "0127-hermes-reader_only",
+      "scenario_id": "c11ca1f52be95a4e04",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-9e90bfae6524144aa4",
+      "condition": "memory",
+      "id": "0127-hermes-memory",
+      "scenario_id": "c11ca1f52be95a4e04",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-42f1da4db881e1dca0",
+      "condition": "reader_only",
+      "id": "0127-openclaw-reader_only",
+      "scenario_id": "c11ca1f52be95a4e04",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-9e90bfae6524144aa4",
+      "condition": "memory",
+      "id": "0127-openclaw-memory",
+      "scenario_id": "c11ca1f52be95a4e04",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-dd17587e8f4f084e56",
+      "condition": "reader_only",
+      "id": "0128-openclaw-reader_only",
+      "scenario_id": "46264d37030b1ae27c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-2c27d2ec72887e0a82",
+      "condition": "memory",
+      "id": "0128-openclaw-memory",
+      "scenario_id": "46264d37030b1ae27c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-dd17587e8f4f084e56",
+      "condition": "reader_only",
+      "id": "0128-hermes-reader_only",
+      "scenario_id": "46264d37030b1ae27c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-2c27d2ec72887e0a82",
+      "condition": "memory",
+      "id": "0128-hermes-memory",
+      "scenario_id": "46264d37030b1ae27c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-107eae3264d5daeb08",
+      "condition": "reader_only",
+      "id": "0129-hermes-reader_only",
+      "scenario_id": "25244d3e4d4a2acb89",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-1ed0d50a2257338dee",
+      "condition": "memory",
+      "id": "0129-hermes-memory",
+      "scenario_id": "25244d3e4d4a2acb89",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-107eae3264d5daeb08",
+      "condition": "reader_only",
+      "id": "0129-openclaw-reader_only",
+      "scenario_id": "25244d3e4d4a2acb89",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-1ed0d50a2257338dee",
+      "condition": "memory",
+      "id": "0129-openclaw-memory",
+      "scenario_id": "25244d3e4d4a2acb89",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-6f79366d1079cc6861",
+      "condition": "reader_only",
+      "id": "0130-openclaw-reader_only",
+      "scenario_id": "5043c75c6ba315a080",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-c04bb3ba0befec4a15",
+      "condition": "memory",
+      "id": "0130-openclaw-memory",
+      "scenario_id": "5043c75c6ba315a080",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-6f79366d1079cc6861",
+      "condition": "reader_only",
+      "id": "0130-hermes-reader_only",
+      "scenario_id": "5043c75c6ba315a080",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-c04bb3ba0befec4a15",
+      "condition": "memory",
+      "id": "0130-hermes-memory",
+      "scenario_id": "5043c75c6ba315a080",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-92933277d7bed59557",
+      "condition": "reader_only",
+      "id": "0131-hermes-reader_only",
+      "scenario_id": "7abaa5fa9c294a95dc",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-81cc1938649b4a0e1d",
+      "condition": "memory",
+      "id": "0131-hermes-memory",
+      "scenario_id": "7abaa5fa9c294a95dc",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-92933277d7bed59557",
+      "condition": "reader_only",
+      "id": "0131-openclaw-reader_only",
+      "scenario_id": "7abaa5fa9c294a95dc",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-81cc1938649b4a0e1d",
+      "condition": "memory",
+      "id": "0131-openclaw-memory",
+      "scenario_id": "7abaa5fa9c294a95dc",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-d61ae83aad2a28eb6a",
+      "condition": "reader_only",
+      "id": "0132-openclaw-reader_only",
+      "scenario_id": "29fff6aa01c2fa0610",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-5340487050b70c4d17",
+      "condition": "memory",
+      "id": "0132-openclaw-memory",
+      "scenario_id": "29fff6aa01c2fa0610",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-d61ae83aad2a28eb6a",
+      "condition": "reader_only",
+      "id": "0132-hermes-reader_only",
+      "scenario_id": "29fff6aa01c2fa0610",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-5340487050b70c4d17",
+      "condition": "memory",
+      "id": "0132-hermes-memory",
+      "scenario_id": "29fff6aa01c2fa0610",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-e4ea3ad480c03e6560",
+      "condition": "reader_only",
+      "id": "0133-hermes-reader_only",
+      "scenario_id": "f27556d06c805f3672",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-2ce62a10619cbb9da0",
+      "condition": "memory",
+      "id": "0133-hermes-memory",
+      "scenario_id": "f27556d06c805f3672",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-e4ea3ad480c03e6560",
+      "condition": "reader_only",
+      "id": "0133-openclaw-reader_only",
+      "scenario_id": "f27556d06c805f3672",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-2ce62a10619cbb9da0",
+      "condition": "memory",
+      "id": "0133-openclaw-memory",
+      "scenario_id": "f27556d06c805f3672",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-de74d2f7cfdef6aac3",
+      "condition": "reader_only",
+      "id": "0134-openclaw-reader_only",
+      "scenario_id": "f02d78c4195d636726",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-7cdae80450c90355a6",
+      "condition": "memory",
+      "id": "0134-openclaw-memory",
+      "scenario_id": "f02d78c4195d636726",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-de74d2f7cfdef6aac3",
+      "condition": "reader_only",
+      "id": "0134-hermes-reader_only",
+      "scenario_id": "f02d78c4195d636726",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-7cdae80450c90355a6",
+      "condition": "memory",
+      "id": "0134-hermes-memory",
+      "scenario_id": "f02d78c4195d636726",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-6bfdcea947d2a9cbb3",
+      "condition": "reader_only",
+      "id": "0135-hermes-reader_only",
+      "scenario_id": "018abd6c3a1764b539",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-09c210d8ffa4eaa023",
+      "condition": "memory",
+      "id": "0135-hermes-memory",
+      "scenario_id": "018abd6c3a1764b539",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-6bfdcea947d2a9cbb3",
+      "condition": "reader_only",
+      "id": "0135-openclaw-reader_only",
+      "scenario_id": "018abd6c3a1764b539",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-09c210d8ffa4eaa023",
+      "condition": "memory",
+      "id": "0135-openclaw-memory",
+      "scenario_id": "018abd6c3a1764b539",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-2d6081f433b25fd8a3",
+      "condition": "reader_only",
+      "id": "0136-openclaw-reader_only",
+      "scenario_id": "eb3d35f32fd84a8f87",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-7fb9987cb227115b8d",
+      "condition": "memory",
+      "id": "0136-openclaw-memory",
+      "scenario_id": "eb3d35f32fd84a8f87",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-2d6081f433b25fd8a3",
+      "condition": "reader_only",
+      "id": "0136-hermes-reader_only",
+      "scenario_id": "eb3d35f32fd84a8f87",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-7fb9987cb227115b8d",
+      "condition": "memory",
+      "id": "0136-hermes-memory",
+      "scenario_id": "eb3d35f32fd84a8f87",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-d9cc3274a3c2d4bba4",
+      "condition": "reader_only",
+      "id": "0137-hermes-reader_only",
+      "scenario_id": "e9068040db9eee0905",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-55d4a54ec42201a78f",
+      "condition": "memory",
+      "id": "0137-hermes-memory",
+      "scenario_id": "e9068040db9eee0905",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-d9cc3274a3c2d4bba4",
+      "condition": "reader_only",
+      "id": "0137-openclaw-reader_only",
+      "scenario_id": "e9068040db9eee0905",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-55d4a54ec42201a78f",
+      "condition": "memory",
+      "id": "0137-openclaw-memory",
+      "scenario_id": "e9068040db9eee0905",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-17d57ac729ca90fab3",
+      "condition": "reader_only",
+      "id": "0138-openclaw-reader_only",
+      "scenario_id": "2831f66410630d6b0d",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-91f4ef3469e09a6257",
+      "condition": "memory",
+      "id": "0138-openclaw-memory",
+      "scenario_id": "2831f66410630d6b0d",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-17d57ac729ca90fab3",
+      "condition": "reader_only",
+      "id": "0138-hermes-reader_only",
+      "scenario_id": "2831f66410630d6b0d",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-91f4ef3469e09a6257",
+      "condition": "memory",
+      "id": "0138-hermes-memory",
+      "scenario_id": "2831f66410630d6b0d",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-5fe304c74fbfb2abab",
+      "condition": "reader_only",
+      "id": "0139-hermes-reader_only",
+      "scenario_id": "b26618271f47e3f796",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-933fa5f9c5c952017f",
+      "condition": "memory",
+      "id": "0139-hermes-memory",
+      "scenario_id": "b26618271f47e3f796",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-5fe304c74fbfb2abab",
+      "condition": "reader_only",
+      "id": "0139-openclaw-reader_only",
+      "scenario_id": "b26618271f47e3f796",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-933fa5f9c5c952017f",
+      "condition": "memory",
+      "id": "0139-openclaw-memory",
+      "scenario_id": "b26618271f47e3f796",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-2f972fd8c522b10113",
+      "condition": "reader_only",
+      "id": "0140-openclaw-reader_only",
+      "scenario_id": "dc05947f9af121405c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-e9c6bc3464d9258776",
+      "condition": "memory",
+      "id": "0140-openclaw-memory",
+      "scenario_id": "dc05947f9af121405c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-2f972fd8c522b10113",
+      "condition": "reader_only",
+      "id": "0140-hermes-reader_only",
+      "scenario_id": "dc05947f9af121405c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-e9c6bc3464d9258776",
+      "condition": "memory",
+      "id": "0140-hermes-memory",
+      "scenario_id": "dc05947f9af121405c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-0b4449cdacbbb061e5",
+      "condition": "reader_only",
+      "id": "0141-hermes-reader_only",
+      "scenario_id": "9ac53f6efa4d1fb34c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-fdf8c05fdc7f2e39a6",
+      "condition": "memory",
+      "id": "0141-hermes-memory",
+      "scenario_id": "9ac53f6efa4d1fb34c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-0b4449cdacbbb061e5",
+      "condition": "reader_only",
+      "id": "0141-openclaw-reader_only",
+      "scenario_id": "9ac53f6efa4d1fb34c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-fdf8c05fdc7f2e39a6",
+      "condition": "memory",
+      "id": "0141-openclaw-memory",
+      "scenario_id": "9ac53f6efa4d1fb34c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-05ba1e674587422b3d",
+      "condition": "reader_only",
+      "id": "0142-openclaw-reader_only",
+      "scenario_id": "cbbad2f225955bbd2c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-c7eca3fcccf83ee0fd",
+      "condition": "memory",
+      "id": "0142-openclaw-memory",
+      "scenario_id": "cbbad2f225955bbd2c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-05ba1e674587422b3d",
+      "condition": "reader_only",
+      "id": "0142-hermes-reader_only",
+      "scenario_id": "cbbad2f225955bbd2c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-c7eca3fcccf83ee0fd",
+      "condition": "memory",
+      "id": "0142-hermes-memory",
+      "scenario_id": "cbbad2f225955bbd2c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-3688125a66563e1355",
+      "condition": "reader_only",
+      "id": "0143-hermes-reader_only",
+      "scenario_id": "6ad56de672a6821339",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-ce3386dc0497273576",
+      "condition": "memory",
+      "id": "0143-hermes-memory",
+      "scenario_id": "6ad56de672a6821339",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-3688125a66563e1355",
+      "condition": "reader_only",
+      "id": "0143-openclaw-reader_only",
+      "scenario_id": "6ad56de672a6821339",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-ce3386dc0497273576",
+      "condition": "memory",
+      "id": "0143-openclaw-memory",
+      "scenario_id": "6ad56de672a6821339",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-818394066ebb02f4ae",
+      "condition": "reader_only",
+      "id": "0144-openclaw-reader_only",
+      "scenario_id": "faf32c0ac41d99507b",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-e27059c7623cbc9afe",
+      "condition": "memory",
+      "id": "0144-openclaw-memory",
+      "scenario_id": "faf32c0ac41d99507b",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-818394066ebb02f4ae",
+      "condition": "reader_only",
+      "id": "0144-hermes-reader_only",
+      "scenario_id": "faf32c0ac41d99507b",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-e27059c7623cbc9afe",
+      "condition": "memory",
+      "id": "0144-hermes-memory",
+      "scenario_id": "faf32c0ac41d99507b",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-4060bf722156e5e950",
+      "condition": "reader_only",
+      "id": "0145-hermes-reader_only",
+      "scenario_id": "9c72203f739edce39f",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-db1e3daacf119677ad",
+      "condition": "memory",
+      "id": "0145-hermes-memory",
+      "scenario_id": "9c72203f739edce39f",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-4060bf722156e5e950",
+      "condition": "reader_only",
+      "id": "0145-openclaw-reader_only",
+      "scenario_id": "9c72203f739edce39f",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-db1e3daacf119677ad",
+      "condition": "memory",
+      "id": "0145-openclaw-memory",
+      "scenario_id": "9c72203f739edce39f",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-43b61b84a2f8643b8c",
+      "condition": "reader_only",
+      "id": "0146-openclaw-reader_only",
+      "scenario_id": "cdaf7f4e7525dbdf5b",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-e6491a9cc6765a7d9f",
+      "condition": "memory",
+      "id": "0146-openclaw-memory",
+      "scenario_id": "cdaf7f4e7525dbdf5b",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-43b61b84a2f8643b8c",
+      "condition": "reader_only",
+      "id": "0146-hermes-reader_only",
+      "scenario_id": "cdaf7f4e7525dbdf5b",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-e6491a9cc6765a7d9f",
+      "condition": "memory",
+      "id": "0146-hermes-memory",
+      "scenario_id": "cdaf7f4e7525dbdf5b",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-c7cd3de0c5243134ce",
+      "condition": "reader_only",
+      "id": "0147-hermes-reader_only",
+      "scenario_id": "1e013f89dfc65b3951",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-f4b4dd93472dc5ce8e",
+      "condition": "memory",
+      "id": "0147-hermes-memory",
+      "scenario_id": "1e013f89dfc65b3951",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-c7cd3de0c5243134ce",
+      "condition": "reader_only",
+      "id": "0147-openclaw-reader_only",
+      "scenario_id": "1e013f89dfc65b3951",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-f4b4dd93472dc5ce8e",
+      "condition": "memory",
+      "id": "0147-openclaw-memory",
+      "scenario_id": "1e013f89dfc65b3951",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-32e4b1550111048d78",
+      "condition": "reader_only",
+      "id": "0148-openclaw-reader_only",
+      "scenario_id": "de60f42b121b2acf7e",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-838835045792cfb139",
+      "condition": "memory",
+      "id": "0148-openclaw-memory",
+      "scenario_id": "de60f42b121b2acf7e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-32e4b1550111048d78",
+      "condition": "reader_only",
+      "id": "0148-hermes-reader_only",
+      "scenario_id": "de60f42b121b2acf7e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-838835045792cfb139",
+      "condition": "memory",
+      "id": "0148-hermes-memory",
+      "scenario_id": "de60f42b121b2acf7e",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-3f1d25f92e6fba617c",
+      "condition": "reader_only",
+      "id": "0149-hermes-reader_only",
+      "scenario_id": "28269b7ecff74835d8",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-56b50c1cb59f17012d",
+      "condition": "memory",
+      "id": "0149-hermes-memory",
+      "scenario_id": "28269b7ecff74835d8",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-3f1d25f92e6fba617c",
+      "condition": "reader_only",
+      "id": "0149-openclaw-reader_only",
+      "scenario_id": "28269b7ecff74835d8",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-56b50c1cb59f17012d",
+      "condition": "memory",
+      "id": "0149-openclaw-memory",
+      "scenario_id": "28269b7ecff74835d8",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-8e8fa4e5c5fabeaf25",
+      "condition": "reader_only",
+      "id": "0150-openclaw-reader_only",
+      "scenario_id": "bbb30b245a04dfad3a",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-a165e1e1c02a037a45",
+      "condition": "memory",
+      "id": "0150-openclaw-memory",
+      "scenario_id": "bbb30b245a04dfad3a",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-8e8fa4e5c5fabeaf25",
+      "condition": "reader_only",
+      "id": "0150-hermes-reader_only",
+      "scenario_id": "bbb30b245a04dfad3a",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-a165e1e1c02a037a45",
+      "condition": "memory",
+      "id": "0150-hermes-memory",
+      "scenario_id": "bbb30b245a04dfad3a",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-e16aab686f4c245bab",
+      "condition": "reader_only",
+      "id": "0151-hermes-reader_only",
+      "scenario_id": "041ea9326e26c7452d",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-d9f9ca0029b8f3480f",
+      "condition": "memory",
+      "id": "0151-hermes-memory",
+      "scenario_id": "041ea9326e26c7452d",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-e16aab686f4c245bab",
+      "condition": "reader_only",
+      "id": "0151-openclaw-reader_only",
+      "scenario_id": "041ea9326e26c7452d",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-d9f9ca0029b8f3480f",
+      "condition": "memory",
+      "id": "0151-openclaw-memory",
+      "scenario_id": "041ea9326e26c7452d",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-4e11b3f166efcad1cc",
+      "condition": "reader_only",
+      "id": "0152-openclaw-reader_only",
+      "scenario_id": "bceffc0fab72afbac3",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-b31597acaa2182c22b",
+      "condition": "memory",
+      "id": "0152-openclaw-memory",
+      "scenario_id": "bceffc0fab72afbac3",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-4e11b3f166efcad1cc",
+      "condition": "reader_only",
+      "id": "0152-hermes-reader_only",
+      "scenario_id": "bceffc0fab72afbac3",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-b31597acaa2182c22b",
+      "condition": "memory",
+      "id": "0152-hermes-memory",
+      "scenario_id": "bceffc0fab72afbac3",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-e294c5b44f61e07b12",
+      "condition": "reader_only",
+      "id": "0153-hermes-reader_only",
+      "scenario_id": "18bc17b5aa1b4f70a6",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-d440d3c7b9bebeaab8",
+      "condition": "memory",
+      "id": "0153-hermes-memory",
+      "scenario_id": "18bc17b5aa1b4f70a6",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-e294c5b44f61e07b12",
+      "condition": "reader_only",
+      "id": "0153-openclaw-reader_only",
+      "scenario_id": "18bc17b5aa1b4f70a6",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-d440d3c7b9bebeaab8",
+      "condition": "memory",
+      "id": "0153-openclaw-memory",
+      "scenario_id": "18bc17b5aa1b4f70a6",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-952f56e5b704f025bb",
+      "condition": "reader_only",
+      "id": "0154-openclaw-reader_only",
+      "scenario_id": "b29e5317284b9806d5",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-27aeb7fc1976eb506e",
+      "condition": "memory",
+      "id": "0154-openclaw-memory",
+      "scenario_id": "b29e5317284b9806d5",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-952f56e5b704f025bb",
+      "condition": "reader_only",
+      "id": "0154-hermes-reader_only",
+      "scenario_id": "b29e5317284b9806d5",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-27aeb7fc1976eb506e",
+      "condition": "memory",
+      "id": "0154-hermes-memory",
+      "scenario_id": "b29e5317284b9806d5",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-7e855c20b094e5edb4",
+      "condition": "reader_only",
+      "id": "0155-hermes-reader_only",
+      "scenario_id": "a79a01ac7050947721",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-0d7f64ffe7f900f369",
+      "condition": "memory",
+      "id": "0155-hermes-memory",
+      "scenario_id": "a79a01ac7050947721",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-7e855c20b094e5edb4",
+      "condition": "reader_only",
+      "id": "0155-openclaw-reader_only",
+      "scenario_id": "a79a01ac7050947721",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-0d7f64ffe7f900f369",
+      "condition": "memory",
+      "id": "0155-openclaw-memory",
+      "scenario_id": "a79a01ac7050947721",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-4db454401fa9346ff1",
+      "condition": "reader_only",
+      "id": "0156-openclaw-reader_only",
+      "scenario_id": "69afbff2314582526c",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-db54b7b916d7018b54",
+      "condition": "memory",
+      "id": "0156-openclaw-memory",
+      "scenario_id": "69afbff2314582526c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-4db454401fa9346ff1",
+      "condition": "reader_only",
+      "id": "0156-hermes-reader_only",
+      "scenario_id": "69afbff2314582526c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-db54b7b916d7018b54",
+      "condition": "memory",
+      "id": "0156-hermes-memory",
+      "scenario_id": "69afbff2314582526c",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-d8598aba65fa419b4a",
+      "condition": "reader_only",
+      "id": "0157-hermes-reader_only",
+      "scenario_id": "06c883013c1f75cc8d",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-98477b1306736d313e",
+      "condition": "memory",
+      "id": "0157-hermes-memory",
+      "scenario_id": "06c883013c1f75cc8d",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-d8598aba65fa419b4a",
+      "condition": "reader_only",
+      "id": "0157-openclaw-reader_only",
+      "scenario_id": "06c883013c1f75cc8d",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-98477b1306736d313e",
+      "condition": "memory",
+      "id": "0157-openclaw-memory",
+      "scenario_id": "06c883013c1f75cc8d",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-bb3cdc2852b7c5ee9a",
+      "condition": "reader_only",
+      "id": "0158-openclaw-reader_only",
+      "scenario_id": "c9cd5ceb823bc99f74",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-1558c19eb7dc20015f",
+      "condition": "memory",
+      "id": "0158-openclaw-memory",
+      "scenario_id": "c9cd5ceb823bc99f74",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-bb3cdc2852b7c5ee9a",
+      "condition": "reader_only",
+      "id": "0158-hermes-reader_only",
+      "scenario_id": "c9cd5ceb823bc99f74",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-1558c19eb7dc20015f",
+      "condition": "memory",
+      "id": "0158-hermes-memory",
+      "scenario_id": "c9cd5ceb823bc99f74",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "reader-stress-cddbc81a6c11c93b6e",
+      "condition": "reader_only",
+      "id": "0159-hermes-reader_only",
+      "scenario_id": "9db88510c5499f8e08",
+      "trial": 0
+    },
+    {
+      "agent": "hermes",
+      "case_id": "stress-88f7d330e2254ebc1e",
+      "condition": "memory",
+      "id": "0159-hermes-memory",
+      "scenario_id": "9db88510c5499f8e08",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "reader-stress-cddbc81a6c11c93b6e",
+      "condition": "reader_only",
+      "id": "0159-openclaw-reader_only",
+      "scenario_id": "9db88510c5499f8e08",
+      "trial": 0
+    },
+    {
+      "agent": "openclaw",
+      "case_id": "stress-88f7d330e2254ebc1e",
+      "condition": "memory",
+      "id": "0159-openclaw-memory",
+      "scenario_id": "9db88510c5499f8e08",
+      "trial": 0
+    }
+  ],
+  "source_sha256": {
+    "configs/command.example.json": "d8a2bb56f9fbda585cf53de84a0b024a8ec8784b8a069328b21105e8f0996d1b",
+    "configs/deepseek-live.example.json": "f2ea73dc458c1caca4557b3a123e28ac2a4e598669ff28aaf2e5723fe203a38c",
+    "configs/deepseek-research-v31.example.json": "c6594374fe10dc23f1f2dd47f6e9a0f7f592e792e29c357b037846da15c45614",
+    "configs/native-agents.example.json": "5c9c2c27deeb23e8ed8a63e1b4d7534acfa28f594ff2e0917cbaa2b0d0af24e6",
+    "experiments/math_memory/__init__.py": "cd8fdff2b8ccce2f6392aaf0dd87b5d48919663cc1f1a3e05cd8bb12b14ff37a",
+    "experiments/math_memory/math_core.py": "861d535280760efa6503ceb5119f3596fdeccee85c46610a006f271df0e2ff6c",
+    "experiments/math_memory/memory_only.py": "132d4c8ff15332786e3a428982499b48839e014fd036205c5be2c864434542b3",
+    "experiments/math_memory/memory_v31.py": "2dabb91e56112cad8eb0933a24dbe4ca20cd8f2791f330385e2b17ea00ab059e",
+    "experiments/math_memory/native_pilot.py": "587399d53b55c99a6b76de352aecfddce9bacdb8af7e80a4dfe84f9cded866a4",
+    "experiments/math_memory/prototype.py": "b7a6a642a6a895599e22646c4edbc7ff52234b3462c95c1339e9e5d756afcdd4",
+    "experiments/math_memory/record_pilot.py": "2fff29dccceef4e6d3c39c3c57ff6a8c6da0ec4371976f29f3edaa363011600e",
+    "experiments/math_memory/reference_health_adapter.py": "969649c38766cf800dad4bf91042d239dd9a38a083fd4969bad3da6835c89863",
+    "experiments/math_memory/revised_pilot.py": "3d463d916890374650157191b97ea44b8a8e474efce3d54c52ce4a8859048382",
+    "experiments/math_memory/runner-v3-before.py": "cdbc291890d02713bda794a7640616df83660b8682f7c86fef26186bc740e634",
+    "experiments/math_memory/transport-v3-before.py": "ef01bd400639a3a536a791c4895a6c2f048e78acb3a6c2904164dcc757ed7cb6",
+    "experiments/math_memory/transport-v3-fixed.py": "adb3cfb6c1d8c5e5ee59127a65e7b8203a05df474baa1c2980e3f5963fef5db1",
+    "experiments/memory_stress/__init__.py": "99c402c38c8122d52aca32dbf38af40cd7aa34a9ad7895366241b8210cc9b11c",
+    "experiments/memory_stress/__main__.py": "e2e4f09736eb71fc60ba53b244c928f2481c88c4c0731cdc92f8a6d23efdbc9e",
+    "experiments/memory_stress/calibrate_stress.py": "322c356eeab06c3a88da29f3fdf3a0193904d88f3da0beea8cda784a5a8b9961",
+    "experiments/memory_stress/oracle.py": "930de57afb80b82f9acfe3532d9f3bba6e9114c326ab5c49bd04399a390f5c14",
+    "experiments/memory_stress/reference_adapter.py": "19286a57fc3abd4b0567ee3fccf624195af023bf824f1a7da0e296d5ab59c840",
+    "experiments/memory_stress/render_history.py": "f14a45f27e17d9dfb33fe3f5562ac5440d579a99e691d5380bd2d1e25339a741",
+    "experiments/memory_stress/suite.py": "3686cb99436c776def0c6870a945b0f22414478840722facc314c83f16947556",
+    "experiments/memory_stress/v2/__init__.py": "fd82505a55f5d7ce53bd87eafbb200c5ee7a225782aab90a20c02dd9ce1bd871",
+    "experiments/memory_stress/v2/__main__.py": "e2e4f09736eb71fc60ba53b244c928f2481c88c4c0731cdc92f8a6d23efdbc9e",
+    "experiments/memory_stress/v2/calibrate_stress.py": "af33379a3c981442eda5353e96d0c8126f79e5609051e31f09a01b70c2a2d8c5",
+    "experiments/memory_stress/v2/chain.py": "4c26ef39fa58111b98b23e6007bc32bdda4f10137b3ce1f33735b3d01dbc5e22",
+    "experiments/memory_stress/v2/environment.py": "e9ffbf958fb60cec9480dd6a7b54cb6a84c7ad8a08a9bc33bb30a4fdfb854925",
+    "experiments/memory_stress/v2/oracle.py": "2343a2a331512d7fcc0a10d99cc117e7c88edf8bb9094789457a8edaf756f4ca",
+    "experiments/memory_stress/v2/reference_adapter.py": "5def2b22df5199a2cb60a40478955688d745e23a2a6c5da34b257730f462fb4b",
+    "experiments/memory_stress/v2/render_history.py": "0240e4818ff5517e76d9e17ea37a949336eb46584aa4b8158be3f3bccbc634d6",
+    "experiments/memory_stress/v2/suite.py": "2b8708a7861d03d70ef50c2464eb559f8af7b2f3465ba8291023ab23f3b0bb16",
+    "experiments/memory_stress/v2/viewer.html": "c0c7254b90df9c8f05ef7a29d0739b9b368f42a5e25c4851e54f6fc2f7d42a36",
+    "experiments/memory_stress/v2/world_generator.py": "6ee73a14035463134ece6f931ebdef01d6204f8f6d97f3dc2f82c7764a0fdcd5",
+    "experiments/memory_stress/viewer.html": "9d792cfc61522439a665ac6429e3dc78d1dbe537921b1a456128b4ce1f359ef7",
+    "experiments/memory_stress/world_generator.py": "fd733f8a5d12b3b9fb0ba319a3fe37570b23f15d59371a1b331509869ce28cad",
+    "kylin_memory_bench/__init__.py": "84458025a1a830016ac1c034a5d63a57b625f0113a8207ef82863d5e925538da",
+    "kylin_memory_bench/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "kylin_memory_bench/adapters.py": "8aefdb0e48e92be367280b448d343530707570287a4bdb5060230fe673399c0c",
+    "kylin_memory_bench/baseline.py": "c9d449ad4c0f6c764b3403000aed25546c93c4fe17062d559c80354c1d269d95",
+    "kylin_memory_bench/challenges.py": "dc23d8514332184be8a49913cb6c06efe998130be6d88cf5a91152d70910d796",
+    "kylin_memory_bench/cli.py": "c26b86cf3a3a4d68d4b14f8e8f134a7d8ddc6a023388334ad9991346035fde98",
+    "kylin_memory_bench/common.py": "bdb2be3af7971b9893e089024ebcf8e9862d81e56a964dcaf1de2cd929f7031a",
+    "kylin_memory_bench/dataset.py": "b9cec11a275f1e447c1b32fa9c0d0fd3ce47045ac48c7a10f7f69aeab1489a9d",
+    "kylin_memory_bench/evidence_view.py": "8afe599b8ff870a41395501cca4928b6fe7a9a321ec25d187bd5acc4cecbbe26",
+    "kylin_memory_bench/generate.py": "40b2e1d04fe0787506b6df394e0f780ea3f2caf4e93ebce2998cca518da6df0c",
+    "kylin_memory_bench/native_trace.py": "a1cf28f1a8b837b7e2655322221af74d0d4784583d29237b3a61e7c01f1f7061",
+    "kylin_memory_bench/report.py": "96a9b10f238043be066cb89b0327bba678d346ff0c34e68d3e75268fc98318c1",
+    "kylin_memory_bench/runner.py": "a2195a0dffac7b5adf488d5a2c9bd339a2810e7120717c3b5aa45af3cc3cbfc8",
+    "kylin_memory_bench/scoring.py": "44ca6bd401b37b5d6b3ce3ccbac8f953df7461970af44d813d8b250585d4ca78",
+    "scripts/analyze_difficulty.py": "5a6a3e5e0ec9180612f149bb9ce297303fccfae96dd7af589ae5f5f3d4ac625f",
+    "scripts/build_dataset_card.py": "d36a4535ac9c84eb1e497b76b05f29198b4a518a2f139182d99ab5f44a2e05d2",
+    "scripts/build_delivery.py": "7c4432e65fd965220b6f018d358eeb8a4caeae779f16a4a04219d071d3cb76af",
+    "scripts/build_presentation.py": "02654354253a3946e2d042a27a0f555ac01b96b590d3233c377c10c428314104",
+    "scripts/build_release.py": "06d7f0af8575d0a0a1004842b01ab1beaf8bf2ff1c3af53590581f1db3398086",
+    "scripts/build_technical_report.py": "91097406fabe9fad9817697dc46306095c2e849afa2df640b01874c8740db9c2",
+    "scripts/calibrate_revision.py": "1578372122b981001caccc2d52dea982a7eb10bd1c636dc2c84e161b3a99bac4",
+    "scripts/calibrate_scoring.py": "bab75b8423f1647d4499bf6aa2530896d558f2c8fc06c6103fcfb195cb2ea233",
+    "scripts/chatgpt_plan.py": "252639ac9d19da40ec968719621eb5b9581e071a28c0704a22b58e800a572052",
+    "scripts/chatgpt_plan_bridge.py": "0a6dd4503a9d9546091aefc770421de1006e773d395e0fd93cac0bc7c59e373f",
+    "scripts/check_plan_memory.py": "04bdb6a09ae6a7f4294c64fd1987365c5e77dfe659b94f025cc483cafdba24e6",
+    "scripts/collect_environment.py": "331a7eb840139895c8637c1475edfe043394d56447a51252f1c10f597af58860",
+    "scripts/compare_scoring_versions.py": "f44771625d3d56c0432981f0625cae0a764a68bd23fadc79791e4052b2b1dfff",
+    "scripts/desktop_session.sh": "47e23c125fd268e1a9f74aabafde81340a163e3b9a733343f0935cde330159f3",
+    "scripts/export_run.py": "c8e83a5a12d5d095fd2248d5c0099530ee0048d97c3511bc6a340151cd22c073",
+    "scripts/generate_difficulty.py": "c7e542c85dc7e05f8b8946476926dd23ec613c8236d4c37039a420c9fe180775",
+    "scripts/isolated_native.sh": "60ab733d397af989c7f327bc073cccfe1aec86e544096494bbf42cd87680434c",
+    "scripts/isolated_native_plan.sh": "6b8f328110fee6e517b2650be3582c84fa33bd1e5058addc25b92a33de5011b9",
+    "scripts/isolated_native_v31.sh": "1470ec782ff2765d5a0926de35ee76e778a282f447019ce498b1b3161b893a63",
+    "scripts/live_deepseek.py": "e4f0914cfa0bc6e8e3ac7d0e0c21e507cdd2d879d1700e7f7bf63b66978b51fb",
+    "scripts/local_embeddings.py": "61f1c0665e2517d697eee81f779b5925d01085aa929c87eb4dba9394c4ba3427",
+    "scripts/open_report.sh": "228f1c7f5fba9e1415189411f7f75d4ee3c14bfcf87c86d2b678afde8848d0ca",
+    "scripts/plan_native_config.py": "1226c4f2a0ed9ffc1a3b07653f7e9e4c11e7db6d296b2484a5c27bdfa8f2516f",
+    "scripts/plan_reader_replay.py": "e5361b4a7e442b295033d6b3c9796284bde26727113805286d2fd5164d806448",
+    "scripts/preflight_record_pilot.py": "378bdd32636009805086eb05c6c7620a19e82bbbf66e22f661d9e5a94e66f358",
+    "scripts/prepare_memory_validation.py": "de4eb49577d4127a14be18e50df332e34bb807400f476ecf1e38c694fd42a7b1",
+    "scripts/report_math_pilot.py": "57cce8611aa21fcb0cd257845bbc4dad2ce0970b6f674651b2d32ebb717f1ae2",
+    "scripts/report_record_pilot.py": "008384028ddd7ca25fbcfb9eb7a1f27bc36bf8323424e1a479d7ace8089ac2dd",
+    "scripts/reproduce.sh": "31aab0e211c7d3d186226587eb2d8a5509bf990e2704f247f41269cd05e16fd0",
+    "scripts/review_challenge.py": "4544e63ddf72b37e3dcbbc4c8efaa89f9d975d5535e15361894963055de5669f",
+    "scripts/run_plan_full.py": "32ad4599ef75962b0c955eeab32141815bf36c57e8ec0ea46530b368dee644f2",
+    "scripts/run_plan_health.py": "2e419076dcda8997bd68e1abe9bf2ff47e8ea82c69eb5684b3d6421e6d928ddb",
+    "scripts/run_plan_reader.py": "09263c8bcfc2b136b6dc7a05860aabb17945a9cee683d06b0f4548b506fdde83",
+    "scripts/run_record_pilot.py": "faa9cdc4488fa9005f1d60b1593fb52df82ce4698eac0f17d6a44d7edba07f3e",
+    "scripts/runtime_bridge.sh": "8534284369073ffe6a3506b451297d1832db185d755c98732388d634f1567c99",
+    "scripts/snapshot_experiment.py": "6bd56a1751385fdf046b34edffbd47f42363b49002eda13e2b6e35dc72f92992",
+    "scripts/start_desktop.sh": "dff2531a104e85d54c7c295bff048cb4c43fb88f8e7c0c3d9e1c5ceaf89b4d7f",
+    "scripts/summarize_experiments.py": "40c2557a47d8d612c6905fabafb04e868801ba133d3e104c36dbddaefb25ff6c",
+    "scripts/validate_foundation.py": "b15a64aa83af757c34a664288045d161aa2ed112e9364fd00466ad4968a61b10",
+    "scripts/validate_memory_offline.py": "84477b0360323be880a5db280930f1dfae6471640188bba21bffee43fdb0fb2c",
+    "scripts/validate_package.sh": "87986987c6a5f99a4c4e11f1ecad482a9f20b135f002deb6a709702702ba8b87",
+    "scripts/verify_openkylin.sh": "d9b64bfd33572e7852c6e01d8cad70e950954d31a6290a54d75053bd4585d0af"
+  },
+  "amendments": [
+    {
+      "changed_sources": [
+        "scripts/run_plan_full.py",
+        "scripts/plan_reader_replay.py",
+        "scripts/check_plan_memory.py"
+      ],
+      "handover": "Legacy STOP retained. Two running memory cases finish untouched. New controller respects four active case leases including legacy cases.",
+      "id": "reader-replay-1",
+      "model_calls_repeated": 0,
+      "previous_protocol_sha256": "8522c0b7c8d2bba05711a4c38dfefd2f69a98eb506c722026d512470d7701c01",
+      "reason": "Core memory dataset verifier requires two sessions; new one-turn reader requires its independently scoped verifier.",
+      "repaired_controller_statuses": [
+        {
+          "task": "0000-openclaw-reader_only",
+          "verification": {
+            "cases": 1,
+            "events": 1,
+            "note": "One-turn reader control, not a core multi-session memory dataset.",
+            "protocol": "luna-native-reader-only-1",
+            "run_id": "33c0e312-410e-4a98-8e0c-01eee95bad44",
+            "status": "completed",
+            "valid": true
+          }
+        },
+        {
+          "task": "0000-hermes-reader_only",
+          "verification": {
+            "cases": 1,
+            "events": 1,
+            "note": "One-turn reader control, not a core multi-session memory dataset.",
+            "protocol": "luna-native-reader-only-1",
+            "run_id": "87ac07ad-e30c-4cce-9585-f76dfc0f4c4e",
+            "status": "completed",
+            "valid": true
+          }
+        }
+      ],
+      "time": 1791890456.9126282,
+      "unchanged": [
+        "tasks",
+        "prompts",
+        "gold",
+        "models",
+        "native_configs",
+        "grading",
+        "case_execution_results"
+      ]
+    }
+  ],
+  "status": "running_not_final_results"
+}

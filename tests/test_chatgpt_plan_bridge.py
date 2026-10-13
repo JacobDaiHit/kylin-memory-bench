@@ -63,3 +63,13 @@ class BridgeTests(unittest.TestCase):
         translated,_=translate(body,TARGET,{'c1':[item]})
         self.assertEqual(translated['input'][0],item)
         self.assertEqual(translate(body,TARGET,{'other':[item]})[0]['input'][0]['type'],'function_call')
+
+    def test_explicit_unlimited_mode_keeps_all_attempts(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            bridge=Bridge(Path(tmp)/'run',capture=True,limit=None,deadline_seconds=None)
+            for i in range(26):
+                with self.assertRaisesRegex(ValueError,'capture_only'):
+                    bridge.invoke({'model':TARGET,'messages':[]})
+            self.assertEqual(bridge.count,26)
+            self.assertEqual(len(list(bridge.output.glob('*.json'))),26)
+            self.assertIsNone(bridge.deadline)

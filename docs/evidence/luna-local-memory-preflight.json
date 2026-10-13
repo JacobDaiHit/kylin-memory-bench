@@ -1,0 +1,57 @@
+{
+  "embedding_model": "BAAI/bge-small-zh-v1.5",
+  "provider": "openai-compatible",
+  "embedding_probe_ok": true,
+  "index_state": "complete",
+  "semantic_available": true,
+  "vector_dimensions": 512,
+  "search_results": [
+    {
+      "path": "MEMORY.md",
+      "score": 0.4977370887994766,
+      "vectorScore": 0.7110529839992523,
+      "textScore": 0,
+      "snippet": "星桥项目客户支持联系人是周岚，服务电话分机是 317。\n"
+    }
+  ],
+  "health_requests": 15,
+  "health": [
+    {
+      "agent": "openclaw",
+      "stage": "learn",
+      "status": "completed",
+      "exact_content_match": null
+    },
+    {
+      "agent": "openclaw",
+      "stage": "recall",
+      "status": "completed",
+      "exact_content_match": true
+    },
+    {
+      "agent": "openclaw",
+      "stage": "isolation",
+      "status": "completed",
+      "exact_content_match": true
+    },
+    {
+      "agent": "hermes",
+      "stage": "learn",
+      "status": "completed",
+      "exact_content_match": null
+    },
+    {
+      "agent": "hermes",
+      "stage": "recall",
+      "status": "completed",
+      "exact_content_match": true
+    },
+    {
+      "agent": "hermes",
+      "stage": "isolation",
+      "status": "completed",
+      "exact_content_match": true
+    }
+  ],
+  "scope": "Native local embedding readiness and basic persistence/isolation only; not Stress performance."
+}
