@@ -1,0 +1,57 @@
+{
+  "cases_per_agent": 6,
+  "elapsed_seconds": 831.5738389492035,
+  "execution_errors": 0,
+  "groups": [
+    {
+      "agent": "openclaw",
+      "cases": 6,
+      "events": 28,
+      "note": "Checks integrity and scoring consistency; hashes are not a signature or proof of honest adapter behavior.",
+      "overall": {
+        "coverage": 0.875,
+        "lower_bound": 0.527778,
+        "score": 0.638889,
+        "upper_bound": 0.652778
+      },
+      "run_id": "ea81204e-e505-4849-b138-1f85b12b1832",
+      "status": "completed",
+      "statuses": {
+        "fail": 6,
+        "pass": 9,
+        "unknown": 3
+      },
+      "valid": true
+    },
+    {
+      "agent": "hermes",
+      "cases": 6,
+      "events": 28,
+      "note": "Checks integrity and scoring consistency; hashes are not a signature or proof of honest adapter behavior.",
+      "overall": {
+        "coverage": 0.875,
+        "lower_bound": 0.791667,
+        "score": 0.916667,
+        "upper_bound": 0.916667
+      },
+      "run_id": "586ddf44-a835-4265-93dd-de760a38c45a",
+      "status": "completed",
+      "statuses": {
+        "fail": 1,
+        "pass": 14,
+        "unknown": 3
+      },
+      "valid": true
+    }
+  ],
+  "observed_events": 56,
+  "planned_events": 56,
+  "protocol": "luna-six-dimension-video-1",
+  "repeats": 1,
+  "request_statuses": {
+    "completed": 145,
+    "failed_or_interrupted": 1
+  },
+  "scope": "Operational demonstration on Ubuntu WSL, displayed in openKylin UKUI; no ranking, no replacement of historical results.",
+  "source_archive_sha256": "c755e4e9cfa0827dd9a0be3d5f45a41595805828da36ec7782a9b817bf3e9621"
+}

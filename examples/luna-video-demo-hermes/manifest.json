@@ -1,0 +1,83 @@
+{
+  "agents": [
+    {
+      "dependency_home": "/home/maedaily/.local/share/kmb-live/hermes-home",
+      "env_allow": [
+        "KMB_VIDEO_KEY_HERMES"
+      ],
+      "executable": "/home/maedaily/.local/share/kmb-live/runs/kmb-plan-video-20261014-01/bin/hermes-isolated",
+      "id": "hermes",
+      "kind": "hermes",
+      "label": "Hermes 4b8a437 / Luna / ChatGPT plan",
+      "memory_complete": false,
+      "model": "gpt-5.6-luna",
+      "native_config": {
+        "agent": {
+          "max_turns": 6,
+          "reasoning_effort": "none"
+        },
+        "auxiliary": {
+          "title_generation": {
+            "enabled": false
+          }
+        },
+        "curator": {
+          "enabled": false
+        },
+        "memory": {
+          "memory_enabled": true,
+          "user_profile_enabled": true
+        },
+        "model": {
+          "base_url": "http://127.0.0.1:45719/v1",
+          "default": "gpt-5.6-luna",
+          "provider": "kmb-plan"
+        },
+        "platform_toolsets": {
+          "cli": [
+            "file",
+            "memory"
+          ]
+        },
+        "providers": {
+          "kmb-plan": {
+            "base_url": "http://127.0.0.1:45719/v1",
+            "key_env": "KMB_VIDEO_KEY_HERMES"
+          }
+        }
+      },
+      "per_turn_proxy_limits": false,
+      "provider": "kmb-plan",
+      "state_isolation": "mount_namespace",
+      "timeout": 180
+    }
+  ],
+  "clock": "simulated integer days; no real-time ageing claim",
+  "config_sha256": "5caef203f624a37dcbaed7f51432e0a0b4b4ad46ed977b9b0496d86deb45748d",
+  "dataset_sha256": "95763e8b6c485ba313162038d67f3ad9b84256cf31abea926dd14dbb7c6b19c1",
+  "environment": {
+    "execution_context": "wsl2",
+    "is_openkylin": false,
+    "machine": "x86_64",
+    "os_release": {
+      "ID": "ubuntu",
+      "PRETTY_NAME": "Ubuntu 26.04 LTS",
+      "VERSION_ID": "26.04"
+    },
+    "python": "3.13.13",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "system": "Linux"
+  },
+  "event_count": 28,
+  "evidence_head": "4d3071323dd6b7b2d834136895ca44a0d86e63021f488515cf764489efdd355f",
+  "execution_errors": 0,
+  "finished_at": "2026-10-13T17:10:41.635254+00:00",
+  "implementation_sha256": "217d7cb47847c1db5ad9f9471e041725c92e9bc755e83fe06fcee3505cef8293",
+  "jobs": 1,
+  "repeats": 1,
+  "run_id": "586ddf44-a835-4265-93dd-de760a38c45a",
+  "schema_version": "1.0",
+  "started_at": "2026-10-13T17:05:19.358559+00:00",
+  "status": "completed",
+  "version": "0.2.1"
+}

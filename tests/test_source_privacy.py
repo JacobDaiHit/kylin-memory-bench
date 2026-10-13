@@ -11,7 +11,8 @@ class SourcePrivacyTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory)
             for name in ['configs/.env','configs/private.local.json','experiments/workspaces/one/token.txt',
-                         'experiments/run/.hermes/config.yaml','experiments/demo/gold.json','configs/.env.example']:
+                         'experiments/run/.hermes/config.yaml','experiments/demo/gold.json','configs/.env.example',
+                         'docs/evidence/luna-full-results.json','docs/luna-full-results.md']:
                 path=root/name;path.parent.mkdir(parents=True,exist_ok=True);path.write_text('synthetic')
             with patch.object(build_release,'ROOT',root):
                 names={name for name,_ in build_release.files()}

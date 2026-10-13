@@ -1,0 +1,85 @@
+{
+  "agents": [
+    {
+      "env_allow": [
+        "KMB_VIDEO_KEY_OPENCLAW"
+      ],
+      "executable": "/home/maedaily/.local/share/kmb-live/runs/kmb-plan-video-20261014-01/bin/openclaw-isolated",
+      "id": "openclaw",
+      "kind": "openclaw",
+      "label": "OpenClaw 2026.9.8 / Luna / ChatGPT plan",
+      "memory_complete": false,
+      "memory_globs": [
+        "MEMORY.md",
+        "USER.md",
+        "memory/**/*.md",
+        ".openclaw/tmp/**/*.json"
+      ],
+      "model": "kmb-plan/gpt-5.6-luna",
+      "native_config": {
+        "agents": {
+          "defaults": {
+            "skipBootstrap": true,
+            "thinkingDefault": "off"
+          }
+        },
+        "memory": {
+          "search": {
+            "model": "BAAI/bge-small-zh-v1.5",
+            "provider": "openai-compatible",
+            "remote": {
+              "apiKey": "[REDACTED]",
+              "baseUrl": "http://127.0.0.1:18789/v1"
+            }
+          }
+        },
+        "models": {
+          "mode": "replace",
+          "providers": {
+            "kmb-plan": {
+              "api": "openai-completions",
+              "apiKey": "[REDACTED]",
+              "baseUrl": "http://127.0.0.1:45779/v1",
+              "models": [
+                {
+                  "compat": {
+                    "maxTokensField": "max_tokens",
+                    "supportsDeveloperRole": false,
+                    "supportsUsageInStreaming": true
+                  },
+                  "contextWindow": 1048576,
+                  "id": "gpt-5.6-luna",
+                  "input": [
+                    "text"
+                  ],
+                  "maxTokens": 4096,
+                  "name": "Luna / ChatGPT plan (budget bridge)",
+                  "reasoning": false
+                }
+              ]
+            }
+          }
+        },
+        "tools": {
+          "allow": [
+            "read",
+            "write",
+            "edit",
+            "memory_search",
+            "memory_get"
+          ],
+          "fs": {
+            "workspaceOnly": true
+          }
+        },
+        "update": {
+          "checkOnStart": false
+        }
+      },
+      "per_turn_proxy_limits": false,
+      "state_isolation": "mount_namespace",
+      "timeout": 180
+    }
+  ],
+  "schema_version": "1.0"
+}

@@ -1,0 +1,7 @@
+agent,kind,dimension,score,coverage,lower_bound,upper_bound,cases
+openclaw,openclaw,retention,0.666667,1.0,0.666667,0.666667,1
+openclaw,openclaw,retrieval,1.0,1.0,1.0,1.0,1
+openclaw,openclaw,update,0.666667,0.75,0.5,0.75,1
+openclaw,openclaw,disambiguation,0.5,1.0,0.5,0.5,1
+openclaw,openclaw,boundary,1.0,0.5,0.5,1.0,1
+openclaw,openclaw,reuse,0.0,1.0,0.0,0.0,1

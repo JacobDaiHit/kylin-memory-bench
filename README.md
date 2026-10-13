@@ -2,13 +2,13 @@
 
 面向 openKylin 的智能体长期记忆自动化评测工具。以真实运行证据为评分输入，覆盖长期保持、记忆调用、动态更新、相近区分、边界识别和任务复用六个维度。
 
-**当前正式版本：0.2.0；工作树正在准备 0.2.1。** 交付包含可安装 CLI、36 例标准集、12 例独立挑战集、原生 OpenClaw/Hermes 适配器、确定性评分和离线证据检查器。真实实验在 openKylin 2.0 SP1 / WSL 2 上运行，两款智能体共同使用 DeepSeek Flash，各执行三轮；规则基线与早期 Ubuntu pilot 独立保存。系统身份和运行错误如实记录。
+**当前交付版本：0.2.1，软件交付与录制材料已准备；最终 MP4 待提交者录制。此前正式实验使用 0.2.0，证据保留。** 交付包含可安装 CLI、36 例标准集、12 例独立挑战集、原生 OpenClaw/Hermes 适配器、确定性评分和离线证据检查器。真实实验在 openKylin 2.0 SP1 / WSL 2 上运行，两款智能体共同使用 DeepSeek Flash，各执行三轮；规则基线与早期 Ubuntu pilot 独立保存。系统身份和运行错误如实记录。
 
-项目仓库：https://github.com/JacobDaiHit/kylin-memory-bench 。[技术方案与实测报告 PDF](output/pdf/KylinMemoryBench-technical-report.pdf) 随源码保存。
+项目仓库：https://github.com/JacobDaiHit/kylin-memory-bench 。[技术方案与实测报告 PDF](docs/technical-report.pdf)、[两页项目摘要](docs/project-summary.pdf)、[旁白](docs/narration-script.md) 和 [字幕](docs/narration.zh.srt) 随源码保存。最终包验收见 [提交收尾记录](docs/final-release-validation.md)。
 
-优先打开 [标准集实测报告](examples/openkylin-core/report.html) 与 [挑战集实测报告](examples/openkylin-challenge/reviewed-report.html)。完整交付包中的 START_HERE.md 提供接收入口，技术报告 PDF、固定源码快照与安装包随包附带。最终 3–5 分钟演示视频由提交者按 [录屏脚本](docs/demo-video.md) 录制。
+优先打开 [标准集实测报告](examples/openkylin-core/report.html) 与 [挑战集实测报告](examples/openkylin-challenge/reviewed-report.html)。完整交付包中的 START_HERE.md 提供接收入口，技术报告 PDF、固定源码快照与安装包随包附带。最终 3–5 分钟演示视频由提交者按 [完整录制与提交手册](docs/recording-runbook.md) 录制。
 
-0.2.1 新增材料：[离线导览](docs/presentation/index.html)、[数据说明卡](docs/dataset-card.md)、[修订验证记录](docs/revision-validation.md)、[数学V3.1修复与离线验收](docs/memory-revision-v31.md)。原难度试测未达到预定门槛；V3.1已补评分、状态对照和运行准备，尚未付费实测。最终安装包和视频尚未冻结，现有PDF与安装生命周期记录属于0.2.0。
+0.2.1 新增材料：[离线导览](docs/presentation/index.html)、[数据说明卡](docs/dataset-card.md)、[修订验证记录](docs/revision-validation.md)、[数学V3.1修复与离线验收](docs/memory-revision-v31.md)。原难度试测未达到预定门槛；V3.1已补评分、状态对照和运行准备，尚未付费实测。此前 PDF 和安装记录属于 0.2.0；本轮重建的 0.2.1 报告、安装包与严格验收见 final-release-validation.md，最终视频仍需录制。
 
 新增 [Memory Stress 首期 30 条开发历史](docs/memory-stress-design.md) 与 [离线题目／证据导览](experiments/memory_stress/development-v1/index.html)：多跳关联、同字段更新各 15 条，五种状态／资料条件、反事实配对和三种表达。仅完成离线构造与软件检查，未调用付费模型，也未验证真实难度或产品区分度。
 
@@ -18,7 +18,11 @@
 
 后续补齐 [答案唯一性、真实文件反馈与中断证据修复](docs/memory-stress-audit-fixes.md)：矛盾答案不计内容通过，已完成事件逐条保存；题目与答案不变，原评分来源归档，仍无新增模型实测。
 
-2026-10-14 完成 [Luna 两小时校题与提交判断](docs/submission-readiness-20261014.md)：独立 8 条短历史、两款原生 Agent、一轮及 reader_only 对照，32 个案例全部结束，保留执行错误；新运行不与历史结果或原 128 会话题库混算。237 项离线测试通过，最终观测可离线复算。新校题门槛未通过，集合题存在读者筛选混杂；新增题库保留探索定位，不能据此发布排名。此前“未模型实测”的说明记录各阶段当时状态，新结果以上述独立报告为准。最终 0.2.1 包和视频仍待冻结。
+2026-10-14 完成 [Luna 两小时校题与提交判断](docs/submission-readiness-20261014.md)：独立 8 条短历史、两款原生 Agent、一轮及 reader_only 对照，32 个案例全部结束，保留执行错误；新运行不与历史结果或原 128 会话题库混算。237 项离线测试通过，最终观测可离线复算。新校题门槛未通过，集合题存在读者筛选混杂；新增题库保留探索定位，不能据此发布排名。此前“未模型实测”的说明记录各阶段当时状态，新结果以上述独立报告为准。最终软件交付验收与视频操作见 [提交收尾记录](docs/final-release-validation.md)；视频仍需录制。
+
+2026-10-14 新增 [Luna 六维真实操作演示](docs/luna-video-demo.md)：两款原生 Agent、六维各一例、一轮，共 56 个事件正常结束，保留失分、未知和上游失败。Ubuntu WSL 执行与 openKylin 桌面呈现分别标明；不替代历史三轮、不用于排名。
+
+视频入口另已完成 [真正 openKylin 双 Agent Luna 验收](docs/openkylin-luna-video.md)：框架与两款原生 Agent 均在 openKylin 执行，56/56 事件正常结束，151 次模型请求均完成，运行约 9 分钟。正式视频按录制手册另起新目录，在录像开始后启动评测。
 
 ## 一分钟运行
 

@@ -15,6 +15,7 @@ shift 2
 workspace="$(pwd -P)"
 case "$workspace" in
     /home/maedaily/.local/share/kmb-live/runs/kmb-plan-*/workspaces/*|/home/maedaily/.local/share/kmb-live/runs/kmb-plan-*/shards/*/workspaces/*) ;;
+    /home/kmb/.local/share/kmb-live/runs/kmb-plan-*/workspaces/*) ;;
     *) echo 'Expected a ChatGPT plan workspace.' >&2; exit 2 ;;
 esac
 runtime_base=/home/maedaily/.local/share/kmb-live
@@ -35,6 +36,11 @@ for part in "${runtime_parts[@]}"; do
 done
 # Repository, evaluator files, old workspaces and old temporary files disappear.
 for path in /mnt /tmp /var/tmp; do mount -t tmpfs -o nosuid,nodev tmpfs "$path"; done
+# A recording machine can also have the .deb installed. Its datasets contain
+# evaluator answers, so hiding only the checkout would leave another route.
+for path in /usr/share/kylin-memory-bench /usr/share/doc/kylin-memory-bench; do
+    if [[ -d "$path" ]]; then mount -t tmpfs -o nosuid,nodev tmpfs "$path"; fi
+done
 cd "$workspace"
 drop_privileges=(setpriv --no-new-privs --bounding-set=-all)
 if [[ "${1:-}" == --isolation-probe ]]; then
@@ -45,6 +51,8 @@ result = {
     'workspace_read_write': (workspace/'allowed.txt').read_text() == 'workspace-only',
     'oauth_credentials_hidden': not pathlib.Path('/home/maedaily/.config/kmb-chatgpt-plan/default.json').exists(),
     'repository_hidden': not pathlib.Path('/mnt/d/github/openkylin').exists(),
+    'installed_benchmark_data_hidden': not pathlib.Path('/usr/share/kylin-memory-bench/kylin_memory_bench/data/sample.jsonl').exists(),
+    'installed_evaluator_material_hidden': not pathlib.Path('/usr/share/doc/kylin-memory-bench/experiments').exists(),
     'other_workspaces_hidden': not (workspace.parent/'forbidden'/'secret.txt').exists(),
     'other_run_files_hidden': not (workspace.parents[1]/'scorer-secret.txt').exists(),
     'old_tmp_hidden': not pathlib.Path('/tmp/kmb-v31-private-sentinel.txt').exists(),

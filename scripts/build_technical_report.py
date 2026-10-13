@@ -260,6 +260,23 @@ def main():
         ['可信被测程序','目录隔离和散列不等于安全沙箱','独立容器/虚拟机与只读评测端隔离']],[90,195,200])
     para('本项目优先保证评价可核验、失败不丢失和未知不被美化。扩展自由文本任务时，应保留固定版本的标注、裁判校准与人工抽检，避免引入无法复现的主观打分。')
 
+    page('13B / LUNA CALIBRATION','新增压力题：公开测量边界')
+    para('2026-10-14 的独立 Luna 校题使用 8 条开发历史，四题族各低／高一条；每条 24 次学习，两款原生 Agent 各一轮，另设只给充分原始证据的 reader_only。集合与反馈题候选表为 16 项。它不是原 128 会话协议，不是盲测，也不与历史 DeepSeek 三轮混算。')
+    luna=read_json(ROOT/'docs/evidence/luna-short24-candidates16-results.json')
+    table(['系统','条件','计划','有效观测','内容正确','任务成功'],[[r['agent'],r['condition'],r['planned'],r['observed'],r['content_correct'],r['task_success']] for r in luna['groups']],[80,100,65,75,80,85])
+    para('32 个案例全部结束，31 个正常结束、1 个原生 CLI 异常；416 个计划事件槽保留 1 个执行错误。reader_only 内容正确 11/16，未达到预声明 14/16 门槛。集合题读者也失败，不能把全部失分解释为遗忘。两款 memory 内容正确均为 1/8，单轮小样本不支持排名。')
+    para('多跳与更新题在给齐原始证据时均可答，历史记忆条件有失败，是跨会话保存／检索／状态使用链路的诊断线索，不足以锁定内部算法。8 条序列化题面另由独立实现解算核对；公开最终观测可离线复算内容、格式和文件，但已去除私人工具轨迹，不是完整原生执行链的公开认证。')
+    para('原难度试测只有 1/6 个家族达到预设效应门槛；这一结论保持不变。Memory Stress 160 条是离线题库规模，不是全量真实实验已完成。新增材料作为探索附录，正式主线仍是历史实验、失败定位和独立复核。','small')
+    para('来源：docs/submission-readiness-20261014.md、docs/evidence/luna-short24-candidates16-results.json、scripts/replay_luna_short_pilot.py。Luna 与历史 DeepSeek 模型、运行系统和条件分别标明。','small')
+
+    page('13C / DESKTOP DEMO','真正 openKylin 的双智能体演示验收')
+    video=read_json(ROOT/'docs/evidence/openkylin-luna-video.json')
+    para('评测框架与 OpenClaw／Hermes 原生 CLI 在 openKylin 2.0 SP1 用户空间／WSL 2 执行；Ubuntu 只提供模型转发和无状态嵌入服务，OAuth 不复制。原生运行时只读复用，案例工作区相互隔离。')
+    table(['系统','已观测分','覆盖率','下界','上界'],[[r['agent']]+[pct(r['overall'][k]) for k in ('score','coverage','lower_bound','upper_bound')] for r in video['groups']],[85,100,100,100,100])
+    para('固定六维各一例，两款各一轮：56 个计划事件全部正常结束，执行错误 0；151 次模型请求均完成，返回模型均为 gpt-5.6-luna。实际约 9 分 1 秒。正常结束不等于满分，未知与失分完整保留。')
+    para('这是录制入口的执行验收，不是新排行榜；案例与公开标准集重叠，上游无强制输出额度，不与历史 DeepSeek 三轮或压力校题合并。正式视频必须在录像开始后，从 UKUI 终端启动新目录的评测，保留连续原片和等待耗时。保存结果回放不能冒充完整真实运行录屏。')
+    para('来源：examples/openkylin-luna-video/；docs/openkylin-luna-video.md；完整操作和中文旁白／SRT 见 docs/recording-runbook.md。运行编号 '+video['run_id'],'small')
+
     page('14 / REFERENCES','参考依据与交付索引')
     refs=[
         ('赛题计划书','项目根目录 ai_open_kylin_open_kylin_benchmark_XaCQyZepC8.pdf，3 页。'),

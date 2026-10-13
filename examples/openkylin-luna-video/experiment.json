@@ -1,0 +1,37 @@
+{
+  "cases": 6,
+  "dataset_sha256": "95763e8b6c485ba313162038d67f3ad9b84256cf31abea926dd14dbb7c6b19c1",
+  "environment": {
+    "execution_context": "wsl2",
+    "is_openkylin": true,
+    "machine": "x86_64",
+    "os_release": {
+      "ID": "openkylin",
+      "PRETTY_NAME": "openKylin 2.0 SP1",
+      "VERSION_ID": "2.0"
+    },
+    "python": "3.12.2",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "system": "Linux"
+  },
+  "events": 56,
+  "execution_errors": 0,
+  "implementation_sha256": "217d7cb47847c1db5ad9f9471e041725c92e9bc755e83fe06fcee3505cef8293",
+  "model": "gpt-5.6-luna",
+  "native_versions": {
+    "hermes_commit": "4b8a43719b2a259cea88a72f9f13a2b6962e7ac3",
+    "openclaw": "2026.9.8 (fc23bc8)"
+  },
+  "parameters": {
+    "reasoning_effort": "none",
+    "sampling_parameters_enforced": false,
+    "server_output_cap": null
+  },
+  "presentation_note": "HTML/SVG regenerated with delivery source; original evidence and scores unchanged.",
+  "repeats": 1,
+  "retry_policy": "No selective rerun or replacement of failed cases.",
+  "run_id": "23d1cec0-e386-412c-a081-4f52b53097c4",
+  "scope": "Single-round operational demonstration; not merged with historical statistics.",
+  "scores_origin": "original",
+  "status": "completed"
+}

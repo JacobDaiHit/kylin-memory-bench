@@ -15,7 +15,7 @@ from kylin_memory_bench import __version__
 from kylin_memory_bench.common import digest, read_json
 from kylin_memory_bench.runner import verify_run
 
-START = '# Kylin Memory Bench — 提交材料入口\n\n版本：@@VERSION@@。材料日期：2026-10-03。\n\n本包包含评测方案、48 个合成任务、可安装工具、原生双智能体三轮实验、可重放证据、离线报告与固定源码快照。真实系统为 openKylin 2.0 SP1 / WSL 2；被测对象为固定版本 OpenClaw 与 Hermes，共用 DeepSeek Flash。执行错误和不可观测项保留在原始结果中。\n\n**最终 3–5 分钟演示视频由提交者录制。** 本机桌面和录屏脚本已经准备，见 source/docs/demo-video.md。本包没有把截图或文字说明替代为视频。\n\n## 接收方先做这三步\n\n1. 打开 Technical-Report.pdf，了解方案、数据设计、完整结果、局限和复现方式。\n2. 打开 source/examples/openkylin-core/report.html 和 source/examples/openkylin-challenge/reviewed-report.html；从评分项进入逐事件证据检查器。页面可离线使用。\n3. 用 Python 3.9+ 执行 `python3 verify-delivery.py`。它校验所有交付文件 SHA256，并独立重放四套证据的评分；不调用模型、不收费。\n\nWindows 本机可使用 `C:\\Python313\\python.exe verify-delivery.py`。普通接收者换成自己满足版本要求的 Python 即可。\n\n## 运行工具\n\n- 源码：进入 source 后执行 `python3 -m kylin_memory_bench demo --output runs/new-demo`。\n- Linux：`sh run-demo.sh`；Windows：`powershell -File run-demo.ps1 -Python <Python完整路径>`。\n- openKylin：`sudo apt install ./packages/kylin-memory-bench_@@VERSION@@_all.deb`，然后 `kmb demo --output "$HOME/kmb-demo"`。\n- wheel：`python3 -m pip install --no-index --no-deps packages/kylin_memory_bench-@@VERSION@@-py3-none-any.whl`。\n\n核心评测和证据复核只使用 Python 标准库。真实新实验需要固定原生 CLI、模型服务和部署者自己的凭据；本包不附带私人密钥或运行时二进制。OpenClaw 的压缩原生轨迹另使用系统 libzstd；不可用时相应证据为 unknown，不影响离线评分复核。\n\n## 四套结果的含义\n\n| 目录 | 用途与范围 |\n|---|---|\n| source/examples/openkylin-core | 最终标准集：36 案例，两款真实智能体，各三轮 |\n| source/examples/openkylin-challenge | 最终独立挑战集：12 案例，两款真实智能体，各三轮 |\n| source/examples/sample-run | 三种规则基线，各三轮；仅用于工程对照 |\n| source/examples/live-run | 早期 Ubuntu 单轮六维 pilot，保留研究过程，不计入最终两套成绩 |\n\n挑战集含一项公开的实测后答案标注订正，松柏与松柏项目统一接受；原始分数完整保留。`source/scripts/review_challenge.py --check` 可独立复算六个订正项。不同数据集分数不能直接混合排名。上下界表示缺少证据导致的范围，不是统计置信区间。模拟时间标签不等于真实等待天数。\n\n## 材料位置\n\n| 材料 | 位置 |\n|---|---|\n| 技术方案与实测报告 | Technical-Report.pdf |\n| 源码、数据、适配器、测试 | source/ |\n| 方法、接口、目标系统与验收说明 | source/docs/ |\n| 系统来源与自动测试证据 | source/docs/evidence/ |\n| 实测冻结源码与复现说明 | source/reproducibility/ |\n| 安装包 | packages/ |\n| 最终安装包生命周期验证日志 | validation/package-lifecycle.log |\n| 交付文件完整性清单 | FILES.sha256.json |\n| 3–5 分钟录屏讲稿 | source/docs/demo-video.md |\n\n`verify-delivery.py` 成功表示交付文件完整、评分可重放；不等于所有能力项通过或主办方认证。WSL 2 实测覆盖 openKylin 用户空间和桌面呈现，不代表裸机驱动、专用内核或完整登录管理器验证。\n\n包内未包含私人 .env、原生智能体工作区、开发临时目录、第三方运行时或原始赛题 PDF。\n'
+START = '# Kylin Memory Bench — 提交材料入口\n\n版本：@@VERSION@@。材料日期：2026-10-03。\n\n本包包含评测方案、48 个合成任务、可安装工具、原生双智能体三轮实验、可重放证据、离线报告与固定源码快照。真实系统为 openKylin 2.0 SP1 / WSL 2；被测对象为固定版本 OpenClaw 与 Hermes，共用 DeepSeek Flash。执行错误和不可观测项保留在原始结果中。\n\n**最终 3–5 分钟演示视频由提交者录制。** 本机桌面和录屏脚本已经准备，见 source/docs/demo-video.md。本包没有把截图或文字说明替代为视频。\n\n## 接收方先做这三步\n\n1. 打开 Technical-Report.pdf，了解方案、数据设计、完整结果、局限和复现方式。\n2. 打开 source/examples/openkylin-core/report.html 和 source/examples/openkylin-challenge/reviewed-report.html；从评分项进入逐事件证据检查器。页面可离线使用。\n3. 用 Python 3.9+ 执行 `python3 verify-delivery.py`。它校验所有交付文件 SHA256，并独立重放历史证据，并复算新增公开 Luna 观测；不调用模型、不收费。\n\nWindows 本机可使用 `C:\\Python313\\python.exe verify-delivery.py`。普通接收者换成自己满足版本要求的 Python 即可。\n\n## 运行工具\n\n- 源码：进入 source 后执行 `python3 -m kylin_memory_bench demo --output runs/new-demo`。\n- Linux：`sh run-demo.sh`；Windows：`powershell -File run-demo.ps1 -Python <Python完整路径>`。\n- openKylin：`sudo apt install ./packages/kylin-memory-bench_@@VERSION@@_all.deb`，然后 `/usr/bin/kmb demo --output "$HOME/kmb-demo"`。\n- wheel：`python3 -m pip install --no-index --no-deps packages/kylin_memory_bench-@@VERSION@@-py3-none-any.whl`。\n\n核心评测和证据复核只使用 Python 标准库。真实新实验需要固定原生 CLI、模型服务和部署者自己的凭据；本包不附带私人密钥或运行时二进制。OpenClaw 的压缩原生轨迹另使用系统 libzstd；不可用时相应证据为 unknown，不影响离线评分复核。\n\n## 四套结果的含义\n\n| 目录 | 用途与范围 |\n|---|---|\n| source/examples/openkylin-core | 最终标准集：36 案例，两款真实智能体，各三轮 |\n| source/examples/openkylin-challenge | 最终独立挑战集：12 案例，两款真实智能体，各三轮 |\n| source/examples/sample-run | 三种规则基线，各三轮；仅用于工程对照 |\n| source/examples/live-run | 早期 Ubuntu 单轮六维 pilot，保留研究过程，不计入最终两套成绩 |\n\n挑战集含一项公开的实测后答案标注订正，松柏与松柏项目统一接受；原始分数完整保留。`source/scripts/review_challenge.py --check` 可独立复算六个订正项。不同数据集分数不能直接混合排名。上下界表示缺少证据导致的范围，不是统计置信区间。模拟时间标签不等于真实等待天数。\n\n## 材料位置\n\n| 材料 | 位置 |\n|---|---|\n| 技术方案与实测报告 | Technical-Report.pdf |\n| 源码、数据、适配器、测试 | source/ |\n| 方法、接口、目标系统与验收说明 | source/docs/ |\n| 系统来源与自动测试证据 | source/docs/evidence/ |\n| 实测冻结源码与复现说明 | source/reproducibility/ |\n| 安装包 | packages/ |\n| 最终安装包生命周期验证日志 | validation/package-lifecycle.log |\n| 交付文件完整性清单 | FILES.sha256.json |\n| 3–5 分钟录屏讲稿 | source/docs/demo-video.md |\n\n`verify-delivery.py` 成功表示交付文件完整、评分可重放；不等于所有能力项通过或主办方认证。WSL 2 实测覆盖 openKylin 用户空间和桌面呈现，不代表裸机驱动、专用内核或完整登录管理器验证。\n\n包内未包含私人 .env、原生智能体工作区、开发临时目录、第三方运行时或原始赛题 PDF。\n'
 
 VERIFY = r'''#!/usr/bin/env python3
 """Verify delivered bytes, then independently replay the bundled benchmark evidence."""
@@ -56,6 +56,16 @@ for command in ([sys.executable, 'scripts/calibrate_scoring.py', '--check', 'doc
                 [sys.executable, 'scripts/calibrate_revision.py', '--check', '--output', 'docs/evidence/scoring-revision']):
     result = subprocess.run(command, cwd=root/'source')
     if result.returncode: raise SystemExit(result.returncode)
+for command in (
+    [sys.executable, 'scripts/check_luna_pilot_inputs.py', '--run', 'experiments/memory_stress/v2/luna-short24-candidates16'],
+    [sys.executable, 'scripts/replay_luna_short_pilot.py', '--data', 'experiments/memory_stress/v2/luna-short24-candidates16', '--evidence', 'docs/evidence/luna-short24-final-evidence.json', '--check', 'docs/evidence/luna-short24-candidates16-results.json'],
+):
+    result = subprocess.run(command, cwd=root/'source')
+    if result.returncode: raise SystemExit(result.returncode)
+for name in ('luna-video-demo-openclaw', 'luna-video-demo-hermes', 'openkylin-luna-video', 'openkylin-luna-video-initial'):
+    if (root/'source/examples'/name).exists():
+        result = subprocess.run([sys.executable, '-m', 'kylin_memory_bench', 'verify', 'examples/'+name], cwd=root/'source')
+        if result.returncode: raise SystemExit(result.returncode)
 if (root/'source/examples/openkylin-difficulty').exists():
     result = subprocess.run([sys.executable, 'scripts/analyze_difficulty.py', '--run',
                              'examples/openkylin-difficulty', '--output',
@@ -130,9 +140,20 @@ def build():
               '数据说明见 source/docs/dataset-card.md；评分修订及底座验证见 source/docs/revision-validation.md。'
               '新增难度试测与历史正式实验分别报告；共享盘基础设施中断尝试也保留，不当成完成的三轮成绩。'
               '难度验收是否通过以 source/docs/evidence/difficulty-analysis/report.html 为准，不能把交付校验成功当成难度通过。\n')
-    entries = {'START_HERE.md': start.encode('utf-8'), 'verify-delivery.py': VERIFY.encode('utf-8'),
+    start += ('\n## 最终校题与录制材料\n\n新增 Luna 短历史校题门槛未通过，作为探索附录，不用于排名。完整边界见 source/docs/submission-readiness-20261014.md。\n先阅读 Recording-Runbook.md，再配合 Narration.zh.srt 录制；Project-Summary.pdf 为两页项目摘要。\n当前交付是录制就绪包；最终 MP4 仍须提交者录制并核对，不能把此 ZIP 称为已含视频的完整提交。\n')
+    entries = {'START_HERE.md': start.encode('utf-8'),
+               'Release-Notes.md': (ROOT/'output/release-notes-0.2.1.md').read_bytes(), 'verify-delivery.py': VERIFY.encode('utf-8'),
                'run-demo.sh': SH.encode('utf-8'), 'run-demo.ps1': PS.encode('utf-8'),
-               'Technical-Report.pdf':pdf.read_bytes(), 'validation/package-lifecycle.log':validation.read_bytes(),
+               'Technical-Report.pdf':pdf.read_bytes(),
+               'Project-Summary.pdf': (ROOT/'docs/project-summary.pdf').read_bytes(),
+               'Recording-Runbook.md': (ROOT/'docs/recording-runbook.md').read_bytes(),
+               'Narration.zh.srt': (ROOT/'docs/narration.zh.srt').read_bytes(),
+               'validation/package-lifecycle.log':validation.read_bytes(),
+               'validation/package-lifecycle-0.2.0.log': (ROOT/'output/validation/package-lifecycle-0.2.0.log').read_bytes(),
+               'validation/bytecode-upgrade-diagnostic.json': (ROOT/'output/validation/bytecode-upgrade-diagnostic.json').read_bytes(),
+               'validation/package-lifecycle-rejected-stale-bytecode.log': (ROOT/'output/validation/package-lifecycle-rejected-stale-bytecode.log').read_bytes(),
+               'validation/final-tests.log': (ROOT/'output/validation/final-tests.log').read_bytes(),
+               'validation/final-validation.json': (ROOT/'output/validation/final-validation.json').read_bytes(),
                'packages/'+deb.name: deb.read_bytes(), 'packages/'+wheel.name: wheel.read_bytes()}
     with zipfile.ZipFile(source_zip) as archive:
         for info in archive.infolist():

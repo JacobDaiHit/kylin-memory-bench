@@ -5031,8 +5031,8 @@
       },
       "runtime": {
         "errors": 0,
-        "latency_p50_ms": 2.048,
-        "latency_p95_ms": 3.555,
+        "latency_p50_ms": 16.844,
+        "latency_p95_ms": 24.167,
         "steps": 504
       },
       "stability": {
@@ -10134,8 +10134,8 @@
       },
       "runtime": {
         "errors": 0,
-        "latency_p50_ms": 2.011,
-        "latency_p95_ms": 3.319,
+        "latency_p50_ms": 16.991,
+        "latency_p95_ms": 25.872,
         "steps": 504
       },
       "stability": {
@@ -15235,8 +15235,8 @@
       },
       "runtime": {
         "errors": 0,
-        "latency_p50_ms": 1.978,
-        "latency_p95_ms": 2.742,
+        "latency_p50_ms": 16.857,
+        "latency_p95_ms": 20.728,
         "steps": 504
       },
       "stability": {
@@ -15252,7 +15252,7 @@
   ],
   "dataset_sha256": "65b84203c8c2c3b6c7826be1b65742e0ad64c1b023b04f3c4de37a64393ac573",
   "method": "Equal dimension macro average of equal case/trial weighted-check scores; unknown/error remain in coverage bounds.",
-  "run_id": "60d4460a-cd34-4b4a-86e6-ea388c041f39",
+  "run_id": "eaf04f41-22b9-47b8-915d-e01c947160c1",
   "run_status": "completed",
   "schema_version": "1.0",
   "scorer_version": "1.0"

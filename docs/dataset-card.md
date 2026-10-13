@@ -78,4 +78,12 @@
 
 评分契约校准样例由 AI 辅助构造，没有独立人审；校准通过不证明题目有足够区分度。
 
+## 新增独立材料
+
+Memory Stress 0.2 为 160 条离线历史、四题族四档，128 条开发／32 条留出预留；不是全量已完成实测，也不是盲测。详见 memory-stress-phase2.md。
+
+Luna 短历史校题为独立 8 条开发历史，两款原生 Agent、memory 与 reader_only 各一轮，共 32 案例；读者 11/16，未达门槛。不得与标准／挑战集混算。详见 submission-readiness-20261014.md。
+
+视频六维演示另用标准集六维首例，两款各一轮，共 56 步，证明实际执行和报告流程，不用于排名。实际 openKylin 来源见 openkylin-luna-video.md。
+
 复算：`python3 scripts/build_dataset_card.py`。

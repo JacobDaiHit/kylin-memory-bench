@@ -16,6 +16,22 @@ from kylin_memory_bench import __version__
 
 EPOCH = int(os.environ.get('SOURCE_DATE_EPOCH', '1790985600'))
 LAUNCHER = b'#!/usr/bin/python3\nimport sys\nfrom pathlib import Path, PurePosixPath\nsys.path.insert(0, str(Path(__file__).resolve().parent.parent / "share/kylin-memory-bench"))\nfrom kylin_memory_bench.cli import main\nraise SystemExit(main())\n'
+POSTINST = b'''#!/bin/sh
+set -eu
+if [ "$1" = configure ]; then
+    python3 -m compileall -q -f --invalidation-mode checked-hash /usr/share/kylin-memory-bench/kylin_memory_bench
+fi
+'''
+POSTRM = b'''#!/bin/sh
+set -eu
+if [ "$1" = remove ] || [ "$1" = purge ]; then
+    root=/usr/share/kylin-memory-bench/kylin_memory_bench
+    if [ -d "$root" ]; then
+        find "$root" -type f -name '*.pyc' -delete
+        find "$root" -depth -type d -empty -delete
+    fi
+fi
+'''
 
 
 def public_source_file(path):
@@ -24,7 +40,7 @@ def public_source_file(path):
     return (path.is_file() and not path.is_symlink() and not private_parts.intersection(relative.parts)
             and path.suffix != '.pyc' and not path.name.endswith('.local.json')
             and (not path.name.startswith('.env') or path.name == '.env.example')
-            and path.name != 'account-balance-final.json')
+            and path.name not in {'account-balance-final.json', 'luna-full-results.json', 'luna-full-results.md'})
 
 
 def files():
@@ -42,7 +58,9 @@ def files():
     for folder in ('examples/sample-run', 'examples/live-run', 'examples/openkylin-core', 'examples/openkylin-challenge',
                    'examples/openkylin-difficulty', 'examples/openkylin-difficulty-interrupted',
                    'examples/openkylin-math-pilot-v1', 'examples/openkylin-math-pilot-v2',
-                   'examples/openkylin-research-memory-v3', 'examples/openkylin-research-memory-v3-interrupted'):
+                   'examples/openkylin-research-memory-v3', 'examples/openkylin-research-memory-v3-interrupted',
+                   'examples/luna-video-demo-openclaw', 'examples/luna-video-demo-hermes',
+                   'examples/openkylin-luna-video', 'examples/openkylin-luna-video-initial'):
         for path in sorted((ROOT / folder).glob('*')):
             if public_source_file(path):
                 yield path.relative_to(ROOT).as_posix(), path.read_bytes()
@@ -100,7 +118,8 @@ def build(output):
                ' offline HTML reports and adapters for openKylin agent evaluation.\n').encode('utf-8')
     md5sums = ''.join(hashlib.md5(data).hexdigest() + '  ' + name + '\n' for name, data, _ in sorted(entries)).encode('ascii')
     deb = b'!<arch>\n' + ar_member('debian-binary', b'2.0\n')
-    deb += ar_member('control.tar.gz', tar_gz([('control', control, 0o644), ('md5sums', md5sums, 0o644)]))
+    deb += ar_member('control.tar.gz', tar_gz([('control', control, 0o644), ('md5sums', md5sums, 0o644),
+                                            ('postinst', POSTINST, 0o755), ('postrm', POSTRM, 0o755)]))
     deb += ar_member('data.tar.gz', tar_gz(entries))
     deb_path = output / f'kylin-memory-bench_{__version__}_all.deb'
     deb_path.write_bytes(deb)

@@ -1,0 +1,56 @@
+{
+  "agents": [
+    {
+      "dependency_home": "/home/maedaily/.local/share/kmb-live/hermes-home",
+      "env_allow": [
+        "KMB_VIDEO_KEY_HERMES"
+      ],
+      "executable": "/home/maedaily/.local/share/kmb-live/runs/kmb-plan-video-20261014-01/bin/hermes-isolated",
+      "id": "hermes",
+      "kind": "hermes",
+      "label": "Hermes 4b8a437 / Luna / ChatGPT plan",
+      "memory_complete": false,
+      "model": "gpt-5.6-luna",
+      "native_config": {
+        "agent": {
+          "max_turns": 6,
+          "reasoning_effort": "none"
+        },
+        "auxiliary": {
+          "title_generation": {
+            "enabled": false
+          }
+        },
+        "curator": {
+          "enabled": false
+        },
+        "memory": {
+          "memory_enabled": true,
+          "user_profile_enabled": true
+        },
+        "model": {
+          "base_url": "http://127.0.0.1:45719/v1",
+          "default": "gpt-5.6-luna",
+          "provider": "kmb-plan"
+        },
+        "platform_toolsets": {
+          "cli": [
+            "file",
+            "memory"
+          ]
+        },
+        "providers": {
+          "kmb-plan": {
+            "base_url": "http://127.0.0.1:45719/v1",
+            "key_env": "KMB_VIDEO_KEY_HERMES"
+          }
+        }
+      },
+      "per_turn_proxy_limits": false,
+      "provider": "kmb-plan",
+      "state_isolation": "mount_namespace",
+      "timeout": 180
+    }
+  ],
+  "schema_version": "1.0"
+}

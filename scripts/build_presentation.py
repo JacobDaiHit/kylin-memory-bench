@@ -166,7 +166,16 @@ def build(output, difficulty=None, calibration=None):
     difficulty_link = link(difficulty, output, "输入难度摘要") if difficulty else ''
     calibration_link = link(calibration, output, "输入校准摘要") if calibration else ''
     delivery_links = ''.join('<p>' + link(ROOT / name, output, label) + '</p>' for name, label in (
-        ("README.md", "使用说明"), ("docs/technical-report.pdf", "技术报告 PDF"),
+        ("README.md", "使用说明"),
+        ("docs/openkylin-luna-video.md", "openKylin 桌面双 Agent 实际执行验收"),
+        ("examples/openkylin-luna-video/report.html", "openKylin Luna 六维双系统报告"),
+        ("docs/luna-video-demo.md", "Luna 六维真实操作演示：独立一轮"),
+        ("docs/evidence/luna-video-comparison/report.html", "Luna 六维演示图表"),
+        ("docs/submission-readiness-20261014.md", "Luna 校题与提交边界"),
+        ("docs/luna-short24-candidates16-results.md", "独立 Luna 校题结果：门槛未通过"),
+        ("docs/recording-runbook.md", "完整录制与提交操作手册"),
+        ("docs/project-summary.pdf", "两页项目摘要 PDF"),
+        ("docs/evidence/foundation-openkylin-final-20261014.json", "最终 openKylin 隔离复核"), ("docs/technical-report.pdf", "技术报告 PDF"),
         ("docs/demo-video.md", "录制方案"), ("docs/narration-script.md", "旁白与字幕稿"),
         ("docs/revision-validation.md", "0.2.1 修订验证与范围"),
         ("docs/evidence/foundation-openkylin-0.2.1.json", "离线隔离／篡改拒绝／状态隔离记录"),

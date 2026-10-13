@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "before": {
+    "exit_code": 1,
+    "observations": {
+      "capabilities_dropped": true,
+      "global_hermes_config_hidden": true,
+      "hermes_runtime_present": true,
+      "installed_benchmark_data_hidden": false,
+      "installed_evaluator_material_hidden": false,
+      "no_new_privileges": true,
+      "oauth_credentials_hidden": true,
+      "old_tmp_hidden": true,
+      "openclaw_runtime_present": true,
+      "other_run_files_hidden": true,
+      "other_workspaces_hidden": true,
+      "pid_namespace": true,
+      "repository_hidden": true,
+      "workspace_read_write": true
+    }
+  },
+  "after": {
+    "exit_code": 0,
+    "observations": {
+      "capabilities_dropped": true,
+      "global_hermes_config_hidden": true,
+      "hermes_runtime_present": true,
+      "installed_benchmark_data_hidden": true,
+      "installed_evaluator_material_hidden": true,
+      "no_new_privileges": true,
+      "oauth_credentials_hidden": true,
+      "old_tmp_hidden": true,
+      "openclaw_runtime_present": true,
+      "other_run_files_hidden": true,
+      "other_workspaces_hidden": true,
+      "pid_namespace": true,
+      "repository_hidden": true,
+      "workspace_read_write": true
+    }
+  },
+  "model_calls": 0,
+  "finding": "Installed benchmark evaluator files were visible despite checkout isolation; masked both installed roots and added mandatory preflight before paid recording runs.",
+  "original_run_preserved": "examples/openkylin-luna-video-initial",
+  "claim_limit": "Does not prove the initial agent actually read installed answers; initial scores are not replaced or pooled."
+}

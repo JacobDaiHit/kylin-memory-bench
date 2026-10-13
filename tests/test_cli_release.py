@@ -69,6 +69,31 @@ class CLITests(unittest.TestCase):
 
 
 class ReleaseTests(unittest.TestCase):
+    def test_same_timestamp_and_size_upgrade_refreshes_cached_bytecode(self):
+        import os
+        import subprocess
+        import sys
+        from scripts import build_release
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            source = root/'upgrade_fixture.py'
+            def write(version):
+                source.write_text('version = "'+version+'"\n', encoding='utf-8')
+                os.utime(source, (build_release.EPOCH, build_release.EPOCH))
+            def read():
+                return subprocess.check_output([sys.executable, '-c',
+                    'import sys; sys.path.insert(0,sys.argv[1]); import upgrade_fixture; print(upgrade_fixture.version)',
+                    str(root)], text=True).strip()
+            write('0.2.0')
+            self.assertEqual(read(), '0.2.0')
+            write('0.2.1')
+            self.assertEqual(read(), '0.2.0', 'Reproduce stale timestamp-based bytecode before repair')
+            subprocess.run([sys.executable, '-m', 'compileall', '-q', '-f', '--invalidation-mode',
+                            'checked-hash', str(root)], check=True)
+            self.assertEqual(read(), '0.2.1')
+            write('0.2.2')
+            self.assertEqual(read(), '0.2.2', 'Hash-based cache must notice same-size source changes')
+
     def test_deb_is_reproducible_and_contains_runtime_data(self):
         import tarfile
         spec = importlib.util.spec_from_file_location('build_release', ROOT/'scripts/build_release.py')
@@ -89,6 +114,10 @@ class ReleaseTests(unittest.TestCase):
                 entries[name] = raw[offset+60:offset+60+length]
                 offset += 60 + length + length % 2
             self.assertEqual(entries['debian-binary'], b'2.0\n')
+            with tarfile.open(fileobj=io.BytesIO(entries['control.tar.gz']), mode='r:gz') as control:
+                self.assertEqual(control.getmember('postinst').mode, 0o755)
+                self.assertEqual(control.extractfile('postinst').read(), module.POSTINST)
+                self.assertEqual(control.getmember('postrm').mode, 0o755)
             with tarfile.open(fileobj=io.BytesIO(entries['data.tar.gz']), mode='r:gz') as data:
                 names = data.getnames()
                 from pathlib import PurePosixPath

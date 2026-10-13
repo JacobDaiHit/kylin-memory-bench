@@ -1,0 +1,57 @@
+{
+  "case_ids": [
+    "retention-001-224906",
+    "retrieval-001-224906",
+    "update-001-224906",
+    "disambiguation-001-224906",
+    "boundary-001-224906",
+    "reuse-001-224906"
+  ],
+  "dataset_sha256": "95763e8b6c485ba313162038d67f3ad9b84256cf31abea926dd14dbb7c6b19c1",
+  "environment": {
+    "execution_context": "wsl2",
+    "is_openkylin": true,
+    "machine": "x86_64",
+    "os_release": {
+      "ID": "openkylin",
+      "PRETTY_NAME": "openKylin 2.0 SP1",
+      "VERSION_ID": "2.0"
+    },
+    "python": "3.12.2",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "system": "Linux"
+  },
+  "isolation_preflight": {
+    "capabilities_dropped": true,
+    "global_hermes_config_hidden": true,
+    "hermes_runtime_present": true,
+    "installed_benchmark_data_hidden": true,
+    "installed_evaluator_material_hidden": true,
+    "no_new_privileges": true,
+    "oauth_credentials_hidden": true,
+    "old_tmp_hidden": true,
+    "openclaw_runtime_present": true,
+    "other_run_files_hidden": true,
+    "other_workspaces_hidden": true,
+    "pid_namespace": true,
+    "repository_hidden": true,
+    "workspace_read_write": true
+  },
+  "jobs": 2,
+  "model": "gpt-5.6-luna",
+  "oauth_credentials_copied": false,
+  "planned_events": 56,
+  "protocol": "openkylin-luna-video-2",
+  "repeats": 1,
+  "retry_policy": "No evaluator case reruns; native recovery retained.",
+  "scope": "Real openKylin framework and native agents; Ubuntu owns only model relay and stateless embeddings.",
+  "server_output_cap": null,
+  "source_sha256": {
+    "kylin_memory_bench/adapters.py": "8aefdb0e48e92be367280b448d343530707570287a4bdb5060230fe673399c0c",
+    "kylin_memory_bench/runner.py": "a2195a0dffac7b5adf488d5a2c9bd339a2810e7120717c3b5aa45af3cc3cbfc8",
+    "scripts/chatgpt_plan_bridge.py": "4fc7cad6c178e145bcac2fc85f37457892dbd715a7c67566f4326faea1a3c703",
+    "scripts/isolated_native_plan.sh": "055e1ac19e40f18b2e33a56b1f79b6ef40dcaf618d6c51a1a5dd32ae0036317a",
+    "scripts/run_openkylin_video.py": "6ca65103c782b5e157b29c47eb393f979838711f02736314c162b069716396a3",
+    "scripts/serve_luna_video_bridges.py": "bd05e6b38b7c554359edfe4d97d82874d8e70b4425464ca99f4d74e15bbc51fb"
+  }
+}

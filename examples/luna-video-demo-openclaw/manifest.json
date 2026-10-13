@@ -1,0 +1,112 @@
+{
+  "agents": [
+    {
+      "env_allow": [
+        "KMB_VIDEO_KEY_OPENCLAW"
+      ],
+      "executable": "/home/maedaily/.local/share/kmb-live/runs/kmb-plan-video-20261014-01/bin/openclaw-isolated",
+      "id": "openclaw",
+      "kind": "openclaw",
+      "label": "OpenClaw 2026.9.8 / Luna / ChatGPT plan",
+      "memory_complete": false,
+      "memory_globs": [
+        "MEMORY.md",
+        "USER.md",
+        "memory/**/*.md",
+        ".openclaw/tmp/**/*.json"
+      ],
+      "model": "kmb-plan/gpt-5.6-luna",
+      "native_config": {
+        "agents": {
+          "defaults": {
+            "skipBootstrap": true,
+            "thinkingDefault": "off"
+          }
+        },
+        "memory": {
+          "search": {
+            "model": "BAAI/bge-small-zh-v1.5",
+            "provider": "openai-compatible",
+            "remote": {
+              "apiKey": "[REDACTED]",
+              "baseUrl": "http://127.0.0.1:18789/v1"
+            }
+          }
+        },
+        "models": {
+          "mode": "replace",
+          "providers": {
+            "kmb-plan": {
+              "api": "openai-completions",
+              "apiKey": "[REDACTED]",
+              "baseUrl": "http://127.0.0.1:45779/v1",
+              "models": [
+                {
+                  "compat": {
+                    "maxTokensField": "max_tokens",
+                    "supportsDeveloperRole": false,
+                    "supportsUsageInStreaming": true
+                  },
+                  "contextWindow": 1048576,
+                  "id": "gpt-5.6-luna",
+                  "input": [
+                    "text"
+                  ],
+                  "maxTokens": 4096,
+                  "name": "Luna / ChatGPT plan (budget bridge)",
+                  "reasoning": false
+                }
+              ]
+            }
+          }
+        },
+        "tools": {
+          "allow": [
+            "read",
+            "write",
+            "edit",
+            "memory_search",
+            "memory_get"
+          ],
+          "fs": {
+            "workspaceOnly": true
+          }
+        },
+        "update": {
+          "checkOnStart": false
+        }
+      },
+      "per_turn_proxy_limits": false,
+      "state_isolation": "mount_namespace",
+      "timeout": 180
+    }
+  ],
+  "clock": "simulated integer days; no real-time ageing claim",
+  "config_sha256": "5f2ad0be49fb16f815d32acbe810fc3e2916b60c5d0126c81430c69fe917776c",
+  "dataset_sha256": "95763e8b6c485ba313162038d67f3ad9b84256cf31abea926dd14dbb7c6b19c1",
+  "environment": {
+    "execution_context": "wsl2",
+    "is_openkylin": false,
+    "machine": "x86_64",
+    "os_release": {
+      "ID": "ubuntu",
+      "PRETTY_NAME": "Ubuntu 26.04 LTS",
+      "VERSION_ID": "26.04"
+    },
+    "python": "3.13.13",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "system": "Linux"
+  },
+  "event_count": 28,
+  "evidence_head": "8fab28681134fcaadb2c9a37409b010a273ccac096c1b26139f077516e02aff5",
+  "execution_errors": 0,
+  "finished_at": "2026-10-13T17:19:10.645658+00:00",
+  "implementation_sha256": "217d7cb47847c1db5ad9f9471e041725c92e9bc755e83fe06fcee3505cef8293",
+  "jobs": 1,
+  "repeats": 1,
+  "run_id": "ea81204e-e505-4849-b138-1f85b12b1832",
+  "schema_version": "1.0",
+  "started_at": "2026-10-13T17:05:19.367767+00:00",
+  "status": "completed",
+  "version": "0.2.1"
+}

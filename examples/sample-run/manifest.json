@@ -24,27 +24,27 @@
   "dataset_sha256": "65b84203c8c2c3b6c7826be1b65742e0ad64c1b023b04f3c4de37a64393ac573",
   "environment": {
     "execution_context": "wsl2",
-    "is_openkylin": true,
+    "is_openkylin": false,
     "machine": "x86_64",
     "os_release": {
-      "ID": "openkylin",
-      "PRETTY_NAME": "openKylin 2.0 SP1",
-      "VERSION_ID": "2.0"
+      "ID": "ubuntu",
+      "PRETTY_NAME": "Ubuntu 26.04 LTS",
+      "VERSION_ID": "26.04"
     },
-    "python": "3.12.2",
+    "python": "3.13.13",
     "release": "6.18.33.2-microsoft-standard-WSL2",
     "system": "Linux"
   },
   "event_count": 1512,
-  "evidence_head": "22972e79b7381f257a41141f4313e76a5a4c82be7411ad932075eb7c56689c96",
+  "evidence_head": "96a221d0e95da12f2b7a6b72bb33292a8c1b13dd1d92d05cc31de308f66ddef7",
   "execution_errors": 0,
-  "finished_at": "2026-10-03T07:46:31.719189+00:00",
-  "implementation_sha256": "6fe84c5059bc9ccd64800deabd2a6d8473ebf05dd895cccba27ff300eb81c3cf",
+  "finished_at": "2026-10-13T17:11:20.685198+00:00",
+  "implementation_sha256": "217d7cb47847c1db5ad9f9471e041725c92e9bc755e83fe06fcee3505cef8293",
   "jobs": 1,
   "repeats": 3,
-  "run_id": "60d4460a-cd34-4b4a-86e6-ea388c041f39",
+  "run_id": "eaf04f41-22b9-47b8-915d-e01c947160c1",
   "schema_version": "1.0",
-  "started_at": "2026-10-03T07:46:22.614438+00:00",
+  "started_at": "2026-10-13T17:10:40.080900+00:00",
   "status": "completed",
-  "version": "0.2.0"
+  "version": "0.2.1"
 }

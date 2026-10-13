@@ -1,0 +1,60 @@
+{
+  "cases": 6,
+  "elapsed_seconds": 540.5538187026978,
+  "events": 56,
+  "framework_environment": {
+    "execution_context": "wsl2",
+    "is_openkylin": true,
+    "machine": "x86_64",
+    "os_release": {
+      "ID": "openkylin",
+      "PRETTY_NAME": "openKylin 2.0 SP1",
+      "VERSION_ID": "2.0"
+    },
+    "python": "3.12.2",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "system": "Linux"
+  },
+  "groups": [
+    {
+      "agent": "openclaw",
+      "overall": {
+        "coverage": 0.916667,
+        "lower_bound": 0.708333,
+        "score": 0.75,
+        "upper_bound": 0.791667
+      },
+      "statuses": {
+        "fail": 4,
+        "pass": 12,
+        "unknown": 2
+      }
+    },
+    {
+      "agent": "hermes",
+      "overall": {
+        "coverage": 0.916667,
+        "lower_bound": 0.75,
+        "score": 0.833333,
+        "upper_bound": 0.833333
+      },
+      "statuses": {
+        "fail": 3,
+        "pass": 13,
+        "unknown": 2
+      }
+    }
+  ],
+  "model": "gpt-5.6-luna",
+  "note": "Checks integrity and scoring consistency; hashes are not a signature or proof of honest adapter behavior.",
+  "planned_events": 56,
+  "protocol": "openkylin-luna-video-2",
+  "requests": {
+    "completed": 151
+  },
+  "run_id": "23d1cec0-e386-412c-a081-4f52b53097c4",
+  "scope": "Real openKylin framework and native agents; Ubuntu owns only model relay and stateless embeddings.",
+  "source_archive_sha256": "bbcb9faf7a6bfb928978f9e09acfff5f38784ba0e2523fd84a9b8cbcc735222b",
+  "status": "completed",
+  "valid": true
+}

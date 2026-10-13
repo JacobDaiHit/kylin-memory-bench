@@ -1,25 +1,29 @@
-UTC=2026-10-03T08:05:34Z
-DEB_SHA256=4798d35ed924d28fd5db36bfb3a46551e15f9ff48249f59441a66794493d4a39
+UTC=2026-10-13T18:27:04Z
+DEB_SHA256=f20b121b04e2eab8272a78ba48bccfb3f2284cceb80dc8d1db2e12c64780b5d4
  new Debian package, version 2.0.
- size 2544080 bytes: control archive=3173 bytes.
-     424 bytes,    11 lines      control
-    9324 bytes,    94 lines      md5sums
+ size 17630680 bytes: control archive=21542 bytes.
+     425 bytes,    11 lines      control
+  126016 bytes,   898 lines      md5sums
+     165 bytes,     5 lines   *  postinst             #!/bin/sh
+     263 bytes,     9 lines   *  postrm               #!/bin/sh
  Package: kylin-memory-bench
- Version: 0.2.0
+ Version: 0.2.1
  Section: science
  Priority: optional
  Architecture: all
  Depends: python3 (>= 3.9)
- Installed-Size: 17273
+ Installed-Size: 178313
  Maintainer: Kylin Memory Bench contributors <maintainers@example.invalid>
  Description: Evidence-first long-term agent memory benchmark
   Reproducible CLI, synthetic scenarios, explainable six-dimensional scoring,
   offline HTML reports and adapters for openKylin agent evaluation.
-(Reading database ... 90797 files and directories currently installed.)
-Preparing to unpack .../kylin-memory-bench_0.2.0_all.deb ...
-Unpacking kylin-memory-bench (0.2.0) ...
-Setting up kylin-memory-bench (0.2.0) ...
-0.2.0
+(Reading database ... 92211 files and directories currently installed.)
+Preparing to unpack .../kylin-memory-bench_0.2.1_all.deb ...
+Unpacking kylin-memory-bench (0.2.1) over (0.2.1) ...
+Setting up kylin-memory-bench (0.2.1) ...
+INSTALLED_LAUNCHER=/usr/bin/kmb
+INSTALLED_VERSION=0.2.1
+PATH_KMB=/usr/bin/kmb
 {
   "agents": [
     {
@@ -44,26 +48,26 @@ Setting up kylin-memory-bench (0.2.0) ...
       "upper_bound": 0.291667
     }
   ],
-  "output": "/home/kmb/runs/package-validation-20261003-160534-94310",
+  "output": "/home/kmb/runs/package-validation-20261014-022704-12615",
   "run_status": "completed"
 }
 {
   "cases": 36,
   "events": 504,
   "note": "Checks integrity and scoring consistency; hashes are not a signature or proof of honest adapter behavior.",
-  "run_id": "0fe71163-548d-490d-8e42-b47fa01db818",
+  "run_id": "48170865-439b-4588-9c07-261680fa2fcc",
   "status": "completed",
   "valid": true
 }
-Installed implementation: 6fe84c5059bc9ccd64800deabd2a6d8473ebf05dd895cccba27ff300eb81c3cf
-(Reading database ... 90904 files and directories currently installed.)
-Removing kylin-memory-bench (0.2.0) ...
-dpkg: warning: while removing kylin-memory-bench, directory '/usr/share/kylin-memory-bench/kylin_memory_bench' not empty so not removed
+Installed implementation: 217d7cb47847c1db5ad9f9471e041725c92e9bc755e83fe06fcee3505cef8293
+INSTALLED_IMPLEMENTATION_MATCH=1
+(Reading database ... 92244 files and directories currently installed.)
+Removing kylin-memory-bench (0.2.1) ...
 Selecting previously unselected package kylin-memory-bench.
-(Reading database ... 90797 files and directories currently installed.)
-Preparing to unpack .../kylin-memory-bench_0.2.0_all.deb ...
-Unpacking kylin-memory-bench (0.2.0) ...
-Setting up kylin-memory-bench (0.2.0) ...
-0.2.0
-kylin-memory-bench	0.2.0
+(Reading database ... 90799 files and directories currently installed.)
+Preparing to unpack .../kylin-memory-bench_0.2.1_all.deb ...
+Unpacking kylin-memory-bench (0.2.1) ...
+Setting up kylin-memory-bench (0.2.1) ...
+0.2.1
+kylin-memory-bench	0.2.1
 LIFECYCLE PASS

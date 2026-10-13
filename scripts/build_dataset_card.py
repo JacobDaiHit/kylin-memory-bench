@@ -66,6 +66,10 @@ def main():
                  '难度分析使用 content、artifact、action 的预声明判据；格式不可解析、执行故障和证据不足保留在有效观测率分母中。记忆快照用于诊断，部分可见性不足以证明全局删除。', '',
                  '验收门槛为能力有效观测率至少 90%，至少三个家族平均下降 15 个百分点且三轮中两轮方向一致。这是描述性门槛，不是统计显著性。每族只有一对实例，三轮也不是新增独立题目；不能据此建立广泛排名。', '',
                  '评分契约校准样例由 AI 辅助构造，没有独立人审；校准通过不证明题目有足够区分度。', '',
+                 '## 新增独立材料', '',
+                 'Memory Stress 0.2 为 160 条离线历史、四题族四档，128 条开发／32 条留出预留；不是全量已完成实测，也不是盲测。详见 memory-stress-phase2.md。', '',
+                 'Luna 短历史校题为独立 8 条开发历史，两款原生 Agent、memory 与 reader_only 各一轮，共 32 案例；读者 11/16，未达门槛。不得与标准／挑战集混算。详见 submission-readiness-20261014.md。', '',
+                 '视频六维演示另用标准集六维首例，两款各一轮，共 56 步，证明实际执行和报告流程，不用于排名。实际 openKylin 来源见 openkylin-luna-video.md。', '',
                  '复算：`python3 scripts/build_dataset_card.py`。'])
     write_text(ROOT / 'docs/dataset-card.md', '\n'.join(text) + '\n')
     print('DATASET CARD: standard {}, challenge {}, difficulty {} cases.'.format(*(s['case_count'] for s in suites.values())))

@@ -1,0 +1,13 @@
+{
+  "note": "Open each source run for original evidence.",
+  "source_runs": [
+    {
+      "path": "/mnt/d/github/openkylin/examples/luna-video-demo-openclaw",
+      "run_id": "ea81204e-e505-4849-b138-1f85b12b1832"
+    },
+    {
+      "path": "/mnt/d/github/openkylin/examples/luna-video-demo-hermes",
+      "run_id": "586ddf44-a835-4265-93dd-de760a38c45a"
+    }
+  ]
+}

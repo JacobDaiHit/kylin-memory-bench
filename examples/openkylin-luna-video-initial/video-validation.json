@@ -1,0 +1,9 @@
+{
+  "cases": 6,
+  "elapsed_seconds": 544.719295501709,
+  "events": 56,
+  "note": "Checks integrity and scoring consistency; hashes are not a signature or proof of honest adapter behavior.",
+  "run_id": "df825bc0-e233-45c4-9a56-afacc6148782",
+  "status": "completed",
+  "valid": true
+}

@@ -1,0 +1,163 @@
+{
+  "agents": [
+    {
+      "env_allow": [
+        "KMB_KYLIN_VIDEO_KEY_OPENCLAW"
+      ],
+      "executable": "/home/kmb/.cache/kmb-video/bin/openclaw-isolated",
+      "id": "openclaw",
+      "kind": "openclaw",
+      "label": "OpenClaw 2026.9.8 / Luna / ChatGPT plan",
+      "memory_complete": false,
+      "memory_globs": [
+        "MEMORY.md",
+        "USER.md",
+        "memory/**/*.md",
+        ".openclaw/tmp/**/*.json"
+      ],
+      "model": "kmb-plan/gpt-5.6-luna",
+      "native_config": {
+        "agents": {
+          "defaults": {
+            "skipBootstrap": true,
+            "thinkingDefault": "off"
+          }
+        },
+        "memory": {
+          "search": {
+            "model": "BAAI/bge-small-zh-v1.5",
+            "provider": "openai-compatible",
+            "remote": {
+              "apiKey": "[REDACTED]",
+              "baseUrl": "http://127.0.0.1:18789/v1"
+            }
+          }
+        },
+        "models": {
+          "mode": "replace",
+          "providers": {
+            "kmb-plan": {
+              "api": "openai-completions",
+              "apiKey": "[REDACTED]",
+              "baseUrl": "http://127.0.0.1:45383/v1",
+              "models": [
+                {
+                  "compat": {
+                    "maxTokensField": "max_tokens",
+                    "supportsDeveloperRole": false,
+                    "supportsUsageInStreaming": true
+                  },
+                  "contextWindow": 1048576,
+                  "id": "gpt-5.6-luna",
+                  "input": [
+                    "text"
+                  ],
+                  "maxTokens": 4096,
+                  "name": "Luna / ChatGPT plan (budget bridge)",
+                  "reasoning": false
+                }
+              ]
+            }
+          }
+        },
+        "tools": {
+          "allow": [
+            "read",
+            "write",
+            "edit",
+            "memory_search",
+            "memory_get"
+          ],
+          "fs": {
+            "workspaceOnly": true
+          }
+        },
+        "update": {
+          "checkOnStart": false
+        }
+      },
+      "per_turn_proxy_limits": false,
+      "state_isolation": "mount_namespace",
+      "timeout": 180
+    },
+    {
+      "dependency_home": "/home/maedaily/.local/share/kmb-live/hermes-home",
+      "env_allow": [
+        "KMB_KYLIN_VIDEO_KEY_HERMES"
+      ],
+      "executable": "/home/kmb/.cache/kmb-video/bin/hermes-isolated",
+      "id": "hermes",
+      "kind": "hermes",
+      "label": "Hermes 4b8a437 / Luna / ChatGPT plan",
+      "memory_complete": false,
+      "model": "gpt-5.6-luna",
+      "native_config": {
+        "agent": {
+          "max_turns": 6,
+          "reasoning_effort": "none"
+        },
+        "auxiliary": {
+          "title_generation": {
+            "enabled": false
+          }
+        },
+        "curator": {
+          "enabled": false
+        },
+        "memory": {
+          "memory_enabled": true,
+          "user_profile_enabled": true
+        },
+        "model": {
+          "base_url": "http://127.0.0.1:45633/v1",
+          "default": "gpt-5.6-luna",
+          "provider": "kmb-plan"
+        },
+        "platform_toolsets": {
+          "cli": [
+            "file",
+            "memory"
+          ]
+        },
+        "providers": {
+          "kmb-plan": {
+            "base_url": "http://127.0.0.1:45633/v1",
+            "key_env": "KMB_KYLIN_VIDEO_KEY_HERMES"
+          }
+        }
+      },
+      "per_turn_proxy_limits": false,
+      "provider": "kmb-plan",
+      "state_isolation": "mount_namespace",
+      "timeout": 180
+    }
+  ],
+  "clock": "simulated integer days; no real-time ageing claim",
+  "config_sha256": "1d3a1764f3f6680ca41d96e6eaddd10454014a619ff6fed35ecc34731a00a292",
+  "dataset_sha256": "95763e8b6c485ba313162038d67f3ad9b84256cf31abea926dd14dbb7c6b19c1",
+  "environment": {
+    "execution_context": "wsl2",
+    "is_openkylin": true,
+    "machine": "x86_64",
+    "os_release": {
+      "ID": "openkylin",
+      "PRETTY_NAME": "openKylin 2.0 SP1",
+      "VERSION_ID": "2.0"
+    },
+    "python": "3.12.2",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "system": "Linux"
+  },
+  "event_count": 56,
+  "evidence_head": "e0e9b5da6ebe798ae83479292dbbab5492e848c42607a04dc92861f439c2871e",
+  "execution_errors": 0,
+  "finished_at": "2026-10-13T17:47:51.818833+00:00",
+  "implementation_sha256": "217d7cb47847c1db5ad9f9471e041725c92e9bc755e83fe06fcee3505cef8293",
+  "jobs": 2,
+  "repeats": 1,
+  "run_id": "df825bc0-e233-45c4-9a56-afacc6148782",
+  "schema_version": "1.0",
+  "started_at": "2026-10-13T17:38:47.249424+00:00",
+  "status": "completed",
+  "version": "0.2.1"
+}

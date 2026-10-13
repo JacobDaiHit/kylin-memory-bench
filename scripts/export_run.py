@@ -30,6 +30,8 @@ def main():
     parser.add_argument('source', type=Path)
     parser.add_argument('destination', type=Path)
     parser.add_argument('--audit', type=Path)
+    parser.add_argument('--chatgpt-plan', action='store_true',
+                        help='Label the opt-in Luna route accurately; no enforced sampling/output cap')
     parser.add_argument('--allow-interrupted', action='store_true',
                         help='Explicitly preserve an aborted attempt; never call it a finished experiment')
     args = parser.parse_args()
@@ -60,8 +62,14 @@ def main():
                 'retry_policy':'No selective rerun or replacement of failed cases.',
                 'native_versions':{'openclaw':'2026.9.8 (fc23bc8)','hermes_commit':'4b8a43719b2a259cea88a72f9f13a2b6962e7ac3'}}
     metadata['status'] = manifest['status']
+    if args.chatgpt_plan:
+        from scripts.chatgpt_plan import TARGET
+        metadata['model'] = TARGET
+        metadata['parameters'] = {'reasoning_effort': 'none', 'server_output_cap': None,
+                                  'sampling_parameters_enforced': False}
+        metadata['scope'] = 'Single-round operational demonstration; not merged with historical statistics.'
     limits = {step['id']:step['output_tokens'] for case in cases for step in case['steps'] if 'output_tokens' in step}
-    if limits:
+    if limits and not args.chatgpt_plan:
         metadata['parameters']['max_tokens'] = max(limits.values())
         metadata['parameters']['per_step_output_tokens'] = limits
         metadata['parameters']['source'] = 'Frozen dataset and loopback proxy cap; verify actual audit as well.'
