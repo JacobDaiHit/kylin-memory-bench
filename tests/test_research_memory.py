@@ -159,14 +159,15 @@ class ResearchMemoryTests(unittest.TestCase):
     def test_cli_frozen_data_tamper_rejected(self):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp)/'v3'
-            command=[sys.executable,'-m','experiments.math_memory.memory_only','--output',str(root)]
+            # Preserve the historical source while reproducing its UTF-8 environment.
+            command=[sys.executable,'-X','utf8','-m','experiments.math_memory.memory_only','--output',str(root)]
             subprocess.run(command,check=True,capture_output=True)
             c=self.case();answer=Path(temp)/'answer.json'
-            answer.write_text(json.dumps(self.gold[c['id']]))
-            checked=subprocess.run(command+['--grade-case',c['id'],'--answer',str(answer)],check=True,capture_output=True,text=True)
+            answer.write_text(json.dumps(self.gold[c['id']]),encoding='utf-8')
+            checked=subprocess.run(command+['--grade-case',c['id'],'--answer',str(answer)],check=True,capture_output=True,text=True,encoding='utf-8')
             self.assertEqual(json.loads(checked.stdout)['correct_count'],18)
-            with (root/'inputs.jsonl').open('a') as stream:stream.write('\n')
-            failed=subprocess.run(command+['--grade-case',c['id'],'--answer',str(answer)],capture_output=True,text=True)
+            with (root/'inputs.jsonl').open('a',encoding='utf-8') as stream:stream.write('\n')
+            failed=subprocess.run(command+['--grade-case',c['id'],'--answer',str(answer)],capture_output=True,text=True,encoding='utf-8')
             self.assertNotEqual(failed.returncode,0)
             self.assertIn('Frozen data changed',failed.stderr)
 

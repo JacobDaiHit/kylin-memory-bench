@@ -185,7 +185,7 @@ def generate(output, seed=20261011):
                 'v3_unchanged_source_sha256':hashlib.sha256(Path(v3.__file__).read_bytes()).hexdigest()}
     v3.dump(output/'protocol.json', protocol)
     v3.write_viewer(output, cases, gold, results)
-    page = (output/'index.html').read_text().replace('memory-v3-design.md','memory-v31-design.md').replace('研究档案记忆 V3','研究档案记忆 V3.1')
+    page = (output/'index.html').read_text(encoding='utf-8').replace('memory-v3-design.md','memory-v31-design.md').replace('研究档案记忆 V3','研究档案记忆 V3.1')
     page = page.replace('<option value="open_book">', '<option value="stateless">无跨会话持久状态</option><option value="open_book">')
     page = page.replace('这是一版设计与离线原型。未调用付费模型；', 'V3.1仅完成离线修订，未进行付费实测；无持久状态组与记忆组收到相同历史。')
     table='<h2>人工策略检查</h2><p>无持久状态组使用相同历史事实答案评价恢复率；它与目标资料从未提供的拒答组分开。</p><table><tr><th>预设策略</th><th>历史组</th><th>无持久状态组</th><th>完整记录组</th><th>缺资料组</th></tr>'

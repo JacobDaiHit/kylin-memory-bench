@@ -1,5 +1,7 @@
 import copy
 import json
+import os
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -187,6 +189,30 @@ class StateControlTests(unittest.TestCase):
         self.assertNotEqual(config_signature(config),config_signature(other))
         other=copy.deepcopy(config);other['agents'][0]['native_config']['tools']['allow']=[]
         self.assertNotEqual(config_signature(config),config_signature(other))
+
+
+class Utf8IOTests(unittest.TestCase):
+    def run_cli_without_utf8_defaults(self, command):
+        env=dict(os.environ,LC_ALL='C',PYTHONCOERCECLOCALE='0',PYTHONUTF8='0',PYTHONIOENCODING='utf-8')
+        return subprocess.run([sys.executable,'-X','utf8=0',*command],cwd=ROOT,env=env,
+                              capture_output=True,encoding='utf-8',check=True)
+
+    def test_revision_calibration_reads_utf8_without_locale_defaults(self):
+        result=self.run_cli_without_utf8_defaults(['scripts/calibrate_revision.py','--check',
+                                                  '--output','docs/evidence/scoring-revision'])
+        self.assertEqual(json.loads(result.stdout),{'count':16,'matched':16,'false_passes':0})
+
+    def test_current_research_generation_and_preparation_without_utf8_defaults(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            result=self.run_cli_without_utf8_defaults(['-m','experiments.math_memory.memory_v31',
+                                                       '--output',str(root/'viewer')])
+            self.assertEqual(json.loads(result.stdout)['cases'],48)
+            self.assertIn('研究档案记忆 V3.1',(root/'viewer/index.html').read_text(encoding='utf-8'))
+            result=self.run_cli_without_utf8_defaults(['scripts/prepare_memory_validation.py','prepare',
+                                                       '--stage','pilot','--output',str(root/'pilot')])
+            self.assertEqual(json.loads(result.stdout)['scheduled_final_slots'],12)
+            verify_prepared(root/'pilot')
 
 
 if __name__=='__main__':unittest.main()

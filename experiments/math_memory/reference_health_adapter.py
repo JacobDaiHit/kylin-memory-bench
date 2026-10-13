@@ -13,13 +13,13 @@ from experiments.math_memory.memory_only import view
 def main():
     request=json.load(sys.stdin)
     path=Path(request['workspace'])/'reference-records.json'
-    records=json.loads(path.read_text()) if path.exists() else []
+    records=json.loads(path.read_text(encoding='utf-8')) if path.exists() else []
     before=len(records)
     for line in request['prompt'].splitlines():
         if line.startswith('RECORD='):
             record=json.loads(line[7:])
             if record['id'] not in {r['id'] for r in records}:records.append(record)
-    path.write_text(json.dumps(records,ensure_ascii=False))
+    path.write_text(json.dumps(records,ensure_ascii=False),encoding='utf-8')
     match=re.search(r'^HEALTH_QUERY=(.+)$',request['prompt'],re.MULTILINE)
     if match:
         state,_,_=view(records,match[1]);old,_,_=view(records,match[1],historical=True)

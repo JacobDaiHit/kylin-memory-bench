@@ -69,6 +69,8 @@ Schur消元的研究背景见[Dusson、Sigal、Stamm，2021](https://arxiv.org/a
 
 在项目根目录执行，无依赖、无网络、无模型费用：
 
+Windows复核下面保留的V1/V2/V3脚本时，用`python -X utf8`替换`python`。CI使用相同的UTF-8运行模式，保留历史源码原件；当前V3.1工具的文件读写已显式指定UTF-8。
+
 ```bash
 python3 -m experiments.math_memory.prototype --output experiments/math_memory/demo-v2
 python3 -m unittest tests.test_math_memory -v

@@ -83,7 +83,7 @@ def prepare(output, stage='pilot', seed=20261011):
     save_dataset(output/'dataset.evaluator.jsonl', cases)
     load_dataset(output/'dataset.evaluator.jsonl')
     v3.dump(output/'gold.json', gold)
-    config = json.loads((ROOT/'configs/deepseek-research-v31.example.json').read_text())
+    config = json.loads((ROOT/'configs/deepseek-research-v31.example.json').read_text(encoding='utf-8'))
     v3.dump(output/'config.template.json', config)
     finals = len(cases)*2*repeats
     protocol = {'version':'3.1','stage':stage,'status':'prepared_not_executed','paid_calls':0,'seed':seed,
@@ -107,7 +107,7 @@ def prepare(output, stage='pilot', seed=20261011):
 
 def verify_prepared(directory):
     directory = Path(directory)
-    protocol = strict_json((directory/'protocol.json').read_text())
+    protocol = strict_json((directory/'protocol.json').read_text(encoding='utf-8'))
     for name, expected in protocol['data_sha256'].items():
         if hashlib.sha256((directory/name).read_bytes()).hexdigest()!=expected:
             raise ValueError('Prepared material changed: '+name)
@@ -139,8 +139,8 @@ def analyze(prepared, run, output, mode='offline', isolation_proof=None):
         raise ValueError('Run differs from the prepared dataset')
     if manifest['repeats']!=protocol['repeats'] or {a['id'] for a in manifest['agents']}!=set(protocol['agents']):
         raise ValueError('Run repeats or agent identities differ from the frozen selection')
-    gold=json.loads((prepared/'gold.json').read_text())
-    learner={c['id']:c for c in json.loads((prepared/'learner-cases.json').read_text())} if protocol['stage']!='health' else {}
+    gold=json.loads((prepared/'gold.json').read_text(encoding='utf-8'))
+    learner={c['id']:c for c in json.loads((prepared/'learner-cases.json').read_text(encoding='utf-8'))} if protocol['stage']!='health' else {}
     finals={(e['agent_id'],e['trial'],e['case_id']):e for e in events if e['step_id']=='final'}
     rows=[]
     for agent in protocol['agents']:
@@ -157,7 +157,7 @@ def analyze(prepared, run, output, mode='offline', isolation_proof=None):
     native=all(a['kind'] in ('openclaw','hermes') for a in manifest['agents'])
     stub_backend=any(a.get('validation_backend')=='offline_stub' for a in manifest['agents'])
     if mode=='live' and native:
-        if config_signature(json.loads((prepared/'config.template.json').read_text()))!=config_signature(json.loads((run/'config.json').read_text())):
+        if config_signature(json.loads((prepared/'config.template.json').read_text(encoding='utf-8')))!=config_signature(json.loads((run/'config.json').read_text(encoding='utf-8'))):
             raise ValueError('Live model/tool/inference configuration differs from preparation')
         if any(Path(a.get('executable','')).name!=a['id']+'-isolated' for a in manifest['agents']):
             raise ValueError('Live validation requires the declared isolated executables')
@@ -177,7 +177,7 @@ def analyze(prepared, run, output, mode='offline', isolation_proof=None):
                 target_write_checks.append({'agent':agent,'trial':trial,'write_action_observed':wrote,'target_store_visible':visible})
     isolated=False
     if isolation_proof is not None:
-        proof=json.loads(Path(isolation_proof).read_text())
+        proof=json.loads(Path(isolation_proof).read_text(encoding='utf-8'))
         isolated=proof.get('wrapper_sha256')==protocol['implementation_sha256']['scripts/isolated_native_v31.sh'] and bool(proof.get('isolation')) and all(proof['isolation'].values())
     all_correct=all(r['correct_count']==r['check_count'] for r in rows)
     errors=sum(bool(e.get('error')) for e in events)

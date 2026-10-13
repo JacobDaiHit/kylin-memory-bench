@@ -14,7 +14,7 @@ from kylin_memory_bench.scoring import evaluate
 
 
 def calculate(path=ROOT/'docs/evidence/scoring-revision-fixtures.jsonl'):
-    fixtures=[json.loads(line) for line in Path(path).read_text().splitlines() if line]
+    fixtures=[json.loads(line) for line in Path(path).read_text(encoding='utf-8').splitlines() if line]
     if len(fixtures)!=16 or len({r['id'] for r in fixtures})!=16:
         raise ValueError('Expected sixteen unique frozen fixtures')
     results=[]
@@ -40,10 +40,10 @@ def main():
     p.add_argument('--check',action='store_true')
     args=p.parse_args();report=calculate()
     if args.check:
-        if json.loads((args.output/'results.json').read_text())!=report:raise ValueError('Calibration report differs from replay')
+        if json.loads((args.output/'results.json').read_text(encoding='utf-8'))!=report:raise ValueError('Calibration report differs from replay')
     else:
         args.output.mkdir(parents=True,exist_ok=False)
-        (args.output/'results.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+        (args.output/'results.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
         body=''.join('<tr><td>'+html.escape(r['id'])+'</td><td>'+html.escape(r['rationale'])+'</td><td>'+html.escape(json.dumps(r['expected'],ensure_ascii=False))+'</td><td>'+html.escape(json.dumps(r['actual'],ensure_ascii=False))+'</td></tr>' for r in report['fixtures'])
         (args.output/'report.html').write_text('<!doctype html><meta charset="utf-8"><title>修订契约校准</title><h1>16条固定修订校准</h1><p>离线构造样例；不代表独立人审、原生能力或难度通过。</p><table border="1"><tr><th>编号</th><th>预设理由</th><th>预期</th><th>实际</th></tr>'+body+'</table>',encoding='utf-8')
     print(json.dumps(report['summary']));return 0 if report['passed'] else 3

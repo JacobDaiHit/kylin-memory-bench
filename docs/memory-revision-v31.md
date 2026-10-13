@@ -37,6 +37,8 @@ scope改为三个独立项目的指定引用恢复，保留18项分母；预设�
 
 [机器验收记录](evidence/memory-revision-v31-validation.json)记录测试、冻结材料、历史复核、公开范围和无新增费用检查。[openKylin原生离线检查](evidence/research-v31-native-offline.json)仅验证隔离、CLI启动、解码及真正生效的输出额度：提供方请求方法被本地stub覆盖，provider网络调用为0，不能据此宣布原生记忆健康。
 
+该机器验收记录对应提交`a92f17a`的离线快照。后续[CI兼容性修订记录](evidence/ci-compatibility-20261013.json)处理Windows默认编码及Python 3.9目录名尾斜杠问题：当前V3.1工具显式使用UTF-8，历史冻结脚本在UTF-8模式下运行；新回归还主动关闭UTF-8默认模式验证当前工具。准备材料重新核对源码指纹，题目、答案、输入、参考结果和历史实测保持原件。
+
 ```sh
 python3 -m unittest discover -s tests -q
 python3 scripts/calibrate_revision.py --check --output docs/evidence/scoring-revision

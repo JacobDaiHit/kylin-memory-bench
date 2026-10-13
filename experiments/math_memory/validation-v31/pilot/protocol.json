@@ -25,15 +25,15 @@
   "paid_policy": "No live call in preparation. Require separately recorded current prices, remaining cumulative authorization and successful live native health before a paid pilot.",
   "scope": "Persistent-state availability control, not a pure native memory-module switch; byte/slot matching is not native context-token matching.",
   "data_sha256": {
-    "answer-trace.evaluator.json": "2595f7a2b0ee3218533c4b2af32c2f51857d2ae9ebabce57f6dc263bc9eb371a",
     "config.template.json": "c6594374fe10dc23f1f2dd47f6e9a0f7f592e792e29c357b037846da15c45614",
-    "dataset.evaluator.jsonl": "d05ce91ce80ad7c1b2ee330ccfbec02738d3568fea459b62a0acbbd38a819584",
     "gold.json": "af829299b5ab87c42e1e8b34bae1d652c610ec403da68599d98e8ff24f04249d",
+    "dataset.evaluator.jsonl": "d05ce91ce80ad7c1b2ee330ccfbec02738d3568fea459b62a0acbbd38a819584",
+    "answer-trace.evaluator.json": "2595f7a2b0ee3218533c4b2af32c2f51857d2ae9ebabce57f6dc263bc9eb371a",
     "learner-cases.json": "252b5f898e05c0366e43573db5d61d9dd62bb39ae19902c9cdd215517136666c"
   },
   "implementation_sha256": {
-    "scripts/prepare_memory_validation.py": "6ad15b1c317a4859c80551ec29623dcc693afcbe4a90dc4210639b33e6b33f7b",
-    "experiments/math_memory/memory_v31.py": "d4a4c15eb7cbab1b84e45badac68383266b5aab445a805dfe42f9392844777d1",
+    "scripts/prepare_memory_validation.py": "de4eb49577d4127a14be18e50df332e34bb807400f476ecf1e38c694fd42a7b1",
+    "experiments/math_memory/memory_v31.py": "2dabb91e56112cad8eb0933a24dbe4ca20cd8f2791f330385e2b17ea00ab059e",
     "scripts/isolated_native_v31.sh": "1470ec782ff2765d5a0926de35ee76e778a282f447019ce498b1b3161b893a63",
     "scripts/live_deepseek.py": "e4f0914cfa0bc6e8e3ac7d0e0c21e507cdd2d879d1700e7f7bf63b66978b51fb",
     "kylin_memory_bench/adapters.py": "888b25f4f6803c65f972c39a716d1bd83cde8170c0c6a29593b31ae65bc49098",

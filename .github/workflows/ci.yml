@@ -1,8 +1,12 @@
 name: benchmark-ci
 on: [push, pull_request]
+env:
+  # Frozen experimental scripts use the original UTF-8 execution environment.
+  PYTHONUTF8: '1'
 jobs:
   test:
     strategy:
+      fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest]
         python: ['3.9', '3.12']

@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "kind": "ci_cross_platform_compatibility_revision",
+  "created_at_utc": "2026-10-13T00:54:18.254511+00:00",
+  "previous_commit": "a92f17a436b2cd219a87adf539a1d2475c9981ac",
+  "previous_failed_ci_url": "https://github.com/JacobDaiHit/kylin-memory-bench/actions/runs/38277503101",
+  "observed_causes": [
+    "Windows default cp1252/GBK file encoding failed on UTF-8 Chinese data.",
+    "Python 3.9 retains trailing slashes on tar directory names; the hierarchy test compared unnormalized names."
+  ],
+  "fixes": [
+    "Current V3.1 text I/O explicitly uses UTF-8.",
+    "Frozen V1/V2/V3 scripts run in UTF-8 mode; the historical CLI test explicitly sets that mode for its child process.",
+    "The tar hierarchy test normalizes names while preserving directory type and ordering checks.",
+    "CI keeps each of its four platform jobs running independently."
+  ],
+  "local_tests": [
+    {
+      "platform": "Linux / WSL2",
+      "python_family": "3.13",
+      "scheduled": 150,
+      "passed": 150,
+      "skipped": 0,
+      "failed": 0,
+      "seconds": 85.701,
+      "local_log_sha256": "237235c2d1ea2e3e9f489900d1539c43578d9b43925720133cd9dadbb7aa5185"
+    },
+    {
+      "platform": "Windows",
+      "python_family": "3.13",
+      "scheduled": 150,
+      "passed": 148,
+      "skipped": 2,
+      "failed": 0,
+      "seconds": 56.302,
+      "local_log_sha256": "66c0ca6cc73acb3b2d88f7d3340cd9f95401ae53cef498c4a5fa1f57d530de18"
+    }
+  ],
+  "post_linux_suite_targeted_cli_retest": {
+    "count": 1,
+    "passed": 1
+  },
+  "regressions_with_utf8_default_disabled": {
+    "linux": {
+      "count": 2,
+      "passed": 2
+    },
+    "windows": {
+      "count": 2,
+      "passed": 2
+    }
+  },
+  "scoring_calibration": {
+    "revision_fixtures": 16,
+    "matched": 16,
+    "original_fixtures": 30,
+    "original_metric_groups": 4,
+    "false_passes": 0,
+    "historical_changed_checks": 0
+  },
+  "prepared_materials": {
+    "prepared_protocols_refreshed": 4,
+    "all_case_gold_input_and_reference_files_unchanged": true,
+    "paid_calls": 0
+  },
+  "prepared_protocols": {
+    "health": {
+      "sha256": "7a71e4394975e58ad3d0f989ce197d77d157d62d3ff8a95909621da6a53b188a",
+      "status": "prepared_not_executed"
+    },
+    "pilot": {
+      "sha256": "ff85cbce889b604452405d0c5f1cd7e607e05870f7d817b89b60d907761ea0e0",
+      "status": "prepared_not_executed"
+    },
+    "formal": {
+      "sha256": "e94b179dd94ca66a6e5c57527e925e5bec5dae91d26fa44d39a150b2211cd77e",
+      "status": "prepared_not_executed"
+    }
+  },
+  "source_sha256": {
+    ".github/workflows/ci.yml": "74027adcd42c3e625848654a559464efa167a6dcdf8487363bd7f187b9cd60d3",
+    "tests/test_cli_release.py": "5352b6bd112a51f1c994568305588f199dae93854ef09b099c96d55392317e55",
+    "tests/test_memory_revision.py": "2c538838bc208ab1cdd407f2e18833a86611c5181015dd86d0e8f2fc039beb57",
+    "tests/test_research_memory.py": "b147514a315fdc61791dab6d2a524786b4acd6de323cbe62fecb3180bd818df6",
+    "scripts/calibrate_revision.py": "1578372122b981001caccc2d52dea982a7eb10bd1c636dc2c84e161b3a99bac4",
+    "scripts/prepare_memory_validation.py": "de4eb49577d4127a14be18e50df332e34bb807400f476ecf1e38c694fd42a7b1",
+    "experiments/math_memory/memory_v31.py": "2dabb91e56112cad8eb0933a24dbe4ca20cd8f2791f330385e2b17ea00ab059e",
+    "experiments/math_memory/reference_health_adapter.py": "969649c38766cf800dad4bf91042d239dd9a38a083fd4969bad3da6835c89863"
+  },
+  "paid_model_calls": 0,
+  "local_paid_request_and_cost_counters_unchanged": true,
+  "scope": "Offline compatibility and source-freeze refresh only. The original local validation remains a historical snapshot. No native paid health, difficulty, final package lifecycle or final video claim."
+}

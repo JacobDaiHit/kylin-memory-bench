@@ -92,13 +92,14 @@ class ReleaseTests(unittest.TestCase):
             with tarfile.open(fileobj=io.BytesIO(entries['data.tar.gz']), mode='r:gz') as data:
                 names = data.getnames()
                 from pathlib import PurePosixPath
+                members = {str(PurePosixPath(member.name)): member for member in data.getmembers()}
                 seen = set()
                 for member in data.getmembers():
                     for parent in PurePosixPath(member.name).parents:
                         if str(parent) != '.':
                             self.assertIn(str(parent), seen, 'dpkg needs parent directories before files')
-                            self.assertTrue(data.getmember(str(parent)).isdir())
-                    seen.add(member.name)
+                            self.assertTrue(members[str(parent)].isdir())
+                    seen.add(str(PurePosixPath(member.name)))
                 self.assertIn('usr/bin/kmb', names)
                 self.assertEqual(data.getmember('usr/bin/kmb').mode, 0o755)
                 self.assertIn('usr/share/kylin-memory-bench/kylin_memory_bench/data/sample.jsonl', names)

@@ -144,6 +144,8 @@ run/
 python3 -m unittest discover -s tests -v
 ```
 
+Windows运行包含历史数学脚本的完整测试时，使用 `python -X utf8 -m unittest discover -s tests -v`；CI采用相同UTF-8模式。当前V3.1工具显式按UTF-8读写文件。
+
 测试使用标准库 `unittest`。CI 配置覆盖 Linux/Windows 与 Python 3.9/3.12；CI 工作流文件已提供，本地验证不能等同于远程 CI 已运行。MIT 许可证；原始赛题 PDF 不在发布包中重新分发。
 
 挑战集的公开标注订正：统一接受“松柏”和“松柏项目”，六个等价答案误判得到修正。原始结果仍保留，详见 `examples/openkylin-challenge/score-review.json`，可用 `python3 scripts/review_challenge.py --check` 复算。
