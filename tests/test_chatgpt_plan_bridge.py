@@ -2,10 +2,37 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
-from scripts.chatgpt_plan_bridge import Bridge, translate, completed_chat, NAMESPACE
+from scripts.chatgpt_plan_bridge import Bridge, translate, completed_chat, NAMESPACE, error_status
 from scripts.chatgpt_plan import TARGET
 
 class BridgeTests(unittest.TestCase):
+    def test_http_provider_failure_is_not_reported_as_bad_input(self):
+        import threading
+        import urllib.request
+        import urllib.error
+        from unittest.mock import patch
+        from scripts.chatgpt_plan import ProbeError
+        with tempfile.TemporaryDirectory() as tmp:
+            bridge=Bridge(Path(tmp)/'run',capture=True)
+            server=bridge.server();thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
+            try:
+                request=urllib.request.Request('http://127.0.0.1:%d/v1/chat/completions'%server.server_port,
+                    data=b'{}',headers={'Authorization':'Bearer '+bridge.key,'Content-Type':'application/json'})
+                with patch.object(bridge,'invoke',side_effect=ProbeError('HTTP 503 / subscription_sharing_user_unavailable')):
+                    with self.assertRaises(urllib.error.HTTPError) as caught:urllib.request.urlopen(request,timeout=5)
+                    self.assertEqual(caught.exception.code,503)
+                    body=json.loads(caught.exception.read());self.assertEqual(body['error']['type'],'api_error')
+                    self.assertNotIn('subscription_sharing',body['error']['message'])
+            finally:server.shutdown();server.server_close();thread.join()
+    def test_transport_errors_keep_retryable_status_without_leaking_messages(self):
+        import requests
+        from scripts.chatgpt_plan import ProbeError
+        self.assertEqual(error_status(ProbeError('HTTP 503 / subscription_sharing_user_unavailable')),503)
+        self.assertEqual(error_status(ProbeError('HTTP 429 / rate_limit_exceeded')),429)
+        self.assertEqual(error_status(ProbeError('Network request failed; no automatic retry. Check connectivity.')),502)
+        self.assertEqual(error_status(requests.ReadTimeout()),504)
+        self.assertEqual(error_status(requests.exceptions.SSLError()),502)
+        self.assertEqual(error_status(ValueError('wrong_model')),400)
     def test_tools_and_complete_history_preserved(self):
         body={'model':TARGET,'messages':[{'role':'system','content':'rules'},
             {'role':'assistant','content':None,'tool_calls':[{'id':'c1','type':'function','function':{'name':'read','arguments':'{"path":"memory.md"}'}}]},

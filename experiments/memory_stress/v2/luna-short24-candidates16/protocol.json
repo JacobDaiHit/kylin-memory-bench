@@ -1,0 +1,317 @@
+{
+  "protocol": "luna-short24-submission-1",
+  "model": "gpt-5.6-luna",
+  "histories": 8,
+  "tasks": [
+    {
+      "id": "00-openclaw-reader_only",
+      "agent": "openclaw",
+      "case_id": "reader-stress-2e5f66b004b9a0a3cb",
+      "condition": "reader_only"
+    },
+    {
+      "id": "00-hermes-reader_only",
+      "agent": "hermes",
+      "case_id": "reader-stress-2e5f66b004b9a0a3cb",
+      "condition": "reader_only"
+    },
+    {
+      "id": "00-openclaw-memory",
+      "agent": "openclaw",
+      "case_id": "stress-02ee75d1ce508391d5",
+      "condition": "memory"
+    },
+    {
+      "id": "00-hermes-memory",
+      "agent": "hermes",
+      "case_id": "stress-02ee75d1ce508391d5",
+      "condition": "memory"
+    },
+    {
+      "id": "01-openclaw-reader_only",
+      "agent": "openclaw",
+      "case_id": "reader-stress-c25140e2d4abeb259c",
+      "condition": "reader_only"
+    },
+    {
+      "id": "01-hermes-reader_only",
+      "agent": "hermes",
+      "case_id": "reader-stress-c25140e2d4abeb259c",
+      "condition": "reader_only"
+    },
+    {
+      "id": "01-openclaw-memory",
+      "agent": "openclaw",
+      "case_id": "stress-55bec20b12f6985ad1",
+      "condition": "memory"
+    },
+    {
+      "id": "01-hermes-memory",
+      "agent": "hermes",
+      "case_id": "stress-55bec20b12f6985ad1",
+      "condition": "memory"
+    },
+    {
+      "id": "02-openclaw-reader_only",
+      "agent": "openclaw",
+      "case_id": "reader-stress-c06cfd56aab2bf4910",
+      "condition": "reader_only"
+    },
+    {
+      "id": "02-hermes-reader_only",
+      "agent": "hermes",
+      "case_id": "reader-stress-c06cfd56aab2bf4910",
+      "condition": "reader_only"
+    },
+    {
+      "id": "02-openclaw-memory",
+      "agent": "openclaw",
+      "case_id": "stress-918ad423cec5bce8cd",
+      "condition": "memory"
+    },
+    {
+      "id": "02-hermes-memory",
+      "agent": "hermes",
+      "case_id": "stress-918ad423cec5bce8cd",
+      "condition": "memory"
+    },
+    {
+      "id": "03-openclaw-reader_only",
+      "agent": "openclaw",
+      "case_id": "reader-stress-e95408113d75520e43",
+      "condition": "reader_only"
+    },
+    {
+      "id": "03-hermes-reader_only",
+      "agent": "hermes",
+      "case_id": "reader-stress-e95408113d75520e43",
+      "condition": "reader_only"
+    },
+    {
+      "id": "03-openclaw-memory",
+      "agent": "openclaw",
+      "case_id": "stress-10af32e680568061ac",
+      "condition": "memory"
+    },
+    {
+      "id": "03-hermes-memory",
+      "agent": "hermes",
+      "case_id": "stress-10af32e680568061ac",
+      "condition": "memory"
+    },
+    {
+      "id": "04-openclaw-reader_only",
+      "agent": "openclaw",
+      "case_id": "reader-stress-7941bc0868cd5f8a5f",
+      "condition": "reader_only"
+    },
+    {
+      "id": "04-hermes-reader_only",
+      "agent": "hermes",
+      "case_id": "reader-stress-7941bc0868cd5f8a5f",
+      "condition": "reader_only"
+    },
+    {
+      "id": "04-openclaw-memory",
+      "agent": "openclaw",
+      "case_id": "stress-f21e8376f479558efb",
+      "condition": "memory"
+    },
+    {
+      "id": "04-hermes-memory",
+      "agent": "hermes",
+      "case_id": "stress-f21e8376f479558efb",
+      "condition": "memory"
+    },
+    {
+      "id": "05-openclaw-reader_only",
+      "agent": "openclaw",
+      "case_id": "reader-stress-6b32ca6b84e1ec2b47",
+      "condition": "reader_only"
+    },
+    {
+      "id": "05-hermes-reader_only",
+      "agent": "hermes",
+      "case_id": "reader-stress-6b32ca6b84e1ec2b47",
+      "condition": "reader_only"
+    },
+    {
+      "id": "05-openclaw-memory",
+      "agent": "openclaw",
+      "case_id": "stress-62338d76a9b59f54ea",
+      "condition": "memory"
+    },
+    {
+      "id": "05-hermes-memory",
+      "agent": "hermes",
+      "case_id": "stress-62338d76a9b59f54ea",
+      "condition": "memory"
+    },
+    {
+      "id": "06-openclaw-reader_only",
+      "agent": "openclaw",
+      "case_id": "reader-stress-e790c58e328e261a8b",
+      "condition": "reader_only"
+    },
+    {
+      "id": "06-hermes-reader_only",
+      "agent": "hermes",
+      "case_id": "reader-stress-e790c58e328e261a8b",
+      "condition": "reader_only"
+    },
+    {
+      "id": "06-openclaw-memory",
+      "agent": "openclaw",
+      "case_id": "stress-8c22330e0e46d7a8bf",
+      "condition": "memory"
+    },
+    {
+      "id": "06-hermes-memory",
+      "agent": "hermes",
+      "case_id": "stress-8c22330e0e46d7a8bf",
+      "condition": "memory"
+    },
+    {
+      "id": "07-openclaw-reader_only",
+      "agent": "openclaw",
+      "case_id": "reader-stress-c93599beaa938d8a47",
+      "condition": "reader_only"
+    },
+    {
+      "id": "07-hermes-reader_only",
+      "agent": "hermes",
+      "case_id": "reader-stress-c93599beaa938d8a47",
+      "condition": "reader_only"
+    },
+    {
+      "id": "07-openclaw-memory",
+      "agent": "openclaw",
+      "case_id": "stress-921211e2e912383cd9",
+      "condition": "memory"
+    },
+    {
+      "id": "07-hermes-memory",
+      "agent": "hermes",
+      "case_id": "stress-921211e2e912383cd9",
+      "condition": "memory"
+    }
+  ],
+  "jobs": 6,
+  "history_sessions": 24,
+  "memory_turns": 400,
+  "reader_turns": 16,
+  "cases_sha256": "c12b609e6b3f20bb75a8d741f223d3b3eaae965f74efce935e2948a4c3fa3269",
+  "source_sha256": {
+    "scripts/analyze_difficulty.py": "5a6a3e5e0ec9180612f149bb9ce297303fccfae96dd7af589ae5f5f3d4ac625f",
+    "scripts/build_dataset_card.py": "d36a4535ac9c84eb1e497b76b05f29198b4a518a2f139182d99ab5f44a2e05d2",
+    "scripts/build_delivery.py": "7c4432e65fd965220b6f018d358eeb8a4caeae779f16a4a04219d071d3cb76af",
+    "scripts/build_presentation.py": "02654354253a3946e2d042a27a0f555ac01b96b590d3233c377c10c428314104",
+    "scripts/build_release.py": "06d7f0af8575d0a0a1004842b01ab1beaf8bf2ff1c3af53590581f1db3398086",
+    "scripts/build_technical_report.py": "91097406fabe9fad9817697dc46306095c2e849afa2df640b01874c8740db9c2",
+    "scripts/calibrate_revision.py": "1578372122b981001caccc2d52dea982a7eb10bd1c636dc2c84e161b3a99bac4",
+    "scripts/calibrate_scoring.py": "bab75b8423f1647d4499bf6aa2530896d558f2c8fc06c6103fcfb195cb2ea233",
+    "scripts/chatgpt_plan.py": "252639ac9d19da40ec968719621eb5b9581e071a28c0704a22b58e800a572052",
+    "scripts/chatgpt_plan_bridge.py": "bd3d0298173c34d5d4ed33b7440d4dae641ca0abac25cb8d65658560b858725d",
+    "scripts/check_plan_memory.py": "04bdb6a09ae6a7f4294c64fd1987365c5e77dfe659b94f025cc483cafdba24e6",
+    "scripts/collect_environment.py": "331a7eb840139895c8637c1475edfe043394d56447a51252f1c10f597af58860",
+    "scripts/compare_scoring_versions.py": "f44771625d3d56c0432981f0625cae0a764a68bd23fadc79791e4052b2b1dfff",
+    "scripts/desktop_session.sh": "47e23c125fd268e1a9f74aabafde81340a163e3b9a733343f0935cde330159f3",
+    "scripts/export_run.py": "c8e83a5a12d5d095fd2248d5c0099530ee0048d97c3511bc6a340151cd22c073",
+    "scripts/generate_difficulty.py": "c7e542c85dc7e05f8b8946476926dd23ec613c8236d4c37039a420c9fe180775",
+    "scripts/isolated_native.sh": "60ab733d397af989c7f327bc073cccfe1aec86e544096494bbf42cd87680434c",
+    "scripts/isolated_native_plan.sh": "6b8f328110fee6e517b2650be3582c84fa33bd1e5058addc25b92a33de5011b9",
+    "scripts/isolated_native_v31.sh": "1470ec782ff2765d5a0926de35ee76e778a282f447019ce498b1b3161b893a63",
+    "scripts/live_deepseek.py": "e4f0914cfa0bc6e8e3ac7d0e0c21e507cdd2d879d1700e7f7bf63b66978b51fb",
+    "scripts/local_embeddings.py": "61f1c0665e2517d697eee81f779b5925d01085aa929c87eb4dba9394c4ba3427",
+    "scripts/open_report.sh": "228f1c7f5fba9e1415189411f7f75d4ee3c14bfcf87c86d2b678afde8848d0ca",
+    "scripts/plan_native_config.py": "1226c4f2a0ed9ffc1a3b07653f7e9e4c11e7db6d296b2484a5c27bdfa8f2516f",
+    "scripts/plan_reader_replay.py": "e5361b4a7e442b295033d6b3c9796284bde26727113805286d2fd5164d806448",
+    "scripts/preflight_record_pilot.py": "378bdd32636009805086eb05c6c7620a19e82bbbf66e22f661d9e5a94e66f358",
+    "scripts/prepare_memory_validation.py": "de4eb49577d4127a14be18e50df332e34bb807400f476ecf1e38c694fd42a7b1",
+    "scripts/report_math_pilot.py": "57cce8611aa21fcb0cd257845bbc4dad2ce0970b6f674651b2d32ebb717f1ae2",
+    "scripts/report_record_pilot.py": "008384028ddd7ca25fbcfb9eb7a1f27bc36bf8323424e1a479d7ace8089ac2dd",
+    "scripts/reproduce.sh": "31aab0e211c7d3d186226587eb2d8a5509bf990e2704f247f41269cd05e16fd0",
+    "scripts/review_challenge.py": "4544e63ddf72b37e3dcbbc4c8efaa89f9d975d5535e15361894963055de5669f",
+    "scripts/runtime_bridge.sh": "8534284369073ffe6a3506b451297d1832db185d755c98732388d634f1567c99",
+    "scripts/run_luna_submission_pilot.py": "598ffeab474b054c5e46b066dc1d794950c8fd26ee022c75c5d9220e4043581d",
+    "scripts/run_plan_full.py": "32ad4599ef75962b0c955eeab32141815bf36c57e8ec0ea46530b368dee644f2",
+    "scripts/run_plan_health.py": "2e419076dcda8997bd68e1abe9bf2ff47e8ea82c69eb5684b3d6421e6d928ddb",
+    "scripts/run_plan_reader.py": "09263c8bcfc2b136b6dc7a05860aabb17945a9cee683d06b0f4548b506fdde83",
+    "scripts/run_record_pilot.py": "faa9cdc4488fa9005f1d60b1593fb52df82ce4698eac0f17d6a44d7edba07f3e",
+    "scripts/snapshot_experiment.py": "6bd56a1751385fdf046b34edffbd47f42363b49002eda13e2b6e35dc72f92992",
+    "scripts/start_desktop.sh": "dff2531a104e85d54c7c295bff048cb4c43fb88f8e7c0c3d9e1c5ceaf89b4d7f",
+    "scripts/summarize_experiments.py": "40c2557a47d8d612c6905fabafb04e868801ba133d3e104c36dbddaefb25ff6c",
+    "scripts/validate_foundation.py": "b15a64aa83af757c34a664288045d161aa2ed112e9364fd00466ad4968a61b10",
+    "scripts/validate_memory_offline.py": "84477b0360323be880a5db280930f1dfae6471640188bba21bffee43fdb0fb2c",
+    "scripts/validate_package.sh": "87986987c6a5f99a4c4e11f1ecad482a9f20b135f002deb6a709702702ba8b87",
+    "scripts/verify_openkylin.sh": "d9b64bfd33572e7852c6e01d8cad70e950954d31a6290a54d75053bd4585d0af",
+    "scripts/watch_plan_report.py": "cb4b772c72e96d7d5d1052a144298bc725519c1328be2029e727b6eb4179fca6",
+    "kylin_memory_bench/adapters.py": "8aefdb0e48e92be367280b448d343530707570287a4bdb5060230fe673399c0c",
+    "kylin_memory_bench/baseline.py": "c9d449ad4c0f6c764b3403000aed25546c93c4fe17062d559c80354c1d269d95",
+    "kylin_memory_bench/challenges.py": "dc23d8514332184be8a49913cb6c06efe998130be6d88cf5a91152d70910d796",
+    "kylin_memory_bench/cli.py": "c26b86cf3a3a4d68d4b14f8e8f134a7d8ddc6a023388334ad9991346035fde98",
+    "kylin_memory_bench/common.py": "bdb2be3af7971b9893e089024ebcf8e9862d81e56a964dcaf1de2cd929f7031a",
+    "kylin_memory_bench/dataset.py": "b9cec11a275f1e447c1b32fa9c0d0fd3ce47045ac48c7a10f7f69aeab1489a9d",
+    "kylin_memory_bench/evidence_view.py": "8afe599b8ff870a41395501cca4928b6fe7a9a321ec25d187bd5acc4cecbbe26",
+    "kylin_memory_bench/generate.py": "40b2e1d04fe0787506b6df394e0f780ea3f2caf4e93ebce2998cca518da6df0c",
+    "kylin_memory_bench/native_trace.py": "a1cf28f1a8b837b7e2655322221af74d0d4784583d29237b3a61e7c01f1f7061",
+    "kylin_memory_bench/report.py": "96a9b10f238043be066cb89b0327bba678d346ff0c34e68d3e75268fc98318c1",
+    "kylin_memory_bench/runner.py": "a2195a0dffac7b5adf488d5a2c9bd339a2810e7120717c3b5aa45af3cc3cbfc8",
+    "kylin_memory_bench/scoring.py": "44ca6bd401b37b5d6b3ce3ccbac8f953df7461970af44d813d8b250585d4ca78",
+    "kylin_memory_bench/__init__.py": "84458025a1a830016ac1c034a5d63a57b625f0113a8207ef82863d5e925538da",
+    "kylin_memory_bench/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "experiments/math_memory/math_core.py": "861d535280760efa6503ceb5119f3596fdeccee85c46610a006f271df0e2ff6c",
+    "experiments/math_memory/memory_only.py": "132d4c8ff15332786e3a428982499b48839e014fd036205c5be2c864434542b3",
+    "experiments/math_memory/memory_v31.py": "2dabb91e56112cad8eb0933a24dbe4ca20cd8f2791f330385e2b17ea00ab059e",
+    "experiments/math_memory/native_pilot.py": "587399d53b55c99a6b76de352aecfddce9bacdb8af7e80a4dfe84f9cded866a4",
+    "experiments/math_memory/prototype.py": "b7a6a642a6a895599e22646c4edbc7ff52234b3462c95c1339e9e5d756afcdd4",
+    "experiments/math_memory/record_pilot.py": "2fff29dccceef4e6d3c39c3c57ff6a8c6da0ec4371976f29f3edaa363011600e",
+    "experiments/math_memory/reference_health_adapter.py": "969649c38766cf800dad4bf91042d239dd9a38a083fd4969bad3da6835c89863",
+    "experiments/math_memory/revised_pilot.py": "3d463d916890374650157191b97ea44b8a8e474efce3d54c52ce4a8859048382",
+    "experiments/math_memory/runner-v3-before.py": "cdbc291890d02713bda794a7640616df83660b8682f7c86fef26186bc740e634",
+    "experiments/math_memory/transport-v3-before.py": "ef01bd400639a3a536a791c4895a6c2f048e78acb3a6c2904164dcc757ed7cb6",
+    "experiments/math_memory/transport-v3-fixed.py": "adb3cfb6c1d8c5e5ee59127a65e7b8203a05df474baa1c2980e3f5963fef5db1",
+    "experiments/math_memory/__init__.py": "cd8fdff2b8ccce2f6392aaf0dd87b5d48919663cc1f1a3e05cd8bb12b14ff37a",
+    "experiments/memory_stress/calibrate_stress.py": "322c356eeab06c3a88da29f3fdf3a0193904d88f3da0beea8cda784a5a8b9961",
+    "experiments/memory_stress/oracle.py": "930de57afb80b82f9acfe3532d9f3bba6e9114c326ab5c49bd04399a390f5c14",
+    "experiments/memory_stress/reference_adapter.py": "19286a57fc3abd4b0567ee3fccf624195af023bf824f1a7da0e296d5ab59c840",
+    "experiments/memory_stress/render_history.py": "f14a45f27e17d9dfb33fe3f5562ac5440d579a99e691d5380bd2d1e25339a741",
+    "experiments/memory_stress/suite.py": "3686cb99436c776def0c6870a945b0f22414478840722facc314c83f16947556",
+    "experiments/memory_stress/world_generator.py": "fd733f8a5d12b3b9fb0ba319a3fe37570b23f15d59371a1b331509869ce28cad",
+    "experiments/memory_stress/__init__.py": "99c402c38c8122d52aca32dbf38af40cd7aa34a9ad7895366241b8210cc9b11c",
+    "experiments/memory_stress/__main__.py": "e2e4f09736eb71fc60ba53b244c928f2481c88c4c0731cdc92f8a6d23efdbc9e",
+    "experiments/memory_stress/v2/calibrate_stress.py": "af33379a3c981442eda5353e96d0c8126f79e5609051e31f09a01b70c2a2d8c5",
+    "experiments/memory_stress/v2/chain.py": "4c26ef39fa58111b98b23e6007bc32bdda4f10137b3ce1f33735b3d01dbc5e22",
+    "experiments/memory_stress/v2/environment.py": "e9ffbf958fb60cec9480dd6a7b54cb6a84c7ad8a08a9bc33bb30a4fdfb854925",
+    "experiments/memory_stress/v2/oracle.py": "2343a2a331512d7fcc0a10d99cc117e7c88edf8bb9094789457a8edaf756f4ca",
+    "experiments/memory_stress/v2/reference_adapter.py": "5def2b22df5199a2cb60a40478955688d745e23a2a6c5da34b257730f462fb4b",
+    "experiments/memory_stress/v2/render_history.py": "0240e4818ff5517e76d9e17ea37a949336eb46584aa4b8158be3f3bccbc634d6",
+    "experiments/memory_stress/v2/suite.py": "2b8708a7861d03d70ef50c2464eb559f8af7b2f3465ba8291023ab23f3b0bb16",
+    "experiments/memory_stress/v2/world_generator.py": "6ee73a14035463134ece6f931ebdef01d6204f8f6d97f3dc2f82c7764a0fdcd5",
+    "experiments/memory_stress/v2/__init__.py": "fd82505a55f5d7ce53bd87eafbb200c5ee7a225782aab90a20c02dd9ce1bd871",
+    "experiments/memory_stress/v2/__main__.py": "e2e4f09736eb71fc60ba53b244c928f2481c88c4c0731cdc92f8a6d23efdbc9e",
+    "configs/command.example.json": "d8a2bb56f9fbda585cf53de84a0b024a8ec8784b8a069328b21105e8f0996d1b",
+    "configs/deepseek-live.example.json": "f2ea73dc458c1caca4557b3a123e28ac2a4e598669ff28aaf2e5723fe203a38c",
+    "configs/deepseek-research-v31.example.json": "c6594374fe10dc23f1f2dd47f6e9a0f7f592e792e29c357b037846da15c45614",
+    "configs/native-agents.example.json": "5c9c2c27deeb23e8ed8a63e1b4d7534acfa28f594ff2e0917cbaa2b0d0af24e6"
+  },
+  "selection": "Development seed index 2 per family and low/high tier; fixed before this pilot. Source suite and prior traces are public; not blind.",
+  "pooled_https_connections": true,
+  "compact_candidate_diagnostic": true,
+  "bridge_error_contract": "provider-and-transport-status-v2",
+  "transport_read_timeout_seconds": 120,
+  "native_turn_timeout_seconds": 180,
+  "case_retry": false,
+  "deadline_seconds": 5048.92888212204,
+  "request_cap": null,
+  "output_cap": null,
+  "tls_warmup": "When pooled, up to four unauthenticated GET attempts establish TLS; inference requests are not retried.",
+  "acceptance": {
+    "reader_observed_minimum": 14,
+    "reader_content_minimum": 14,
+    "memory_observed_minimum": 14,
+    "meaning": "Operational calibration only. No ranking or claim that original difficulty gate was met."
+  },
+  "scope": "Standalone 24-session revision. Does not replace or merge 128-session results. Native tools retained; WSL, not native openKylin.",
+  "deadline_epoch": 1791908700.0
+}

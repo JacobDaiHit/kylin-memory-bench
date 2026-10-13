@@ -9,6 +9,7 @@ import os
 import secrets
 import time
 import threading
+import re
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 from scripts import chatgpt_plan as plan
@@ -18,6 +19,19 @@ AUTH_LOCK = threading.Lock()
 # Native clients send these automatically. Their absence upstream is disclosed
 # in every request record; this route is NOT the DeepSeek capped protocol.
 UNSUPPORTED = {'temperature', 'top_p', 'max_tokens', 'max_completion_tokens'}
+
+
+def error_status(exc):
+    """Keep invalid input distinct from retryable provider/transport failures."""
+    if isinstance(exc, plan.ProbeError):
+        match=re.match(r'^HTTP (\d{3}) /',str(exc))
+        if match:return int(match.group(1))
+        return 502
+    import requests
+    if isinstance(exc,requests.Timeout):return 504
+    if isinstance(exc,requests.RequestException):return 502
+    if isinstance(exc,(ValueError,TypeError)):return 400
+    return 500
 
 
 def translate(body, model, replay=None):
@@ -169,9 +183,11 @@ class Bridge:
                     else:
                         self.send_response(200); self.send_header('Content-Type','application/json'); self.end_headers()
                         self.wfile.write(json.dumps(result).encode())
-                except Exception:
-                    # 400 avoids SDK transport retry amplification. Full private
-                    # attempt record remains available to the evaluator.
-                    self.send_response(400); self.send_header('Content-Type','application/json'); self.end_headers()
-                    self.wfile.write(b'{"error":{"message":"Plan bridge rejected request; inspect private ledger.","type":"invalid_request_error"}}')
+                except Exception as exc:
+                    # Native SDK recovery is retained; every provider attempt is
+                    # persisted. The evaluator does not rerun failed cases.
+                    status=error_status(exc)
+                    self.send_response(status); self.send_header('Content-Type','application/json'); self.end_headers()
+                    kind='invalid_request_error' if status==400 else 'api_error'
+                    self.wfile.write(json.dumps({'error':{'message':'Plan bridge request failed; inspect private ledger.','type':kind}}).encode())
         return HTTPServer(('127.0.0.1',0),Handler)

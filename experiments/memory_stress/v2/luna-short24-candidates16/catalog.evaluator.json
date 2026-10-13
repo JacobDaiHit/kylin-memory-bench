@@ -1,0 +1,1340 @@
+{
+  "reader-stress-2e5f66b004b9a0a3cb": {
+    "scenario_id": "short24-candidates16-11590fec50188f813a",
+    "split_group": "short24-candidates16-11590fec50188f813a",
+    "split": "development",
+    "family": "multihop",
+    "tier": "low",
+    "seed": 20261102,
+    "loads": {
+      "candidate_chains": 4,
+      "history_slots": 128,
+      "hop_count": 1,
+      "short_history_sessions": 24,
+      "source_history_sessions": 128
+    },
+    "case_id": "reader-stress-2e5f66b004b9a0a3cb",
+    "query_id": "q06",
+    "query_role": "primary",
+    "condition": "reader_only",
+    "expression": "structured",
+    "rendered_expression": "structured",
+    "variant": "base",
+    "expected": "exports/OUT-ce9b8637e6",
+    "answer_type": "string",
+    "contract": "memory-stress-short24-submission-1",
+    "proof": {
+      "answer": "exports/OUT-ce9b8637e6",
+      "sufficient_sets": [
+        [
+          "E-08fa6b6a25"
+        ],
+        [
+          "E-5d5534b323"
+        ]
+      ],
+      "required_groups": [
+        [
+          "E-08fa6b6a25",
+          "E-5d5534b323"
+        ]
+      ],
+      "required_group_count": 1,
+      "positive_evidence_observable": true,
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "explanatory_ids": []
+    },
+    "case_sha256": "f0adf804a8ce461127080bf7cec7ba7dbc0e3aa6445058b383810f6b81ce6f69",
+    "history_utf8_bytes": 0,
+    "final_utf8_bytes": 2406,
+    "oracle_raw_record_count": 1,
+    "delivery_spec": null,
+    "delivery_candidates": [],
+    "evaluation_track": "memory_lookup",
+    "forbidden_files": []
+  },
+  "stress-02ee75d1ce508391d5": {
+    "scenario_id": "short24-candidates16-11590fec50188f813a",
+    "split_group": "short24-candidates16-11590fec50188f813a",
+    "split": "development",
+    "family": "multihop",
+    "tier": "low",
+    "seed": 20261102,
+    "loads": {
+      "candidate_chains": 4,
+      "history_slots": 128,
+      "hop_count": 1,
+      "short_history_sessions": 24,
+      "source_history_sessions": 128
+    },
+    "case_id": "stress-02ee75d1ce508391d5",
+    "query_id": "q06",
+    "query_role": "primary",
+    "condition": "memory",
+    "expression": "structured",
+    "rendered_expression": "structured",
+    "variant": "base",
+    "expected": "exports/OUT-ce9b8637e6",
+    "answer_type": "string",
+    "contract": "memory-stress-short24-submission-1",
+    "proof": {
+      "answer": "exports/OUT-ce9b8637e6",
+      "sufficient_sets": [
+        [
+          "E-08fa6b6a25"
+        ],
+        [
+          "E-5d5534b323"
+        ]
+      ],
+      "required_groups": [
+        [
+          "E-08fa6b6a25",
+          "E-5d5534b323"
+        ]
+      ],
+      "required_group_count": 1,
+      "positive_evidence_observable": true,
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "explanatory_ids": []
+    },
+    "case_sha256": "2d2de5cf86a3d67b2daf99b9a1f9eb6e5e3dcec2198c7b1968976d71fcd4e6ff",
+    "history_utf8_bytes": 7796,
+    "final_utf8_bytes": 2179,
+    "oracle_raw_record_count": 0,
+    "delivery_spec": null,
+    "delivery_candidates": [],
+    "evaluation_track": "memory_lookup",
+    "forbidden_files": []
+  },
+  "reader-stress-c25140e2d4abeb259c": {
+    "scenario_id": "short24-candidates16-bce5f107ab9001e7ca",
+    "split_group": "short24-candidates16-bce5f107ab9001e7ca",
+    "split": "development",
+    "family": "multihop",
+    "tier": "high",
+    "seed": 20261302,
+    "loads": {
+      "candidate_chains": 4,
+      "history_slots": 128,
+      "hop_count": 4,
+      "short_history_sessions": 24,
+      "source_history_sessions": 128
+    },
+    "case_id": "reader-stress-c25140e2d4abeb259c",
+    "query_id": "q02",
+    "query_role": "primary",
+    "condition": "reader_only",
+    "expression": "structured",
+    "rendered_expression": "structured",
+    "variant": "base",
+    "expected": "exports/OUT-56d5a60abf",
+    "answer_type": "string",
+    "contract": "memory-stress-short24-submission-1",
+    "proof": {
+      "answer": "exports/OUT-56d5a60abf",
+      "sufficient_sets": [
+        [
+          "E-8b6faecafe",
+          "E-1eb0fb174f",
+          "E-b2228f66d3",
+          "E-9d380bc2b4"
+        ],
+        [
+          "E-8b6faecafe",
+          "E-1eb0fb174f",
+          "E-b2228f66d3",
+          "E-b414cafa77"
+        ]
+      ],
+      "required_groups": [
+        [
+          "E-9d380bc2b4",
+          "E-b414cafa77"
+        ],
+        [
+          "E-8b6faecafe"
+        ],
+        [
+          "E-b2228f66d3"
+        ],
+        [
+          "E-1eb0fb174f"
+        ]
+      ],
+      "required_group_count": 4,
+      "positive_evidence_observable": true,
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "explanatory_ids": []
+    },
+    "case_sha256": "b203c65bf48616faa9c04df09069ae3d5a23700dc864fd63ff6273d834840958",
+    "history_utf8_bytes": 0,
+    "final_utf8_bytes": 2917,
+    "oracle_raw_record_count": 4,
+    "delivery_spec": null,
+    "delivery_candidates": [],
+    "evaluation_track": "memory_lookup",
+    "forbidden_files": []
+  },
+  "stress-55bec20b12f6985ad1": {
+    "scenario_id": "short24-candidates16-bce5f107ab9001e7ca",
+    "split_group": "short24-candidates16-bce5f107ab9001e7ca",
+    "split": "development",
+    "family": "multihop",
+    "tier": "high",
+    "seed": 20261302,
+    "loads": {
+      "candidate_chains": 4,
+      "history_slots": 128,
+      "hop_count": 4,
+      "short_history_sessions": 24,
+      "source_history_sessions": 128
+    },
+    "case_id": "stress-55bec20b12f6985ad1",
+    "query_id": "q02",
+    "query_role": "primary",
+    "condition": "memory",
+    "expression": "structured",
+    "rendered_expression": "structured",
+    "variant": "base",
+    "expected": "exports/OUT-56d5a60abf",
+    "answer_type": "string",
+    "contract": "memory-stress-short24-submission-1",
+    "proof": {
+      "answer": "exports/OUT-56d5a60abf",
+      "sufficient_sets": [
+        [
+          "E-8b6faecafe",
+          "E-1eb0fb174f",
+          "E-b2228f66d3",
+          "E-9d380bc2b4"
+        ],
+        [
+          "E-8b6faecafe",
+          "E-1eb0fb174f",
+          "E-b2228f66d3",
+          "E-b414cafa77"
+        ]
+      ],
+      "required_groups": [
+        [
+          "E-9d380bc2b4",
+          "E-b414cafa77"
+        ],
+        [
+          "E-8b6faecafe"
+        ],
+        [
+          "E-b2228f66d3"
+        ],
+        [
+          "E-1eb0fb174f"
+        ]
+      ],
+      "required_group_count": 4,
+      "positive_evidence_observable": true,
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "explanatory_ids": []
+    },
+    "case_sha256": "8f96816736d0ab9f0e516eed66397ed7d8d3f46cc0c0191e9f553bf9c1bb9b9f",
+    "history_utf8_bytes": 7826,
+    "final_utf8_bytes": 2179,
+    "oracle_raw_record_count": 0,
+    "delivery_spec": null,
+    "delivery_candidates": [],
+    "evaluation_track": "memory_lookup",
+    "forbidden_files": []
+  },
+  "reader-stress-c06cfd56aab2bf4910": {
+    "scenario_id": "short24-candidates16-0e4ae9a1d0adf7cb0d",
+    "split_group": "short24-candidates16-0e4ae9a1d0adf7cb0d",
+    "split": "development",
+    "family": "updates",
+    "tier": "low",
+    "seed": 20271102,
+    "loads": {
+      "downstream_depth": 3,
+      "history_slots": 128,
+      "inputs_after_effective_update": 34,
+      "last_effective_update_position": 94,
+      "registry_keys": 15,
+      "same_field_updates": 1,
+      "scopes": 2,
+      "selective_cancels": 1,
+      "short_history_sessions": 24,
+      "source_history_sessions": 128
+    },
+    "case_id": "reader-stress-c06cfd56aab2bf4910",
+    "query_id": "q04",
+    "query_role": "primary",
+    "condition": "reader_only",
+    "expression": "structured",
+    "rendered_expression": "structured",
+    "variant": "base",
+    "expected": "exports/OUT-e169705a2e",
+    "answer_type": "string",
+    "contract": "memory-stress-short24-submission-1",
+    "proof": {
+      "answer": "exports/OUT-e169705a2e",
+      "sufficient_sets": [
+        [
+          "E-a5ab076b62",
+          "E-00838ee175",
+          "E-c73a0884a2",
+          "E-5568fadf9a",
+          "E-264c9000e1",
+          "E-4dab116431"
+        ]
+      ],
+      "required_groups": [
+        [
+          "E-5568fadf9a"
+        ],
+        [
+          "E-4dab116431"
+        ],
+        [
+          "E-c73a0884a2"
+        ],
+        [
+          "E-a5ab076b62"
+        ],
+        [
+          "E-00838ee175"
+        ]
+      ],
+      "required_group_count": 5,
+      "positive_evidence_observable": true,
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "explanatory_ids": [
+        "E-264c9000e1"
+      ]
+    },
+    "case_sha256": "b0024334b686aec3a494e3f0f3820ea1a305e2cacc1bddcd1e94b69cbebb29da",
+    "history_utf8_bytes": 0,
+    "final_utf8_bytes": 3228,
+    "oracle_raw_record_count": 6,
+    "delivery_spec": null,
+    "delivery_candidates": [],
+    "evaluation_track": "memory_lookup",
+    "forbidden_files": []
+  },
+  "stress-918ad423cec5bce8cd": {
+    "scenario_id": "short24-candidates16-0e4ae9a1d0adf7cb0d",
+    "split_group": "short24-candidates16-0e4ae9a1d0adf7cb0d",
+    "split": "development",
+    "family": "updates",
+    "tier": "low",
+    "seed": 20271102,
+    "loads": {
+      "downstream_depth": 3,
+      "history_slots": 128,
+      "inputs_after_effective_update": 34,
+      "last_effective_update_position": 94,
+      "registry_keys": 15,
+      "same_field_updates": 1,
+      "scopes": 2,
+      "selective_cancels": 1,
+      "short_history_sessions": 24,
+      "source_history_sessions": 128
+    },
+    "case_id": "stress-918ad423cec5bce8cd",
+    "query_id": "q04",
+    "query_role": "primary",
+    "condition": "memory",
+    "expression": "structured",
+    "rendered_expression": "structured",
+    "variant": "base",
+    "expected": "exports/OUT-e169705a2e",
+    "answer_type": "string",
+    "contract": "memory-stress-short24-submission-1",
+    "proof": {
+      "answer": "exports/OUT-e169705a2e",
+      "sufficient_sets": [
+        [
+          "E-a5ab076b62",
+          "E-00838ee175",
+          "E-c73a0884a2",
+          "E-5568fadf9a",
+          "E-264c9000e1",
+          "E-4dab116431"
+        ]
+      ],
+      "required_groups": [
+        [
+          "E-5568fadf9a"
+        ],
+        [
+          "E-4dab116431"
+        ],
+        [
+          "E-c73a0884a2"
+        ],
+        [
+          "E-a5ab076b62"
+        ],
+        [
+          "E-00838ee175"
+        ]
+      ],
+      "required_group_count": 5,
+      "positive_evidence_observable": true,
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "explanatory_ids": [
+        "E-264c9000e1"
+      ]
+    },
+    "case_sha256": "bf76d9d8a91e762d41c4e214a9746b98728b82a493fed6c0cd6ce87e5509bcb1",
+    "history_utf8_bytes": 7738,
+    "final_utf8_bytes": 2177,
+    "oracle_raw_record_count": 0,
+    "delivery_spec": null,
+    "delivery_candidates": [],
+    "evaluation_track": "memory_lookup",
+    "forbidden_files": []
+  },
+  "reader-stress-e95408113d75520e43": {
+    "scenario_id": "short24-candidates16-7cc4a454ccb1d8f7cb",
+    "split_group": "short24-candidates16-7cc4a454ccb1d8f7cb",
+    "split": "development",
+    "family": "updates",
+    "tier": "high",
+    "seed": 20271302,
+    "loads": {
+      "downstream_depth": 3,
+      "history_slots": 128,
+      "inputs_after_effective_update": 34,
+      "last_effective_update_position": 94,
+      "registry_keys": 15,
+      "same_field_updates": 6,
+      "scopes": 2,
+      "selective_cancels": 1,
+      "short_history_sessions": 24,
+      "source_history_sessions": 128
+    },
+    "case_id": "reader-stress-e95408113d75520e43",
+    "query_id": "q03",
+    "query_role": "primary",
+    "condition": "reader_only",
+    "expression": "structured",
+    "rendered_expression": "structured",
+    "variant": "base",
+    "expected": "exports/OUT-32654b5fa0",
+    "answer_type": "string",
+    "contract": "memory-stress-short24-submission-1",
+    "proof": {
+      "answer": "exports/OUT-32654b5fa0",
+      "sufficient_sets": [
+        [
+          "E-b335ce9270",
+          "E-e2b059b5db",
+          "E-5732998cc7",
+          "E-6536ea0ffa",
+          "E-8fb09b36f6",
+          "E-b0e8529ddc"
+        ]
+      ],
+      "required_groups": [
+        [
+          "E-6536ea0ffa"
+        ],
+        [
+          "E-b0e8529ddc"
+        ],
+        [
+          "E-e2b059b5db"
+        ],
+        [
+          "E-5732998cc7"
+        ],
+        [
+          "E-b335ce9270"
+        ]
+      ],
+      "required_group_count": 5,
+      "positive_evidence_observable": true,
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "explanatory_ids": [
+        "E-8fb09b36f6"
+      ]
+    },
+    "case_sha256": "3851e7201d5cd05ec90b07435b6204afa33c22cfd0bea70799c347f590a6bb2e",
+    "history_utf8_bytes": 0,
+    "final_utf8_bytes": 3227,
+    "oracle_raw_record_count": 6,
+    "delivery_spec": null,
+    "delivery_candidates": [],
+    "evaluation_track": "memory_lookup",
+    "forbidden_files": []
+  },
+  "stress-10af32e680568061ac": {
+    "scenario_id": "short24-candidates16-7cc4a454ccb1d8f7cb",
+    "split_group": "short24-candidates16-7cc4a454ccb1d8f7cb",
+    "split": "development",
+    "family": "updates",
+    "tier": "high",
+    "seed": 20271302,
+    "loads": {
+      "downstream_depth": 3,
+      "history_slots": 128,
+      "inputs_after_effective_update": 34,
+      "last_effective_update_position": 94,
+      "registry_keys": 15,
+      "same_field_updates": 6,
+      "scopes": 2,
+      "selective_cancels": 1,
+      "short_history_sessions": 24,
+      "source_history_sessions": 128
+    },
+    "case_id": "stress-10af32e680568061ac",
+    "query_id": "q03",
+    "query_role": "primary",
+    "condition": "memory",
+    "expression": "structured",
+    "rendered_expression": "structured",
+    "variant": "base",
+    "expected": "exports/OUT-32654b5fa0",
+    "answer_type": "string",
+    "contract": "memory-stress-short24-submission-1",
+    "proof": {
+      "answer": "exports/OUT-32654b5fa0",
+      "sufficient_sets": [
+        [
+          "E-b335ce9270",
+          "E-e2b059b5db",
+          "E-5732998cc7",
+          "E-6536ea0ffa",
+          "E-8fb09b36f6",
+          "E-b0e8529ddc"
+        ]
+      ],
+      "required_groups": [
+        [
+          "E-6536ea0ffa"
+        ],
+        [
+          "E-b0e8529ddc"
+        ],
+        [
+          "E-e2b059b5db"
+        ],
+        [
+          "E-5732998cc7"
+        ],
+        [
+          "E-b335ce9270"
+        ]
+      ],
+      "required_group_count": 5,
+      "positive_evidence_observable": true,
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "explanatory_ids": [
+        "E-8fb09b36f6"
+      ]
+    },
+    "case_sha256": "2271b951776aabc1ec24b522ff87e994503d5820531bd95b73e9c33a5b1f1c64",
+    "history_utf8_bytes": 7592,
+    "final_utf8_bytes": 2177,
+    "oracle_raw_record_count": 0,
+    "delivery_spec": null,
+    "delivery_candidates": [],
+    "evaluation_track": "memory_lookup",
+    "forbidden_files": []
+  },
+  "reader-stress-7941bc0868cd5f8a5f": {
+    "scenario_id": "short24-candidates16-5f3cc494dfef69d0ee",
+    "split_group": "short24-candidates16-5f3cc494dfef69d0ee",
+    "split": "development",
+    "family": "collections",
+    "tier": "low",
+    "seed": 20281102,
+    "loads": {
+      "allowed_file_count": 8,
+      "candidate_plans": 256,
+      "current_constraints": 6,
+      "file_pairs": 8,
+      "historical_constraints": 2,
+      "history_slots": 128,
+      "selective_cancels": 1,
+      "diagnostic_candidate_count": 16,
+      "source_candidate_count": 256,
+      "short_history_sessions": 24,
+      "source_history_sessions": 128
+    },
+    "case_id": "reader-stress-7941bc0868cd5f8a5f",
+    "query_id": "q05",
+    "query_role": "primary",
+    "condition": "reader_only",
+    "expression": "structured",
+    "rendered_expression": "structured",
+    "variant": "base",
+    "expected": "OPTION-a46567ecb2",
+    "answer_type": "string",
+    "contract": "memory-stress-short24-submission-1",
+    "proof": {
+      "answer": "OPTION-a46567ecb2",
+      "sufficient_sets": [
+        [
+          "E-8d5c9c68d9",
+          "E-b51e7d4fae",
+          "E-43ee89fd5f",
+          "E-3aad94b949"
+        ]
+      ],
+      "required_groups": [
+        [
+          "E-8d5c9c68d9"
+        ],
+        [
+          "E-3aad94b949"
+        ],
+        [
+          "E-b51e7d4fae"
+        ]
+      ],
+      "required_group_count": 3,
+      "positive_evidence_observable": true,
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "explanatory_ids": [
+        "E-43ee89fd5f"
+      ]
+    },
+    "case_sha256": "e1215fec4235331e25785fea2d8e237f27afdbe181ff0bf1d9bd70adcffb9fbc",
+    "history_utf8_bytes": 0,
+    "final_utf8_bytes": 6648,
+    "oracle_raw_record_count": 4,
+    "delivery_spec": null,
+    "delivery_candidates": [],
+    "evaluation_track": "memory_lookup",
+    "forbidden_files": []
+  },
+  "stress-f21e8376f479558efb": {
+    "scenario_id": "short24-candidates16-5f3cc494dfef69d0ee",
+    "split_group": "short24-candidates16-5f3cc494dfef69d0ee",
+    "split": "development",
+    "family": "collections",
+    "tier": "low",
+    "seed": 20281102,
+    "loads": {
+      "allowed_file_count": 8,
+      "candidate_plans": 256,
+      "current_constraints": 6,
+      "file_pairs": 8,
+      "historical_constraints": 2,
+      "history_slots": 128,
+      "selective_cancels": 1,
+      "diagnostic_candidate_count": 16,
+      "source_candidate_count": 256,
+      "short_history_sessions": 24,
+      "source_history_sessions": 128
+    },
+    "case_id": "stress-f21e8376f479558efb",
+    "query_id": "q05",
+    "query_role": "primary",
+    "condition": "memory",
+    "expression": "structured",
+    "rendered_expression": "structured",
+    "variant": "base",
+    "expected": "OPTION-a46567ecb2",
+    "answer_type": "string",
+    "contract": "memory-stress-short24-submission-1",
+    "proof": {
+      "answer": "OPTION-a46567ecb2",
+      "sufficient_sets": [
+        [
+          "E-8d5c9c68d9",
+          "E-b51e7d4fae",
+          "E-43ee89fd5f",
+          "E-3aad94b949"
+        ]
+      ],
+      "required_groups": [
+        [
+          "E-8d5c9c68d9"
+        ],
+        [
+          "E-3aad94b949"
+        ],
+        [
+          "E-b51e7d4fae"
+        ]
+      ],
+      "required_group_count": 3,
+      "positive_evidence_observable": true,
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "explanatory_ids": [
+        "E-43ee89fd5f"
+      ]
+    },
+    "case_sha256": "f67a946a51ef0217a3cb699712f40638402b1f8f8d299142175743098734872d",
+    "history_utf8_bytes": 8097,
+    "final_utf8_bytes": 5928,
+    "oracle_raw_record_count": 0,
+    "delivery_spec": null,
+    "delivery_candidates": [],
+    "evaluation_track": "memory_lookup",
+    "forbidden_files": []
+  },
+  "reader-stress-6b32ca6b84e1ec2b47": {
+    "scenario_id": "short24-candidates16-f7561d35fb47d5fff2",
+    "split_group": "short24-candidates16-f7561d35fb47d5fff2",
+    "split": "development",
+    "family": "collections",
+    "tier": "high",
+    "seed": 20281302,
+    "loads": {
+      "allowed_file_count": 8,
+      "candidate_plans": 256,
+      "current_constraints": 2,
+      "file_pairs": 8,
+      "historical_constraints": 6,
+      "history_slots": 128,
+      "selective_cancels": 1,
+      "diagnostic_candidate_count": 16,
+      "source_candidate_count": 256,
+      "short_history_sessions": 24,
+      "source_history_sessions": 128
+    },
+    "case_id": "reader-stress-6b32ca6b84e1ec2b47",
+    "query_id": "q02",
+    "query_role": "primary",
+    "condition": "reader_only",
+    "expression": "structured",
+    "rendered_expression": "structured",
+    "variant": "base",
+    "expected": "OPTION-e0b7ecf5ac",
+    "answer_type": "string",
+    "contract": "memory-stress-short24-submission-1",
+    "proof": {
+      "answer": "OPTION-e0b7ecf5ac",
+      "sufficient_sets": [
+        [
+          "E-6c90c637cf",
+          "E-b94b44d698",
+          "E-123a424618",
+          "E-247f28b1c9",
+          "E-2afa562f95",
+          "E-bb80cea38c",
+          "E-0232a823ba",
+          "E-529679eac5"
+        ]
+      ],
+      "required_groups": [
+        [
+          "E-6c90c637cf"
+        ],
+        [
+          "E-529679eac5"
+        ],
+        [
+          "E-b94b44d698"
+        ],
+        [
+          "E-123a424618"
+        ],
+        [
+          "E-247f28b1c9"
+        ],
+        [
+          "E-2afa562f95"
+        ],
+        [
+          "E-bb80cea38c"
+        ]
+      ],
+      "required_group_count": 7,
+      "positive_evidence_observable": true,
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "explanatory_ids": [
+        "E-0232a823ba"
+      ]
+    },
+    "case_sha256": "c4e4de7919d4da742aa2042a929ea0fa569e9d06931bc1d90b38f8ba5f928593",
+    "history_utf8_bytes": 0,
+    "final_utf8_bytes": 7233,
+    "oracle_raw_record_count": 8,
+    "delivery_spec": null,
+    "delivery_candidates": [],
+    "evaluation_track": "memory_lookup",
+    "forbidden_files": []
+  },
+  "stress-62338d76a9b59f54ea": {
+    "scenario_id": "short24-candidates16-f7561d35fb47d5fff2",
+    "split_group": "short24-candidates16-f7561d35fb47d5fff2",
+    "split": "development",
+    "family": "collections",
+    "tier": "high",
+    "seed": 20281302,
+    "loads": {
+      "allowed_file_count": 8,
+      "candidate_plans": 256,
+      "current_constraints": 2,
+      "file_pairs": 8,
+      "historical_constraints": 6,
+      "history_slots": 128,
+      "selective_cancels": 1,
+      "diagnostic_candidate_count": 16,
+      "source_candidate_count": 256,
+      "short_history_sessions": 24,
+      "source_history_sessions": 128
+    },
+    "case_id": "stress-62338d76a9b59f54ea",
+    "query_id": "q02",
+    "query_role": "primary",
+    "condition": "memory",
+    "expression": "structured",
+    "rendered_expression": "structured",
+    "variant": "base",
+    "expected": "OPTION-e0b7ecf5ac",
+    "answer_type": "string",
+    "contract": "memory-stress-short24-submission-1",
+    "proof": {
+      "answer": "OPTION-e0b7ecf5ac",
+      "sufficient_sets": [
+        [
+          "E-6c90c637cf",
+          "E-b94b44d698",
+          "E-123a424618",
+          "E-247f28b1c9",
+          "E-2afa562f95",
+          "E-bb80cea38c",
+          "E-0232a823ba",
+          "E-529679eac5"
+        ]
+      ],
+      "required_groups": [
+        [
+          "E-6c90c637cf"
+        ],
+        [
+          "E-529679eac5"
+        ],
+        [
+          "E-b94b44d698"
+        ],
+        [
+          "E-123a424618"
+        ],
+        [
+          "E-247f28b1c9"
+        ],
+        [
+          "E-2afa562f95"
+        ],
+        [
+          "E-bb80cea38c"
+        ]
+      ],
+      "required_group_count": 7,
+      "positive_evidence_observable": true,
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "explanatory_ids": [
+        "E-0232a823ba"
+      ]
+    },
+    "case_sha256": "e3755d628d94033c0ebb2328ec0feaae934b0db71fb14e411b0ef51bd84a75c3",
+    "history_utf8_bytes": 8093,
+    "final_utf8_bytes": 5856,
+    "oracle_raw_record_count": 0,
+    "delivery_spec": null,
+    "delivery_candidates": [],
+    "evaluation_track": "memory_lookup",
+    "forbidden_files": []
+  },
+  "reader-stress-e790c58e328e261a8b": {
+    "scenario_id": "short24-candidates16-bff739ebf66a65bbd5",
+    "split_group": "short24-candidates16-bff739ebf66a65bbd5",
+    "split": "development",
+    "family": "feedback",
+    "tier": "low",
+    "seed": 20291102,
+    "loads": {
+      "candidate_recipes": 64,
+      "clients": 8,
+      "current_rules": 5,
+      "evaluation_track": "controlled_transfer",
+      "feedback_interactions": 99,
+      "historical_rules": 1,
+      "history_slots": 128,
+      "diagnostic_candidate_count": 16,
+      "source_candidate_count": 64,
+      "short_history_sessions": 24,
+      "source_history_sessions": 128
+    },
+    "case_id": "reader-stress-e790c58e328e261a8b",
+    "query_id": "q03",
+    "query_role": "primary",
+    "condition": "reader_only",
+    "expression": "structured",
+    "rendered_expression": "structured",
+    "variant": "base",
+    "expected": "OPTION-2b66ee9838",
+    "answer_type": "string",
+    "contract": "memory-stress-short24-submission-1",
+    "proof": {
+      "answer": "OPTION-2b66ee9838",
+      "sufficient_sets": [
+        [
+          "E-79e2e5cb39"
+        ],
+        [
+          "E-6b58a1b655"
+        ]
+      ],
+      "required_groups": [
+        [
+          "E-79e2e5cb39",
+          "E-6b58a1b655"
+        ]
+      ],
+      "required_group_count": 1,
+      "positive_evidence_observable": true,
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "explanatory_ids": []
+    },
+    "case_sha256": "17022ddbe30d1cda94bac91efb59d5a16f8b90aa60d299093a137e503702605d",
+    "history_utf8_bytes": 0,
+    "final_utf8_bytes": 10250,
+    "oracle_raw_record_count": 1,
+    "delivery_spec": {
+      "path": "delivery/DIR-68d07ff7d2/NEWPROJECT-62d0fe83c5.json",
+      "content": {
+        "template": "TEMPLATE-99e8014eaa",
+        "profile": "PROFILE-6130c48789",
+        "revision": "REVISION-8d97206496",
+        "redaction": "REDACTION-d3ce7172a6",
+        "bundle": "BUNDLE-6b5ac65aa9"
+      },
+      "text": "{\"bundle\":\"BUNDLE-6b5ac65aa9\",\"profile\":\"PROFILE-6130c48789\",\"redaction\":\"REDACTION-d3ce7172a6\",\"revision\":\"REVISION-8d97206496\",\"template\":\"TEMPLATE-99e8014eaa\"}\n"
+    },
+    "delivery_candidates": [
+      "delivery/DIR-612da681ae/NEWPROJECT-62d0fe83c5.json",
+      "delivery/DIR-68d07ff7d2/NEWPROJECT-62d0fe83c5.json"
+    ],
+    "evaluation_track": "controlled_transfer",
+    "forbidden_files": []
+  },
+  "stress-8c22330e0e46d7a8bf": {
+    "scenario_id": "short24-candidates16-bff739ebf66a65bbd5",
+    "split_group": "short24-candidates16-bff739ebf66a65bbd5",
+    "split": "development",
+    "family": "feedback",
+    "tier": "low",
+    "seed": 20291102,
+    "loads": {
+      "candidate_recipes": 64,
+      "clients": 8,
+      "current_rules": 5,
+      "evaluation_track": "controlled_transfer",
+      "feedback_interactions": 99,
+      "historical_rules": 1,
+      "history_slots": 128,
+      "diagnostic_candidate_count": 16,
+      "source_candidate_count": 64,
+      "short_history_sessions": 24,
+      "source_history_sessions": 128
+    },
+    "case_id": "stress-8c22330e0e46d7a8bf",
+    "query_id": "q03",
+    "query_role": "primary",
+    "condition": "memory",
+    "expression": "structured",
+    "rendered_expression": "structured",
+    "variant": "base",
+    "expected": "OPTION-2b66ee9838",
+    "answer_type": "string",
+    "contract": "memory-stress-short24-submission-1",
+    "proof": {
+      "answer": "OPTION-2b66ee9838",
+      "sufficient_sets": [
+        [
+          "E-79e2e5cb39"
+        ],
+        [
+          "E-6b58a1b655"
+        ]
+      ],
+      "required_groups": [
+        [
+          "E-79e2e5cb39",
+          "E-6b58a1b655"
+        ]
+      ],
+      "required_group_count": 1,
+      "positive_evidence_observable": true,
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "explanatory_ids": []
+    },
+    "case_sha256": "395b0c8b06f2e555d83e5cd2c00e792e094202d7e34d198890a40990be6b635c",
+    "history_utf8_bytes": 11203,
+    "final_utf8_bytes": 9881,
+    "oracle_raw_record_count": 0,
+    "delivery_spec": {
+      "path": "delivery/DIR-68d07ff7d2/NEWPROJECT-62d0fe83c5.json",
+      "content": {
+        "template": "TEMPLATE-99e8014eaa",
+        "profile": "PROFILE-6130c48789",
+        "revision": "REVISION-8d97206496",
+        "redaction": "REDACTION-d3ce7172a6",
+        "bundle": "BUNDLE-6b5ac65aa9"
+      },
+      "text": "{\"bundle\":\"BUNDLE-6b5ac65aa9\",\"profile\":\"PROFILE-6130c48789\",\"redaction\":\"REDACTION-d3ce7172a6\",\"revision\":\"REVISION-8d97206496\",\"template\":\"TEMPLATE-99e8014eaa\"}\n"
+    },
+    "delivery_candidates": [
+      "delivery/DIR-612da681ae/NEWPROJECT-62d0fe83c5.json",
+      "delivery/DIR-68d07ff7d2/NEWPROJECT-62d0fe83c5.json"
+    ],
+    "evaluation_track": "controlled_transfer",
+    "forbidden_files": []
+  },
+  "reader-stress-c93599beaa938d8a47": {
+    "scenario_id": "short24-candidates16-9c72203f739edce39f",
+    "split_group": "short24-candidates16-9c72203f739edce39f",
+    "split": "development",
+    "family": "feedback",
+    "tier": "high",
+    "seed": 20291302,
+    "loads": {
+      "candidate_recipes": 64,
+      "clients": 8,
+      "current_rules": 2,
+      "evaluation_track": "controlled_transfer",
+      "feedback_interactions": 99,
+      "historical_rules": 4,
+      "history_slots": 128,
+      "diagnostic_candidate_count": 16,
+      "source_candidate_count": 64,
+      "short_history_sessions": 24,
+      "source_history_sessions": 128
+    },
+    "case_id": "reader-stress-c93599beaa938d8a47",
+    "query_id": "q05",
+    "query_role": "primary",
+    "condition": "reader_only",
+    "expression": "structured",
+    "rendered_expression": "structured",
+    "variant": "base",
+    "expected": "OPTION-5426e49622",
+    "answer_type": "string",
+    "contract": "memory-stress-short24-submission-1",
+    "proof": {
+      "answer": "OPTION-5426e49622",
+      "sufficient_sets": [
+        [
+          "E-9b09ca3185",
+          "E-fc1a4f0479",
+          "E-9c4cff9884",
+          "E-3e2c9a08f7"
+        ],
+        [
+          "E-9b09ca3185",
+          "E-7d997c10e7",
+          "E-9c4cff9884",
+          "E-3e2c9a08f7"
+        ],
+        [
+          "E-9b09ca3185",
+          "E-fc1a4f0479",
+          "E-66e4fc1569",
+          "E-3e2c9a08f7"
+        ],
+        [
+          "E-9b09ca3185",
+          "E-7d997c10e7",
+          "E-66e4fc1569",
+          "E-3e2c9a08f7"
+        ],
+        [
+          "E-bdaadb8c91",
+          "E-fc1a4f0479",
+          "E-9c4cff9884",
+          "E-3e2c9a08f7"
+        ],
+        [
+          "E-bdaadb8c91",
+          "E-7d997c10e7",
+          "E-9c4cff9884",
+          "E-3e2c9a08f7"
+        ],
+        [
+          "E-bdaadb8c91",
+          "E-fc1a4f0479",
+          "E-66e4fc1569",
+          "E-3e2c9a08f7"
+        ],
+        [
+          "E-bdaadb8c91",
+          "E-7d997c10e7",
+          "E-66e4fc1569",
+          "E-3e2c9a08f7"
+        ],
+        [
+          "E-9b09ca3185",
+          "E-fc1a4f0479",
+          "E-9c4cff9884",
+          "E-cc6a596a31"
+        ],
+        [
+          "E-9b09ca3185",
+          "E-7d997c10e7",
+          "E-9c4cff9884",
+          "E-cc6a596a31"
+        ],
+        [
+          "E-9b09ca3185",
+          "E-fc1a4f0479",
+          "E-66e4fc1569",
+          "E-cc6a596a31"
+        ],
+        [
+          "E-9b09ca3185",
+          "E-7d997c10e7",
+          "E-66e4fc1569",
+          "E-cc6a596a31"
+        ],
+        [
+          "E-bdaadb8c91",
+          "E-fc1a4f0479",
+          "E-9c4cff9884",
+          "E-cc6a596a31"
+        ],
+        [
+          "E-bdaadb8c91",
+          "E-7d997c10e7",
+          "E-9c4cff9884",
+          "E-cc6a596a31"
+        ],
+        [
+          "E-bdaadb8c91",
+          "E-fc1a4f0479",
+          "E-66e4fc1569",
+          "E-cc6a596a31"
+        ],
+        [
+          "E-bdaadb8c91",
+          "E-7d997c10e7",
+          "E-66e4fc1569",
+          "E-cc6a596a31"
+        ]
+      ],
+      "required_groups": [
+        [
+          "E-3e2c9a08f7",
+          "E-cc6a596a31"
+        ],
+        [
+          "E-9b09ca3185",
+          "E-bdaadb8c91"
+        ],
+        [
+          "E-9c4cff9884",
+          "E-66e4fc1569"
+        ],
+        [
+          "E-fc1a4f0479",
+          "E-7d997c10e7"
+        ]
+      ],
+      "required_group_count": 4,
+      "positive_evidence_observable": true,
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "explanatory_ids": []
+    },
+    "case_sha256": "cd2cb833f6ac948fb312611a9ad2721e2124198b90f956bc108f54cc84573a25",
+    "history_utf8_bytes": 0,
+    "final_utf8_bytes": 11107,
+    "oracle_raw_record_count": 4,
+    "delivery_spec": {
+      "path": "delivery/DIR-57c52370a4/NEWPROJECT-d1c6c218a7.json",
+      "content": {
+        "template": "TEMPLATE-dc3fc95283",
+        "profile": "PROFILE-a306c004e8",
+        "revision": "REVISION-2d94614ed6",
+        "redaction": "REDACTION-6bac56c227",
+        "bundle": "BUNDLE-5e9b36ff9a"
+      },
+      "text": "{\"bundle\":\"BUNDLE-5e9b36ff9a\",\"profile\":\"PROFILE-a306c004e8\",\"redaction\":\"REDACTION-6bac56c227\",\"revision\":\"REVISION-2d94614ed6\",\"template\":\"TEMPLATE-dc3fc95283\"}\n"
+    },
+    "delivery_candidates": [
+      "delivery/DIR-498d3885ea/NEWPROJECT-d1c6c218a7.json",
+      "delivery/DIR-57c52370a4/NEWPROJECT-d1c6c218a7.json"
+    ],
+    "evaluation_track": "controlled_transfer",
+    "forbidden_files": []
+  },
+  "stress-921211e2e912383cd9": {
+    "scenario_id": "short24-candidates16-9c72203f739edce39f",
+    "split_group": "short24-candidates16-9c72203f739edce39f",
+    "split": "development",
+    "family": "feedback",
+    "tier": "high",
+    "seed": 20291302,
+    "loads": {
+      "candidate_recipes": 64,
+      "clients": 8,
+      "current_rules": 2,
+      "evaluation_track": "controlled_transfer",
+      "feedback_interactions": 99,
+      "historical_rules": 4,
+      "history_slots": 128,
+      "diagnostic_candidate_count": 16,
+      "source_candidate_count": 64,
+      "short_history_sessions": 24,
+      "source_history_sessions": 128
+    },
+    "case_id": "stress-921211e2e912383cd9",
+    "query_id": "q05",
+    "query_role": "primary",
+    "condition": "memory",
+    "expression": "structured",
+    "rendered_expression": "structured",
+    "variant": "base",
+    "expected": "OPTION-5426e49622",
+    "answer_type": "string",
+    "contract": "memory-stress-short24-submission-1",
+    "proof": {
+      "answer": "OPTION-5426e49622",
+      "sufficient_sets": [
+        [
+          "E-9b09ca3185",
+          "E-fc1a4f0479",
+          "E-9c4cff9884",
+          "E-3e2c9a08f7"
+        ],
+        [
+          "E-9b09ca3185",
+          "E-7d997c10e7",
+          "E-9c4cff9884",
+          "E-3e2c9a08f7"
+        ],
+        [
+          "E-9b09ca3185",
+          "E-fc1a4f0479",
+          "E-66e4fc1569",
+          "E-3e2c9a08f7"
+        ],
+        [
+          "E-9b09ca3185",
+          "E-7d997c10e7",
+          "E-66e4fc1569",
+          "E-3e2c9a08f7"
+        ],
+        [
+          "E-bdaadb8c91",
+          "E-fc1a4f0479",
+          "E-9c4cff9884",
+          "E-3e2c9a08f7"
+        ],
+        [
+          "E-bdaadb8c91",
+          "E-7d997c10e7",
+          "E-9c4cff9884",
+          "E-3e2c9a08f7"
+        ],
+        [
+          "E-bdaadb8c91",
+          "E-fc1a4f0479",
+          "E-66e4fc1569",
+          "E-3e2c9a08f7"
+        ],
+        [
+          "E-bdaadb8c91",
+          "E-7d997c10e7",
+          "E-66e4fc1569",
+          "E-3e2c9a08f7"
+        ],
+        [
+          "E-9b09ca3185",
+          "E-fc1a4f0479",
+          "E-9c4cff9884",
+          "E-cc6a596a31"
+        ],
+        [
+          "E-9b09ca3185",
+          "E-7d997c10e7",
+          "E-9c4cff9884",
+          "E-cc6a596a31"
+        ],
+        [
+          "E-9b09ca3185",
+          "E-fc1a4f0479",
+          "E-66e4fc1569",
+          "E-cc6a596a31"
+        ],
+        [
+          "E-9b09ca3185",
+          "E-7d997c10e7",
+          "E-66e4fc1569",
+          "E-cc6a596a31"
+        ],
+        [
+          "E-bdaadb8c91",
+          "E-fc1a4f0479",
+          "E-9c4cff9884",
+          "E-cc6a596a31"
+        ],
+        [
+          "E-bdaadb8c91",
+          "E-7d997c10e7",
+          "E-9c4cff9884",
+          "E-cc6a596a31"
+        ],
+        [
+          "E-bdaadb8c91",
+          "E-fc1a4f0479",
+          "E-66e4fc1569",
+          "E-cc6a596a31"
+        ],
+        [
+          "E-bdaadb8c91",
+          "E-7d997c10e7",
+          "E-66e4fc1569",
+          "E-cc6a596a31"
+        ]
+      ],
+      "required_groups": [
+        [
+          "E-3e2c9a08f7",
+          "E-cc6a596a31"
+        ],
+        [
+          "E-9b09ca3185",
+          "E-bdaadb8c91"
+        ],
+        [
+          "E-9c4cff9884",
+          "E-66e4fc1569"
+        ],
+        [
+          "E-fc1a4f0479",
+          "E-7d997c10e7"
+        ]
+      ],
+      "required_group_count": 4,
+      "positive_evidence_observable": true,
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "explanatory_ids": []
+    },
+    "case_sha256": "b10dcb0d7e52be81cfeb453aadfecb93580fab6f63cad8d4f0b31400c7dbffd4",
+    "history_utf8_bytes": 11226,
+    "final_utf8_bytes": 9816,
+    "oracle_raw_record_count": 0,
+    "delivery_spec": {
+      "path": "delivery/DIR-57c52370a4/NEWPROJECT-d1c6c218a7.json",
+      "content": {
+        "template": "TEMPLATE-dc3fc95283",
+        "profile": "PROFILE-a306c004e8",
+        "revision": "REVISION-2d94614ed6",
+        "redaction": "REDACTION-6bac56c227",
+        "bundle": "BUNDLE-5e9b36ff9a"
+      },
+      "text": "{\"bundle\":\"BUNDLE-5e9b36ff9a\",\"profile\":\"PROFILE-a306c004e8\",\"redaction\":\"REDACTION-6bac56c227\",\"revision\":\"REVISION-2d94614ed6\",\"template\":\"TEMPLATE-dc3fc95283\"}\n"
+    },
+    "delivery_candidates": [
+      "delivery/DIR-498d3885ea/NEWPROJECT-d1c6c218a7.json",
+      "delivery/DIR-57c52370a4/NEWPROJECT-d1c6c218a7.json"
+    ],
+    "evaluation_track": "controlled_transfer",
+    "forbidden_files": []
+  }
+}

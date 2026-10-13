@@ -1,0 +1,208 @@
+{
+  "verified_cases": 32,
+  "all_valid": true,
+  "planned_event_slots": 416,
+  "actual_event_counts": {
+    "responses": 415,
+    "execution_error_steps": 1
+  },
+  "usage_completed_requests_only": {
+    "input_tokens": 6964366,
+    "output_tokens": 119930,
+    "total_tokens": 7084296
+  },
+  "cases": [
+    {
+      "id": "00-openclaw-reader_only",
+      "valid": true,
+      "events": 1,
+      "status": "completed"
+    },
+    {
+      "id": "00-hermes-reader_only",
+      "valid": true,
+      "events": 1,
+      "status": "completed"
+    },
+    {
+      "id": "00-openclaw-memory",
+      "valid": true,
+      "events": 25,
+      "status": "completed"
+    },
+    {
+      "id": "00-hermes-memory",
+      "valid": true,
+      "events": 25,
+      "status": "completed"
+    },
+    {
+      "id": "01-openclaw-reader_only",
+      "valid": true,
+      "events": 1,
+      "status": "completed"
+    },
+    {
+      "id": "01-hermes-reader_only",
+      "valid": true,
+      "events": 1,
+      "status": "completed"
+    },
+    {
+      "id": "01-openclaw-memory",
+      "valid": true,
+      "events": 25,
+      "status": "completed"
+    },
+    {
+      "id": "01-hermes-memory",
+      "valid": true,
+      "events": 25,
+      "status": "completed"
+    },
+    {
+      "id": "02-openclaw-reader_only",
+      "valid": true,
+      "events": 1,
+      "status": "completed"
+    },
+    {
+      "id": "02-hermes-reader_only",
+      "valid": true,
+      "events": 1,
+      "status": "completed"
+    },
+    {
+      "id": "02-openclaw-memory",
+      "valid": true,
+      "events": 25,
+      "status": "completed"
+    },
+    {
+      "id": "02-hermes-memory",
+      "valid": true,
+      "events": 25,
+      "status": "completed"
+    },
+    {
+      "id": "03-openclaw-reader_only",
+      "valid": true,
+      "events": 1,
+      "status": "completed"
+    },
+    {
+      "id": "03-hermes-reader_only",
+      "valid": true,
+      "events": 1,
+      "status": "completed"
+    },
+    {
+      "id": "03-openclaw-memory",
+      "valid": true,
+      "events": 25,
+      "status": "completed"
+    },
+    {
+      "id": "03-hermes-memory",
+      "valid": true,
+      "events": 25,
+      "status": "completed"
+    },
+    {
+      "id": "04-openclaw-reader_only",
+      "valid": true,
+      "events": 1,
+      "status": "completed"
+    },
+    {
+      "id": "04-hermes-reader_only",
+      "valid": true,
+      "events": 1,
+      "status": "completed"
+    },
+    {
+      "id": "04-openclaw-memory",
+      "valid": true,
+      "events": 25,
+      "status": "completed"
+    },
+    {
+      "id": "04-hermes-memory",
+      "valid": true,
+      "events": 25,
+      "status": "completed"
+    },
+    {
+      "id": "05-openclaw-reader_only",
+      "valid": true,
+      "events": 1,
+      "status": "completed"
+    },
+    {
+      "id": "05-hermes-reader_only",
+      "valid": true,
+      "events": 1,
+      "status": "completed"
+    },
+    {
+      "id": "05-openclaw-memory",
+      "valid": true,
+      "events": 25,
+      "status": "completed"
+    },
+    {
+      "id": "05-hermes-memory",
+      "valid": true,
+      "events": 25,
+      "status": "completed"
+    },
+    {
+      "id": "06-openclaw-reader_only",
+      "valid": true,
+      "events": 1,
+      "status": "completed"
+    },
+    {
+      "id": "06-hermes-reader_only",
+      "valid": true,
+      "events": 1,
+      "status": "completed"
+    },
+    {
+      "id": "06-openclaw-memory",
+      "valid": true,
+      "events": 25,
+      "status": "completed"
+    },
+    {
+      "id": "06-hermes-memory",
+      "valid": true,
+      "events": 25,
+      "status": "completed"
+    },
+    {
+      "id": "07-openclaw-reader_only",
+      "valid": true,
+      "events": 1,
+      "status": "completed"
+    },
+    {
+      "id": "07-hermes-reader_only",
+      "valid": true,
+      "events": 1,
+      "status": "completed"
+    },
+    {
+      "id": "07-openclaw-memory",
+      "valid": true,
+      "events": 25,
+      "status": "completed"
+    },
+    {
+      "id": "07-hermes-memory",
+      "valid": true,
+      "events": 25,
+      "status": "completed_with_errors"
+    }
+  ]
+}

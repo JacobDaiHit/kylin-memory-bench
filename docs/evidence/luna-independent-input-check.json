@@ -1,0 +1,64 @@
+{
+  "method": "Independent serialized-prompt state ledger and candidate/graph resolution; does not call suite Oracle or models.",
+  "checked": 8,
+  "matched": 8,
+  "checks": [
+    {
+      "case_id": "reader-stress-2e5f66b004b9a0a3cb",
+      "family": "multihop",
+      "tier": "low",
+      "match": true,
+      "raw_evidence_records": 1
+    },
+    {
+      "case_id": "reader-stress-c25140e2d4abeb259c",
+      "family": "multihop",
+      "tier": "high",
+      "match": true,
+      "raw_evidence_records": 4
+    },
+    {
+      "case_id": "reader-stress-c06cfd56aab2bf4910",
+      "family": "updates",
+      "tier": "low",
+      "match": true,
+      "raw_evidence_records": 6
+    },
+    {
+      "case_id": "reader-stress-e95408113d75520e43",
+      "family": "updates",
+      "tier": "high",
+      "match": true,
+      "raw_evidence_records": 6
+    },
+    {
+      "case_id": "reader-stress-7941bc0868cd5f8a5f",
+      "family": "collections",
+      "tier": "low",
+      "match": true,
+      "raw_evidence_records": 4
+    },
+    {
+      "case_id": "reader-stress-6b32ca6b84e1ec2b47",
+      "family": "collections",
+      "tier": "high",
+      "match": true,
+      "raw_evidence_records": 8
+    },
+    {
+      "case_id": "reader-stress-e790c58e328e261a8b",
+      "family": "feedback",
+      "tier": "low",
+      "match": true,
+      "raw_evidence_records": 1
+    },
+    {
+      "case_id": "reader-stress-c93599beaa938d8a47",
+      "family": "feedback",
+      "tier": "high",
+      "match": true,
+      "raw_evidence_records": 4
+    }
+  ],
+  "cases_file_sha256": "def79c6249811b39595bae6ce662f9c8cd312a88a5a1612944c26411bbffd0b9"
+}

@@ -1,0 +1,370 @@
+{
+  "scope": "Deidentified final observations only. Replays content, format and file grading; does not preserve original full native hash chain, private config, memory snapshots or tool traces. Original event hashes reference local full evidence.",
+  "cases_sha256": "c12b609e6b3f20bb75a8d741f223d3b3eaae965f74efce935e2948a4c3fa3269",
+  "rows": [
+    {
+      "task_id": "00-openclaw-reader_only",
+      "case_id": "reader-stress-2e5f66b004b9a0a3cb",
+      "agent": "openclaw",
+      "condition": "reader_only",
+      "text": "{\"answer\":\"exports/OUT-ce9b8637e6\"}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "4cb79be54569330574de7103fb2851899149d30b978c01a56df56eb2b841b811"
+    },
+    {
+      "task_id": "00-hermes-reader_only",
+      "case_id": "reader-stress-2e5f66b004b9a0a3cb",
+      "agent": "hermes",
+      "condition": "reader_only",
+      "text": "{\"answer\":\"exports/OUT-ce9b8637e6\"}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "10d6f4d7a0cc6f1e8ff9cc1d64c91246b8130d5e155daa0b867d8b778dc54db2"
+    },
+    {
+      "task_id": "00-openclaw-memory",
+      "case_id": "stress-02ee75d1ce508391d5",
+      "agent": "openclaw",
+      "condition": "memory",
+      "text": "{\"answer\":\"exports/OUT-ce9b8637e6\"}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "5c0085a41ab81552b199ae5444cdffb77ccc05ae781db60f83ba7c4faf29ed49"
+    },
+    {
+      "task_id": "00-hermes-memory",
+      "case_id": "stress-02ee75d1ce508391d5",
+      "agent": "hermes",
+      "condition": "memory",
+      "text": "{\"answer\":\"exports/OUT-ce9b8637e6\"}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "984da37e4c5341285f5238f5b0b9b0e85665c76e6b7383d22645ebd770692ffa"
+    },
+    {
+      "task_id": "01-openclaw-reader_only",
+      "case_id": "reader-stress-c25140e2d4abeb259c",
+      "agent": "openclaw",
+      "condition": "reader_only",
+      "text": "{\"answer\":\"exports/OUT-56d5a60abf\"}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "2cd23134671c20f2d2706aed7832ede4146db38e024389e39f9d29b8dacf4fb1"
+    },
+    {
+      "task_id": "01-hermes-reader_only",
+      "case_id": "reader-stress-c25140e2d4abeb259c",
+      "agent": "hermes",
+      "condition": "reader_only",
+      "text": "{\"answer\":\"exports/OUT-56d5a60abf\"}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "ae8d421efcb8be321980a0d33ac3234074cc44519e44b9a2cad5210919f55b93"
+    },
+    {
+      "task_id": "01-openclaw-memory",
+      "case_id": "stress-55bec20b12f6985ad1",
+      "agent": "openclaw",
+      "condition": "memory",
+      "text": "{\"answer\":\"OUT-101838990d\"}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "15b3d4f2bad2f0020c931c8ac6d753a76653c0b1a7f7d9161754b3b453b8a710"
+    },
+    {
+      "task_id": "01-hermes-memory",
+      "case_id": "stress-55bec20b12f6985ad1",
+      "agent": "hermes",
+      "condition": "memory",
+      "text": "{\"answer\":null}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "0c0ff0011f89b23974fd334120dad6825f61ce5751315725562cdf79b29b4bd3"
+    },
+    {
+      "task_id": "02-openclaw-reader_only",
+      "case_id": "reader-stress-c06cfd56aab2bf4910",
+      "agent": "openclaw",
+      "condition": "reader_only",
+      "text": "{\"answer\":\"exports/OUT-e169705a2e\"}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "e23db825c91101dcd64be0498546018a83c05a667cbb62412b11d96d33a41d0f"
+    },
+    {
+      "task_id": "02-hermes-reader_only",
+      "case_id": "reader-stress-c06cfd56aab2bf4910",
+      "agent": "hermes",
+      "condition": "reader_only",
+      "text": "{\"answer\":\"exports/OUT-e169705a2e\"}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "99d17de74006d5d98d30de34ccb0fcbed8618e69145cf98373c4805d7cb62171"
+    },
+    {
+      "task_id": "02-openclaw-memory",
+      "case_id": "stress-918ad423cec5bce8cd",
+      "agent": "openclaw",
+      "condition": "memory",
+      "text": "{\"answer\":null}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "740c5257c05fe831f462d9ed9261052cb391082275d3aa1bde6b98a079f8426b"
+    },
+    {
+      "task_id": "02-hermes-memory",
+      "case_id": "stress-918ad423cec5bce8cd",
+      "agent": "hermes",
+      "condition": "memory",
+      "text": "{\"answer\":null}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "b3f09e772ef7f0074ad89fa158796c019fc8ad4af3a9bd1afef89d6c22d32fff"
+    },
+    {
+      "task_id": "03-openclaw-reader_only",
+      "case_id": "reader-stress-e95408113d75520e43",
+      "agent": "openclaw",
+      "condition": "reader_only",
+      "text": "{\"answer\":\"exports/OUT-32654b5fa0\"}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "da77aafaa7db45a836609b927e76306e6d4ab9c47f0ea1374cd00a505b8cd6c0"
+    },
+    {
+      "task_id": "03-hermes-reader_only",
+      "case_id": "reader-stress-e95408113d75520e43",
+      "agent": "hermes",
+      "condition": "reader_only",
+      "text": "{\"answer\":\"exports/OUT-32654b5fa0\"}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "05ef1cc798b7fd85c269269b2ea81b0c0de429c611edbeac01fe8f557f6f929a"
+    },
+    {
+      "task_id": "03-openclaw-memory",
+      "case_id": "stress-10af32e680568061ac",
+      "agent": "openclaw",
+      "condition": "memory",
+      "text": "{\"answer\":null}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "73a4fc01c9c526a7a776f62a9286e06c8131a80145bbd9741e5e8bc98d8d1502"
+    },
+    {
+      "task_id": "03-hermes-memory",
+      "case_id": "stress-10af32e680568061ac",
+      "agent": "hermes",
+      "condition": "memory",
+      "text": "{\"answer\":null}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "993122f13da0378b0d0555df895189082ae14fbf655fc58cf9fb8b7f40601a08"
+    },
+    {
+      "task_id": "04-openclaw-reader_only",
+      "case_id": "reader-stress-7941bc0868cd5f8a5f",
+      "agent": "openclaw",
+      "condition": "reader_only",
+      "text": "{\"answer\":\"OPTION-3ffc1f8a4e\"}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "f518a04a3b2a0d68460e0c8797591ed07faa879daf08b9cf505dde21a93cbd02"
+    },
+    {
+      "task_id": "04-hermes-reader_only",
+      "case_id": "reader-stress-7941bc0868cd5f8a5f",
+      "agent": "hermes",
+      "condition": "reader_only",
+      "text": "{\"answer\":\"OPTION-c13611ec4d\"}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "e1614d3797e7de0977635fb4883c42653080f34a29b30a2b96fb3b62259e0ee9"
+    },
+    {
+      "task_id": "04-openclaw-memory",
+      "case_id": "stress-f21e8376f479558efb",
+      "agent": "openclaw",
+      "condition": "memory",
+      "text": "{\"answer\":\"OPTION-3ffc1f8a4e\"}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "efea626feb323d820bf9f794140c92b858455cdb30c2b4816af2c4651319ff95"
+    },
+    {
+      "task_id": "04-hermes-memory",
+      "case_id": "stress-f21e8376f479558efb",
+      "agent": "hermes",
+      "condition": "memory",
+      "text": "{\"answer\":\"OPTION-3ffc1f8a4e\"}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "1d90001497243e466d76a5e53aa837e77b877b7f34afe4e8ffb4ad6d87b542d5"
+    },
+    {
+      "task_id": "05-openclaw-reader_only",
+      "case_id": "reader-stress-6b32ca6b84e1ec2b47",
+      "agent": "openclaw",
+      "condition": "reader_only",
+      "text": "{\"answer\":\"OPTION-2a0cf88f5b\"}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "5d5a97d0e4b7130d0da73b2ddc03538a58b1c6c911fa649d5ece1349fd0f7237"
+    },
+    {
+      "task_id": "05-hermes-reader_only",
+      "case_id": "reader-stress-6b32ca6b84e1ec2b47",
+      "agent": "hermes",
+      "condition": "reader_only",
+      "text": "{\"answer\":null}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "be6b29d556a25bbd603552c6a636a195f2e23257160a54360b61a08cae560626"
+    },
+    {
+      "task_id": "05-openclaw-memory",
+      "case_id": "stress-62338d76a9b59f54ea",
+      "agent": "openclaw",
+      "condition": "memory",
+      "text": "{\"answer\":\"OPTION-2a0cf88f5b\"}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "3b9e468c2d3f4ec9d290f663be08b5fd74d2bcd3825decd60bd07d3dec9c6f31"
+    },
+    {
+      "task_id": "05-hermes-memory",
+      "case_id": "stress-62338d76a9b59f54ea",
+      "agent": "hermes",
+      "condition": "memory",
+      "text": "{\"answer\":\"OPTION-87e113c0c7\"}",
+      "error": null,
+      "artifacts": {},
+      "original_event_hash": "7f4f4ce3a5461324b3bbb119b98912d00d007b5ea8f7f91c0d457f24ce12da64"
+    },
+    {
+      "task_id": "06-openclaw-reader_only",
+      "case_id": "reader-stress-e790c58e328e261a8b",
+      "agent": "openclaw",
+      "condition": "reader_only",
+      "text": "{\"answer\":\"OPTION-2b66ee9838\"}",
+      "error": null,
+      "artifacts": {
+        "delivery/DIR-68d07ff7d2/NEWPROJECT-62d0fe83c5.json": {
+          "bytes": 163,
+          "exists": true,
+          "sha256": "1eec0d79461ded949c224b7e8232a8893b42d762743621bd244dcb2a5a3cf23a",
+          "text": "{\"template\":\"TEMPLATE-99e8014eaa\",\"profile\":\"PROFILE-6130c48789\",\"revision\":\"REVISION-8d97206496\",\"redaction\":\"REDACTION-d3ce7172a6\",\"bundle\":\"BUNDLE-6b5ac65aa9\"}\n"
+        }
+      },
+      "original_event_hash": "4346ca0fbe48bb4c82d2a03146a27b584e91c4212765f56f8316d8148da63bc0"
+    },
+    {
+      "task_id": "06-hermes-reader_only",
+      "case_id": "reader-stress-e790c58e328e261a8b",
+      "agent": "hermes",
+      "condition": "reader_only",
+      "text": "{\"answer\":\"OPTION-2b66ee9838\"}",
+      "error": null,
+      "artifacts": {
+        "delivery/DIR-68d07ff7d2/NEWPROJECT-62d0fe83c5.json": {
+          "bytes": 163,
+          "exists": true,
+          "sha256": "1eec0d79461ded949c224b7e8232a8893b42d762743621bd244dcb2a5a3cf23a",
+          "text": "{\"template\":\"TEMPLATE-99e8014eaa\",\"profile\":\"PROFILE-6130c48789\",\"revision\":\"REVISION-8d97206496\",\"redaction\":\"REDACTION-d3ce7172a6\",\"bundle\":\"BUNDLE-6b5ac65aa9\"}\n"
+        }
+      },
+      "original_event_hash": "dcf4242695ae036fc76d103057d85ef38c3274514875954a482ef6f3391acb2b"
+    },
+    {
+      "task_id": "06-openclaw-memory",
+      "case_id": "stress-8c22330e0e46d7a8bf",
+      "agent": "openclaw",
+      "condition": "memory",
+      "text": "{\"answer\":null}",
+      "error": null,
+      "artifacts": {
+        "delivery/DIR-68d07ff7d2/NEWPROJECT-62d0fe83c5.json": {
+          "exists": false
+        }
+      },
+      "original_event_hash": "18ad77724e223c52b22ec8d732d098f121b5bb0333777344026ddc8dc765d49e"
+    },
+    {
+      "task_id": "06-hermes-memory",
+      "case_id": "stress-8c22330e0e46d7a8bf",
+      "agent": "hermes",
+      "condition": "memory",
+      "text": "{\"answer\":\"OPTION-9adcd4c359\"}",
+      "error": null,
+      "artifacts": {
+        "delivery/DIR-68d07ff7d2/NEWPROJECT-62d0fe83c5.json": {
+          "exists": false
+        }
+      },
+      "original_event_hash": "97281de979cbf8f02a3c11add45fb3685867f0aedf8d29fa35ba7bab4d4e44d7"
+    },
+    {
+      "task_id": "07-openclaw-reader_only",
+      "case_id": "reader-stress-c93599beaa938d8a47",
+      "agent": "openclaw",
+      "condition": "reader_only",
+      "text": "{\"answer\":\"OPTION-5426e49622\"}",
+      "error": null,
+      "artifacts": {
+        "delivery/DIR-57c52370a4/NEWPROJECT-d1c6c218a7.json": {
+          "bytes": 163,
+          "exists": true,
+          "sha256": "e31098082fa3d505da444243161d31160fdf5c809e7587343d77187993fbd03c",
+          "text": "{\"template\":\"TEMPLATE-dc3fc95283\",\"profile\":\"PROFILE-a306c004e8\",\"revision\":\"REVISION-2d94614ed6\",\"redaction\":\"REDACTION-6bac56c227\",\"bundle\":\"BUNDLE-5e9b36ff9a\"}\n"
+        }
+      },
+      "original_event_hash": "14f11ff4e8e104328d121c875b561b3d3b04406db152a8bd6cbc301360fda477"
+    },
+    {
+      "task_id": "07-hermes-reader_only",
+      "case_id": "reader-stress-c93599beaa938d8a47",
+      "agent": "hermes",
+      "condition": "reader_only",
+      "text": "{\"answer\":\"OPTION-1347964e6f\"}",
+      "error": null,
+      "artifacts": {
+        "delivery/DIR-57c52370a4/NEWPROJECT-d1c6c218a7.json": {
+          "bytes": 163,
+          "exists": true,
+          "sha256": "e31098082fa3d505da444243161d31160fdf5c809e7587343d77187993fbd03c",
+          "text": "{\"template\":\"TEMPLATE-dc3fc95283\",\"profile\":\"PROFILE-a306c004e8\",\"revision\":\"REVISION-2d94614ed6\",\"redaction\":\"REDACTION-6bac56c227\",\"bundle\":\"BUNDLE-5e9b36ff9a\"}\n"
+        }
+      },
+      "original_event_hash": "ce444948635dc730ed90d750f703bbf8e43bc4091ef5a128d0964c24e968d673"
+    },
+    {
+      "task_id": "07-openclaw-memory",
+      "case_id": "stress-921211e2e912383cd9",
+      "agent": "openclaw",
+      "condition": "memory",
+      "text": "{\"answer\":\"OPTION-5087af3f87\"}",
+      "error": null,
+      "artifacts": {
+        "delivery/DIR-57c52370a4/NEWPROJECT-d1c6c218a7.json": {
+          "exists": false
+        }
+      },
+      "original_event_hash": "a1c1ad65f3f73584e6152498b7ddf918d15f1b42531d14b74e3c885a8a9ab3bd"
+    },
+    {
+      "task_id": "07-hermes-memory",
+      "case_id": "stress-921211e2e912383cd9",
+      "agent": "hermes",
+      "condition": "memory",
+      "text": "",
+      "error": "Adapter exited 1; stderr SHA256 is e55498705df201da75b11facfe33f9ba98e4905797edbe49b8eaab7fcdf7fb9d",
+      "artifacts": {
+        "delivery/DIR-57c52370a4/NEWPROJECT-d1c6c218a7.json": {
+          "exists": false
+        }
+      },
+      "original_event_hash": "e72c958f373714ade7a592d06e127408acbcbd284d2eb025c06847f18773d1f6"
+    }
+  ]
+}
