@@ -145,6 +145,36 @@ class PhaseTwoGenerationTests(unittest.TestCase):
 
 
 class PhaseTwoGradingTests(unittest.TestCase):
+    def test_competing_answers_are_unknown_without_selecting_the_correct_candidate(self):
+        right = chr(96)*3+'json\n{"answer":"RIGHT"}\n'+chr(96)*3
+        cases = ('{"answer":"WRONG"}\n'+right,right+'\n{"answer":"WRONG"}',
+                 right+'\n最终修正：{"answer":"WRO',right+'\n{"answer"',
+                 right+'\n{"\\u0061nswer":"WRONG"}',right+'\n{"answer":"RIGHT"}')
+        for text in cases:
+            with self.subTest(text=text):
+                result = grade('RIGHT',text,output_type='string')
+                self.assertEqual(result['status'],'unknown')
+                self.assertEqual(result['parse_error_code'],'ambiguous_answer')
+                self.assertFalse(result['content_task_success']); self.assertFalse(result['strict_task_success'])
+
+    def test_unique_answer_with_ordinary_prose_still_has_observable_content(self):
+        answer = chr(96)*3+'json\n{"answer":"RIGHT"}\n'+chr(96)*3
+        for text in ('说明：这是登记中的目录。\n'+answer,answer+'\n以上是查询结果。'):
+            result = grade('RIGHT',text,output_type='string')
+            self.assertTrue(result['content_task_success']); self.assertEqual(result['format_status'],'fail')
+        self.assertTrue(grade('RIGHT','{"answer":"RIGHT"}',output_type='string')['strict_task_success'])
+
+    def test_ambiguous_answer_keeps_the_scheduled_denominator(self):
+        world = revised_phase_one_worlds()[0]; q = next(q for q in world['queries'] if q['role'] == 'primary')
+        case,meta = suite.build_case(world,q['id'])
+        text = chr(96)*3+'json\n'+json.dumps({'answer':meta['expected']})+'\n'+chr(96)*3+'\n{"answer":"another"}'
+        events = [{'agent_id':'a','trial':0,'case_id':case['id'],'step_id':s['id'],
+                   'response':{'text':text,'actions':[]}} for s in case['steps']]
+        rows = suite.collect_slots({'agents':[{'id':'a'}],'repeats':1},[case],events,{case['id']:meta})
+        summary = grouped_summary(rows)[0]
+        self.assertEqual(summary['scheduled_final_slots'],1); self.assertEqual(summary['status_counts'],{'unknown':1})
+        self.assertEqual(summary['content_success_history_macro'],0)
+
     def test_nullable_format_schema_is_independent_of_gold(self):
         for output_type,known,output in (('string','exports/a','exports/b'),('integer',11,17),('string_set',['a'],['b'])):
             for expected in (known,None):
@@ -312,6 +342,145 @@ class PhaseTwoPipelineTests(unittest.TestCase):
 
 
 class PhaseTwoChainTests(unittest.TestCase):
+    def test_actual_file_failure_reaches_the_next_request_and_enables_repair(self):
+        world = next(w for w in phase_two_worlds() if w['family'] == 'feedback')
+        primary = next(q for q in world['queries'] if q['role'] == 'primary')
+        answer = oracle.resolve(world,primary)['value']
+        for fault,reason in (('missing','missing_file'),('invalid_json','invalid_json_file'),
+                             ('no_lf','format_mismatch'),('wrong_content','content_mismatch')):
+            with self.subTest(fault=fault), tempfile.TemporaryDirectory() as tmp:
+                out = Path(tmp)/'chain'; receipts = []
+                class Repair:
+                    def turn(self,request):
+                        if not receipts:
+                            query = parse_question(request['prompt'])
+                            spec = environment.artifact_spec(query,next(o for o in query['options'] if o['id'] == answer))
+                            if fault != 'missing':
+                                path = Path(request['workspace'])/spec['path']; path.parent.mkdir(parents=True,exist_ok=True)
+                                text = ('{invalid}\n' if fault == 'invalid_json' else spec['text'].rstrip('\n') if fault == 'no_lf'
+                                        else canonical(dict(spec['content'],profile='WRONG-PROFILE'))+'\n')
+                                path.write_bytes(text.encode('utf-8'))
+                            receipts.append(request)
+                            return {'text':json.dumps({'answer':answer}),'actions':[]}
+                        if len(receipts) == 1:
+                            saved = [json.loads(line) for line in (out/'evidence.jsonl').read_text(encoding='utf-8').splitlines()]
+                            self_test.assertEqual(len(saved),1)
+                            self_test.assertFalse(read_json(out/'results.json')['chain_success'])
+                            raw = next(line.split('=',1)[1] for line in request['prompt'].splitlines() if line.startswith('DELIVERY_FEEDBACK='))
+                            receipt = json.loads(raw)
+                            self_test.assertEqual(receipt['delivery_verdict']['result'],'rejected')
+                            self_test.assertEqual(receipt['delivery_verdict']['reason'],reason)
+                            self_test.assertTrue(all(r['interaction']['result'] == 'accepted' for r in parse_records(request['prompt'])))
+                            self_test.assertEqual(receipt['submitted_artifact']['exists'],fault != 'missing')
+                        receipts.append(request)
+                        return turn(request)
+                self_test = self
+                result = chain.run_chain(world,out,adapter=Repair())
+                self.assertTrue(result['chain_success'])
+                self.assertEqual([r['status'] for r in result['stages'][0]['attempts']],['fail','pass'])
+                self.assertEqual(chain.verify_chain(out)['status'],'completed')
+
+    def test_interrupt_preserves_completed_event_inflight_request_and_unknown_stages(self):
+        world = next(w for w in phase_two_worlds() if w['family'] == 'feedback')
+        for interruption in (KeyboardInterrupt,SystemExit):
+            with self.subTest(interruption=interruption.__name__), tempfile.TemporaryDirectory() as tmp:
+                class Interrupted:
+                    def __init__(self): self.calls = 0
+                    def turn(self,request):
+                        self.calls += 1
+                        if self.calls == 2: raise interruption()
+                        return {'text':'{"answer":null}','actions':[]}
+                adapter = Interrupted(); out = Path(tmp)/'chain'
+                with self.assertRaises(interruption): chain.run_chain(world,out,adapter=adapter)
+                result = read_json(out/'results.json')
+                self.assertEqual((result['status'],result['event_count']),('interrupted',1))
+                self.assertEqual(result['in_flight']['attempt'],1)
+                self.assertEqual(result['in_flight']['request']['day'],2)
+                self.assertFalse(result['chain_success']); self.assertEqual(result['planned_stages'],3)
+                self.assertEqual(result['stages'][1]['attempts'][0]['status'],'unknown')
+                check = chain.verify_chain(out)
+                self.assertTrue(check['valid']); self.assertFalse(check['complete']); self.assertEqual(adapter.calls,2)
+
+    def test_interrupted_feedback_ack_does_not_complete_the_stage(self):
+        world = next(w for w in phase_two_worlds() if w['family'] == 'feedback')
+        primary = next(q for q in world['queries'] if q['role'] == 'primary'); answer = oracle.resolve(world,primary)['value']
+        class InterruptedAck:
+            def __init__(self): self.calls = 0
+            def turn(self,request):
+                self.calls += 1
+                if self.calls == 2: raise KeyboardInterrupt()
+                query = parse_question(request['prompt'])
+                spec = environment.artifact_spec(query,next(o for o in query['options'] if o['id'] == answer))
+                return {'text':json.dumps({'answer':answer}),'actions':[environment.write_delivery(request['workspace'],spec)]}
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp)/'chain'
+            with self.assertRaises(KeyboardInterrupt): chain.run_chain(world,out,adapter=InterruptedAck())
+            result = read_json(out/'results.json')
+            self.assertEqual(result['in_flight']['kind'],'feedback_delivery')
+            self.assertTrue(result['stages'][0]['first_attempt_success']); self.assertFalse(result['stages'][0]['stage_success'])
+            self.assertFalse(chain.verify_chain(out)['complete'])
+
+    def test_force_exit_keeps_fsynced_events_without_relying_on_finally(self):
+        code = (
+            "import os,sys\n"
+            "from experiments.memory_stress.v2.chain import run_chain\n"
+            "from experiments.memory_stress.v2.world_generator import phase_two_worlds\n"
+            "class Killed:\n"
+            " def __init__(self): self.calls=0\n"
+            " def turn(self,request):\n"
+            "  self.calls+=1\n"
+            "  if self.calls==2: os._exit(73)\n"
+            "  return {'text':'{\"answer\":null}','actions':[]}\n"
+            "world=next(w for w in phase_two_worlds() if w['family']=='feedback')\n"
+            "run_chain(world,sys.argv[1],adapter=Killed())\n")
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp)/'chain'
+            done = subprocess.run([sys.executable,'-X','utf8','-c',code,str(out)],cwd=ROOT,capture_output=True,timeout=30)
+            self.assertEqual(done.returncode,73)
+            result = read_json(out/'results.json')
+            self.assertEqual((result['status'],result['event_count']),('running',1)); self.assertFalse(result['chain_success'])
+            self.assertEqual(result['in_flight']['attempt'],1)
+            check = chain.verify_chain(out); self.assertEqual(check['events'],1); self.assertFalse(check['complete'])
+
+    def test_progress_checkpoint_and_partial_tail_remain_incomplete(self):
+        world = next(w for w in phase_two_worlds() if w['family'] == 'feedback')
+        class Replay:
+            def turn(self,request): return turn(request)
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp)/'chain'; chain.run_chain(world,out,adapter=Replay())
+            result = read_json(out/'results.json')
+            rows = [json.loads(line) for line in (out/'evidence.jsonl').read_text(encoding='utf-8').splitlines()]
+            result.update(status='running',event_count=1,evidence_head=rows[0]['hash'],chain_success=False,
+                          stages=chain.stage_summaries(rows[:1],incomplete=True),transfer_first_attempt_success=False)
+            from kylin_memory_bench.common import write_json
+            write_json(out/'results.json',result)
+            check = chain.verify_chain(out)
+            self.assertEqual(check['uncheckpointed_events'],len(rows)-1); self.assertFalse(check['complete'])
+            with (out/'evidence.jsonl').open('a',encoding='utf-8') as stream: stream.write('{"unfinished":')
+            before = (out/'evidence.jsonl').read_bytes()
+            self.assertTrue(chain.verify_chain(out)['truncated_tail'])
+            self.assertEqual((out/'evidence.jsonl').read_bytes(),before)
+            result['status'] = 'completed'; write_json(out/'results.json',result)
+            with self.assertRaises(BenchError): chain.verify_chain(out)
+
+    def test_rehashed_wrong_forwarded_diagnosis_is_rejected(self):
+        from kylin_memory_bench.common import digest,write_json,write_text
+        world = next(w for w in phase_two_worlds() if w['family'] == 'feedback')
+        class Replay:
+            def turn(self,request): return turn(request)
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp)/'chain'; chain.run_chain(world,out,adapter=Replay())
+            rows = [json.loads(line) for line in (out/'evidence.jsonl').read_text(encoding='utf-8').splitlines()]
+            receipt = chain.forwarded_delivery(rows[1]['request']['prompt'])
+            original = canonical(receipt); receipt['delivery_verdict']['reason'] = 'invented_diagnosis'
+            rows[1]['request']['prompt'] = rows[1]['request']['prompt'].replace(original,canonical(receipt))
+            previous = None
+            for row in rows:
+                row['previous_hash'] = previous; row['hash'] = digest({k:v for k,v in row.items() if k != 'hash'}); previous = row['hash']
+            write_text(out/'evidence.jsonl',''.join(canonical(row)+'\n' for row in rows))
+            result = read_json(out/'results.json'); result['evidence_head'] = previous; write_json(out/'results.json',result)
+            with self.assertRaisesRegex(BenchError,'forwarded feedback'): chain.verify_chain(out)
+
     def test_actual_feedback_correction_and_transfer_are_separate_from_controlled_suite(self):
         w = next(w for w in phase_two_worlds() if w['family'] == 'feedback' and w['tier'] == 'extreme')
         class Replay:

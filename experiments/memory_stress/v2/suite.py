@@ -12,7 +12,7 @@ from experiments.memory_stress.calibrate_stress import evidence_match
 from experiments.memory_stress.suite import CONDITIONS, presentation
 from experiments.memory_stress.world_generator import opaque
 from . import CONTRACT
-from .calibrate_stress import action_grade, answer_type, grade, grouped_summary, paired_summary, quality
+from .calibrate_stress import GRADING_REVISION, action_grade, answer_type, grade, grouped_summary, paired_summary, quality
 from .environment import artifact_spec
 from .oracle import answers, delivery_spec, evidence, oracle_records, resolve, without_query_history
 from .render_history import EXPRESSIONS, RULES, render_event, render_query
@@ -144,7 +144,8 @@ def prepare(output,seed=None,conditions=('memory',),expression='structured',vari
                         'sessions':[{k:s[k] for k in ('session','day','prompt','output_tokens')} for s in c['steps']]})+'\n' for c in selected))
     viewer(output,worlds,audit)
     if revised: prepare_pilot(output/'pilot',worlds)
-    protocol = {'contract':'memory-stress-0.1.1' if revised else CONTRACT,'cohort':cohort,'status':'offline_prepared_no_paid_trials','paid_calls':0,'seed':seed,
+    protocol = {'contract':'memory-stress-0.1.1' if revised else CONTRACT,'scoring_revision':GRADING_REVISION,
+                'cohort':cohort,'status':'offline_prepared_no_paid_trials','paid_calls':0,'seed':seed,
                 'histories':len(worlds),'families':list(FAMILIES[:2] if revised else FAMILIES),'tiers':list(TIERS[:3] if revised else TIERS),
                 'histories_per_family_tier':5 if revised else 10,'split_counts':audit['split_counts'],
                 'split_scope':'Group-reserved seeds, same task templates; public/reviewable, not blinded or unseen graph-family generalization.',
@@ -204,7 +205,7 @@ def prepare_pilot(output,worlds):
         'tools_enabled':False,'reader_model':None,'source_sha256':source_fingerprints(),
         'input_sha256':file_digest(output/'reader-only.learner.jsonl'), 'gold_sha256':file_digest(output/'reader-only.gold.evaluator.json'),
         'claim_limit':'Separate one-shot readability protocol, not a replacement for the five-condition Agent experiment.'})
-    protocol = {'contract':'memory-stress-0.1.1','status':'prepared_not_executed','paid_calls':0,
+    protocol = {'contract':'memory-stress-0.1.1','scoring_revision':GRADING_REVISION,'status':'prepared_not_executed','paid_calls':0,
         'kind':'preselected_six_history_native_pilot','selection_rule':'Lowest seed in each family/tier cell, chosen before model outputs',
         'selected_histories':[{k:w[k] for k in ('scenario_id','family','tier','seed','split_group')} for w in selected],
         'agents_planned':['openclaw','hermes'],'agent_configs':None,'model_config':None,'repeats':1,
@@ -273,7 +274,8 @@ def analyze(prepared,runs,output):
         rows.extend(batch)
     pair_rows = copy.deepcopy(rows)
     for r in pair_rows: r['trial'] = str(r['run_id'])+'/'+str(r['trial'])
-    result = {'contract':protocol['contract'],'kind':'stress_run_replay','sources':sources,'prepared_protocol_sha256':file_digest(Path(prepared)/'protocol.json'),
+    result = {'contract':protocol['contract'],'scoring_revision':GRADING_REVISION,'grader_source_sha256':source_fingerprints(),
+              'kind':'stress_run_replay','sources':sources,'prepared_protocol_sha256':file_digest(Path(prepared)/'protocol.json'),
               'rows':rows,'summary':grouped_summary(rows),'paired_summary':paired_summary(pair_rows),'planned_final_slots':len(rows),
               'prepared_native_cases':len(catalog),'distinct_cases_scheduled':len({r['case_id'] for r in rows}),
               'prepared_cases_not_scheduled':len(set(catalog)-{r['case_id'] for r in rows}),

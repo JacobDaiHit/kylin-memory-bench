@@ -1,21 +1,63 @@
 """Software checks, exact set metrics and separated memory/action observations."""
+import re
 from collections import Counter, defaultdict
 
 from experiments.memory_stress.calibrate_stress import grouped_summary as v1_summary, paired_summary as v1_pairs
-from experiments.math_memory.memory_v31 import extract_answer
+from experiments.math_memory.memory_v31 import extract_answer as legacy_extract_answer
+from kylin_memory_bench.common import strict_json
 from .environment import grade_delivery
 from .oracle import answers, evidence, validate_world
 from .render_history import EXPRESSIONS, answer_type, parse_event, render_event
 from .world_generator import FAMILIES, TIERS, VARIANTS, transform
 
+GRADING_REVISION = 'stress-content-unique-answer-1'
+_FENCE = re.compile(re.escape(chr(96)*3)+r'([^\n\x60]*)\n(.*?)\n'+re.escape(chr(96)*3), re.DOTALL)
+_KEY = re.compile(r'[{,]\s*("(?:[^"\\]|\\.)*")')
+_UNFINISHED_KEY = re.compile(r'[{,]\s*("(?:[^"\\]|\\.)*)\Z')
+
+
+class AmbiguousAnswer(ValueError):
+    pass
+
+
+def answer_key_count(text):
+    """Recognize explicit JSON answer keys, including escaped or truncated keys."""
+    count = 0
+    for match in _KEY.finditer(text):
+        try: key = strict_json(match[1])
+        except ValueError: continue
+        count += key == 'answer'
+    tail = _UNFINISHED_KEY.search(text)
+    if tail:
+        try: count += strict_json(tail[1]+'"') == 'answer'
+        except ValueError: pass
+    return count
+
+
+def extract_answer(text):
+    """Keep prose tolerance; never choose a fenced answer over another candidate."""
+    if not isinstance(text,str) or len(text) > 100000:
+        raise ValueError('Response must be bounded text')
+    blocks = list(_FENCE.finditer(text))
+    if len(blocks) == 1:
+        outside = text[:blocks[0].start()]+'\n'+text[blocks[0].end():]
+        if answer_key_count(outside):
+            raise AmbiguousAnswer('ambiguous_answer: competing or unfinished JSON answer outside the declared block')
+    try: return legacy_extract_answer(text)
+    except (ValueError,TypeError):
+        if len(blocks) > 1 or answer_key_count(text) > 1:
+            raise AmbiguousAnswer('ambiguous_answer: multiple declared answer candidates') from None
+        raise
+
 
 def grade(expected, text, error=None, forbidden=(), output_type='scalar_or_set'):
     if output_type not in ('string', 'integer', 'string_set', 'scalar_or_set'):
         raise ValueError('Unknown answer schema')
-    parsed, mode, conforms, problem = None, None, False, None
+    parsed, mode, conforms, problem, problem_code = None, None, False, None, None
     if not error:
         try: parsed, mode, conforms = extract_answer(text)
-        except (ValueError, TypeError, RecursionError) as exc: problem = str(exc)
+        except (ValueError, TypeError, RecursionError) as exc:
+            problem = str(exc); problem_code = 'ambiguous_answer' if isinstance(exc,AmbiguousAnswer) else 'invalid_answer'
     actual = parsed.get('answer') if parsed is not None else None
     is_set = isinstance(actual, list) and len(actual) <= 64 and all(isinstance(v, str) for v in actual)
     valid = parsed is not None and 'answer' in parsed and (type(actual) in (str, int, type(None)) or is_set)
@@ -33,7 +75,8 @@ def grade(expected, text, error=None, forbidden=(), output_type='scalar_or_set')
     set_observed = is_set and isinstance(expected, list)
     return {'status': status, 'observed': status in ('pass','fail'), 'correct': correct,
             'content_task_success': status == 'pass', 'strict_task_success': status == 'pass' and format_ok,
-            'format_status': 'error' if error else 'pass' if format_ok else 'fail', 'error': error, 'parse_error': problem, 'envelope': mode,
+            'format_status': 'error' if error else 'pass' if format_ok else 'fail', 'error': error, 'parse_error': problem,
+            'parse_error_code':problem_code,'envelope': mode,'scoring_revision':GRADING_REVISION,
             'answer_type':output_type,
             'set_precision': (len(got & wanted)/len(got) if got else 1.0 if not wanted else 0.0) if set_observed else None,
             'set_recall': (len(got & wanted)/len(wanted) if wanted else 1.0) if set_observed else None,
