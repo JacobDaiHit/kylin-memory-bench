@@ -220,10 +220,14 @@ def models(token):
 
 def parse_stream(lines):
     completed, buffer, size = None, [], 0
-    deltas, event_counts = [], {}
+    deltas, event_counts, items = [], {}, {}
     def event(data):
         obj = json.loads('\n'.join(data)); kind = obj.get('type')
         event_counts[kind] = event_counts.get(kind, 0)+1
+        if kind == 'response.output_item.done':
+            index = obj.get('output_index')
+            if type(index) is not int or index in items: raise ProbeError('Duplicate or invalid output item index.')
+            items[index] = obj['item']
         if kind == 'response.output_text.delta':
             if not isinstance(obj.get('delta'), str): raise ProbeError('Invalid text delta.')
             deltas.append(obj['delta'])
@@ -250,7 +254,8 @@ def parse_stream(lines):
     if buffer: raise ProbeError('Truncated SSE event; completion unknown.')
     if completed is None: raise ProbeError('Stream ended without completed inference.')
     completed['_probe_stream'] = {'event_counts': event_counts,
-                                  'delta_text': ''.join(deltas) if deltas else None}
+                                  'delta_text': ''.join(deltas) if deltas else None,
+                                  'output_items': [items[i] for i in sorted(items)]}
     return completed
 
 

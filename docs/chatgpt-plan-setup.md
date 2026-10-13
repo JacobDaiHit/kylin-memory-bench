@@ -101,3 +101,39 @@ tmp/chatgpt-plan-venv/bin/python scripts/chatgpt_plan.py smoke --model gpt-5.6-l
 登录不消耗推理额度；套餐调用并非无限免费。脚本没有替你修改账户额度，也没有替你接受授权。
 
 官方依据（2026-10-13 核对）：[注册与登录](https://developers.openai.com/siwc/token-sharing-open-source/sign-in)、[账号与刷新](https://developers.openai.com/siwc/token-sharing-open-source/profiles-and-sessions)、[模型列表与推理](https://developers.openai.com/siwc/token-sharing-open-source/models-and-inference)、[接口限制](https://developers.openai.com/siwc/token-sharing-open-source/preview-limitations)。
+
+## 原生 Agent 健康检查（Luna 接入开发协议）
+
+现在可使用 `scripts/chatgpt_plan_bridge.py` 将原生 Chat Completions 请求转换为
+官方套餐 Responses 请求。OAuth 凭据只由宿主桥接器读取，不传入 Agent 工作区。
+转换层不检索记忆、不补答案。原生函数放入 `native_tools` namespace；system 消息
+转换为 developer。工具调用与返回保持原样；同一 turn 的加密 reasoning 项仅随对应
+call_id 回放，不能跨阶段作为记忆使用。服务端最终 output 可能为空，因此解析器还收集
+`response.output_item.done`，并要求终止事件及 EOF，不能把中途工具参数当作完整响应。
+
+本机 WSL 运行方式（依赖已安装的两个原生运行时，路径见脚本）：
+
+```bash
+# 默认仅在本地捕获原生请求，不消耗套餐；输出目录必须是新目录。
+tmp/chatgpt-plan-venv/bin/python -m scripts.run_plan_health \
+  --output tmp/plan-capture-example
+# 显式开始真实检查；最多 24 次接入请求，不自动补跑失败。
+tmp/chatgpt-plan-venv/bin/python -m scripts.run_plan_health \
+  --output tmp/plan-health-example --live --request-limit 24
+```
+
+检查包含保存事实、新进程／新会话召回、全新工作区未知事实拒答。每款 Agent 的
+后续阶段依赖前序调用成功；失败后不静默重跑。调用成功本身不等于记忆保存正确。
+这不是 Memory Stress 的三轮难度实验，也不是统计排名。原始请求、流事件和逐阶段
+结果保存在指定的本地目录，包含原生提示和本机路径，不自动作为公开附件。
+
+资源条件与旧 DeepSeek 协议不同：套餐不支持服务端输出 token 硬上限或采样参数。
+原生客户端自动携带的 `max_tokens`、`temperature`、`top_p` 等会明确记入
+`unsupported_parameters_omitted`，不会宣称它们仍然生效。该协议指定
+`reasoning.effort=none`，未知参数会拒绝；请求体最多 1 MB，最多 24 次请求，
+原生 turn 超时 180 秒，桥接器不重试。流响应经过完整检查后才交给原生客户端，
+因此不能拿它的首 token 延迟与直接连接成绩比较。消费的是用户授权的套餐额度，
+没有使用或导入 Codex 私有凭据，也不计入旧 DeepSeek 人民币账本。
+
+接口依据：[套餐限制](https://developers.openai.com/siwc/token-sharing-open-source/preview-limitations)、
+[函数调用](https://developers.openai.com/api/docs/guides/function-calling)。

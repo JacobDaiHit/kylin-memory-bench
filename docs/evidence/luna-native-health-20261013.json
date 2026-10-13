@@ -1,0 +1,548 @@
+{
+  "protocol": "luna-integration-development-20261013",
+  "model": "gpt-5.6-luna",
+  "not_a_memory_stress_ranking": true,
+  "no_automatic_rerun": true,
+  "upstream_requests": 22,
+  "parser_failure_requests_preserved": 2,
+  "health": [
+    {
+      "agent": "openclaw",
+      "stage": "learn",
+      "status": "completed",
+      "exact_content_match": null,
+      "observed_action_count": 4,
+      "memory_files": [
+        "MEMORY.md"
+      ]
+    },
+    {
+      "agent": "openclaw",
+      "stage": "recall",
+      "status": "completed",
+      "exact_content_match": true,
+      "observed_action_count": 2,
+      "memory_files": [
+        "MEMORY.md"
+      ]
+    },
+    {
+      "agent": "openclaw",
+      "stage": "isolation",
+      "status": "completed",
+      "exact_content_match": true,
+      "observed_action_count": 1,
+      "memory_files": []
+    },
+    {
+      "agent": "hermes",
+      "stage": "learn",
+      "status": "completed",
+      "exact_content_match": null,
+      "observed_action_count": 1,
+      "memory_files": [
+        ".hermes/memories/MEMORY.md"
+      ]
+    },
+    {
+      "agent": "hermes",
+      "stage": "recall",
+      "status": "completed",
+      "exact_content_match": true,
+      "observed_action_count": 0,
+      "memory_files": [
+        ".hermes/memories/MEMORY.md"
+      ]
+    },
+    {
+      "agent": "hermes",
+      "stage": "isolation",
+      "status": "completed",
+      "exact_content_match": true,
+      "observed_action_count": 0,
+      "memory_files": []
+    }
+  ],
+  "reader_only": {
+    "benchmark_memory_score": false,
+    "planned": 6,
+    "results": [
+      {
+        "id": "reader-24c1f152e9076eb848",
+        "status": "completed",
+        "text": "{\"answer\":\"exports/client-171c06dde7\"}",
+        "grade": {
+          "status": "pass",
+          "observed": true,
+          "correct": true,
+          "content_task_success": true,
+          "strict_task_success": true,
+          "format_status": "pass",
+          "error": null,
+          "parse_error": null,
+          "parse_error_code": null,
+          "envelope": "json",
+          "scoring_revision": "stress-content-unique-answer-1",
+          "answer_type": "string",
+          "set_precision": null,
+          "set_recall": null,
+          "forbidden_items": null,
+          "duplicate_count": null
+        }
+      },
+      {
+        "id": "reader-838a03ab229e37ccb7",
+        "status": "completed",
+        "text": "{\"answer\":null}",
+        "grade": {
+          "status": "fail",
+          "observed": true,
+          "correct": false,
+          "content_task_success": false,
+          "strict_task_success": false,
+          "format_status": "pass",
+          "error": null,
+          "parse_error": null,
+          "parse_error_code": null,
+          "envelope": "json",
+          "scoring_revision": "stress-content-unique-answer-1",
+          "answer_type": "string",
+          "set_precision": null,
+          "set_recall": null,
+          "forbidden_items": null,
+          "duplicate_count": null
+        }
+      },
+      {
+        "id": "reader-20cfd72656357361d8",
+        "status": "completed",
+        "text": "{\"answer\":\"exports/client-3125c2bed2\"}",
+        "grade": {
+          "status": "pass",
+          "observed": true,
+          "correct": true,
+          "content_task_success": true,
+          "strict_task_success": true,
+          "format_status": "pass",
+          "error": null,
+          "parse_error": null,
+          "parse_error_code": null,
+          "envelope": "json",
+          "scoring_revision": "stress-content-unique-answer-1",
+          "answer_type": "string",
+          "set_precision": null,
+          "set_recall": null,
+          "forbidden_items": null,
+          "duplicate_count": null
+        }
+      },
+      {
+        "id": "reader-b112929ab41865c8c4",
+        "status": "completed",
+        "text": "{\"answer\":\"exports/client-b52a23cedf\"}",
+        "grade": {
+          "status": "pass",
+          "observed": true,
+          "correct": true,
+          "content_task_success": true,
+          "strict_task_success": true,
+          "format_status": "pass",
+          "error": null,
+          "parse_error": null,
+          "parse_error_code": null,
+          "envelope": "json",
+          "scoring_revision": "stress-content-unique-answer-1",
+          "answer_type": "string",
+          "set_precision": null,
+          "set_recall": null,
+          "forbidden_items": null,
+          "duplicate_count": null
+        }
+      },
+      {
+        "id": "reader-f37f345141fad78a62",
+        "status": "completed",
+        "text": "{\"answer\":\"exports/client-dded8d43d1\"}",
+        "grade": {
+          "status": "pass",
+          "observed": true,
+          "correct": true,
+          "content_task_success": true,
+          "strict_task_success": true,
+          "format_status": "pass",
+          "error": null,
+          "parse_error": null,
+          "parse_error_code": null,
+          "envelope": "json",
+          "scoring_revision": "stress-content-unique-answer-1",
+          "answer_type": "string",
+          "set_precision": null,
+          "set_recall": null,
+          "forbidden_items": null,
+          "duplicate_count": null
+        }
+      },
+      {
+        "id": "reader-2df1d73970451afa29",
+        "status": "completed",
+        "text": "{\"answer\":\"exports/client-26b3c0c58e\"}",
+        "grade": {
+          "status": "pass",
+          "observed": true,
+          "correct": true,
+          "content_task_success": true,
+          "strict_task_success": true,
+          "format_status": "pass",
+          "error": null,
+          "parse_error": null,
+          "parse_error_code": null,
+          "envelope": "json",
+          "scoring_revision": "stress-content-unique-answer-1",
+          "answer_type": "string",
+          "set_precision": null,
+          "set_recall": null,
+          "forbidden_items": null,
+          "duplicate_count": null
+        }
+      }
+    ]
+  },
+  "requests": [
+    {
+      "run": "plan-native-health-01",
+      "request": 1,
+      "context": "openclaw/learn",
+      "status": "failed_or_interrupted",
+      "error": "no_observed_output",
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 5307,
+        "output_tokens": 75,
+        "total_tokens": 5382
+      },
+      "request_record_sha256": "118fa11d87d332f1ef8be5cc065799c9cec0a70b4608adabb7279ac06891c2f0"
+    },
+    {
+      "run": "plan-native-health-01",
+      "request": 2,
+      "context": "hermes/learn",
+      "status": "failed_or_interrupted",
+      "error": "no_observed_output",
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 4322,
+        "output_tokens": 74,
+        "total_tokens": 4396
+      },
+      "request_record_sha256": "99577ee366bde9d49c58d628b2794434fb076b902afa4a47ec792418a201e4cb"
+    },
+    {
+      "run": "plan-native-health-02",
+      "request": 1,
+      "context": "openclaw/learn",
+      "status": "completed",
+      "error": null,
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 5310,
+        "output_tokens": 45,
+        "total_tokens": 5355
+      },
+      "request_record_sha256": "0b52630048f141e01e2542151a81db5a5ad473ac358e569c5eeba8844dd9acbf"
+    },
+    {
+      "run": "plan-native-health-02",
+      "request": 2,
+      "context": "openclaw/learn",
+      "status": "completed",
+      "error": null,
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 6168,
+        "output_tokens": 32,
+        "total_tokens": 6200
+      },
+      "request_record_sha256": "d8b11d1e7f3e75ae0f2233c01cc48711b4c3a9b8765f9fafe52c40f852379543"
+    },
+    {
+      "run": "plan-native-health-02",
+      "request": 3,
+      "context": "openclaw/learn",
+      "status": "completed",
+      "error": null,
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 7294,
+        "output_tokens": 24,
+        "total_tokens": 7318
+      },
+      "request_record_sha256": "075e5547bb390330b096baf1e383d9ba0e6f51f1d3d366cdaa30b78feb665b82"
+    },
+    {
+      "run": "plan-native-health-02",
+      "request": 4,
+      "context": "openclaw/learn",
+      "status": "completed",
+      "error": null,
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 7369,
+        "output_tokens": 64,
+        "total_tokens": 7433
+      },
+      "request_record_sha256": "0fcabb23eb1633360eb2e32f95ba288e02c01f805150d8b4d98e9238dad47f47"
+    },
+    {
+      "run": "plan-native-health-02",
+      "request": 5,
+      "context": "openclaw/learn",
+      "status": "completed",
+      "error": null,
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 7484,
+        "output_tokens": 45,
+        "total_tokens": 7529
+      },
+      "request_record_sha256": "d37d7923abf295bf064a0340efa6a9ff6298743fcfe891de410c0dcabd04c47f"
+    },
+    {
+      "run": "plan-native-health-02",
+      "request": 6,
+      "context": "openclaw/recall",
+      "status": "completed",
+      "error": null,
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 5401,
+        "output_tokens": 38,
+        "total_tokens": 5439
+      },
+      "request_record_sha256": "837d530cf6e890d52bceea4dab1fb21a8a9da88f0f092376c65dbe5b04953879"
+    },
+    {
+      "run": "plan-native-health-02",
+      "request": 7,
+      "context": "openclaw/recall",
+      "status": "completed",
+      "error": null,
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 6146,
+        "output_tokens": 28,
+        "total_tokens": 6174
+      },
+      "request_record_sha256": "da915b79fe1600ef3ceecfeff5c6fe2e79cd102e761ddca0a01dcbf85d46f5a0"
+    },
+    {
+      "run": "plan-native-health-02",
+      "request": 8,
+      "context": "openclaw/recall",
+      "status": "completed",
+      "error": null,
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 6425,
+        "output_tokens": 16,
+        "total_tokens": 6441
+      },
+      "request_record_sha256": "40564a8a7ecbf450504c5719234a2729cbcac9039ae327ff02e6719888b5e1b1"
+    },
+    {
+      "run": "plan-native-health-02",
+      "request": 9,
+      "context": "openclaw/isolation",
+      "status": "completed",
+      "error": null,
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 5327,
+        "output_tokens": 39,
+        "total_tokens": 5366
+      },
+      "request_record_sha256": "e421e8a801fc080a85fbf84ab4a867d8dae87448e7799a03c90375bc24c2e6c5"
+    },
+    {
+      "run": "plan-native-health-02",
+      "request": 10,
+      "context": "openclaw/isolation",
+      "status": "completed",
+      "error": null,
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 6187,
+        "output_tokens": 13,
+        "total_tokens": 6200
+      },
+      "request_record_sha256": "d5d53f8db3b273842ddeaae97fecd8ae38590bcc26118c32bb440008234798f0"
+    },
+    {
+      "run": "plan-native-health-02",
+      "request": 11,
+      "context": "hermes/learn",
+      "status": "completed",
+      "error": null,
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 4322,
+        "output_tokens": 47,
+        "total_tokens": 4369
+      },
+      "request_record_sha256": "51f39017d964f5a858f926822ccbc130271f028fb02925143f8009aaa69be1df"
+    },
+    {
+      "run": "plan-native-health-02",
+      "request": 12,
+      "context": "hermes/learn",
+      "status": "completed",
+      "error": null,
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 4443,
+        "output_tokens": 29,
+        "total_tokens": 4472
+      },
+      "request_record_sha256": "9eb8e201025e83a5506f879a5f6969617cf62a3d3de798921496521d18a789e0"
+    },
+    {
+      "run": "plan-native-health-02",
+      "request": 13,
+      "context": "hermes/recall",
+      "status": "completed",
+      "error": null,
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 4372,
+        "output_tokens": 16,
+        "total_tokens": 4388
+      },
+      "request_record_sha256": "3b1c12c88bcd966b9dd6bf2f9090819aae2eaaebcb478e5702d002131b2e38ce"
+    },
+    {
+      "run": "plan-native-health-02",
+      "request": 14,
+      "context": "hermes/isolation",
+      "status": "completed",
+      "error": null,
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 4329,
+        "output_tokens": 13,
+        "total_tokens": 4342
+      },
+      "request_record_sha256": "ce5181b7826bbea1173615deee5f385f7618a221822e8d6c2e0f9d652bbfa49c"
+    },
+    {
+      "run": "plan-reader-01",
+      "request": 1,
+      "context": "reader-24c1f152e9076eb848",
+      "status": "completed",
+      "error": null,
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 576,
+        "output_tokens": 16,
+        "total_tokens": 592
+      },
+      "request_record_sha256": "cff58b491f4cc4b883f5b858563ed3f26585034b95f29caedd243b858345a20a"
+    },
+    {
+      "run": "plan-reader-01",
+      "request": 2,
+      "context": "reader-838a03ab229e37ccb7",
+      "status": "completed",
+      "error": null,
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 633,
+        "output_tokens": 9,
+        "total_tokens": 642
+      },
+      "request_record_sha256": "03c243531acd75f484596a15f806718be63047cc61514d28bcddd119cb82042d"
+    },
+    {
+      "run": "plan-reader-01",
+      "request": 3,
+      "context": "reader-20cfd72656357361d8",
+      "status": "completed",
+      "error": null,
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 741,
+        "output_tokens": 17,
+        "total_tokens": 758
+      },
+      "request_record_sha256": "752a52595072a62e336a80fff3df720f435efd5a02339db16768960b1e048ce4"
+    },
+    {
+      "run": "plan-reader-01",
+      "request": 4,
+      "context": "reader-b112929ab41865c8c4",
+      "status": "completed",
+      "error": null,
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 847,
+        "output_tokens": 16,
+        "total_tokens": 863
+      },
+      "request_record_sha256": "25c695bf2a829b39aed0079297a304e12092e8b93cdb579430a58767cae9e56b"
+    },
+    {
+      "run": "plan-reader-01",
+      "request": 5,
+      "context": "reader-f37f345141fad78a62",
+      "status": "completed",
+      "error": null,
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 847,
+        "output_tokens": 17,
+        "total_tokens": 864
+      },
+      "request_record_sha256": "1f5bbc05dfc91aac2909f6fe8cdf9ce1d565444fdb4a7ceadddc5311e56ed684"
+    },
+    {
+      "run": "plan-reader-01",
+      "request": 6,
+      "context": "reader-2df1d73970451afa29",
+      "status": "completed",
+      "error": null,
+      "model": "gpt-5.6-luna",
+      "upstream_attempted": true,
+      "usage": {
+        "input_tokens": 848,
+        "output_tokens": 19,
+        "total_tokens": 867
+      },
+      "request_record_sha256": "012027cde1f1410223f75c170066f3078faf0c8b41296ef40fbfe40899ef4b85"
+    }
+  ],
+  "limitations": [
+    "OpenClaw embedding authentication missing; memory_search degraded to keyword-only; successful recall does not establish vector retrieval health.",
+    "Reader-only evidence supplied in query: measures reading, not persistent memory.",
+    "Server output token cap unavailable. Native max_tokens omitted explicitly; reasoning effort none.",
+    "Private raw prompts, encrypted reasoning and local paths not published. Digests alone are not an independently replayable public evidence bundle."
+  ]
+}
