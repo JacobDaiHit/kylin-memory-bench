@@ -95,6 +95,29 @@ class PlanProtocolTests(unittest.TestCase):
             records=list(Path(tmp).glob('probe-*.json'));self.assertEqual(len(records),1)
             self.assertEqual(plan.read_json(records[0])['status'],'failed_or_interrupted')
 
+    def test_text_deltas_are_used_only_after_complete_stream(self):
+        events = [{'type':'response.output_text.delta','delta':'O'},
+                  {'type':'response.output_text.delta','delta':'K'},
+                  {'type':'response.completed','response':{'status':'completed','model':plan.TARGET}}]
+        lines = [line for event in events for line in ['data: '+json.dumps(event),'']]
+        result=plan.text_diagnostics(plan.parse_stream(lines))
+        self.assertTrue(result['text_is_ok']);self.assertEqual(result['reply_text'],'OK')
+        self.assertEqual(result['text_source'],'stream_deltas')
+        with self.assertRaises(plan.ProbeError):plan.parse_stream(lines[:-2])
+
+    def test_actual_wrong_reply_is_preserved_without_relaxing_check(self):
+        for text in ['OK.','Okay','', 'NOT OK']:
+            result=plan.text_diagnostics({'output':[{'content':[{'type':'output_text','text':text}]}]})
+            self.assertFalse(result['text_is_ok']);self.assertEqual(result['reply_text'],text)
+            self.assertEqual(result['text_check_status'],'mismatch')
+
+    def test_absent_and_conflicting_text_are_unknown(self):
+        absent=plan.text_diagnostics({'output':[]})
+        self.assertIsNone(absent['text_is_ok']);self.assertEqual(absent['text_check_status'],'unobserved')
+        conflict=plan.text_diagnostics({'output':[{'content':[{'type':'output_text','text':'WRONG'}]}],
+                                        '_probe_stream':{'delta_text':'OK'}})
+        self.assertIsNone(conflict['text_is_ok']);self.assertEqual(conflict['text_check_status'],'conflicting_text')
+
     @unittest.skipUnless(importlib.util.find_spec('jwt') and importlib.util.find_spec('cryptography'),'Optional OAuth crypto dependencies not installed')
     def test_jwt_signature_nonce_audience_expiry_and_issuer(self):
         import jwt

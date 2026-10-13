@@ -220,8 +220,13 @@ def models(token):
 
 def parse_stream(lines):
     completed, buffer, size = None, [], 0
+    deltas, event_counts = [], {}
     def event(data):
         obj = json.loads('\n'.join(data)); kind = obj.get('type')
+        event_counts[kind] = event_counts.get(kind, 0)+1
+        if kind == 'response.output_text.delta':
+            if not isinstance(obj.get('delta'), str): raise ProbeError('Invalid text delta.')
+            deltas.append(obj['delta'])
         if kind in ('error', 'response.failed', 'response.incomplete'):
             raise ProbeError('Inference failed or incomplete; no retry was made.')
         if kind == 'response.completed':
@@ -244,7 +249,27 @@ def parse_stream(lines):
         elif line.startswith('data:'): buffer.append(line[5:].lstrip(' '))
     if buffer: raise ProbeError('Truncated SSE event; completion unknown.')
     if completed is None: raise ProbeError('Stream ended without completed inference.')
+    completed['_probe_stream'] = {'event_counts': event_counts,
+                                  'delta_text': ''.join(deltas) if deltas else None}
     return completed
+
+
+def text_diagnostics(result):
+    """Keep transport completion separate from observing the expected reply."""
+    parts = [c['text'] for item in (result.get('output') or [])
+             for c in (item.get('content') or [])
+             if c.get('type') == 'output_text' and isinstance(c.get('text'), str)]
+    final = ''.join(parts) if parts else None
+    stream = result.get('_probe_stream', {})
+    delta = stream.get('delta_text')
+    conflict = final is not None and delta is not None and final != delta
+    text = None if conflict else (final if final is not None else delta)
+    status = 'conflicting_text' if conflict else ('unobserved' if text is None else ('pass' if text.strip() == 'OK' else 'mismatch'))
+    return {'connectivity_ok': True, 'text_check_status': status,
+            'text_is_ok': None if text is None else text.strip() == 'OK',
+            'reply_text': text, 'text_source': None if text is None else ('completed_output' if final is not None else 'stream_deltas'),
+            'completed_output_text': final, 'stream_delta_text': delta,
+            'stream_event_counts': stream.get('event_counts', {})}
 
 
 def smoke(root, profile, model, allowed):
@@ -261,13 +286,13 @@ def smoke(root, profile, model, allowed):
         with request('POST', API+'/responses', headers={'Authorization': 'Bearer '+token}, json=body, stream=True) as response:
             result = parse_stream(response.iter_lines())
         record.update(status='completed', reported_model=result.get('model'), usage=result.get('usage'),
-                      text_is_ok=''.join(c.get('text', '') for i in result.get('output', [])
-                                        for c in i.get('content', []) if c.get('type') == 'output_text').strip() == 'OK')
+                      **text_diagnostics(result))
     except BaseException:
         record['status'] = 'failed_or_interrupted'; raise
     finally:
         record['finished_at'] = time.time(); atomic_private(log, record)
     print(json.dumps(record, ensure_ascii=False, indent=2))
+    return record
 
 
 def main(argv=None):
@@ -289,7 +314,9 @@ def main(argv=None):
                 rows = models(access(root, args.profile))
                 print(json.dumps({'models': rows, 'requested_model': args.model,
                                   'available': args.model in {r['slug'] for r in rows}}, ensure_ascii=False, indent=2))
-            else: smoke(root, args.profile, args.model, args.allow_one_request)
+            else:
+                result = smoke(root, args.profile, args.model, args.allow_one_request)
+                if result['text_is_ok'] is not True: return 2
     except ProbeError as exc: print(str(exc), file=sys.stderr); return 1
     except ImportError: print('Install scripts/chatgpt-plan-requirements.txt in a virtual environment.', file=sys.stderr); return 1
     except KeyboardInterrupt: print('Stopped. No automatic retry.', file=sys.stderr); return 130

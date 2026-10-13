@@ -68,6 +68,10 @@ tmp/chatgpt-plan-venv/bin/python scripts/chatgpt_plan.py smoke --model gpt-5.6-l
 
 提示仅为 `Reply with exactly OK.`，没有仓库、题目、历史、工具或标准答案。工具等待完整流结束，记录返回模型标识、usage 和 `text_is_ok`。完整结束且 `text_is_ok: true` 说明最小文本调用可用；不是工具调用、原生 Agent 健康或记忆能力验证。
 
+诊断修订：`status: completed` 表示服务请求完成，文本检查单独记录。输出新增 `reply_text`、`text_source`、`completed_output_text`、`stream_delta_text`、`stream_event_counts` 和 `text_check_status`。最终事件未包含文本时，可以使用已完整结束的流中的文本增量；两处文本冲突或均不可见则标记未知，不直接算失败或通过。
+
+`text_check_status` 为 `pass` 才是预期回复通过；`mismatch` 表示看到了不同回复，`unobserved` 表示没有提取到文本，`conflicting_text` 表示流式与最终文本不一致。后三种情况命令退出码为 2，但不撤销已观察到的服务端完成状态。旧版只保存了布尔值，无法据此恢复当时实际回复；新请求单独记录，不覆盖旧记录，也不自动重跑。
+
 失败和中断不会自动重跑。开始请求前就写入一条本地 `probe-*.json` 记录；后续中断保留失败／未知状态。超时后手动重复命令也会是一个新请求，先确认上次记录。
 
 此官方预览路线不支持 `max_output_tokens`；工具只限制请求次数和本地接收规模，**不宣称具有服务端 Token／人民币硬上限**。请求“只回答 OK”也不是输出长度的硬限制。可在 ChatGPT Settings → Usage 管理应用套餐使用权限与额度。
