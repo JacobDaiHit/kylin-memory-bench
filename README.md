@@ -159,3 +159,5 @@ Windows运行包含历史数学脚本的完整测试时，使用 `python -X utf8
 挑战集的公开标注订正：统一接受“松柏”和“松柏项目”，六个等价答案误判得到修正。原始结果仍保留，详见 `examples/openkylin-challenge/score-review.json`，可用 `python3 scripts/review_challenge.py --check` 复算。
 
 公共仓库保留可复核的原始 benchmark 证据；API 审计的私人账户余额数值已移除，详情见 [实验说明](docs/live-experiments.md)。密钥、私人配置、原生智能体工作区和开发临时文件均不随仓库上传。
+
+ChatGPT 套餐接入的独立授权／模型检查工具：见 [WSL 操作指南](docs/chatgpt-plan-setup.md)。尚未完成原生双 Agent 对接，不属于已完成实测。
