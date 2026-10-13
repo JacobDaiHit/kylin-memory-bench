@@ -36,6 +36,18 @@ class FullPlanTests(unittest.TestCase):
         self.assertTrue(rows[1]['native_config']['memory']['memory_enabled'])
         self.assertFalse(rows[0]['per_turn_proxy_limits'])
 
+    def test_windows_paths_are_substituted_after_json_parsing(self):
+        from scripts import run_plan_health as health
+        from pathlib import PureWindowsPath
+        runtime=PureWindowsPath('C:/Users/example/kmb-live')
+        bins=r'C:\Users\example\bin'
+        with patch.object(health,'RUNTIME',runtime):
+            rows=health.configurations(bins,'http://127.0.0.1:1/v1')
+        serialized=json.dumps(rows)
+        self.assertEqual(json.loads(serialized),rows)
+        self.assertEqual(rows[0]['executable'],bins+'/openclaw-isolated')
+        self.assertEqual(rows[1]['dependency_home'],str(runtime/'hermes-home'))
+
     def test_health_gate_requires_both_agents_and_semantic_search(self):
         m={'results':[{}, {'output':json.dumps([{'embeddingProbe':{'ok':True},'status':{'vector':{'semanticAvailable':True},'model':'BAAI/bge-small-zh-v1.5'}}])}, {'output':'{"results":[{"path":"MEMORY.md"}]}'}]}
         h={'results':[{'agent':a,'stage':s,'status':'completed','exact_content_match':True} for a in ('openclaw','hermes') for s in ('learn','recall','isolation')]}

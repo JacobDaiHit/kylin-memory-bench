@@ -25,7 +25,10 @@ class BridgeTests(unittest.TestCase):
                     self.assertNotIn('subscription_sharing',body['error']['message'])
             finally:server.shutdown();server.server_close();thread.join()
     def test_transport_errors_keep_retryable_status_without_leaking_messages(self):
-        import requests
+        try:
+            import requests
+        except ImportError:
+            self.skipTest("Optional live transport dependency requests is not installed")
         from scripts.chatgpt_plan import ProbeError
         self.assertEqual(error_status(ProbeError('HTTP 503 / subscription_sharing_user_unavailable')),503)
         self.assertEqual(error_status(ProbeError('HTTP 429 / rate_limit_exceeded')),429)
@@ -33,6 +36,14 @@ class BridgeTests(unittest.TestCase):
         self.assertEqual(error_status(requests.ReadTimeout()),504)
         self.assertEqual(error_status(requests.exceptions.SSLError()),502)
         self.assertEqual(error_status(ValueError('wrong_model')),400)
+    def test_error_status_without_optional_transport_dependency(self):
+        from unittest.mock import patch
+        from scripts.chatgpt_plan import ProbeError
+        with patch.dict('sys.modules',{'requests':None}):
+            self.assertEqual(error_status(ValueError('wrong_model')),400)
+            self.assertEqual(error_status(ProbeError('HTTP 503 / unavailable')),503)
+            self.assertEqual(error_status(RuntimeError('internal')),500)
+
     def test_tools_and_complete_history_preserved(self):
         body={'model':TARGET,'messages':[{'role':'system','content':'rules'},
             {'role':'assistant','content':None,'tool_calls':[{'id':'c1','type':'function','function':{'name':'read','arguments':'{"path":"memory.md"}'}}]},

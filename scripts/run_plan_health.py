@@ -20,11 +20,19 @@ RUNTIME=Path('/home/maedaily/.local/share/kmb-live')
 
 
 def configurations(bin_dir,base):
-    text=(ROOT/'configs/deepseek-research-v31.example.json').read_text()
-    text=text.replace('kmb-deepseek','kmb-plan').replace('deepseek-flash',TARGET).replace('DeepSeek Flash','Luna / ChatGPT plan')
-    text=text.replace('REPLACE_ISOLATED_BIN',str(bin_dir)).replace('KMB_PROXY_BASE_URL',base)
-    text=text.replace('/path/to/existing/hermes-home',str(RUNTIME/'hermes-home'))
-    rows=json.loads(text)['agents']
+    template=json.loads((ROOT/'configs/deepseek-research-v31.example.json').read_text())
+    replacements={'kmb-deepseek':'kmb-plan','deepseek-flash':TARGET,
+                  'DeepSeek Flash':'Luna / ChatGPT plan',
+                  'REPLACE_ISOLATED_BIN':str(bin_dir),'KMB_PROXY_BASE_URL':base,
+                  '/path/to/existing/hermes-home':str(RUNTIME/'hermes-home')}
+    def substitute(value):
+        if isinstance(value,str):
+            for old,new in replacements.items():value=value.replace(old,new)
+            return value
+        if isinstance(value,list):return [substitute(item) for item in value]
+        if isinstance(value,dict):return {substitute(key):substitute(item) for key,item in value.items()}
+        return value
+    rows=substitute(template)['agents']
     for row in rows:
         row['per_turn_proxy_limits']=False
         row['timeout']=180

@@ -27,10 +27,13 @@ def error_status(exc):
         match=re.match(r'^HTTP (\d{3}) /',str(exc))
         if match:return int(match.group(1))
         return 502
-    import requests
+    if isinstance(exc,(ValueError,TypeError)):return 400
+    try:
+        import requests
+    except ImportError:
+        return 500
     if isinstance(exc,requests.Timeout):return 504
     if isinstance(exc,requests.RequestException):return 502
-    if isinstance(exc,(ValueError,TypeError)):return 400
     return 500
 
 
