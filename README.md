@@ -12,6 +12,10 @@
 
 新增 [Memory Stress 首期 30 条开发历史](docs/memory-stress-design.md) 与 [离线题目／证据导览](experiments/memory_stress/development-v1/index.html)：多跳关联、同字段更新各 15 条，五种状态／资料条件、反事实配对和三种表达。仅完成离线构造与软件检查，未调用付费模型，也未验证真实难度或产品区分度。
 
+第二阶段新增 [Memory Stress 160 条离线历史](docs/memory-stress-phase2.md) 与 [V2 导览](experiments/memory_stress/v2/development-v2/index.html)：四题族、四档，128 条开发／32 条留出预留；集合授权、实际文件验收与独立完整任务链。首期原件保持不变，仍未调用付费模型；预留分组不是盲测，尚无模型难度或区分度结论。
+
+首期审查修复已另存为 [0.1.1 修正版与六条小试清单](docs/memory-stress-phase2.md)：未知行动轨迹、nullable 输出格式和更新证据距离已修正；原 0.1 冻结材料保留。小试与 reader_only 只准备输入，尚未执行模型。
+
 ## 一分钟运行
 
 需要 Python 3.9+。核心运行没有第三方 Python 依赖，不需要 GPU、模型密钥或网络。

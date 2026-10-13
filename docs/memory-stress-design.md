@@ -2,6 +2,8 @@
 
 状态：**离线实现完成，未进行付费实测**。这是独立的开发题库 `memory-stress-0.1`，不覆盖标准集、挑战集、原难度试测或数学 V3.1 的题目与成绩。打开 [离线题目与证据导览](../experiments/memory_stress/development-v1/index.html) 可以逐条检查。
 
+后续审查确认 0.1 的行动轨迹 null 边界、格式与 gold 类型耦合、更新证据距离混杂。冻结原件保留用于重放；新实验使用 [0.1.1 修正版与预选小试](memory-stress-phase2.md)，通过 `experiments.memory_stress.v2 prepare --cohort revision-v1` 准备。下文和原入口描述的是历史 0.1 协议；不能把其软件验收视为上述边界已经覆盖。
+
 [离线验收记录](evidence/memory-stress-offline-validation.json)：Linux 171 项通过，Windows 169 项通过／2 项平台跳过；新增 21 项测试。三表达共 5,760 次事件读回、150 组配对关系检查、650 事件的软件子进程状态检查均通过；导览完成 2,700 种选择与 150 个配对展示检查。请求和费用账本计数未变化。这些数字均为软件检查，不是模型成绩。
 
 ## 这次具体增加什么

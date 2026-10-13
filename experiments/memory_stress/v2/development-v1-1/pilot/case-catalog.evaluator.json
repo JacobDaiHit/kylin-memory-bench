@@ -1,0 +1,798 @@
+{
+  "stress-049e097a668badc0ba": {
+    "answer_type": "string",
+    "case_id": "stress-049e097a668badc0ba",
+    "case_sha256": "c775642aa91b9ba9e932a66968c64a919e063558ece8ffadb15688869a5cbb45",
+    "condition": "memory",
+    "contract": "memory-stress-0.1.1",
+    "delivery_candidates": [],
+    "delivery_spec": null,
+    "evaluation_track": "memory_lookup",
+    "expected": "exports/client-43ad7331b4",
+    "expression": "structured",
+    "family": "multihop",
+    "final_utf8_bytes": 2179,
+    "forbidden_files": [],
+    "history_utf8_bytes": 17445,
+    "loads": {
+      "candidate_chains": 4,
+      "history_slots": 64,
+      "hop_count": 2,
+      "same_field_updates": 0
+    },
+    "oracle_raw_record_count": 0,
+    "proof": {
+      "answer": "exports/client-43ad7331b4",
+      "explanatory_ids": [],
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "positive_evidence_observable": true,
+      "required_group_count": 2,
+      "required_groups": [
+        [
+          "E-869a3bae46",
+          "E-c039781dda"
+        ],
+        [
+          "E-2201f4bd8e"
+        ]
+      ],
+      "sufficient_sets": [
+        [
+          "E-2201f4bd8e",
+          "E-869a3bae46"
+        ],
+        [
+          "E-2201f4bd8e",
+          "E-c039781dda"
+        ]
+      ]
+    },
+    "query_id": "q06",
+    "query_role": "primary",
+    "rendered_expression": "structured",
+    "scenario_id": "0b393d0b728d21f130",
+    "seed": 20261113,
+    "split": "development",
+    "split_group": "0b393d0b728d21f130",
+    "tier": "medium",
+    "variant": "base"
+  },
+  "stress-1b7c8177e3751ae81d": {
+    "answer_type": "string",
+    "case_id": "stress-1b7c8177e3751ae81d",
+    "case_sha256": "19e80c3cd02acdd4558d4209cb973bb45e27c6a9452227eb0293707891a4d222",
+    "condition": "oracle_evidence",
+    "contract": "memory-stress-0.1.1",
+    "delivery_candidates": [],
+    "delivery_spec": null,
+    "evaluation_track": "memory_lookup",
+    "expected": "exports/client-43ad7331b4",
+    "expression": "structured",
+    "family": "multihop",
+    "final_utf8_bytes": 2578,
+    "forbidden_files": [],
+    "history_utf8_bytes": 17445,
+    "loads": {
+      "candidate_chains": 4,
+      "history_slots": 64,
+      "hop_count": 2,
+      "same_field_updates": 0
+    },
+    "oracle_raw_record_count": 2,
+    "proof": {
+      "answer": "exports/client-43ad7331b4",
+      "explanatory_ids": [],
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "positive_evidence_observable": true,
+      "required_group_count": 2,
+      "required_groups": [
+        [
+          "E-869a3bae46",
+          "E-c039781dda"
+        ],
+        [
+          "E-2201f4bd8e"
+        ]
+      ],
+      "sufficient_sets": [
+        [
+          "E-2201f4bd8e",
+          "E-869a3bae46"
+        ],
+        [
+          "E-2201f4bd8e",
+          "E-c039781dda"
+        ]
+      ]
+    },
+    "query_id": "q06",
+    "query_role": "primary",
+    "rendered_expression": "structured",
+    "scenario_id": "0b393d0b728d21f130",
+    "seed": 20261113,
+    "split": "development",
+    "split_group": "0b393d0b728d21f130",
+    "tier": "medium",
+    "variant": "base"
+  },
+  "stress-2cc78edd94736e7d77": {
+    "answer_type": "string",
+    "case_id": "stress-2cc78edd94736e7d77",
+    "case_sha256": "e48471c4e3afc92902ac11860e423d2b1126456e7cc6fad55bd64f052904850f",
+    "condition": "memory",
+    "contract": "memory-stress-0.1.1",
+    "delivery_candidates": [],
+    "delivery_spec": null,
+    "evaluation_track": "memory_lookup",
+    "expected": "exports/client-3125c2bed2",
+    "expression": "structured",
+    "family": "multihop",
+    "final_utf8_bytes": 2179,
+    "forbidden_files": [],
+    "history_utf8_bytes": 17480,
+    "loads": {
+      "candidate_chains": 4,
+      "history_slots": 64,
+      "hop_count": 4,
+      "same_field_updates": 0
+    },
+    "oracle_raw_record_count": 0,
+    "proof": {
+      "answer": "exports/client-3125c2bed2",
+      "explanatory_ids": [],
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "positive_evidence_observable": true,
+      "required_group_count": 4,
+      "required_groups": [
+        [
+          "E-2ac6840625",
+          "E-2e83709814"
+        ],
+        [
+          "E-42961e5b01"
+        ],
+        [
+          "E-cfa69c7a29"
+        ],
+        [
+          "E-e01cf6e6a1"
+        ]
+      ],
+      "sufficient_sets": [
+        [
+          "E-e01cf6e6a1",
+          "E-cfa69c7a29",
+          "E-42961e5b01",
+          "E-2ac6840625"
+        ],
+        [
+          "E-e01cf6e6a1",
+          "E-cfa69c7a29",
+          "E-42961e5b01",
+          "E-2e83709814"
+        ]
+      ]
+    },
+    "query_id": "q06",
+    "query_role": "primary",
+    "rendered_expression": "structured",
+    "scenario_id": "8181df894e227e3765",
+    "seed": 20261213,
+    "split": "development",
+    "split_group": "8181df894e227e3765",
+    "tier": "high",
+    "variant": "base"
+  },
+  "stress-3845fa80fcd04114e3": {
+    "answer_type": "string",
+    "case_id": "stress-3845fa80fcd04114e3",
+    "case_sha256": "cb18a65b80a9f198ee7706649d76a3a8d57d112a3ec40b470d1431742ed3ed48",
+    "condition": "memory",
+    "contract": "memory-stress-0.1.1",
+    "delivery_candidates": [],
+    "delivery_spec": null,
+    "evaluation_track": "memory_lookup",
+    "expected": "exports/client-26b3c0c58e",
+    "expression": "structured",
+    "family": "updates",
+    "final_utf8_bytes": 2177,
+    "forbidden_files": [],
+    "history_utf8_bytes": 17381,
+    "loads": {
+      "downstream_depth": 3,
+      "history_slots": 64,
+      "hop_count": 4,
+      "inputs_after_effective_update": 14,
+      "last_effective_update_position": 50,
+      "same_field_updates": 6,
+      "scopes": 2,
+      "selective_cancels": 1,
+      "temporary_updates": 1
+    },
+    "oracle_raw_record_count": 0,
+    "proof": {
+      "answer": "exports/client-26b3c0c58e",
+      "explanatory_ids": [
+        "E-886fc17f37"
+      ],
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "positive_evidence_observable": true,
+      "required_group_count": 5,
+      "required_groups": [
+        [
+          "E-7886581897"
+        ],
+        [
+          "E-d4c8640601"
+        ],
+        [
+          "E-e69435aec8"
+        ],
+        [
+          "E-8490b0800d"
+        ],
+        [
+          "E-14e5ec6c74"
+        ]
+      ],
+      "sufficient_sets": [
+        [
+          "E-8490b0800d",
+          "E-e69435aec8",
+          "E-14e5ec6c74",
+          "E-7886581897",
+          "E-886fc17f37",
+          "E-d4c8640601"
+        ]
+      ]
+    },
+    "query_id": "q06",
+    "query_role": "primary",
+    "rendered_expression": "structured",
+    "scenario_id": "a65d8065efe76618db",
+    "seed": 20262213,
+    "split": "development",
+    "split_group": "a65d8065efe76618db",
+    "tier": "high",
+    "variant": "base"
+  },
+  "stress-70ed96475691bd806b": {
+    "answer_type": "string",
+    "case_id": "stress-70ed96475691bd806b",
+    "case_sha256": "caa5f9422290e5d6d44f0b782fbc065adfeb7bd04c981b37ce71ec6132b1d791",
+    "condition": "oracle_evidence",
+    "contract": "memory-stress-0.1.1",
+    "delivery_candidates": [],
+    "delivery_spec": null,
+    "evaluation_track": "memory_lookup",
+    "expected": "exports/client-3125c2bed2",
+    "expression": "structured",
+    "family": "multihop",
+    "final_utf8_bytes": 2921,
+    "forbidden_files": [],
+    "history_utf8_bytes": 17480,
+    "loads": {
+      "candidate_chains": 4,
+      "history_slots": 64,
+      "hop_count": 4,
+      "same_field_updates": 0
+    },
+    "oracle_raw_record_count": 4,
+    "proof": {
+      "answer": "exports/client-3125c2bed2",
+      "explanatory_ids": [],
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "positive_evidence_observable": true,
+      "required_group_count": 4,
+      "required_groups": [
+        [
+          "E-2ac6840625",
+          "E-2e83709814"
+        ],
+        [
+          "E-42961e5b01"
+        ],
+        [
+          "E-cfa69c7a29"
+        ],
+        [
+          "E-e01cf6e6a1"
+        ]
+      ],
+      "sufficient_sets": [
+        [
+          "E-e01cf6e6a1",
+          "E-cfa69c7a29",
+          "E-42961e5b01",
+          "E-2ac6840625"
+        ],
+        [
+          "E-e01cf6e6a1",
+          "E-cfa69c7a29",
+          "E-42961e5b01",
+          "E-2e83709814"
+        ]
+      ]
+    },
+    "query_id": "q06",
+    "query_role": "primary",
+    "rendered_expression": "structured",
+    "scenario_id": "8181df894e227e3765",
+    "seed": 20261213,
+    "split": "development",
+    "split_group": "8181df894e227e3765",
+    "tier": "high",
+    "variant": "base"
+  },
+  "stress-7d53d57b371e7d4d73": {
+    "answer_type": "string",
+    "case_id": "stress-7d53d57b371e7d4d73",
+    "case_sha256": "b4f138e785776c39224d0489785c351229c5d45c2f2b550fee24526f63423d21",
+    "condition": "oracle_evidence",
+    "contract": "memory-stress-0.1.1",
+    "delivery_candidates": [],
+    "delivery_spec": null,
+    "evaluation_track": "memory_lookup",
+    "expected": "exports/client-171c06dde7",
+    "expression": "structured",
+    "family": "multihop",
+    "final_utf8_bytes": 2409,
+    "forbidden_files": [],
+    "history_utf8_bytes": 17455,
+    "loads": {
+      "candidate_chains": 4,
+      "history_slots": 64,
+      "hop_count": 1,
+      "same_field_updates": 0
+    },
+    "oracle_raw_record_count": 1,
+    "proof": {
+      "answer": "exports/client-171c06dde7",
+      "explanatory_ids": [],
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "positive_evidence_observable": true,
+      "required_group_count": 1,
+      "required_groups": [
+        [
+          "E-107f17144b",
+          "E-f21b239c06"
+        ]
+      ],
+      "sufficient_sets": [
+        [
+          "E-107f17144b"
+        ],
+        [
+          "E-f21b239c06"
+        ]
+      ]
+    },
+    "query_id": "q03",
+    "query_role": "primary",
+    "rendered_expression": "structured",
+    "scenario_id": "16c072a1cc631512c9",
+    "seed": 20261013,
+    "split": "development",
+    "split_group": "16c072a1cc631512c9",
+    "tier": "low",
+    "variant": "base"
+  },
+  "stress-8b7aeefd421254cbb6": {
+    "answer_type": "string",
+    "case_id": "stress-8b7aeefd421254cbb6",
+    "case_sha256": "a69b25a3a7b938acff7c81d17a6b71bc5bc417fc61b2c01f4afddf762c4b2bb5",
+    "condition": "memory",
+    "contract": "memory-stress-0.1.1",
+    "delivery_candidates": [],
+    "delivery_spec": null,
+    "evaluation_track": "memory_lookup",
+    "expected": "exports/client-b52a23cedf",
+    "expression": "structured",
+    "family": "updates",
+    "final_utf8_bytes": 2177,
+    "forbidden_files": [],
+    "history_utf8_bytes": 17505,
+    "loads": {
+      "downstream_depth": 3,
+      "history_slots": 64,
+      "hop_count": 4,
+      "inputs_after_effective_update": 14,
+      "last_effective_update_position": 50,
+      "same_field_updates": 1,
+      "scopes": 2,
+      "selective_cancels": 1,
+      "temporary_updates": 1
+    },
+    "oracle_raw_record_count": 0,
+    "proof": {
+      "answer": "exports/client-b52a23cedf",
+      "explanatory_ids": [
+        "E-e865b19321"
+      ],
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "positive_evidence_observable": true,
+      "required_group_count": 5,
+      "required_groups": [
+        [
+          "E-0ea718cecf"
+        ],
+        [
+          "E-730a9d5073"
+        ],
+        [
+          "E-fda801b1d3"
+        ],
+        [
+          "E-716fd5c56c"
+        ],
+        [
+          "E-8bb4fcf383"
+        ]
+      ],
+      "sufficient_sets": [
+        [
+          "E-8bb4fcf383",
+          "E-fda801b1d3",
+          "E-716fd5c56c",
+          "E-0ea718cecf",
+          "E-e865b19321",
+          "E-730a9d5073"
+        ]
+      ]
+    },
+    "query_id": "q01",
+    "query_role": "primary",
+    "rendered_expression": "structured",
+    "scenario_id": "f8537937b2d998a741",
+    "seed": 20262013,
+    "split": "development",
+    "split_group": "f8537937b2d998a741",
+    "tier": "low",
+    "variant": "base"
+  },
+  "stress-b2b90a0081a86bfdfd": {
+    "answer_type": "string",
+    "case_id": "stress-b2b90a0081a86bfdfd",
+    "case_sha256": "d337c965efbc8e5cf2124227219dc28f57cadc168adf8ae518d8d215bfc759e3",
+    "condition": "oracle_evidence",
+    "contract": "memory-stress-0.1.1",
+    "delivery_candidates": [],
+    "delivery_spec": null,
+    "evaluation_track": "memory_lookup",
+    "expected": "exports/client-dded8d43d1",
+    "expression": "structured",
+    "family": "updates",
+    "final_utf8_bytes": 3230,
+    "forbidden_files": [],
+    "history_utf8_bytes": 17495,
+    "loads": {
+      "downstream_depth": 3,
+      "history_slots": 64,
+      "hop_count": 4,
+      "inputs_after_effective_update": 14,
+      "last_effective_update_position": 50,
+      "same_field_updates": 3,
+      "scopes": 2,
+      "selective_cancels": 1,
+      "temporary_updates": 1
+    },
+    "oracle_raw_record_count": 6,
+    "proof": {
+      "answer": "exports/client-dded8d43d1",
+      "explanatory_ids": [
+        "E-413d255d36"
+      ],
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "positive_evidence_observable": true,
+      "required_group_count": 5,
+      "required_groups": [
+        [
+          "E-5338ced491"
+        ],
+        [
+          "E-1d2915104e"
+        ],
+        [
+          "E-8733c444fe"
+        ],
+        [
+          "E-b332771276"
+        ],
+        [
+          "E-9a7bc91c98"
+        ]
+      ],
+      "sufficient_sets": [
+        [
+          "E-9a7bc91c98",
+          "E-8733c444fe",
+          "E-b332771276",
+          "E-5338ced491",
+          "E-413d255d36",
+          "E-1d2915104e"
+        ]
+      ]
+    },
+    "query_id": "q03",
+    "query_role": "primary",
+    "rendered_expression": "structured",
+    "scenario_id": "90b55aaa4a19a6ac92",
+    "seed": 20262113,
+    "split": "development",
+    "split_group": "90b55aaa4a19a6ac92",
+    "tier": "medium",
+    "variant": "base"
+  },
+  "stress-caddb0cf0d6e46e1ac": {
+    "answer_type": "string",
+    "case_id": "stress-caddb0cf0d6e46e1ac",
+    "case_sha256": "53f5bea79426dd17ce98f9a56891fe359f021689c8a849d1a01647fb521f1608",
+    "condition": "oracle_evidence",
+    "contract": "memory-stress-0.1.1",
+    "delivery_candidates": [],
+    "delivery_spec": null,
+    "evaluation_track": "memory_lookup",
+    "expected": "exports/client-b52a23cedf",
+    "expression": "structured",
+    "family": "updates",
+    "final_utf8_bytes": 3231,
+    "forbidden_files": [],
+    "history_utf8_bytes": 17505,
+    "loads": {
+      "downstream_depth": 3,
+      "history_slots": 64,
+      "hop_count": 4,
+      "inputs_after_effective_update": 14,
+      "last_effective_update_position": 50,
+      "same_field_updates": 1,
+      "scopes": 2,
+      "selective_cancels": 1,
+      "temporary_updates": 1
+    },
+    "oracle_raw_record_count": 6,
+    "proof": {
+      "answer": "exports/client-b52a23cedf",
+      "explanatory_ids": [
+        "E-e865b19321"
+      ],
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "positive_evidence_observable": true,
+      "required_group_count": 5,
+      "required_groups": [
+        [
+          "E-0ea718cecf"
+        ],
+        [
+          "E-730a9d5073"
+        ],
+        [
+          "E-fda801b1d3"
+        ],
+        [
+          "E-716fd5c56c"
+        ],
+        [
+          "E-8bb4fcf383"
+        ]
+      ],
+      "sufficient_sets": [
+        [
+          "E-8bb4fcf383",
+          "E-fda801b1d3",
+          "E-716fd5c56c",
+          "E-0ea718cecf",
+          "E-e865b19321",
+          "E-730a9d5073"
+        ]
+      ]
+    },
+    "query_id": "q01",
+    "query_role": "primary",
+    "rendered_expression": "structured",
+    "scenario_id": "f8537937b2d998a741",
+    "seed": 20262013,
+    "split": "development",
+    "split_group": "f8537937b2d998a741",
+    "tier": "low",
+    "variant": "base"
+  },
+  "stress-dd5f3c9e8c9ebfe8fc": {
+    "answer_type": "string",
+    "case_id": "stress-dd5f3c9e8c9ebfe8fc",
+    "case_sha256": "98cac4439f59129134ae33e93a55434b9d6cfc186b0c88ed605d615a8d7a286d",
+    "condition": "memory",
+    "contract": "memory-stress-0.1.1",
+    "delivery_candidates": [],
+    "delivery_spec": null,
+    "evaluation_track": "memory_lookup",
+    "expected": "exports/client-171c06dde7",
+    "expression": "structured",
+    "family": "multihop",
+    "final_utf8_bytes": 2179,
+    "forbidden_files": [],
+    "history_utf8_bytes": 17455,
+    "loads": {
+      "candidate_chains": 4,
+      "history_slots": 64,
+      "hop_count": 1,
+      "same_field_updates": 0
+    },
+    "oracle_raw_record_count": 0,
+    "proof": {
+      "answer": "exports/client-171c06dde7",
+      "explanatory_ids": [],
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "positive_evidence_observable": true,
+      "required_group_count": 1,
+      "required_groups": [
+        [
+          "E-107f17144b",
+          "E-f21b239c06"
+        ]
+      ],
+      "sufficient_sets": [
+        [
+          "E-107f17144b"
+        ],
+        [
+          "E-f21b239c06"
+        ]
+      ]
+    },
+    "query_id": "q03",
+    "query_role": "primary",
+    "rendered_expression": "structured",
+    "scenario_id": "16c072a1cc631512c9",
+    "seed": 20261013,
+    "split": "development",
+    "split_group": "16c072a1cc631512c9",
+    "tier": "low",
+    "variant": "base"
+  },
+  "stress-df018d2adf7d7c0ae7": {
+    "answer_type": "string",
+    "case_id": "stress-df018d2adf7d7c0ae7",
+    "case_sha256": "d44cbd505bc61cd90131cc236f6536744164a9a176270086991de17b1221fbd5",
+    "condition": "oracle_evidence",
+    "contract": "memory-stress-0.1.1",
+    "delivery_candidates": [],
+    "delivery_spec": null,
+    "evaluation_track": "memory_lookup",
+    "expected": "exports/client-26b3c0c58e",
+    "expression": "structured",
+    "family": "updates",
+    "final_utf8_bytes": 3231,
+    "forbidden_files": [],
+    "history_utf8_bytes": 17381,
+    "loads": {
+      "downstream_depth": 3,
+      "history_slots": 64,
+      "hop_count": 4,
+      "inputs_after_effective_update": 14,
+      "last_effective_update_position": 50,
+      "same_field_updates": 6,
+      "scopes": 2,
+      "selective_cancels": 1,
+      "temporary_updates": 1
+    },
+    "oracle_raw_record_count": 6,
+    "proof": {
+      "answer": "exports/client-26b3c0c58e",
+      "explanatory_ids": [
+        "E-886fc17f37"
+      ],
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "positive_evidence_observable": true,
+      "required_group_count": 5,
+      "required_groups": [
+        [
+          "E-7886581897"
+        ],
+        [
+          "E-d4c8640601"
+        ],
+        [
+          "E-e69435aec8"
+        ],
+        [
+          "E-8490b0800d"
+        ],
+        [
+          "E-14e5ec6c74"
+        ]
+      ],
+      "sufficient_sets": [
+        [
+          "E-8490b0800d",
+          "E-e69435aec8",
+          "E-14e5ec6c74",
+          "E-7886581897",
+          "E-886fc17f37",
+          "E-d4c8640601"
+        ]
+      ]
+    },
+    "query_id": "q06",
+    "query_role": "primary",
+    "rendered_expression": "structured",
+    "scenario_id": "a65d8065efe76618db",
+    "seed": 20262213,
+    "split": "development",
+    "split_group": "a65d8065efe76618db",
+    "tier": "high",
+    "variant": "base"
+  },
+  "stress-e812c4f85730ebfae7": {
+    "answer_type": "string",
+    "case_id": "stress-e812c4f85730ebfae7",
+    "case_sha256": "b07ae6509bc6f2c3ff741e424d234f55df13945394ea617efe47584f78cefd2c",
+    "condition": "memory",
+    "contract": "memory-stress-0.1.1",
+    "delivery_candidates": [],
+    "delivery_spec": null,
+    "evaluation_track": "memory_lookup",
+    "expected": "exports/client-dded8d43d1",
+    "expression": "structured",
+    "family": "updates",
+    "final_utf8_bytes": 2177,
+    "forbidden_files": [],
+    "history_utf8_bytes": 17495,
+    "loads": {
+      "downstream_depth": 3,
+      "history_slots": 64,
+      "hop_count": 4,
+      "inputs_after_effective_update": 14,
+      "last_effective_update_position": 50,
+      "same_field_updates": 3,
+      "scopes": 2,
+      "selective_cancels": 1,
+      "temporary_updates": 1
+    },
+    "oracle_raw_record_count": 0,
+    "proof": {
+      "answer": "exports/client-dded8d43d1",
+      "explanatory_ids": [
+        "E-413d255d36"
+      ],
+      "negative_policy": "Unknown probes receive full raw history; no compact negative recall claim.",
+      "positive_evidence_observable": true,
+      "required_group_count": 5,
+      "required_groups": [
+        [
+          "E-5338ced491"
+        ],
+        [
+          "E-1d2915104e"
+        ],
+        [
+          "E-8733c444fe"
+        ],
+        [
+          "E-b332771276"
+        ],
+        [
+          "E-9a7bc91c98"
+        ]
+      ],
+      "sufficient_sets": [
+        [
+          "E-9a7bc91c98",
+          "E-8733c444fe",
+          "E-b332771276",
+          "E-5338ced491",
+          "E-413d255d36",
+          "E-1d2915104e"
+        ]
+      ]
+    },
+    "query_id": "q03",
+    "query_role": "primary",
+    "rendered_expression": "structured",
+    "scenario_id": "90b55aaa4a19a6ac92",
+    "seed": 20262113,
+    "split": "development",
+    "split_group": "90b55aaa4a19a6ac92",
+    "tier": "medium",
+    "variant": "base"
+  }
+}

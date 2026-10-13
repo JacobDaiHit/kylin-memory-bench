@@ -1,0 +1,50 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>__TITLE__</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f1f5f8;color:#15324a;font:16px/1.65 system-ui,sans-serif}main{max-width:1280px;padding:28px;margin:auto}h1{margin:0;font-size:28px}h2{font-size:20px;margin:8px 0}p{margin:10px 0}.banner{border-left:4px solid #267a8a;background:#e6f2f4;padding:16px;margin:16px 0}.controls,.facts{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}label{display:grid;gap:5px}select,button{font:inherit;padding:6px 10px;border:1px solid #afc2cf;border-radius:5px;background:white;color:#15324a}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:white;border:1px solid #d9e3eb;border-radius:8px;padding:18px;min-width:0}.tag{background:#eaf1f6;padding:8px 12px;border-radius:5px}pre{font:13px/1.65 ui-monospace,monospace;white-space:pre-wrap;overflow-wrap:anywhere;background:#f7f9fb;padding:12px;max-height:400px;overflow:auto}.records{max-height:600px;overflow:auto}.record{border-bottom:1px solid #dce4eb;padding:6px}.record pre{margin:4px 0;max-height:none}.marked{background:#e7f4ed}.muted{color:#526879}details{margin:12px 0}summary{cursor:pointer}table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:8px;text-align:left;border-bottom:1px solid #dce4eb}a{color:#176d85}@media(max-width:800px){main{padding:18px}.grid{grid-template-columns:1fr}.controls label{width:100%}}
+</style>
+<main><h1>__TITLE__</h1>
+<div class="banner">__INTRO__ 负载标签不代表已经验证的难度或产品区分度。</div>
+<p>__DETAIL__</p>
+<div class="controls">
+<label>家族<select id="family"><option value="multihop">多跳关联</option><option value="updates">同字段更新</option><option value="collections">集合授权</option><option value="feedback">反馈经验复用</option></select></label>
+<label>负载<select id="tier"><option value="low">低</option><option value="medium">中</option><option value="high">高</option><option value="extreme">最高</option></select></label>
+<label>分组<select id="split"><option value="development">开发</option><option value="reserved">留出预留</option></select></label>
+<label>历史<select id="scene"></select></label>
+<label>表达<select id="expression"><option value="structured">A · 结构化</option><option value="statement">B · 陈述模板</option><option value="dialogue">C · 对话模板</option></select></label>
+<label>问题<select id="query"></select></label>
+<label>条件预览<select id="condition"><option value="memory">持久记忆</option><option value="stateless">无跨会话状态</option><option value="open_book">完整原文</option><option value="oracle_evidence">关键原文证据</option><option value="no_history">未提供目标资料</option></select></label>
+</div>
+<p id="loading" aria-live="polite"></p><div id="facts" class="facts"></div>
+<div class="grid">
+<section class="card"><h2>最终问题</h2><pre id="question"></pre><p id="control" class="muted"></p>
+<details id="answer"><summary>查看标准答案与文件契约</summary><pre id="gold"></pre><p>内容、格式、实际文件、工具可见性分别分析。辅助文件集合按集合计算精确率／召回率，重复项和排序单列为格式问题；不得把一个短方案答对等同于真实文件已交付。</p></details>
+<h2>必要与充分原始证据</h2><p id="proofnote"></p><details><summary>查看全部等价证据集合</summary><pre id="proofsets"></pre></details><div id="evidence" class="records"></div></section>
+<section class="card"><h2>基础历史原文</h2><p class="muted">绿色为第一组充分证据。这一栏始终展示基础历史；无资料条件会替换目标证据，具体学习输入需用对应条件生成器复核。默认附件仅冻结 memory 输入，其他条件可显式生成。</p><div id="history" class="records"></div></section>
+<section class="card"><h2>反事实与不变性</h2><label>改动<select id="variant"><option value="fact_edit">只改有效事实</option><option value="approval_swap">交换批准状态</option><option value="label_renumber">只改编号数字</option><option value="irrelevant_edit">只改无关讨论</option><option value="paraphrase">同事实换表达</option></select></label><p id="pairnote"></p><pre id="pair"></pre></section>
+<section class="card"><h2>预设软件故障策略</h2><table><thead><tr><th>策略</th><th>主问题</th><th>六个问题全对</th></tr></thead><tbody id="strategies"></tbody></table><p class="muted">直接重放事件结构，仅验证题目和故障诊断。没有同 LLM 的信息提取条件，不是产品排名。</p><p id="track"></p></section>
+</div>
+<div class="banner">__FOOTER__</div>
+<p><a href="protocol.json">冻结协议</a> · <a href="quality.evaluator.json">软件检查</a> · <a href="../../../../docs/memory-stress-phase2.md">第二阶段说明</a> · <a href="../../development-v1/index.html">首期 30 条原件</a></p>
+</main>
+<script type="application/json" id="catalog">__CATALOG__</script>
+<script>
+'use strict';
+const catalog=JSON.parse(document.getElementById('catalog').textContent), cache=new Map();let current=null;
+const el=id=>document.getElementById(id);
+const names={primary:'主问题',alias:'合法别名',historical:'历史检查点',other_scope:'其他对象／范围',current:'当前登记',preservation:'相邻字段保留',abstention:'资料不足',files:'文件集合',direct:'直接登记'};
+const policies={complete:'完整重放',first_state:'最早批准值',ignore_cancel:'忽略撤销',scope_blind:'混合范围',accept_draft:'采纳草稿',recent_window:'最近 12 条'};
+function option(node,value,text){const o=document.createElement('option');o.value=value;o.textContent=text;node.appendChild(o);}
+function selectScenes(){el('scene').replaceChildren();catalog.filter(w=>w.family===el('family').value&&w.tier===el('tier').value&&w.split===el('split').value).forEach((w,i)=>option(el('scene'),w.scenario_id,'历史 '+(i+1)+' · '+w.seed));loadScene();}
+function loadScene(){const id=el('scene').value;current=null;el('loading').textContent='正在读取这条离线历史…';if(cache.has(id)){window.receiveScene(cache.get(id));return;}const s=document.createElement('script');s.src='scenes/'+id+'.js';s.onerror=()=>{el('loading').textContent='历史文件无法读取，请保留 scenes 目录并打开本地完整副本。';};s.onload=()=>s.remove();document.head.appendChild(s);}
+window.receiveScene=w=>{cache.set(w.scenario_id,w);if(w.scenario_id!==el('scene').value)return;current=w;el('loading').textContent='已加载 · '+w.split+' · '+w.scenario_id;el('query').replaceChildren();w.queries.slice().sort((a,b)=>a.role===b.role?0:a.role==='primary'?-1:b.role==='primary'?1:0).forEach(q=>option(el('query'),q.id,names[q.role]+' · '+q.id));draw();};
+function records(node,ids,marked){node.replaceChildren();const expr=el('expression').value;current.events.forEach((r,i)=>{if(!ids.has(r.id))return;const d=document.createElement('div');d.className='record'+(marked.has(r.id)?' marked':'');const p=document.createElement('pre');p.textContent=String(i+1).padStart(3,'0')+' · '+current.expressions[expr][i];d.appendChild(p);node.appendChild(d);});}
+function drawPair(){if(!current)return;const q=current.queries.find(q=>q.id===el('query').value),v=el('variant').value,p=current.pairs.find(p=>p.variant===v);el('pairnote').textContent=['fact_edit','approval_swap'].includes(v)?'主答案必须改变，其他问题按事件重新计算。':'全部答案必须保持不变。';el('pair').textContent=JSON.stringify({base_answer:current.proofs[q.id].answer,edited_answer:p.answers[q.id],changed_records:p.changes},null,2);}
+function draw(){if(!current)return;const q=current.queries.find(q=>q.id===el('query').value),p=current.proofs[q.id],expr=el('expression').value,cond=el('condition').value,ids=new Set(p.sufficient_sets[0]);el('answer').open=false;el('facts').replaceChildren();[current.events.length+' 个学习会话',current.split==='development'?'开发历史':'留出预留',p.required_group_count+' 组答案敏感证据',q.mode==='transfer'?'真实文件任务':'短回答查询'].forEach(t=>{const d=document.createElement('span');d.className='tag';d.textContent=t;el('facts').appendChild(d);});let question=current.questions[expr][q.id];if(cond==='open_book'||cond==='oracle_evidence'){question+='\n以下是按原顺序排列的原始会话材料：\n'+current.events.map((r,i)=>({r,i})).filter(x=>cond==='open_book'||ids.has(x.r.id)).map(x=>current.expressions[expr][x.i]).join('\n\n');}el('question').textContent=question;
+const descriptions={memory:'每步新会话，案例内保留持久工作区。',stateless:'相同学习原文，每步新工作区；按相同历史答案评价恢复率。',open_book:'最终新工作区，再给全部原始材料。',oracle_evidence:'最终新工作区，只给原始充分证据，不给整理答案；拒答题给完整原文。',no_history:'目标资料替换为中性讨论，输入会话数不变；无法确定则返回 null，不生成候选交付文件。'};el('control').textContent=descriptions[cond];
+const answer=cond==='no_history'?null:p.answer;const detail={answer};if(q.mode==='transfer'&&answer!==null){const line=current.questions.structured[q.id].split('\n').find(s=>s.startsWith('TASK='));detail.actual_delivery=JSON.parse(line.slice(5)).deliveries[answer];}el('gold').textContent=JSON.stringify(detail,null,2);
+el('proofnote').textContent=p.positive_evidence_observable?'必要组：'+JSON.stringify(p.required_groups)+'。第一组原始充分证据显示如下；等价来源可以替换。':'资料不足探针：保留全部原始历史，不宣称紧凑负证据或可靠检索召回率。';el('proofsets').textContent=JSON.stringify(p.sufficient_sets,null,2);records(el('history'),new Set(current.events.map(r=>r.id)),ids);records(el('evidence'),ids,ids);
+el('strategies').replaceChildren();current.strategies.forEach(r=>{const tr=document.createElement('tr');[policies[r.policy],r.primary_correct?'通过':'失败',r.all_queries_correct?'通过':'失败'].forEach(t=>{const td=document.createElement('td');td.textContent=t;tr.appendChild(td);});el('strategies').appendChild(tr);});el('track').textContent=current.family==='feedback'?'此处为受控迁移题，学习材料是脚本产生的模拟工具经历。完整任务链保留实际尝试和反馈，独立检查；不混合两条成绩。':current.family==='updates'?'重复更新增加状态维护负担，各档主问题必要证据均为 5 组。':'';drawPair();}
+const labels={family:{multihop:'多跳关联',updates:'同字段更新',collections:'集合授权',feedback:'反馈经验复用'},tier:{low:'低',medium:'中',high:'高',extreme:'最高'},split:{development:'开发',reserved:'留出预留'}};
+['family','tier','split'].forEach(id=>{el(id).replaceChildren();Object.keys(labels[id]).filter(v=>catalog.some(w=>w[id]===v)).forEach(v=>option(el(id),v,labels[id][v]));el(id).addEventListener('change',selectScenes);});el('scene').addEventListener('change',loadScene);['query','expression','condition'].forEach(id=>el(id).addEventListener('change',draw));el('variant').addEventListener('change',drawPair);selectScenes();
+</script></html>

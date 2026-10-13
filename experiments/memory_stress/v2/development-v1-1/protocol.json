@@ -1,0 +1,165 @@
+{
+  "action_visibility": "Visible action counts are partial observations; total is null if any planned trace is unavailable.",
+  "answer_schema": "Question-declared string/integer/string-set, always nullable; format independent of gold value.",
+  "available_queries_per_history": 6,
+  "burden_axes": {
+    "multihop": [
+      1,
+      2,
+      4
+    ],
+    "updates": [
+      1,
+      3,
+      6
+    ]
+  },
+  "claim_limit": "No native LLM trial, memory ranking, real difficulty effect, human review, time ageing, equal token budgets or final release verified.",
+  "cohort": "revision-v1",
+  "conditions_available": [
+    "memory",
+    "stateless",
+    "open_book",
+    "oracle_evidence",
+    "no_history"
+  ],
+  "conditions_prepared": [
+    "memory"
+  ],
+  "contract": "memory-stress-0.1.1",
+  "data_sha256": {
+    "case-catalog.evaluator.json": "c9c2ce731757ba364204993f52394d7e113b2e9eda6620c5c852f14420fddabe",
+    "gold.evaluator.json": "67c24d0683e451bf87ec5254ef4482064c1559a9305dfc2d0654cf28ce9f3249",
+    "index.html": "777d37cea0d0d835512e7cae15ae044a236399114060883ee1aea7252f61b4e4",
+    "learner-memory-development.jsonl": "0507071ef33889b8661da51d8f39189df61b698761d8dabfbae7d4344b7113d7",
+    "native-memory-development.evaluator.jsonl": "44d160fbf642c8e337f28b7976b93f483ae0c76a8b25fdd2239a143e19cb9e8a",
+    "pilot/case-catalog.evaluator.json": "173122843523d45f6ac91f1592ffc12415f7d26f0f8d48927ef18099143ce3e5",
+    "pilot/learner.jsonl": "d039647e60adb6fcd9a67b6add76f85f31386b4bfbe6440134905d8c6958d0a7",
+    "pilot/native.evaluator.jsonl": "a18bf3f0ef8d90c59ad515881e7b43e41955d8093dbdcdc192c309b953fb8c80",
+    "pilot/protocol.json": "b47972a4104d73e696b01cd35bc791e2a4537b0e3bd44ff27e8fc11aa280bd64",
+    "pilot/reader-only.gold.evaluator.json": "113d73547f9ff74829e0f067e00a5245fb4729f65c4779057b09198377762159",
+    "pilot/reader-only.learner.jsonl": "8419035840bbbf4915b758002759a55182c52715caaa30652ba52a2ec4848b29",
+    "pilot/reader-only.protocol.json": "817ab083d9165ece4c84ea88d5c2be635d1067dd1b924ecb79fbb90fe4e11cb6",
+    "quality.evaluator.json": "066be87091bac77db1de51024b5f2503b4c85bda76e898a60766d155a104c640",
+    "scenes/0a4d63a72498c4ae76.js": "07f53e5e725b322a321f210a4bb25cb0a455e3064421c63d6f83d99dff16d68d",
+    "scenes/0b393d0b728d21f130.js": "e14d36286b2539cbf2f014512b0cc833040239c91610b1034b5a6ea7132acb51",
+    "scenes/1485c197051f5904dd.js": "7901c6e8c454acd0e866150b2c788e377f2a4f9b25d0b935e61559d390e92a5a",
+    "scenes/15f325c1674c3baded.js": "548a3dfde7e5e12d07ace6546c5a96f2f20906428c5de3aad709f67a5de8bcfc",
+    "scenes/16c072a1cc631512c9.js": "76a7a291403fa74f5cf6fdc8ca95b3ff5d4ecd5ddbf18287e59b99f5ed8bdeaf",
+    "scenes/2ba4ec5b0d892f426f.js": "0867768e3c8ffec6e172093c43f573dbea4ec61cd4eb0bcc8b9430d144dcfec0",
+    "scenes/2da84ebd5366ba8fd3.js": "bc1098af739d213fea37abf493fc08d28e4c4029d142633d11e6cef51e5d75d4",
+    "scenes/313801fb210c09288a.js": "aca47e9462d7188384cf7755855de0ac04e85c3bc33d0a1a3c78e2e2ef4eab1d",
+    "scenes/35b9bd78b2cd303225.js": "7c1e3ba9ac8d0feaa4d5e7a3a1086f62539230de1e093696513b836958b0eed5",
+    "scenes/40262e9a7a82e0a703.js": "70179db1116e8e533343fcfad337c8e0a06147f92d967eb3ce95f38b429b8053",
+    "scenes/5498f4b01fd7d3f966.js": "5e51c4c03cb1244303bd5010c4e638502a35c88d97b311e7bb1da375fa286c27",
+    "scenes/5e9f7871d9ffb2a299.js": "afc9a3e21c448a1895f383c45c6a5678acf8eb9368f6dfb4a8026f7ca9708753",
+    "scenes/5f333cec698696b1ca.js": "4e56d9808edeabf60f514028d5975a897b0bd0e96d4c285546fd33528a58028f",
+    "scenes/69b102ff5b0d84ece0.js": "61ab489534af58dde74071ab6558b201b9391fe5530795d7f1bb2324c319108a",
+    "scenes/732272be0de645128c.js": "bc9265c5fabfaad80aaf4e09c6d0f4a3e35198a0366d05c5ae9b0ccdbe7e80a1",
+    "scenes/8181df894e227e3765.js": "af6e7895e1de2e6fe4345184c7cb083c8be6e3803cfb8ad74a6e6bc9e11c4084",
+    "scenes/82aee6fb14e7bf54f8.js": "3cbfc689f75d4d3a3636d0caf340d7df8968633604ba96101ae77ac48fc0af5d",
+    "scenes/90b55aaa4a19a6ac92.js": "f8b50dd62f8125ba20ad990cdb422ab81ea29136bfbc61d834ddd23ca14a3975",
+    "scenes/954f61c2b414bf5999.js": "48c95142fbb42a12249506a6217b4badeb55e01e760db1813dbca297034bb174",
+    "scenes/a65d8065efe76618db.js": "e3a9b1b61338dc23ac8e4db8e0b5ed35610af186878f3635166dde5def7ea51d",
+    "scenes/a90c5e065253edf285.js": "affdcf9c130d0da3bc195bd07fc9bbbf0e800341be4a0959a5f092bab7119c3a",
+    "scenes/abb2ef744bba171919.js": "477c699c049bec743f1605332124153c38b0995ee6c176091b827148fb66a0b4",
+    "scenes/b8bf45e5bfe3ec58de.js": "2aaf42278f6f4b356eaee16ad8de4c5b32d0e573d580ec852d17378efd828ce1",
+    "scenes/bfcd4233aa4c2300ad.js": "8f4f7d9a7a3caa04478b3b73c7b4406d7ed3086cedf52611ab38a9c12cb366f7",
+    "scenes/c5062b01fcbe6c0c83.js": "1f28f95adad7b152494f4fbaf4730be843cd55cb761a5aa7858e218dfd25e5fd",
+    "scenes/cab19c0c5fd2a091ad.js": "902fa48c8bd18971835f17df890436b4b6ae1729b3bf86bcdca66e68f65cf8dd",
+    "scenes/dd36ea79731df4ac25.js": "9977e3a5c7296574e899e31b81e81e1f57e51e6375e8b9d2de628a21c022c6b0",
+    "scenes/f4cbbb79df95176721.js": "bc8f4e35d32408d326c6a213e3a44474aa6223022b7e77e3443540096dc3af1d",
+    "scenes/f8537937b2d998a741.js": "f01096583668dde69dab64d7b3cd2686b02b63e2f036f475edca6186e18f1447",
+    "scenes/fe8e5c9b1ea3e82d5f.js": "f222e6f6d043e4c6a2264979ab1693fa6841d7dac9c325d1082c5d6e338f51da",
+    "worlds.evaluator.jsonl": "a45306ca66fd169e54504abace91f6034e48d1fcc9a9cbd133ab50818d8081a9"
+  },
+  "expression": "structured",
+  "families": [
+    "multihop",
+    "updates"
+  ],
+  "feedback_track": "Controlled transfer from scripted validator experiences; full live chain is a separate offline controller check.",
+  "grading": "Response content, format, set precision/recall/forbidden members, real file state, tool visibility and scheduled errors separate.",
+  "histories": 30,
+  "histories_per_family_tier": 5,
+  "history_sessions": 64,
+  "isolation": "One final query per independent case; rebuild learning history; no mutable snapshot sharing.",
+  "native_case_counts": {
+    "memory": 30
+  },
+  "native_dataset_digests": {
+    "memory": "29561106313d261df49635260994bb88542c646255db7ab9028cd5ff79db39c0"
+  },
+  "necessary_groups": {
+    "multihop": [
+      1,
+      2,
+      4
+    ],
+    "updates": [
+      5,
+      5,
+      5
+    ]
+  },
+  "negative_oracle": "Full raw history for negative probes; unavailable retrieval and tokens remain unknown.",
+  "paid_calls": 0,
+  "query_selection": "primary",
+  "reader_controls": "open_book/oracle_evidence fresh final state with raw records, same historical gold; native isolation still needs verification.",
+  "recency_control": {
+    "inputs_after_effective_update": 14,
+    "last_effective_update_position": 50
+  },
+  "seed": 20261013,
+  "source_sha256": {
+    "experiments/math_memory/memory_only.py": "132d4c8ff15332786e3a428982499b48839e014fd036205c5be2c864434542b3",
+    "experiments/math_memory/memory_v31.py": "2dabb91e56112cad8eb0933a24dbe4ca20cd8f2791f330385e2b17ea00ab059e",
+    "experiments/memory_stress/__init__.py": "99c402c38c8122d52aca32dbf38af40cd7aa34a9ad7895366241b8210cc9b11c",
+    "experiments/memory_stress/__main__.py": "e2e4f09736eb71fc60ba53b244c928f2481c88c4c0731cdc92f8a6d23efdbc9e",
+    "experiments/memory_stress/calibrate_stress.py": "322c356eeab06c3a88da29f3fdf3a0193904d88f3da0beea8cda784a5a8b9961",
+    "experiments/memory_stress/oracle.py": "930de57afb80b82f9acfe3532d9f3bba6e9114c326ab5c49bd04399a390f5c14",
+    "experiments/memory_stress/reference_adapter.py": "19286a57fc3abd4b0567ee3fccf624195af023bf824f1a7da0e296d5ab59c840",
+    "experiments/memory_stress/render_history.py": "f14a45f27e17d9dfb33fe3f5562ac5440d579a99e691d5380bd2d1e25339a741",
+    "experiments/memory_stress/suite.py": "3686cb99436c776def0c6870a945b0f22414478840722facc314c83f16947556",
+    "experiments/memory_stress/v2/__init__.py": "fd82505a55f5d7ce53bd87eafbb200c5ee7a225782aab90a20c02dd9ce1bd871",
+    "experiments/memory_stress/v2/__main__.py": "e2e4f09736eb71fc60ba53b244c928f2481c88c4c0731cdc92f8a6d23efdbc9e",
+    "experiments/memory_stress/v2/calibrate_stress.py": "69cc837e2d2e4d1365a3ff094a4ab73602252373f7ae275e4b69414fc6f0271e",
+    "experiments/memory_stress/v2/chain.py": "e28b4b53a715c767a0120f3f5f3184d2c78c8518c4f0ebcd1566e898d851b7cd",
+    "experiments/memory_stress/v2/environment.py": "e9ffbf958fb60cec9480dd6a7b54cb6a84c7ad8a08a9bc33bb30a4fdfb854925",
+    "experiments/memory_stress/v2/oracle.py": "2343a2a331512d7fcc0a10d99cc117e7c88edf8bb9094789457a8edaf756f4ca",
+    "experiments/memory_stress/v2/reference_adapter.py": "5def2b22df5199a2cb60a40478955688d745e23a2a6c5da34b257730f462fb4b",
+    "experiments/memory_stress/v2/render_history.py": "0240e4818ff5517e76d9e17ea37a949336eb46584aa4b8158be3f3bccbc634d6",
+    "experiments/memory_stress/v2/suite.py": "fa1106da7c56fcdf3ab88327000e7f419e928db00111697c604b2dd88874339a",
+    "experiments/memory_stress/v2/viewer.html": "c0c7254b90df9c8f05ef7a29d0739b9b368f42a5e25c4851e54f6fc2f7d42a36",
+    "experiments/memory_stress/v2/world_generator.py": "6ee73a14035463134ece6f931ebdef01d6204f8f6d97f3dc2f82c7764a0fdcd5",
+    "experiments/memory_stress/world_generator.py": "fd733f8a5d12b3b9fb0ba319a3fe37570b23f15d59371a1b331509869ce28cad",
+    "kylin_memory_bench/__init__.py": "84458025a1a830016ac1c034a5d63a57b625f0113a8207ef82863d5e925538da",
+    "kylin_memory_bench/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "kylin_memory_bench/adapters.py": "888b25f4f6803c65f972c39a716d1bd83cde8170c0c6a29593b31ae65bc49098",
+    "kylin_memory_bench/baseline.py": "c9d449ad4c0f6c764b3403000aed25546c93c4fe17062d559c80354c1d269d95",
+    "kylin_memory_bench/challenges.py": "dc23d8514332184be8a49913cb6c06efe998130be6d88cf5a91152d70910d796",
+    "kylin_memory_bench/cli.py": "c26b86cf3a3a4d68d4b14f8e8f134a7d8ddc6a023388334ad9991346035fde98",
+    "kylin_memory_bench/common.py": "bdb2be3af7971b9893e089024ebcf8e9862d81e56a964dcaf1de2cd929f7031a",
+    "kylin_memory_bench/dataset.py": "b9cec11a275f1e447c1b32fa9c0d0fd3ce47045ac48c7a10f7f69aeab1489a9d",
+    "kylin_memory_bench/evidence_view.py": "8afe599b8ff870a41395501cca4928b6fe7a9a321ec25d187bd5acc4cecbbe26",
+    "kylin_memory_bench/generate.py": "40b2e1d04fe0787506b6df394e0f780ea3f2caf4e93ebce2998cca518da6df0c",
+    "kylin_memory_bench/native_trace.py": "a1cf28f1a8b837b7e2655322221af74d0d4784583d29237b3a61e7c01f1f7061",
+    "kylin_memory_bench/report.py": "96a9b10f238043be066cb89b0327bba678d346ff0c34e68d3e75268fc98318c1",
+    "kylin_memory_bench/runner.py": "a2195a0dffac7b5adf488d5a2c9bd339a2810e7120717c3b5aa45af3cc3cbfc8",
+    "kylin_memory_bench/scoring.py": "44ca6bd401b37b5d6b3ce3ccbac8f953df7461970af44d813d8b250585d4ca78"
+  },
+  "split_counts": {
+    "development": 30
+  },
+  "split_scope": "Group-reserved seeds, same task templates; public/reviewable, not blinded or unseen graph-family generalization.",
+  "status": "offline_prepared_no_paid_trials",
+  "steps_per_case": 65,
+  "tiers": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "variants": [
+    "base"
+  ]
+}
