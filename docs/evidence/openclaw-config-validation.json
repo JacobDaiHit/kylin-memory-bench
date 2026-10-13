@@ -1,0 +1,66 @@
+{
+  "baseline_commit": "0e1808ab3941646dc132bb7e1851fef790b8144b",
+  "kind": "openclaw_per_turn_config_offline_validation",
+  "model_calls": 0,
+  "native_agent_calls": 0,
+  "tests": {
+    "targeted": 21,
+    "full_linux": 208,
+    "passed": true
+  },
+  "regression": {
+    "before": [
+      {
+        "cap": 1024,
+        "model_preserved": false,
+        "workspace_preserved": false,
+        "proxy_path_correct": true,
+        "template_unchanged": true
+      },
+      {
+        "cap": 4096,
+        "model_preserved": false,
+        "workspace_preserved": false,
+        "proxy_path_correct": true,
+        "template_unchanged": true
+      },
+      {
+        "cap": 1024,
+        "model_preserved": false,
+        "workspace_preserved": false,
+        "proxy_path_correct": true,
+        "template_unchanged": true
+      }
+    ],
+    "after": [
+      {
+        "cap": 1024,
+        "model_preserved": true,
+        "workspace_preserved": true,
+        "proxy_path_correct": true,
+        "template_unchanged": true
+      },
+      {
+        "cap": 4096,
+        "model_preserved": true,
+        "workspace_preserved": true,
+        "proxy_path_correct": true,
+        "template_unchanged": true
+      },
+      {
+        "cap": 1024,
+        "model_preserved": true,
+        "workspace_preserved": true,
+        "proxy_path_correct": true,
+        "template_unchanged": true
+      }
+    ]
+  },
+  "adapter_sha256": "8aefdb0e48e92be367280b448d343530707570287a4bdb5060230fe673399c0c",
+  "legacy_stress_01": {
+    "original_protocol_unchanged": true,
+    "current_source_rejected": true,
+    "archived_source_verified": true
+  },
+  "claim_limit": "Mock CLI only; actual model, workspace and persistent memory locations need native health validation."
+}

@@ -324,8 +324,27 @@ class PhaseTwoPipelineTests(unittest.TestCase):
             self.assertEqual(len([s for s in c['steps'] if s['id'] == 'final']),1)
             self.assertNotIn('feedback',c['id']); self.assertNotIn('reserved',c['id'])
 
-    def test_phase_one_source_fingerprints_remain_valid(self):
-        verify_v1(ROOT/'experiments/memory_stress/development-v1')
+    def test_phase_one_fingerprints_require_archived_adapter(self):
+        import hashlib
+        import zipfile
+        from experiments.memory_stress import suite as legacy
+        prepared=ROOT/'experiments/memory_stress/development-v1'
+        with self.assertRaisesRegex(BenchError,'source fingerprint mismatch'):
+            verify_v1(prepared)
+        manifest=read_json(ROOT/'docs/evidence/openclaw-config-source-archive.json')
+        archive=ROOT/manifest['archive']
+        self.assertEqual(hashlib.sha256(archive.read_bytes()).hexdigest(),manifest['sha256'])
+        with tempfile.TemporaryDirectory() as tmp,zipfile.ZipFile(archive) as z:
+            root=Path(tmp)
+            self.assertEqual(set(z.namelist()),set(manifest['members']))
+            for name,expected in manifest['members'].items():
+                content=z.read(name)
+                self.assertEqual(hashlib.sha256(content).hexdigest(),expected)
+                path=root/name
+                self.assertTrue(path.resolve().is_relative_to(root.resolve()))
+                path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(content)
+            with patch.object(legacy,'ROOT',root),patch.object(legacy,'__file__',str(root/'experiments/memory_stress/suite.py')):
+                verify_v1(prepared)
 
     def test_prepare_freezes_every_scene_and_preserves_split_inputs(self):
         with tempfile.TemporaryDirectory() as tmp:

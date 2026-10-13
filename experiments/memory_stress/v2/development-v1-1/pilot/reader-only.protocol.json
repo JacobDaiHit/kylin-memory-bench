@@ -32,7 +32,7 @@
     "experiments/memory_stress/world_generator.py": "fd733f8a5d12b3b9fb0ba319a3fe37570b23f15d59371a1b331509869ce28cad",
     "kylin_memory_bench/__init__.py": "84458025a1a830016ac1c034a5d63a57b625f0113a8207ef82863d5e925538da",
     "kylin_memory_bench/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
-    "kylin_memory_bench/adapters.py": "888b25f4f6803c65f972c39a716d1bd83cde8170c0c6a29593b31ae65bc49098",
+    "kylin_memory_bench/adapters.py": "8aefdb0e48e92be367280b448d343530707570287a4bdb5060230fe673399c0c",
     "kylin_memory_bench/baseline.py": "c9d449ad4c0f6c764b3403000aed25546c93c4fe17062d559c80354c1d269d95",
     "kylin_memory_bench/challenges.py": "dc23d8514332184be8a49913cb6c06efe998130be6d88cf5a91152d70910d796",
     "kylin_memory_bench/cli.py": "c26b86cf3a3a4d68d4b14f8e8f134a7d8ddc6a023388334ad9991346035fde98",

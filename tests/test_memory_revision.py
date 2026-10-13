@@ -159,12 +159,23 @@ class StateControlTests(unittest.TestCase):
     def test_per_turn_caps_are_written_without_changing_base_config(self):
         config=json.loads((ROOT/'configs/deepseek-research-v31.example.json').read_text())['agents'][0]
         config['native_config']['models']['providers']['kmb-deepseek']['baseUrl']='http://127.0.0.1:9876/v1'
+        original=copy.deepcopy(config)
         with tempfile.TemporaryDirectory() as d,patch('kylin_memory_bench.adapters.process',return_value='{"result":{"final":"{\\"ok\\":true}"}}'):
             adapter=External(config,Path(d))
-            for cap in (1024,4096):
+            initial=json.loads((Path(d)/'.openclaw/openclaw.json').read_text())
+            for cap in (1024,4096,1024):
                 adapter.turn({'session_id':'fixture','day':0,'prompt':'confirm','output_tokens':cap})
                 native=json.loads((Path(d)/'.openclaw/openclaw.json').read_text())
                 self.assertEqual(native['models']['providers']['kmb-deepseek']['baseUrl'],f'http://127.0.0.1:9876/v1/cap/{cap}')
+                self.assertEqual(native['agents']['defaults']['model'],config['model'])
+                self.assertEqual(native['agents']['defaults']['workspace'],str(adapter.workspace))
+                self.assertEqual(native['agents'],initial['agents'])
+                expected=copy.deepcopy(initial)
+                provider=expected['models']['providers']['kmb-deepseek']
+                provider['baseUrl']=f'http://127.0.0.1:9876/v1/cap/{cap}'
+                for model in provider.get('models',[]):model['maxTokens']=cap
+                self.assertEqual(native,expected)
+                self.assertEqual(config,original)
             self.assertEqual(config['native_config']['models']['providers']['kmb-deepseek']['baseUrl'],'http://127.0.0.1:9876/v1')
 
     def test_offline_reference_health_cannot_authorize_native_paid_stage(self):

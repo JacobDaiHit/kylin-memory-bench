@@ -36,7 +36,7 @@
     "experiments/math_memory/memory_v31.py": "2dabb91e56112cad8eb0933a24dbe4ca20cd8f2791f330385e2b17ea00ab059e",
     "scripts/isolated_native_v31.sh": "1470ec782ff2765d5a0926de35ee76e778a282f447019ce498b1b3161b893a63",
     "scripts/live_deepseek.py": "e4f0914cfa0bc6e8e3ac7d0e0c21e507cdd2d879d1700e7f7bf63b66978b51fb",
-    "kylin_memory_bench/adapters.py": "888b25f4f6803c65f972c39a716d1bd83cde8170c0c6a29593b31ae65bc49098",
+    "kylin_memory_bench/adapters.py": "8aefdb0e48e92be367280b448d343530707570287a4bdb5060230fe673399c0c",
     "kylin_memory_bench/runner.py": "a2195a0dffac7b5adf488d5a2c9bd339a2810e7120717c3b5aa45af3cc3cbfc8",
     "kylin_memory_bench/scoring.py": "44ca6bd401b37b5d6b3ce3ccbac8f953df7461970af44d813d8b250585d4ca78",
     "kylin_memory_bench/dataset.py": "b9cec11a275f1e447c1b32fa9c0d0fd3ce47045ac48c7a10f7f69aeab1489a9d"

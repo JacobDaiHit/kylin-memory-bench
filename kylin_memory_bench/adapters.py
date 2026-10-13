@@ -201,14 +201,7 @@ class External:
         if config['kind'] == 'openclaw':
             state = self.workspace / '.openclaw'
             state.mkdir(mode=0o700, exist_ok=True)
-            native = strict_json(canonical(config.get('native_config', {})))
-            agents = native.setdefault('agents', {})
-            if agents.get('list') or agents.get('entries'):
-                raise BenchError('Native OpenClaw config must not override per-agent workspaces')
-            defaults = agents.setdefault('defaults', {})
-            defaults['workspace'] = str(self.workspace)
-            if config.get('model'):
-                defaults['model'] = config['model']
+            native = self._native_config()
             write_json(state / 'openclaw.json', native)
             self.env.update(OPENCLAW_HOME=str(private_home), OPENCLAW_STATE_DIR=str(state),
                             OPENCLAW_CONFIG_PATH=str(state / 'openclaw.json'), OPENCLAW_WORKSPACE_DIR=str(self.workspace))
@@ -229,6 +222,20 @@ class External:
             # JSON is a YAML subset; Hermes consumes config.yaml.
             write_json(home / 'config.yaml', config.get('native_config', {}))
 
+    def _native_config(self):
+        # Rebuild from the template so per-turn caps never accumulate; always
+        # reapply case bindings before writing a native configuration.
+        native = strict_json(canonical(self.config.get('native_config', {})))
+        if self.config['kind'] == 'openclaw':
+            agents = native.setdefault('agents', {})
+            if agents.get('list') or agents.get('entries'):
+                raise BenchError('Native OpenClaw config must not override per-agent workspaces')
+            defaults = agents.setdefault('defaults', {})
+            defaults['workspace'] = str(self.workspace)
+            if self.config.get('model'):
+                defaults['model'] = self.config['model']
+        return native
+
     def turn(self, request):
         kind = self.config['kind']
         timeout = self.config.get('timeout', 120)
@@ -245,7 +252,7 @@ class External:
             limit = request.get('output_tokens', 1024)
             if type(limit) is not int or not 256 <= limit <= 8192:
                 raise BenchError('Invalid per-turn output limit')
-            native = strict_json(canonical(self.config.get('native_config', {})))
+            native = self._native_config()
             providers = native.get('models', {}).get('providers', {}) if kind == 'openclaw' else native.get('providers', {})
             settings = list(providers.values()) + ([native['model']] if kind == 'hermes' and 'model' in native else [])
             for setting in settings:
