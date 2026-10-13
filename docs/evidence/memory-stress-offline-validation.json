@@ -1,0 +1,117 @@
+{
+  "base_revision": "34282eae86a98e8132f92cb62cfb49b34a0b52ff",
+  "budget_guard": {
+    "account_values_published": false,
+    "cumulative_cost_counter_unchanged": true,
+    "request_counter_unchanged": true
+  },
+  "claim_limit": "Offline construction, grammar, grading, pipeline and synthetic state controls only. No paid agent trial, native health test, model difficulty/discrimination, module-only ablation, human review, held-out evaluation or final release.",
+  "contract": "memory-stress-0.1",
+  "environment": {
+    "execution_context": "wsl2",
+    "is_openkylin": false,
+    "machine": "x86_64",
+    "os_release": {
+      "ID": "ubuntu",
+      "PRETTY_NAME": "Ubuntu 26.04 LTS",
+      "VERSION_ID": "26.04"
+    },
+    "python": "3.13.13",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "system": "Linux"
+  },
+  "evidence_groups": {
+    "multihop": [
+      1,
+      2,
+      4
+    ],
+    "updates": [
+      5,
+      5,
+      5
+    ]
+  },
+  "generation": {
+    "expression_roundtrips": 5760,
+    "history_count": 30,
+    "paired_relations_checked": 150,
+    "passed": true
+  },
+  "kind": "memory_stress_offline_validation",
+  "new_tests": 21,
+  "paid_calls": 0,
+  "prepared_native_case_count": 150,
+  "protocol_sha256": "368e5f997f11d6b88fc1d1f6af6a6b54c043279441ad0604c5f654ac414f2798",
+  "smoke_analysis_scope": {
+    "distinct_cases_scheduled": 10,
+    "planned_final_slots": 10,
+    "prepared_cases_not_scheduled": 140,
+    "prepared_native_cases": 150
+  },
+  "smoke_evidence_head": "cd1bd7ab284b0032100af358a3b12e9b5c155a538a137d5b85bd8fa11443ba72",
+  "smoke_raw_event_count": 650,
+  "smoke_run_status": "completed",
+  "source_sha256": {
+    "experiments/math_memory/memory_only.py": "132d4c8ff15332786e3a428982499b48839e014fd036205c5be2c864434542b3",
+    "experiments/math_memory/memory_v31.py": "2dabb91e56112cad8eb0933a24dbe4ca20cd8f2791f330385e2b17ea00ab059e",
+    "experiments/memory_stress/__init__.py": "99c402c38c8122d52aca32dbf38af40cd7aa34a9ad7895366241b8210cc9b11c",
+    "experiments/memory_stress/__main__.py": "e2e4f09736eb71fc60ba53b244c928f2481c88c4c0731cdc92f8a6d23efdbc9e",
+    "experiments/memory_stress/calibrate_stress.py": "322c356eeab06c3a88da29f3fdf3a0193904d88f3da0beea8cda784a5a8b9961",
+    "experiments/memory_stress/oracle.py": "930de57afb80b82f9acfe3532d9f3bba6e9114c326ab5c49bd04399a390f5c14",
+    "experiments/memory_stress/reference_adapter.py": "19286a57fc3abd4b0567ee3fccf624195af023bf824f1a7da0e296d5ab59c840",
+    "experiments/memory_stress/render_history.py": "f14a45f27e17d9dfb33fe3f5562ac5440d579a99e691d5380bd2d1e25339a741",
+    "experiments/memory_stress/suite.py": "3686cb99436c776def0c6870a945b0f22414478840722facc314c83f16947556",
+    "experiments/memory_stress/viewer.html": "9d792cfc61522439a665ac6429e3dc78d1dbe537921b1a456128b4ce1f359ef7",
+    "experiments/memory_stress/world_generator.py": "fd733f8a5d12b3b9fb0ba319a3fe37570b23f15d59371a1b331509869ce28cad",
+    "kylin_memory_bench/adapters.py": "888b25f4f6803c65f972c39a716d1bd83cde8170c0c6a29593b31ae65bc49098",
+    "kylin_memory_bench/common.py": "bdb2be3af7971b9893e089024ebcf8e9862d81e56a964dcaf1de2cd929f7031a",
+    "kylin_memory_bench/dataset.py": "b9cec11a275f1e447c1b32fa9c0d0fd3ce47045ac48c7a10f7f69aeab1489a9d",
+    "kylin_memory_bench/native_trace.py": "a1cf28f1a8b837b7e2655322221af74d0d4784583d29237b3a61e7c01f1f7061",
+    "kylin_memory_bench/runner.py": "a2195a0dffac7b5adf488d5a2c9bd339a2810e7120717c3b5aa45af3cc3cbfc8",
+    "kylin_memory_bench/scoring.py": "44ca6bd401b37b5d6b3ce3ccbac8f953df7461970af44d813d8b250585d4ca78"
+  },
+  "subprocess_smoke": {
+    "cases": 10,
+    "claim_limit": "Synthetic grammar adapter only; no native health, LLM capability or snapshot-fork validation.",
+    "content_passes_by_condition": {
+      "memory": 2,
+      "no_history": 2,
+      "open_book": 2,
+      "oracle_evidence": 2,
+      "stateless": 0
+    },
+    "events": 650,
+    "independent_histories": 2,
+    "kind": "offline_subprocess_and_state_control_check",
+    "paid_calls": 0,
+    "passed": true
+  },
+  "tests": [
+    {
+      "discovered_tests": 171,
+      "duration_seconds": 117.346,
+      "passed": 171,
+      "private_log_sha256": "b3d8c85d9e723c11d31311f7373b1bd25af9380d4fbe7f162a6cdc051820d817",
+      "result": "passed",
+      "skipped": 0,
+      "system": "linux-wsl"
+    },
+    {
+      "discovered_tests": 171,
+      "duration_seconds": 80.924,
+      "passed": 169,
+      "private_log_sha256": "86edf9453890cfd1e8ba3731801d81c5041eafe74255f4a419385063cccfba66",
+      "result": "passed",
+      "skipped": 2,
+      "system": "windows"
+    }
+  ],
+  "validated_at_utc": "2026-10-13T03:39:54.133740+00:00",
+  "viewer": {
+    "edge_offline_layout_checked": true,
+    "network_dependencies": 0,
+    "node_selection_checks": 2700,
+    "pair_checks": 150
+  }
+}

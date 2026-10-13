@@ -10,6 +10,8 @@
 
 0.2.1 新增材料：[离线导览](docs/presentation/index.html)、[数据说明卡](docs/dataset-card.md)、[修订验证记录](docs/revision-validation.md)、[数学V3.1修复与离线验收](docs/memory-revision-v31.md)。原难度试测未达到预定门槛；V3.1已补评分、状态对照和运行准备，尚未付费实测。最终安装包和视频尚未冻结，现有PDF与安装生命周期记录属于0.2.0。
 
+新增 [Memory Stress 首期 30 条开发历史](docs/memory-stress-design.md) 与 [离线题目／证据导览](experiments/memory_stress/development-v1/index.html)：多跳关联、同字段更新各 15 条，五种状态／资料条件、反事实配对和三种表达。仅完成离线构造与软件检查，未调用付费模型，也未验证真实难度或产品区分度。
+
 ## 一分钟运行
 
 需要 Python 3.9+。核心运行没有第三方 Python 依赖，不需要 GPU、模型密钥或网络。

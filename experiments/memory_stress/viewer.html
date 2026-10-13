@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Memory Stress 首期 30 条 · 离线设计检查</title>
+<style>
+:root{color-scheme:light;--ink:#163049;--muted:#526577;--accent:#176d85;--line:#d9e3eb;--paper:#f1f5f8}
+*{box-sizing:border-box}body{margin:0;font:16px/1.65 system-ui,sans-serif;color:var(--ink);background:var(--paper)}
+main{max-width:1260px;margin:auto;padding:28px}h1{font-size:28px;margin:0 0 12px}h2{font-size:20px;margin:16px 0 8px}h3{font-size:17px}
+p{margin:8px 0}.banner{padding:16px;background:#e5f1f5;border-left:4px solid var(--accent)}
+.controls{display:flex;flex-wrap:wrap;gap:14px;margin:22px 0}label{display:grid;gap:5px}select,button{font:inherit;padding:7px 10px;border:1px solid #a7bbc9;border-radius:5px;background:white;color:var(--ink)}button{cursor:pointer}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:white;border:1px solid var(--line);border-radius:8px;padding:18px;min-width:0}
+.facts{display:flex;flex-wrap:wrap;gap:10px}.fact{background:#edf4f7;padding:8px 12px;border-radius:5px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.6 ui-monospace,monospace;background:#f7f9fb;padding:12px;border-radius:4px;max-height:500px;overflow:auto}
+.records{max-height:620px;overflow:auto}.record{border-bottom:1px solid var(--line);padding:10px 0}.record pre{margin:4px 0;max-height:none}.marked{background:#eaf5ef}.muted{color:var(--muted)}
+details{margin:12px 0}summary{cursor:pointer}table{border-collapse:collapse;width:100%;font-size:14px}td,th{border-bottom:1px solid var(--line);padding:7px;text-align:left}
+.wide{grid-column:1/-1}a{color:var(--accent)}@media(max-width:800px){.grid{grid-template-columns:1fr}main{padding:18px}.controls label{width:100%}}
+</style>
+<main>
+<h1>Memory Stress：首期 30 条开发历史</h1>
+<div class="banner">已完成离线构造与软件检查，付费调用为 0。此页展示题目、证据和预设故障策略；尚无 OpenClaw / Hermes 在本题库的成绩，尚未验证真实难度与区分度。</div>
+<p>15 条多跳关联历史 + 15 条同字段更新历史；各分低、中、高三档，每档五个独立种子。所有历史固定 64 个输入会话，最终只回答一个短值。原始输入字节数仍可能不同，不声称模型收到等量 Token。</p>
+<div class="controls">
+<label>任务家族<select id="family"><option value="multihop">多跳关联检索</option><option value="updates">同字段更新与局部撤销</option></select></label>
+<label>档位<select id="tier"><option value="low">低</option><option value="medium">中</option><option value="high">高</option></select></label>
+<label>独立历史<select id="scene"></select></label>
+<label>表达<select id="expression"><option value="structured">A · 结构化记录</option><option value="statement">B · 自然陈述模板</option><option value="dialogue">C · 对话修正模板</option></select></label>
+<label>查询<select id="query"></select></label>
+<label>最终资料条件<select id="condition"><option value="memory">持久记忆</option><option value="stateless">无跨会话状态</option><option value="open_book">完整原始历史</option><option value="oracle_evidence">关键原始证据</option><option value="no_history">未提供目标资料</option></select></label>
+</div>
+<div id="facts" class="facts"></div>
+<div class="grid" style="margin-top:18px">
+<section class="card"><h2>最终问题</h2><pre id="question"></pre><p id="control" class="muted"></p>
+<details id="answer"><summary>查看标准答案和判分口径</summary><pre id="gold"></pre><p>内容正确与输出格式分别计分。原生运行补充评分要求仅有 answer 字段；主要内容评分接受冻结的规范整数文本别名，但文本形式仍不满足严格整数输出类型。运行错误、无法解析及缺失计划结果分别报告。</p></details>
+<h3>仅供评测方查看：证据</h3><p id="proofnote"></p><div id="evidence" class="records"></div></section>
+<section class="card"><h2>完整原始学习历史</h2><p class="muted">绿色是第一组充分证据；支持等价证据组，不强制唯一来源。此处只展示基础历史，完整无资料替换输入可在 learner-no_history.jsonl 检查。</p><div id="history" class="records"></div></section>
+<section class="card"><h2>反事实配对</h2><label>改动<select id="variant"><option value="fact_edit">只改一条有效事实</option><option value="approval_swap">交换批准／草稿状态</option><option value="label_renumber">只改编号数字大小</option><option value="irrelevant_edit">只改无关记录</option><option value="paraphrase">同事实换表达</option></select></label><p id="pairnote"></p><pre id="pair"></pre><p class="muted">所有配对、表达和查询保留在同一开发集分组。默认准备的可运行数据只含基础题；配对与其他表达需用 prepare 参数显式生成，尚未有模型配对成绩。</p></section>
+<section class="card"><h2>预设故障策略检查</h2><table><thead><tr><th>程序策略</th><th>主问题</th><th>六个查询全对</th></tr></thead><tbody id="strategies"></tbody></table><p class="muted">这些策略直接读取事件结构，是软件故障检查。它们没有同一底座 LLM 的提取条件，不构成真实记忆策略基线或产品排名。</p></section>
+</div>
+<p>重复更新题的关键证据组数保持为 5；增加 1／3／6 次修改测试状态维护负担。多跳题的主查询关键证据组数为 1／2／4。自然陈述与对话目前是确定性模板，尚未经过独立人审。</p>
+<p><a href="protocol.json">冻结协议</a> · <a href="quality.evaluator.json">完整离线检查</a> · <a href="../../../docs/memory-stress-design.md">设计与使用说明</a></p>
+</main>
+<script type="application/json" id="stress-data">__STRESS_DATA__</script>
+<script>
+'use strict';
+const data=JSON.parse(document.getElementById('stress-data').textContent);
+const el=id=>document.getElementById(id);
+const roleNames={primary:'主查询 · 交付目录',alias:'合法别名',historical:'历史检查点',other_scope:'非目标对象／范围',direct:'直接登记值',abstention:'资料不足拒答',current:'当前 D1',preservation:'保留分支'};
+const policyNames={complete:'完整重放',first_state:'只记最早批准值',ignore_cancel:'忽略撤销',scope_blind:'混合范围',accept_draft:'误收草稿',recent_window:'只留最近 12 条'};
+function option(select,value,text){const n=document.createElement('option');n.value=value;n.textContent=text;select.appendChild(n);}
+function selected(){return data.worlds.find(w=>w.scenario_id===el('scene').value);}
+function refreshScenes(){const worlds=data.worlds.filter(w=>w.family===el('family').value&&w.tier===el('tier').value);el('scene').replaceChildren();worlds.forEach((w,i)=>option(el('scene'),w.scenario_id,'历史 '+(i+1)+' · seed '+w.seed));refreshQueries();}
+function refreshQueries(){const w=selected();el('query').replaceChildren();w.queries.slice().sort((a,b)=>(a.role==='primary'?-1:b.role==='primary'?1:0)).forEach(q=>option(el('query'),q.id,roleNames[q.role]+' · '+q.id));draw();}
+function records(node,w,indices,marked){node.replaceChildren();const expr=el('expression').value;indices.forEach(i=>{const d=document.createElement('div');d.className='record'+(marked.has(w.events[i].id)?' marked':'');const p=document.createElement('pre');p.textContent=String(i+1).padStart(2,'0')+' · '+w.expressions[expr][i];d.appendChild(p);node.appendChild(d);});}
+function drawPair(){const w=selected(),q=w.queries.find(q=>q.id===el('query').value),variant=el('variant').value,pair=w.pairs.find(p=>p.variant===variant);el('pairnote').textContent=(['fact_edit','approval_swap'].includes(variant)?'主查询答案必须改变；其他查询按实际事实重新计算。':'六个查询答案必须保持不变。')+(variant==='paraphrase'?' 生成时切换到下一种表达，事件语义不变。':'');el('pair').textContent=JSON.stringify({base_answer:w.proofs[q.id].answer,edited_answer:pair.answers[q.id],changed_records:pair.changes},null,2);}
+function draw(){const w=selected(),q=w.queries.find(q=>q.id===el('query').value),proof=w.proofs[q.id],expr=el('expression').value,cond=el('condition').value,ids=new Set(proof.sufficient_sets[0]);el('answer').open=false;el('facts').replaceChildren();['64 个学习会话','6 个独立查询可选',w.family==='multihop'?w.loads.hop_count+' 跳关联':w.loads.same_field_updates+' 次同字段修改',proof.required_group_count+' 组答案敏感证据'].forEach(t=>{const n=document.createElement('span');n.className='fact';n.textContent=t;el('facts').appendChild(n);});
+let question=w.questions[expr][q.id];if(cond==='open_book'||cond==='oracle_evidence'){const indices=w.events.map((_,i)=>i).filter(i=>cond==='open_book'||ids.has(w.events[i].id));question+='\n以下是按原顺序排列的原始档案登记：\n'+indices.map(i=>w.expressions[expr][i]).join('\n\n');}el('question').textContent=question;
+const descriptions={memory:'学习和最终查询使用同一案例的持久工作区，各步仍为新会话。',stateless:'与记忆组学习输入相同；每个会话新建工作区，用同一个历史答案评价恢复率。',open_book:'先学习相同历史；最终新建工作区，只凭再次提供的全部原始记录回答。',oracle_evidence:'最终新建工作区，给齐本查询的原始充分证据，不给整理后的答案。拒答题提供完整历史。',no_history:'替换目标证据为中性记录，保留 64 次输入与相同问题。其标准答案为 null，分别报告。'};
+el('control').textContent=descriptions[cond];el('gold').textContent=JSON.stringify({answer:cond==='no_history'?null:proof.answer});
+el('proofnote').textContent=proof.positive_evidence_observable?'必要组：'+JSON.stringify(proof.required_groups)+'；充分集合：'+JSON.stringify(proof.sufficient_sets)+'. 单个冗余来源允许替换。':'本题为资料不足探针，使用全部原始记录；不宣称紧凑负证据或可靠检索召回。';
+records(el('history'),w,w.events.map((_,i)=>i),ids);records(el('evidence'),w,w.events.map((_,i)=>i).filter(i=>ids.has(w.events[i].id)),ids);
+el('strategies').replaceChildren();data.strategies.filter(r=>r.scenario_id===w.scenario_id).forEach(r=>{const tr=document.createElement('tr');[policyNames[r.policy],r.primary_correct?'通过':'失败',r.all_queries_correct?'通过':'失败'].forEach(t=>{const td=document.createElement('td');td.textContent=t;tr.appendChild(td);});el('strategies').appendChild(tr);});drawPair();}
+['family','tier'].forEach(id=>el(id).addEventListener('change',refreshScenes));el('scene').addEventListener('change',refreshQueries);['query','expression','condition'].forEach(id=>el(id).addEventListener('change',draw));el('variant').addEventListener('change',drawPair);refreshScenes();
+</script></html>

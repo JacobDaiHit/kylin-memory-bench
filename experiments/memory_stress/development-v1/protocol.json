@@ -1,0 +1,93 @@
+{
+  "case_count_by_condition": {
+    "memory": 30,
+    "no_history": 30,
+    "open_book": 30,
+    "oracle_evidence": 30,
+    "stateless": 30
+  },
+  "claim_limit": "No native memory ability, model difficulty, ranking, token budget equality, genuine elapsed time, human review or release readiness verified.",
+  "conditions": [
+    "memory",
+    "stateless",
+    "open_book",
+    "oracle_evidence",
+    "no_history"
+  ],
+  "contract": "memory-stress-0.1",
+  "controls": "open_book/oracle_evidence use a fresh final workspace and raw records, not computed answers. Native fresh state needs verified namespace isolation.",
+  "data_sha256": {
+    "case-catalog.evaluator.json": "f421eacff977365a4f3775aa7dbb63d4ce80c7b59f19333b74c0680aa60919ec",
+    "gold.evaluator.json": "67c24d0683e451bf87ec5254ef4482064c1559a9305dfc2d0654cf28ce9f3249",
+    "index.html": "986a5dfbc2bb557d0255a225d1ae0d3549601ef735cebfbf74d853128cf07f13",
+    "learner-memory.jsonl": "99b94e8b49bf87306842cc46da0656c1376b6b1770b26735c07c6779733bd088",
+    "learner-no_history.jsonl": "83c650c1f687026526e8771c3b0dfc90be4750bf02717756d72df9128c66d241",
+    "learner-open_book.jsonl": "e6e42d3c9468089f85b0ecec337c6edeac0104eb00f4d41bff2be607eb4be69b",
+    "learner-oracle_evidence.jsonl": "b8ef3ba8853069c50693075348a4504f8c844f6c7bc11544672a6b0f30473ec7",
+    "learner-stateless.jsonl": "1f6ca52c9413a5afa6ff5c296da74a0a879c131d2d69278799c13436ad3039b0",
+    "native-memory.evaluator.jsonl": "2457e52cdc9b396714bf546cd64bf58709ebeb8e33c13e3533f948ddd7415e61",
+    "native-no_history.evaluator.jsonl": "ef7017e6469cbe0be8f87bd14ed7b03dd74917e84174d263ab0e42c27d43fd00",
+    "native-open_book.evaluator.jsonl": "2de7b9a25b081598aa89f82c213fe78033b64ebd772b5a05ac51c27dd1bdfb36",
+    "native-oracle_evidence.evaluator.jsonl": "a685b8349ad31aba083ca5d08273e29531d689a65db6066a77d32a31b93aa1fc",
+    "native-stateless.evaluator.jsonl": "e3aa0bd33208370929be58881eb1638e39e00517a67068a541b19899e0eacd44",
+    "quality.evaluator.json": "6d2c15e4904c696ce66f89949691cddab5a167710eedea3190916088445e786a",
+    "worlds.evaluator.jsonl": "2e65caba9735978085e21208e704c4dbf5d52acbab492587916a11b484e8fb66"
+  },
+  "difficulty_axes": {
+    "multihop": [
+      1,
+      2,
+      4
+    ],
+    "note": "Update registry size fixed (11 keys); update necessary answer-changing groups remain 5, not 1/3/6.",
+    "updates": [
+      1,
+      3,
+      6
+    ]
+  },
+  "expression": "structured",
+  "gold_policy": "Same historical-fact gold for memory/stateless/open_book/oracle_evidence; no_history=null.",
+  "grading": "One short answer; content / format / errors / unknown separate; no missing scheduled slot dropped.",
+  "histories_per_family_tier": 5,
+  "history_sessions": 64,
+  "independent_histories": 30,
+  "isolation": "Rebuild history in each independent query case. No shared writable snapshot or preceding query.",
+  "native_dataset_digests": {
+    "memory": "f7fedc29ee8783b44d1ae9a78041441dbbd94650d5a61c536fb6c718812c7629",
+    "no_history": "732266378d055c3b1082bccc6523fba558918d9e9b3d4a79d84c0f3c977ccf2b",
+    "open_book": "21e4a1957fac1def58569f0df77f2cac05d137695707fcdc1fee44dc2b06dac5",
+    "oracle_evidence": "98c5aaa5e6670f65757bbe1980819153f6c7539e5f4db0897a3cf301f2e108bf",
+    "stateless": "1b87af2adf58bac2844fa601660cf08ca5166f67306cad402242eb0bd6d2b137"
+  },
+  "negative_oracle": "Negative probes use full raw history, with evidence recall unknown.",
+  "paid_calls": 0,
+  "planned_steps_per_case": 65,
+  "queries_per_history_available": 6,
+  "query_selection": "primary",
+  "seed": 20261013,
+  "source_sha256": {
+    "experiments/math_memory/memory_only.py": "132d4c8ff15332786e3a428982499b48839e014fd036205c5be2c864434542b3",
+    "experiments/math_memory/memory_v31.py": "2dabb91e56112cad8eb0933a24dbe4ca20cd8f2791f330385e2b17ea00ab059e",
+    "experiments/memory_stress/__init__.py": "99c402c38c8122d52aca32dbf38af40cd7aa34a9ad7895366241b8210cc9b11c",
+    "experiments/memory_stress/__main__.py": "e2e4f09736eb71fc60ba53b244c928f2481c88c4c0731cdc92f8a6d23efdbc9e",
+    "experiments/memory_stress/calibrate_stress.py": "322c356eeab06c3a88da29f3fdf3a0193904d88f3da0beea8cda784a5a8b9961",
+    "experiments/memory_stress/oracle.py": "930de57afb80b82f9acfe3532d9f3bba6e9114c326ab5c49bd04399a390f5c14",
+    "experiments/memory_stress/reference_adapter.py": "19286a57fc3abd4b0567ee3fccf624195af023bf824f1a7da0e296d5ab59c840",
+    "experiments/memory_stress/render_history.py": "f14a45f27e17d9dfb33fe3f5562ac5440d579a99e691d5380bd2d1e25339a741",
+    "experiments/memory_stress/suite.py": "3686cb99436c776def0c6870a945b0f22414478840722facc314c83f16947556",
+    "experiments/memory_stress/viewer.html": "9d792cfc61522439a665ac6429e3dc78d1dbe537921b1a456128b4ce1f359ef7",
+    "experiments/memory_stress/world_generator.py": "fd733f8a5d12b3b9fb0ba319a3fe37570b23f15d59371a1b331509869ce28cad",
+    "kylin_memory_bench/adapters.py": "888b25f4f6803c65f972c39a716d1bd83cde8170c0c6a29593b31ae65bc49098",
+    "kylin_memory_bench/common.py": "bdb2be3af7971b9893e089024ebcf8e9862d81e56a964dcaf1de2cd929f7031a",
+    "kylin_memory_bench/dataset.py": "b9cec11a275f1e447c1b32fa9c0d0fd3ce47045ac48c7a10f7f69aeab1489a9d",
+    "kylin_memory_bench/native_trace.py": "a1cf28f1a8b837b7e2655322221af74d0d4784583d29237b3a61e7c01f1f7061",
+    "kylin_memory_bench/runner.py": "a2195a0dffac7b5adf488d5a2c9bd339a2810e7120717c3b5aa45af3cc3cbfc8",
+    "kylin_memory_bench/scoring.py": "44ca6bd401b37b5d6b3ce3ccbac8f953df7461970af44d813d8b250585d4ca78"
+  },
+  "split": "All expressions, edits and questions share a development split_group; no held-out evaluation.",
+  "status": "offline_development_only_no_paid_runs",
+  "variants": [
+    "base"
+  ]
+}
